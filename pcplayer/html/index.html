@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>genie</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
+<script type="text/javascript" src="/js/plugins/jquery.min.js"></script>
+<style type="text/css">
+	body, table, caption, colgroup, col, tbody, tr, td, a{margin:0; padding:0;}
+	body {padding:30px; font-size:13px; background:#fff; overflow:auto}
+	table{width:100%; margin:0 auto 70px; border-right:1px solid #666; border-bottom:1px solid #666; font-size:13px; color:#333; border-spacing:0}
+	caption{font-size:30px; font-weight:600; padding:20px 0; }
+	th{font-size:14px; color:#fff; border-left:1px solid #666; border-top:1px solid #666; background:#666;}
+	td{padding:5px 4px; line-height:1.333em; border-left:1px solid #666; border-top:1px solid #666; text-align:center;}
+	h1 {font-size:30px; margin-bottom:15px}
+	a {color:#ff6600; font-size:13px}
+	.bar td {border-top:2px solid #666;}
+	.clr-key1 {color:red}
+	dl{padding:10px 0; font-size:12px}
+	dt{padding:5px 0 3px}
+	dd{line-height: 18px}
+</style>
+</head>
+<body>
+<h1>genie pc player web view</h1>
+<dl>
+	<dt>18/03/07</dt>
+	<dd>- Mac 버전 일 경우 이미지 경로 2x 추가 ex) /images/common<span style="color:red">/2x/</span>img-noimage-50x50.jpg</dd>
+	<dd>- 배너 확대된 이미지로 변경</dd>
+	<dt>18/03/12</dt>
+	<dd>- GNB영역 상단 이용권구매/상품권 등록 히든처리</dd>
+	<dt>18/05/30</dt>
+	<dd>마이뮤직 > 좋아요 메뉴 추가</dd>
+</dl>
+<table>
+	<caption></caption>
+	<colgroup>
+		<col width="3%"/>
+		<col width="8%"/>
+		<col width="8%"/>
+		<col width="8%"/>
+		<col width="8%"/>
+		<col width="10%"/>
+		<col width="10%"/>
+	</colgroup>
+	<thead>
+		<tr>
+			<th>No.</th>
+			<th>1 Depth</th>
+			<th>2 Depth</th>
+			<th>3 Depth</th>
+			<th>4 Depth</th>
+			<th>링크</th>
+			<th>비고</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+			<td>공통 레이아웃</td>
+			<td>최종 gnb는 여기에</td>
+			<td bgcolor="#fcb5b5">배너 사이즈 수정 356*232</td>
+			<td></td>
+			<td><a href="/html/layout.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="bar">
+			<td></td>
+			<td>지니차트</td>
+			<td>top100</td>
+			<td>실시간</td>
+			<td></td>
+			<td><a href="/html/char-top100-realtime.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>지니차트</td>
+			<td>top100</td>
+			<td>일간</td>
+			<td></td>
+			<td><a href="/html/char-top100-day.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>지니차트</td>
+			<td>top100</td>
+			<td>주간</td>
+			<td></td>
+			<td><a href="/html/char-top100-week.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>지니차트</td>
+			<td>top100</td>
+			<td>월간</td>
+			<td></td>
+			<td><a href="/html/char-top100-month.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>지니차트</td>
+			<td>top100</td>
+			<td>누적</td>
+			<td></td>
+			<td><a href="/html/char-top100-cumulative.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>지니차트</td>
+			<td>장르별차트</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/char-genre-day.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>지니차트</td>
+			<td>뮤직비디오</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/char-mv-day.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>지니차트</td>
+			<td>좋아요</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/char-like.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>지니차트</td>
+			<td>(신규)시대별차트</td>
+			<td>정식버전 오픈 시 비노출 예정</td>
+			<td></td>
+			<td><a href="/html/char-top200-period.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="bar">
+			<td></td>
+			<td>공통</td>
+			<td>곡 상세</td>
+			<td>19금 케이스</td>
+			<td></td>
+			<td><a href="/html/detail-song-19.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>곡 상세</td>
+			<td>가사</td>
+			<td></td>
+			<td><a href="/html/detail-song-lyrics.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>곡 상세</td>
+			<td>뮤직비디오</td>
+			<td></td>
+			<td><a href="/html/detail-song-mv.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>곡 상세</td>
+			<td>댓글</td>
+			<td></td>
+			<td><a href="/html/detail-song-reply.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>앨범 상세</td>
+			<td>수록곡</td>
+			<td></td>
+			<td><a href="/html/detail-album-songs.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>앨범 상세</td>
+			<td>뮤직비디오</td>
+			<td></td>
+			<td><a href="/html/detail-album-mv.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>앨범 상세</td>
+			<td>댓글</td>
+			<td></td>
+			<td><a href="/html/detail-album-reply.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>앨범 상세</td>
+			<td>앨범소개</td>
+			<td></td>
+			<td><a href="/html/detail-album-intro.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>아티스트 상세</td>
+			<td>곡</td>
+			<td></td>
+			<td><a href="/html/detail-artist-songs.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>아티스트 상세</td>
+			<td>앨범</td>
+			<td></td>
+			<td><a href="/html/detail-artist-album.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>아티스트 상세</td>
+			<td>뮤직비디오</td>
+			<td></td>
+			<td><a href="/html/detail-artist-mv.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>아티스트 상세</td>
+			<td>댓글</td>
+			<td></td>
+			<td><a href="/html/detail-artist-reply.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>아티스트 상세</td>
+			<td>유사 아티스트</td>
+			<td></td>
+			<td><a href="/html/detail-artist-similar.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>공통</td>
+			<td>아티스트 상세</td>
+			<td>아티스트 소개</td>
+			<td></td>
+			<td><a href="/html/detail-artist-intro.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="bar">
+			<td></td>
+			<td>장르음악</td>
+			<td>가요</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/genre-song.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="bar">
+			<td></td>
+			<td>최신음악</td>
+			<td>곡</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/newest-song.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>최신음악</td>
+			<td>앨범</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/newest-album.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>최신음악</td>
+			<td>뮤직비디오</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/newest-mv.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="bar">
+			<td></td>
+			<td>추천음악</td>
+			<td>추천</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/recomm-recomm.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>추천음악</td>
+			<td>인기</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/recomm-popular.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>추천음악</td>
+			<td>상세</td>
+			<td>수록곡</td>
+			<td></td>
+			<td><a href="/html/recomm-detail-song.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>추천음악</td>
+			<td>상세</td>
+			<td>댓글</td>
+			<td></td>
+			<td><a href="/html/recomm-detail-reply.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>추천음악</td>
+			<td>상세</td>
+			<td>유사선곡</td>
+			<td></td>
+			<td><a href="/html/recomm-detail-similar.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>추천음악</td>
+			<td>태그</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/recomm-tag.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>추천음악</td>
+			<td>태그</td>
+			<td>태그 선택결과</td>
+			<td></td>
+			<td><a href="/html/recomm-tag-selected.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="bar">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>마이앨범</td>
+			<td>목록</td>
+			<td></td>
+			<td><a href="/html/mymusic-album-list.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>마이앨범</td>
+			<td>목록</td>
+			<td>마이앨범 데이터 없음, 로딩바 샘플 추가</td>
+			<td><a href="/html/mymusic-album-list-nodata.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>마이앨범</td>
+			<td>수록곡</td>
+			<td></td>
+			<td><a href="/html/mymusic-album-song.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>좋아요</td>
+			<td>가요</td>
+			<td></td>
+			<td><a href="/html/mymusic-history-latest-song-like.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>좋아요</td>
+			<td>앨범</td>
+			<td></td>
+			<td><a href="/html/mymusic-history-latest-album-like.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>좋아요</td>
+			<td>아티스트</td>
+			<td></td>
+			<td><a href="/html/mymusic-history-latest-artist-like.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>좋아요</td>
+			<td>동영상</td>
+			<td></td>
+			<td><a href="/html/mymusic-history-latest-mv-like.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>좋아요</td>
+			<td>추천</td>
+			<td></td>
+			<td><a href="/html/mymusic-history-latest-recomm-like.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>감상이력</td>
+			<td>최근 감상곡</td>
+			<td></td>
+			<td><a href="/html/mymusic-history-latest-song.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>감상이력</td>
+			<td>최근 감상 추천</td>
+			<td></td>
+			<td><a href="/html/mymusic-history-latest-recomm.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>감상이력</td>
+			<td>많이 들은 곡</td>
+			<td></td>
+			<td><a href="/html/mymusic-history-fav-song.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>감상이력</td>
+			<td>많이 들은 아티스트</td>
+			<td></td>
+			<td><a href="/html/mymusic-history-fav-artist.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>다운로드 보관함</td>
+			<td>MP3 다운로드</td>
+			<td></td>
+			<td><a href="/html/mymusic-keep-download.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>마이뮤직</td>
+			<td>다운로드 보관함</td>
+			<td>무제한 다운로드</td>
+			<td></td>
+			<td><a href="/html/mymusic-keep-download-un.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="bar">
+			<td></td>
+			<td>검색</td>
+			<td>통합검색</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/search-result-all.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>검색</td>
+			<td>아티스트</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/search-result-artist.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>검색</td>
+			<td>곡</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/search-result-song.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>검색</td>
+			<td>앨범</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/search-result-album.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>검색</td>
+			<td>추천음악</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/search-result-recomm.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>검색</td>
+			<td>뮤직비디오</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/search-result-mv.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>검색</td>
+			<td>가사</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/search-result-lyrics.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="bar">
+			<td></td>
+			<td>기타</td>
+			<td>메인 팝업</td>
+			<td bgcolor="#fcb5b5">배너 사이즈 수정 700*660 / 510*660</td>
+			<td></td>
+			<td><a href="/html/main-popup.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>기타</td>
+			<td>에러 페이지</td>
+			<td>IE 호환성 안내</td>
+			<td></td>
+			<td><a href="/html/error-ie-compatibility.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>기타</td>
+			<td>에러 페이지</td>
+			<td>IE 버전 오류</td>
+			<td></td>
+			<td><a href="/html/error-ie-ver.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>기타</td>
+			<td>에러 페이지</td>
+			<td>윈도우즈 버전 오류</td>
+			<td></td>
+			<td><a href="/html/error-win-ver.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>기타</td>
+			<td>에러 페이지</td>
+			<td>네트워크 오류</td>
+			<td></td>
+			<td><a href="/html/error-network.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>기타</td>
+			<td>에러 페이지</td>
+			<td>정기점검</td>
+			<td></td>
+			<td><a href="/html/error-inspection.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>기타</td>
+			<td>비밀번호 변경안내 팝업</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/popup-password-change.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>기타</td>
+			<td>공유하기 팝업</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/pop-share.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="bar">
+			<td></td>
+			<td>다운로드</td>
+			<td>다운로드 대기곡</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/download-step1.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>다운로드</td>
+			<td>다운로드 대기곡</td>
+			<td bgcolor="#fcb5b5">mac</td>
+			<td>결제관련 비노출</td>
+			<td><a href="/html/download-step1-mac.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>다운로드</td>
+			<td>결제수단 선택</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/download-step2.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>다운로드</td>
+			<td>결제 완료</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/download-step3.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>다운로드</td>
+			<td>결제 완료</td>
+			<td bgcolor="#fcb5b5">mac</td>
+			<td>css,텍스트 변경</td>
+			<td><a href="/html/download-step3-mac.html">링크</a></td>
+			<td></td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>다운로드</td>
+			<td>결제 팝업</td>
+			<td></td>
+			<td></td>
+			<td><a href="/html/popup-payment.html">링크</a></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+<script type="text/javascript">
+$.fn.rowspan = function(colIdx, isStats) {
+	return this.each(function(){
+		var that;
+		$('tr', this).each(function(row) {
+			$('td:eq('+colIdx+')', this).filter(':visible').each(function(col) {
+
+				if ($(this).html() != "" && $(this).html() == $(that).html() && (!isStats || isStats && $(this).prev().html() == $(that).prev().html())) {
+					rowspan = $(that).attr("rowspan") || 1;
+					rowspan = Number(rowspan)+1;
+					$(that).attr("rowspan",rowspan);
+					$(this).addClass("hide").hide();
+				} else {
+					that = this;
+				}
+				that = (that == null) ? this : that;
+			});
+		});
+	});
+};
+$('table').rowspan(1);
+$('table').rowspan(2);
+$('table').rowspan(3);
+$("table tbody tr").each(function(i,e){
+	$(this).find("td").eq(0).text(i + 1);
+	$(this).find(".hide").remove();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>genie</title>
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/css/swiper.css">
+<link rel="stylesheet" type="text/css" href="/css/layout.css">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script type="text/javascript" src="/js/plugins/modernizr.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.transit.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.fakeform.min.js"></script>
+<script type="text/javascript" src="/js/plugins/swiper.min.js"></script>
+<script type="text/javascript" src="/js/ui-front.js"></script>
+</head>
+
+<body>
+
+<a href="#" onclick="openCenterPop($('#popLoginHappyMoney'), $(this)); return false;">해피머니 로그인</a><br><br>
+<div id="popLoginHappyMoney" class="pop-wrap">
+    <div class="pop-layer pop-payment-login">
+        <h3>해피머니 상품권 결제</h3>
+        <a class="close" href="#">닫기</a>
+        <div class="pop-content">
+            <form>
+               <fieldset>
+                   <legend>해피머니 로그인</legend>
+                   <label for="inputIdHM">아이디</label>
+                   <input type="text" id="inputIdHM" placeholder="해피머니 아이디 입력">
+                   <label for="inputPassHM">비밀번호</label>
+                   <input type="password" id="inputPassHM" placeholder="비밀번호 입력">
+               </fieldset>
+            </form>
+        </div>
+        <div class="pop-bottom">
+            <a class="btn-action confirm" href="#">로그인</a>
+            <a class="btn-action" href="#" onclick="$('#popLoginHappyMoney').hide(); return false;">취소</a>
+        </div>
+        <div class="pop-bottom-notice">
+            <h4>유의사항</h4>
+            <ul class="list-txt">
+                <li>해피머니 사이트에서 해피캐시 잠금 풀기 후 로그인이 가능합니다.</li>
+                <li>결제 비밀번호 이용고객은 비밀번호 입력란에 결제 비밀번호를 입력해 주세요. <a class="btn-link" href="#">해피머니 바로가기</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<a href="#" onclick="openCenterPop($('#popPaymentHappyMoney'), $(this)); return false;">해피머니 상품권 결제</a><br><br>
+<div id="popPaymentHappyMoney" class="pop-wrap">
+    <div class="pop-layer pop-payment-pay">
+        <h3>해피머니 상품권 결제</h3>
+        <a class="close" href="#">닫기</a>
+        <div class="pop-content">
+            <table class="tbl-rows">
+                <caption>결제수단 선택 및 결제정보,구매곡 수, 상세설명 확인</caption>
+                <colgroup>
+                    <col style="width:140px">
+                    <col>
+                </colgroup>
+                <tr>
+                    <th scope="row">결제금액 (VAT 별도)</th>
+                    <td><strong class="clr-r">123,456원</strong></td>
+                </tr>
+                <tr>
+                    <th scope="row">구매할 곡 수</th>
+                    <td><strong>100곡</strong></td>
+                </tr>
+                <tr>
+                    <th scope="row">해피머니 캐시</th>
+                    <td><strong class="clr-b">120,000</strong></td>
+                </tr>
+                <tr class="payment">
+                    <th scope="row">결제부족 금액</th>
+                    <td>
+                        <strong class="clr-gb">120,000</strong>
+                        <a class="btn-basic" href="#">충전하기</a>
+                        <a class="btn-refresh" href="#">새로고침</a>
+                    </td>
+                </tr>
+            </table>
+            <p class="caution">북앤라이프 캐시가 부족합니다. <br>충전 후 결제하시거나 다른 결제 수단을 선택해 주세요.<br>충천 후, 새로고침 하시면 충전된 금액을 확인하실 수 있습니다.</p>
+        </div>
+        <div class="pop-bottom">
+            <a class="btn-action confirm" href="#">결제</a>
+            <a class="btn-action" href="#" onclick="$('#popPaymentHappyMoney').hide(); return false;">취소</a>
+            <a class="btn-action confirm" href="#">확인</a>
+        </div>
+    </div>
+</div>
+
+<a href="#" onclick="openCenterPop($('#popLoginBookLife'), $(this)); return false;">북앤라이프 로그인</a><br><br>
+<div id="popLoginBookLife" class="pop-wrap">
+    <div class="pop-layer pop-payment-login">
+        <h3>도서문화 상품권 결제</h3>
+        <a class="close" href="#">닫기</a>
+        <div class="pop-content">
+            <form>
+               <fieldset>
+                   <legend>해피머니 로그인</legend>
+                   <label for="inputIdBL">아이디</label>
+                   <input type="text" id="inputIdBL" placeholder="북앤라이프 아이디 입력">
+                   <label for="inputPassBL">비밀번호</label>
+                   <input type="password" id="inputPassBL" placeholder="비밀번호 입력">
+               </fieldset>
+            </form>
+        </div>
+        <div class="pop-bottom">
+            <a class="btn-action confirm" href="#">로그인</a>
+            <a class="btn-action" href="#" onclick="$('#popLoginBookLife').hide(); return false;">취소</a>
+        </div>
+        <div class="pop-bottom-notice">
+            <h4>유의사항</h4>
+            <ul class="list-txt">
+                <li>도서상품권을 북앤라이프 캐시로 전환한 후 사용하실 수 있습니다. <a class="btn-link" href="#">북앤라이프 바로가기</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<a href="#" onclick="openCenterPop($('#popPaymentBookLife'), $(this)); return false;">도서문화 상품권 결제</a><br><br>
+<div id="popPaymentBookLife" class="pop-wrap">
+    <div class="pop-layer pop-payment-pay">
+        <h3>도서문화 상품권 결제</h3>
+        <a class="close" href="#">닫기</a>
+        <div class="pop-content">
+            <table class="tbl-rows">
+                <caption>결제수단 선택 및 결제정보,구매곡 수, 상세설명 확인</caption>
+                <colgroup>
+                    <col style="width:140px">
+                    <col>
+                </colgroup>
+                <tr>
+                    <th scope="row">결제금액 (VAT 별도)</th>
+                    <td><strong class="clr-r">123,456원</strong></td>
+                </tr>
+                <tr>
+                    <th scope="row">구매할 곡 수</th>
+                    <td><strong>100곡</strong></td>
+                </tr>
+                <tr>
+                    <th scope="row">북앤라이프 캐시</th>
+                    <td><strong class="clr-b">120,000</strong></td>
+                </tr>
+                <tr class="payment">
+                    <th scope="row">결제부족 금액</th>
+                    <td>
+                        <strong class="clr-gb">120,000</strong>
+                        <a class="btn-basic" href="#">충전하기</a>
+                        <a class="btn-refresh" href="#">새로고침</a>
+                    </td>
+                </tr>
+            </table>
+            <p class="caution">북앤라이프 캐시가 부족합니다. <br>충전 후 결제하시거나 다른 결제 수단을 선택해 주세요.<br>충천 후, 새로고침 하시면 충전된 금액을 확인하실 수 있습니다.</p>
+        </div>
+        <div class="pop-bottom">
+            <a class="btn-action confirm" href="#">결제</a>
+            <a class="btn-action" href="#" onclick="$('#popPaymentBookLife').hide(); return false;">취소</a>
+            <a class="btn-action confirm" href="#">확인</a>
+        </div>
+    </div>
+</div>
+
+
+<a href="#" onclick="openCenterPop($('#popPaymentOKcert'), $(this)); return false;">OK캐쉬백 인증</a><br><br>
+<div id="popPaymentOKcert" class="pop-wrap">
+    <div class="pop-layer pop-payment-pay  pop-payment-okc">
+        <h3>OK캐쉬백 결제</h3>
+        <a class="close" href="#">닫기</a>
+        <div class="pop-content">
+            <table class="tbl-rows">
+                <caption>OK캐쉬백 카드번호 및 비밀번호 입력</caption>
+                <colgroup>
+                    <col style="width:140px">
+                    <col>
+                </colgroup>
+                <tr class="number">
+                    <th scope="row"><label for="inputOKcardNum1">OK캐쉬백 카드번호</label></th>
+                    <td>
+                        <input type="text" id="inputOKcardNum1" title="OK캐쉬백 카드번호 앞 네자리">
+                        <span>-</span>
+                        <input type="password" id="inputOKcardNum2" title="OK캐쉬백 카드번호 두번째 네자리">
+                        <span>-</span>
+                        <input type="password" id="inputOKcardNum3" title="OK캐쉬백 카드번호 세번째 네자리">
+                        <span>-</span>
+                        <input type="text" id="inputOKcardNum4" title="OK캐쉬백 카드번호 마지막 네자리">
+                    </td>
+                </tr>
+                <tr class="password">
+                    <th scope="row"><label for="inputOKcardPass">온라인 카드 비밀번호</label></th>
+                    <td>
+                        <input type="password" id="inputOKcardNum1" title="OK캐쉬백 온라인 카드 비밀번호">
+                        <a class="btn-link" href="#">비밀번호 등록하기</a>
+                    </td>
+                </tr>
+            </table>
+            <div class="pop-bottom-notice">
+                <h4>개인 정보 수집에 대한 동의</h4>
+                <ul class="list-txt">
+                    <li>개인 정보의 수집, 이용 목적 : OK캐쉬백 포인트 적립/사용 시 본인 확인</li>
+                    <li>수집하는 개인 정보의 항목 : OK캐쉬백 카드번호</li>
+                    <li>개인 정보의 보유, 이용 기간 : OK캐쉬백 포인트 서비스 탈퇴 시까지</li>
+                </ul>
+                <p>※ 동의하지 않을 경우 OK캐쉬백 포인트 적립 및 사용이 불가능합니다.</p>
+            </div>
+            <div class="agree"><input type="checkbox" id="checkAgreeOkPolicy"><label for="checkAgreeOkPolicy">위 개인 정보 수집 및 이용에 동의합니다.</label></div>
+        </div>
+        <div class="pop-bottom">
+            <a class="btn-action confirm" href="#">인증받기</a>
+            <a class="btn-action" href="#" onclick="$('#popPaymentOKcert').hide(); return false;">취소</a>
+        </div>
+    </div>
+</div>
+
+
+<a href="#" onclick="openCenterPop($('#popPaymentOK'), $(this)); return false;">OK캐쉬백 결제</a><br><br>
+<div id="popPaymentOK" class="pop-wrap">
+    <div class="pop-layer pop-payment-pay">
+        <h3>OK캐쉬백 결제</h3>
+        <a class="close" href="#">닫기</a>
+        <div class="pop-content">
+            <table class="tbl-rows">
+                <caption>결제수단 선택 및 결제정보,구매곡 수, 상세설명 확인</caption>
+                <colgroup>
+                    <col style="width:140px">
+                    <col>
+                </colgroup>
+                <tr>
+                    <th scope="row">결제금액 (VAT 별도)</th>
+                    <td><strong class="clr-r">123,456원</strong></td>
+                </tr>
+                <tr>
+                    <th scope="row">구매할 곡 수</th>
+                    <td><strong>100곡</strong></td>
+                </tr>
+                <tr>
+                    <th scope="row">OK캐쉬백 포인트</th>
+                    <td><strong class="clr-b">120,000</strong></td>
+                </tr>
+                <tr>
+                    <th scope="row">결제부족 금액</th>
+                    <td><strong class="clr-gb">120,000</strong></td>
+                </tr>
+            </table>
+            <p class="caution">OK캐쉬백 포인트가 부족합니다. <br>다른 결제 수단을 선택해 주세요.</p>
+        </div>
+        <div class="pop-bottom">
+            <a class="btn-action confirm" href="#" onclick="$('#popPaymentOK').hide(); return false;">확인</a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

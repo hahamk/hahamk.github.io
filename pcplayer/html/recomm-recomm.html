@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>genie</title>
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/css/swiper.css">
+<link rel="stylesheet" type="text/css" href="/css/layout.css">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script type="text/javascript" src="/js/plugins/modernizr.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.transit.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="/js/plugins/swiper.min.js"></script>
+<script type="text/javascript" src="/js/ui-front.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+    <!-- header(좌측 메뉴 영역) -->
+    <div id="header">
+        <div class="side">
+            <div class="top">
+                <h1><a href="#">genie</a></h1>
+                <div class="history">
+                    <a class="prev" href="#">이전 페이지</a>
+                    <a class="next" href="#">다음 페이지</a>
+                </div>
+            </div>
+            <div id="gnb">
+                <ul class="quick">
+                    <li><a href="#">이용권구매</a></li>
+                    <li><a href="#">상품권등록</a></li>
+                </ul>
+                <ul class="nav">
+                    <li class="n1 open"><a href="#">지니차트</a><!-- 기본값이 열린 경우 클래스에 open 추가 -->
+                        <ul>
+                            <li class="selected"><a href="#">TOP100</a></li><!-- 선택시 li에 selected -->
+                            <li><a href="#">장르별</a></li>
+                            <li><a href="#">뮤직비디오</a></li>
+                            <li><a href="#">좋아요</a></li>
+                        </ul>
+                    </li>
+                    <li class="n2 open"><a href="#">최신음악</a><!-- 기본값이 열린 경우 클래스에 open 추가 -->
+                        <ul>
+                            <li><a href="#">곡</a></li>
+                            <li><a href="#">앨범</a></li>
+                            <li><a href="#">뮤직비디오</a></li>
+                        </ul>
+                    </li>
+                    <li class="n3"><a href="#">장르음악</a>
+                        <ul>
+                            <li><a href="#">가요</a></li>
+                            <li><a href="#">POP</a></li>
+                            <li><a href="#">OST</a></li>
+                            <li><a href="#">EDM</a></li>
+                            <li><a href="#">JAZZ</a></li>
+                            <li><a href="#">CLASSIC</a></li>
+                            <li><a href="#">JPOP</a></li>
+                            <li><a href="#">CCM</a></li>
+                            <li><a href="#">그 외 장르</a></li>
+                        </ul>
+                    </li>
+                    <li class="n4"><a href="#">추천음악</a></li>
+                    <li class="n5"><a href="#">마이뮤직</a>
+                        <ul>
+                            <li><a href="#">마이앨범</a></li>
+                            <li><a href="#">감상이력</a></li>
+                            <li><a href="#">다운로드 보관함</a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <div class="notice">
+                    <a href="#">[공지]11/11 정기점검 안내 정기점검 안내</a>
+                </div>
+                <div class="banner">
+                    <div class="list-bnr-side swiper-container">
+                        <div class="swiper-paginate"></div>
+                        <div class="swiper-wrapper">
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-content">
+            <fieldset>
+                <legend>검색</legend>
+                <span class="wrap">
+                    <input type="search" id="searchMusic" name="" value="기본검색값" title="검색어 입력">
+                    <input class="clear" type="button" id="searchMusicClear" name="" title="검색어 삭제">
+                    <input class="search" type="button" id="" name="" title="검색">
+                </span>
+            </fieldset>
+            <div class="my-info">
+                <!-- 로그인 전 -->
+                <!-- <div class="my">
+                    <span class="pic"></span>
+                    <a class="login" href="#">로그인</a>
+                </div> -->
+                <!-- //로그인 전 -->
+                <!-- 로그인 후 -->
+                <div id="wrapMyInfo" class="my">
+                    <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                    <a class="login toggle" id="btnMyInfo" href="#">로그인</a>
+                    <!-- 로그인 정보 -->
+                    <div id="divMyInfo" class="info">
+                        <ul>
+                            <li class="cash"><strong class="title">지니캐시</strong><a class="btn-func" href="#"><span class="ico">&#8361; 충전</span></a><strong class="value">4,700원</strong></li>
+                            <li><strong class="title">이용중인 상품</strong><span class="value">총 2개</span>
+                                <ul>
+                                    <li><p>30곡 다운로드(30일마다 자동결제)</p><p>잔여일 : D-5</p></li>
+                                    <li><p>스마트 다운로드 + 음악감상 (30일) 길어지면 줄임표 처리</p><p>잔여일 : 부가서비스 해지 시까지</p></li>
+                                </ul>
+                            </li>
+                            <li><strong class="title">이용권 보관함</strong><span class="value">총 2개</span>
+                                <ul>
+                                    <li><p>월 30곡 다운로드(30일)</p></li>
+                                    <li><p>스마트 다운로드+음악감상(30일)</p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="sign">
+                            <a href="#">내정보</a>
+                            <a href="#">로그아웃</a>
+                        </div>
+                    </div>
+                    <!-- //로그인 정보 -->
+                </div>
+                <!-- //로그인 후 -->
+                <a class="download" href="#"><!-- 1곡 이상일 경우 --><span class="num">1</span><!-- //1곡 이상일 경우 --></a>
+            </div>
+        </div>
+    </div>
+    <!-- //header(좌측 메뉴 영역) -->
+    <!-- content(우측 콘텐츠 영역) -->
+    <div id="container">
+    <div id="content">
+        <div class="section-chart">
+            <h2>추천음악</h2>
+            <!-- 탭 -->
+            <div id="tabRecomm" class="tab-carousel">
+                <span class="btn prev"><button>이전</button></span>
+                <div class="holder">
+                    <ul>
+                        <li class="active"><a href="#"><span>추천</span></a></li>
+                        <li><a href="#"><span>인기</span></a></li>
+                        <li><a href="#"><span>태그</span></a></li>
+                    </ul>
+                </div>
+                <span class="btn next"><button>다음</button></span>
+            </div>
+            <!-- //탭 -->
+            <!-- 목록 -->
+            <div class="list-common-wrap">
+                <div class="list-common list-recomm"><div class="list-inner">
+                    <!-- loop -->
+                    <div class="list-row">
+<!--
+                        <div class="list-cell check" list-role="선택">
+                            <input type="checkbox" id="seqMusic1" name="">
+                            <label class="alone" for="seqMusic1">선택</label>
+                        </div>
+-->
+                        <div class="list-cell rank number" list-role="번호"><!-- 랭크가 아니고 번호일 경우 number 추가 -->
+                            <strong class="num">1</strong>
+                        </div>
+                        <div class="list-cell artwork" list-role="앨범커버">
+                            <a class="pic" href="#"><img src="/images/temp/thumb-120x120-2.jpg" alt="대체텍스트"></a>
+                        </div>
+                        <div class="list-cell button play" list-role="듣기">
+                            <a class="btn-list play" href="#"><span class="ico">듣기</span></a>
+                        </div>
+                        <div class="list-cell button add" list-role="추가">
+                            <a class="btn-list add" href="#"><span class="ico">재생목록에 추가</span></a>
+                        </div>
+                        <div class="list-cell selection" list-role="선곡 정보">
+                            <p class="top"><span class="category">오늘의 선곡</span><span class="date">2017. 08. 11</span></p>
+                            <p class="title"><a href="#">스트레스를 날려줄 강력한 락</a></p>
+                            <ul class="tags">
+                                <li><a class="btn-tag" href="#">#오늘의 선곡</a></li>
+                                <li><a class="btn-tag" href="#">#DJ 안선수</a></li>
+                                <li><a class="btn-tag" href="#">#POP</a></li>
+                                <li><a class="btn-tag" href="#">#드라이브</a></li>
+                                <li><a class="btn-tag" href="#">#산책</a></li>
+                            </ul>
+                            <div class="info"><ul>
+                                <!--<li class="i1">
+                                    <a class="link-user" href="#">
+                                        <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                                        <span class="name">DJ 빡세</span>
+                                    </a>
+                                </li>-->
+                                <li class="i2"><span class="ico-like"><span class="accessibility">좋아요 </span>111</span></li>
+                                <li class="i3"><span class="ico-length">111곡</span></li>
+                            </ul></div>
+                        </div>
+                        <!--<div class="list-cell extend dj" list-role="DJ명">
+                            <a class="link-user" href="#">
+                                <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                                <span class="name">DJ 빡세</span>
+                            </a>
+                        </div>-->
+                        <div class="list-cell extend date" list-role="게시일">
+                            <span class="date">2017. 08. 11</span>
+                        </div>
+                        <div class="list-cell extend like" list-role="좋아요">
+                            <span class="ico-like"><span class="accessibility">좋아요 </span>111</span>
+                        </div>
+                        <div class="list-cell extend length" list-role="곡 수">
+                            <span class="ico-length">111곡</span>
+                        </div>
+                    </div>
+                    <!-- //loop -->
+                    <!-- loop -->
+                    <div class="list-row">
+<!--
+                        <div class="list-cell check" list-role="선택">
+                            <input type="checkbox" id="seqMusic2" name="">
+                            <label class="alone" for="seqMusic2">선택</label>
+                        </div>
+-->
+                        <div class="list-cell rank number" list-role="번호"><!-- 랭크가 아니고 번호일 경우 number 추가 -->
+                            <strong class="num">2</strong>
+                        </div>
+                        <div class="list-cell artwork" list-role="앨범커버">
+                            <a class="pic" href="#"><img src="/images/temp/thumb-120x120-2.jpg" alt="대체텍스트"></a>
+                        </div>
+                        <div class="list-cell button play" list-role="듣기">
+                            <a class="btn-list play" href="#"><span class="ico">듣기</span></a>
+                        </div>
+                        <div class="list-cell button add" list-role="추가">
+                            <a class="btn-list add" href="#"><span class="ico">재생목록에 추가</span></a>
+                        </div>
+                        <div class="list-cell selection" list-role="선곡 정보">
+                            <p class="top"><span class="category">오늘의 선곡</span><span class="date">2017. 08. 11</span></p>
+                            <p class="title"><a href="#">스트레스를 날려줄 강력한 락</a></p>
+                            <ul class="tags">
+                                <li><a class="btn-tag" href="#">#오늘의 선곡</a></li>
+                                <li><a class="btn-tag" href="#">#DJ 안선수</a></li>
+                                <li><a class="btn-tag" href="#">#POP</a></li>
+                                <li><a class="btn-tag" href="#">#드라이브</a></li>
+                                <li><a class="btn-tag" href="#">#산책</a></li>
+                            </ul>
+                            <div class="info"><ul>
+                                <!--<li class="i1">
+                                    <a class="link-user" href="#">
+                                        <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                                        <span class="name">DJ 빡세</span>
+                                    </a>
+                                </li>-->
+                                <li class="i2"><span class="ico-like"><span class="accessibility">좋아요 </span>111</span></li>
+                                <li class="i3"><span class="ico-length">111곡</span></li>
+                            </ul></div>
+                        </div>
+                        <!--<div class="list-cell extend dj" list-role="DJ명">
+                            <a class="link-user" href="#">
+                                <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                                <span class="name">DJ 빡세</span>
+                            </a>
+                        </div>-->
+                        <div class="list-cell extend date" list-role="게시일">
+                            <span class="date">2017. 08. 11</span>
+                        </div>
+                        <div class="list-cell extend like" list-role="좋아요">
+                            <span class="ico-like"><span class="accessibility">좋아요 </span>111</span>
+                        </div>
+                        <div class="list-cell extend length" list-role="곡 수">
+                            <span class="ico-length">111곡</span>
+                        </div>
+                    </div>
+                    <!-- //loop -->
+                    <!-- loop -->
+                    <div class="list-row">
+<!--
+                        <div class="list-cell check" list-role="선택">
+                            <input type="checkbox" id="seqMusic3" name="">
+                            <label class="alone" for="seqMusic3">선택</label>
+                        </div>
+-->
+                        <div class="list-cell rank number" list-role="번호"><!-- 랭크가 아니고 번호일 경우 number 추가 -->
+                            <strong class="num">3</strong>
+                        </div>
+                        <div class="list-cell artwork" list-role="앨범커버">
+                            <a class="pic" href="#"><img src="/images/temp/thumb-120x120-2.jpg" alt="대체텍스트"></a>
+                        </div>
+                        <div class="list-cell button play" list-role="듣기">
+                            <a class="btn-list play" href="#"><span class="ico">듣기</span></a>
+                        </div>
+                        <div class="list-cell button add" list-role="추가">
+                            <a class="btn-list add" href="#"><span class="ico">재생목록에 추가</span></a>
+                        </div>
+                        <div class="list-cell selection" list-role="선곡 정보">
+                            <p class="top"><span class="category">오늘의 선곡</span><span class="date">2017. 08. 11</span></p>
+                            <p class="title"><a href="#">스트레스를 날려줄 강력한 락 스트레스를 날려줄 강력한 락 스트레스를 날려줄 강력한 락</a></p>
+                            <ul class="tags">
+                                <li><a class="btn-tag" href="#">#오늘의 선곡</a></li>
+                                <li><a class="btn-tag" href="#">#DJ 안선수</a></li>
+                                <li><a class="btn-tag" href="#">#POP</a></li>
+                                <li><a class="btn-tag" href="#">#드라이브</a></li>
+                                <li><a class="btn-tag" href="#">#산책</a></li>
+                            </ul>
+                            <div class="info"><ul>
+                                <!--<li class="i1">
+                                    <a class="link-user" href="#">
+                                        <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                                        <span class="name">DJ 빡세</span>
+                                    </a>
+                                </li>-->
+                                <li class="i2"><span class="ico-like"><span class="accessibility">좋아요 </span>111</span></li>
+                                <li class="i3"><span class="ico-length">111곡</span></li>
+                            </ul></div>
+                        </div>
+                        <!--<div class="list-cell extend dj" list-role="DJ명">
+                            <a class="link-user" href="#">
+                                <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                                <span class="name">DJ 빡세</span>
+                            </a>
+                        </div>-->
+                        <div class="list-cell extend date" list-role="게시일">
+                            <span class="date">2017. 08. 11</span>
+                        </div>
+                        <div class="list-cell extend like" list-role="좋아요">
+                            <span class="ico-like"><span class="accessibility">좋아요 </span>111</span>
+                        </div>
+                        <div class="list-cell extend length" list-role="곡 수">
+                            <span class="ico-length">111곡</span>
+                        </div>
+                    </div>
+                    <!-- //loop -->
+                    <!-- loop -->
+                    <div class="list-row">
+<!--
+                        <div class="list-cell check" list-role="선택">
+                            <input type="checkbox" id="seqMusic4" name="">
+                            <label class="alone" for="seqMusic4">선택</label>
+                        </div>
+-->
+                        <div class="list-cell rank number" list-role="번호"><!-- 랭크가 아니고 번호일 경우 number 추가 -->
+                            <strong class="num">4</strong>
+                        </div>
+                        <div class="list-cell artwork" list-role="앨범커버">
+                            <a class="pic" href="#"><img src="/images/temp/thumb-120x120-2.jpg" alt="대체텍스트"></a>
+                        </div>
+                        <div class="list-cell button play" list-role="듣기">
+                            <a class="btn-list play" href="#"><span class="ico">듣기</span></a>
+                        </div>
+                        <div class="list-cell button add" list-role="추가">
+                            <a class="btn-list add" href="#"><span class="ico">재생목록에 추가</span></a>
+                        </div>
+                        <div class="list-cell selection" list-role="선곡 정보">
+                            <p class="top"><span class="category">오늘의 선곡</span><span class="date">2017. 08. 11</span></p>
+                            <p class="title"><a href="#">스트레스를 날려줄 강력한 락</a></p>
+                            <ul class="tags">
+                                <li><a class="btn-tag" href="#">#오늘의 선곡</a></li>
+                                <li><a class="btn-tag" href="#">#DJ 안선수</a></li>
+                                <li><a class="btn-tag" href="#">#POP</a></li>
+                                <li><a class="btn-tag" href="#">#드라이브</a></li>
+                                <li><a class="btn-tag" href="#">#산책</a></li>
+                            </ul>
+                            <div class="info"><ul>
+                                <!--<li class="i1">
+                                    <a class="link-user" href="#">
+                                        <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                                        <span class="name">DJ 빡세</span>
+                                    </a>
+                                </li>-->
+                                <li class="i2"><span class="ico-like"><span class="accessibility">좋아요 </span>111</span></li>
+                                <li class="i3"><span class="ico-length">111곡</span></li>
+                            </ul></div>
+                        </div>
+                        <!--<div class="list-cell extend dj" list-role="DJ명">
+                            <a class="link-user" href="#">
+                                <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                                <span class="name">DJ 빡세</span>
+                            </a>
+                        </div>-->
+                        <div class="list-cell extend date" list-role="게시일">
+                            <span class="date">2017. 08. 11</span>
+                        </div>
+                        <div class="list-cell extend like" list-role="좋아요">
+                            <span class="ico-like"><span class="accessibility">좋아요 </span>111</span>
+                        </div>
+                        <div class="list-cell extend length" list-role="곡 수">
+                            <span class="ico-length">111곡</span>
+                        </div>
+                    </div>
+                    <!-- //loop -->
+                    <!-- loop -->
+                    <div class="list-row">
+<!--
+                        <div class="list-cell check" list-role="선택">
+                            <input type="checkbox" id="seqMusic5" name="">
+                            <label class="alone" for="seqMusic5">선택</label>
+                        </div>
+-->
+                        <div class="list-cell rank number" list-role="번호"><!-- 랭크가 아니고 번호일 경우 number 추가 -->
+                            <strong class="num">5</strong>
+                        </div>
+                        <div class="list-cell artwork" list-role="앨범커버">
+                            <a class="pic" href="#"><img src="/images/temp/thumb-120x120-2.jpg" alt="대체텍스트"></a>
+                        </div>
+                        <div class="list-cell button play" list-role="듣기">
+                            <a class="btn-list play" href="#"><span class="ico">듣기</span></a>
+                        </div>
+                        <div class="list-cell button add" list-role="추가">
+                            <a class="btn-list add" href="#"><span class="ico">재생목록에 추가</span></a>
+                        </div>
+                        <div class="list-cell selection" list-role="선곡 정보">
+                            <p class="top"><span class="category">오늘의 선곡</span><span class="date">2017. 08. 11</span></p>
+                            <p class="title"><a href="#">스트레스를 날려줄 강력한 락</a></p>
+                            <ul class="tags">
+                                <li><a class="btn-tag" href="#">#오늘의 선곡</a></li>
+                                <li><a class="btn-tag" href="#">#DJ 안선수</a></li>
+                                <li><a class="btn-tag" href="#">#POP</a></li>
+                                <li><a class="btn-tag" href="#">#드라이브</a></li>
+                                <li><a class="btn-tag" href="#">#산책</a></li>
+                            </ul>
+                            <div class="info"><ul>
+                                <!--<li class="i1">
+                                    <a class="link-user" href="#">
+                                        <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                                        <span class="name">DJ 빡세</span>
+                                    </a>
+                                </li>-->
+                                <li class="i2"><span class="ico-like"><span class="accessibility">좋아요 </span>111</span></li>
+                                <li class="i3"><span class="ico-length">111곡</span></li>
+                            </ul></div>
+                        </div>
+                        <!--<div class="list-cell extend dj" list-role="DJ명">
+                            <a class="link-user" href="#">
+                                <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                                <span class="name">DJ 빡세</span>
+                            </a>
+                        </div>-->
+                        <div class="list-cell extend date" list-role="게시일">
+                            <span class="date">2017. 08. 11</span>
+                        </div>
+                        <div class="list-cell extend like" list-role="좋아요">
+                            <span class="ico-like"><span class="accessibility">좋아요 </span>111</span>
+                        </div>
+                        <div class="list-cell extend length" list-role="곡 수">
+                            <span class="ico-length">111곡</span>
+                        </div>
+                    </div>
+                    <!-- //loop -->
+                </div></div>
+                <div class="more-load">
+                    <a href="#">더보기</a>
+                </div>
+            </div>
+            <!-- //목록 -->
+            <!-- 목록 기능 영역 -->
+<!--
+            <div class="list-function">
+                <span class="check"><input type="checkbox" id="checkAllList" name=""><label class="alone" for="checkAllList">전체선택</label></span>
+                <a class="btn-func play" href="#"><span class="ico">듣기</span></a>
+                <a class="btn-func add" href="#"><span class="ico">재생목록추가</span></a>
+                <a class="btn-func put" href="#"><span class="ico">담기</span></a>
+                <a class="btn-func down" href="#"><span class="ico">다운</span></a>
+                <p class="num"><span>0</span><span>곡 선택</span></p>
+            </div>
+-->
+            <!-- //목록 기능 영역 -->
+        </div>
+    </div>
+    </div>
+    <!-- content(우측 콘텐츠 영역) -->
+</div>
+<script>
+    //gnb init
+    var initGnb = new gnbAction();
+
+    //좌하단 배너 롤링 init
+    var bnrSwiper = new Swiper ('.list-bnr-side', {
+        pagination: '.list-bnr-side .swiper-paginate',
+        paginationClickable: true
+    });
+
+    //로그인 버튼 클릭
+    var initMyInfo = new toggleElem($("#wrapMyInfo"),$("#btnMyInfo"),$("#divMyInfo"));
+
+    //셀렉트박스(기본 셀렉트 없이 구현)
+    var initSelectTime = new selectBox($("#selectTime"));
+
+    //상단 롤링 탭 init
+    var initCarouselTab = new carouselTab($("#tabRecomm"));
+
+    $(function(){
+
+        //상단 검색 영역 커스텀 클리어 필드 버튼 동작 예시
+        var commonSearch = $("#searchMusic");
+        var commonSearchClear = $("#searchMusicClear");
+        var svalue = commonSearch.val();
+        commonSearch.on("focus",function(){
+            commonSearch.val("");
+        });
+        commonSearch.on("blur",function(){
+            if(commonSearch.val().length === 0){
+                commonSearch.val(svalue);
+            }
+        });
+        commonSearch.on("keyup",function(){
+            if(commonSearch.val().length > 0 && commonSearch.val() !== svalue){
+                commonSearchClear.show();
+            }
+        });
+        commonSearchClear.click(function(){
+           commonSearch.val("");
+        });
+
+
+        //음악 목록 UI 처리
+        var listMusic = $(".list-common");
+        listMusic.find(".list-row").each(function(index,element){
+            var _this = $(this);
+
+            //음악 목록 클릭 및 체크박스 선택시 토글 처리
+            /*_this.on("click",function(){
+                if(_this.hasClass("disabled")){
+                   return;
+                }
+                _this.find('input[type="checkbox"]').prop('checked',function(){
+                    return !$(this).prop('checked');
+                });
+                _this.toggleClass("selected");
+            });
+            _this.find('input[type="checkbox"]').on("change",function(){
+                if($(this).prop('checked')){
+                    _this.addClass("selected");
+                }else{
+                    _this.removeClass("selected");
+                }
+            });
+            _this.on("click","a",function(e){
+                e.stopPropagation();
+            });*/
+
+            //음악 목록 클릭 및 체크박스 선택시 토글 처리 - 변경
+            _this.on("click",function(e){
+                if(_this.hasClass("disabled")){
+                   return;
+                }
+                // 리스트 여백 클릭시
+                if($(e.target).hasClass("list-cell") || $(e.target).hasClass("ellipsis")){
+                    _this.siblings(".list-row").removeClass("selected");
+                    _this.siblings(".list-row").find('input[type="checkbox"]').prop('checked',false);
+                    _this.find('input[type="checkbox"]').prop('checked',true);
+                    _this.addClass("selected");
+                }else{
+                    e.stopPropagation();
+                }
+            });
+            _this.find('input[type="checkbox"]').on("change",function(){
+                if($(this).prop('checked')){
+                    _this.addClass("selected");
+                }else{
+                    _this.removeClass("selected");
+                }
+            });
+
+        });
+
+
+        $(window).resize(function(){
+            //
+        });
+
+    });
+</script>
+
+</body>
+</html>

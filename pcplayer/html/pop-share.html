@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>genie</title>
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/css/swiper.css">
+<link rel="stylesheet" type="text/css" href="/css/layout.css">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script type="text/javascript" src="/js/plugins/modernizr.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.transit.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.fakeform.min.js"></script>
+<script type="text/javascript" src="/js/plugins/swiper.min.js"></script>
+<script type="text/javascript" src="/js/ui-front.js"></script>
+</head>
+
+<body>
+
+<a href="#" onclick="openCenterPop($('#popShareSong'), $(this)); return false;">곡 공유하기</a><br><br>
+<div id="popShareSong" class="pop-wrap">
+    <div class="pop-layer pop-share">
+        <h3>공유하기</h3>
+        <a class="close" href="#">닫기</a>
+        <div class="pop-content">
+            <div class="info">
+                <span class="artwork"><img src="/images/temp/thumb-120x120-2.jpg" onerror="this.src='/images/common/img-noimage-120x120.jpg';" alt="앨범명"></span>
+                <ul>
+                    <li><span>곡</span><p><strong>비도 오고 그래서</strong></p></li>
+                    <li><span>아티스트</span><p>헤이즈(Heize)</p></li>
+                    <li><span>앨범명</span><p>///(너 먹구름 비) 앨범명이 길어지면 글자를 줄입니다.</p></li>
+                </ul>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="checkShareSongType1"><label for="checkShareSongType1">페이스북</label>
+                <input type="checkbox" id="checkShareSongType2"><label for="checkShareSongType2">트위터</label>
+                <input type="checkbox" id="checkShareSongType3"><label for="checkShareSongType3">링크 url 만들기</label>
+            </div>
+            <textarea id="inputShareSongContent" placeholder="내용을 입력해 주세요."></textarea>
+        </div>
+        <div class="pop-bottom">
+            <a class="btn-action confirm" href="#">공유하기</a>
+            <a class="btn-action" href="#" onclick="$('#popShareSong').hide(); return false;">취소</a>
+        </div>
+    </div>
+</div>
+    
+<a href="#" onclick="openCenterPop($('#popShareAlbum'), $(this)); return false;">앨범 공유하기</a><br><br>
+<div id="popShareAlbum" class="pop-wrap">
+    <div class="pop-layer pop-share">
+        <h3>공유하기</h3>
+        <a class="close" href="#">닫기</a>
+        <div class="pop-content">
+            <div class="info">
+                <span class="artwork"><img src="/images/temp/thumb-120x120-2.jpg" onerror="this.src='/images/common/img-noimage-120x120.jpg';" alt="앨범명"></span>
+                <ul>
+                    <li><span>앨범명</span><p><strong>///(너 먹구름 비) 앨범명이 길어지면 글자를 줄입니다.</strong></p></li>
+                    <li><span>아티스트</span><p>헤이즈(Heize)</p></li>
+                    <li><span>앨범유형</span><p>정규</p></li>
+                    <li><span>발매일</span><p>2017.06.26</p></li>
+                    <li><span>장르</span><p>가요/전체</p></li>
+                </ul>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="checkShareAlbumType1"><label for="checkShareAlbumType1">페이스북</label>
+                <input type="checkbox" id="checkShareAlbumType2"><label for="checkShareAlbumType2">트위터</label>
+                <input type="checkbox" id="checkShareAlbumType3"><label for="checkShareAlbumType3">링크 url 만들기</label>
+            </div>
+            <textarea id="inputShareContent" placeholder="내용을 입력해 주세요."></textarea>
+        </div>
+        <div class="pop-bottom">
+            <a class="btn-action confirm" href="#">공유하기</a>
+            <a class="btn-action" href="#" onclick="$('#popShareAlbum').hide(); return false;">취소</a>
+        </div>
+    </div>
+</div>
+
+<a href="#" onclick="openCenterPop($('#popShareArtist'), $(this)); return false;">아티스트 공유하기</a><br><br>
+<div id="popShareArtist" class="pop-wrap">
+    <div class="pop-layer pop-share">
+        <h3>공유하기</h3>
+        <a class="close" href="#">닫기</a>
+        <div class="pop-content">
+            <div class="info">
+                <span class="artwork artist" style="background-image:url(/images/temp/thumb-120x120.jpg)">아티스트명</span>
+                <ul>
+                    <li><span>아티스트</span><p><strong>샤이니 (SHINee) 아티스트명 길어지면 글자를 줄입니다.</strong></p></li>
+                    <li><span>활동유형</span><p>남성/그룹</p></li>
+                    <li><span>활동연대</span><p>2000년대</p></li>
+                    <li><span>데뷔</span><p>2008년/누난 너무 예뻐(Replay)</p></li>
+                    <li><span>국적</span><p>한국</p></li>
+                </ul>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="checkShareArtistType1"><label for="checkShareArtistType1">페이스북</label>
+                <input type="checkbox" id="checkShareArtistType2"><label for="checkShareArtistType2">트위터</label>
+                <input type="checkbox" id="checkShareArtistType3"><label for="checkShareArtistType3">링크 url 만들기</label>
+            </div>
+            <textarea id="inputShareArtistContent" placeholder="내용을 입력해 주세요."></textarea>
+        </div>
+        <div class="pop-bottom">
+            <a class="btn-action confirm" href="#">공유하기</a>
+            <a class="btn-action" href="#" onclick="$('#popShareArtist').hide(); return false;">취소</a>
+        </div>
+    </div>
+</div>
+
+<a href="#" onclick="openCenterPop($('#popShareComp'), $(this)); return false;">공유하기 완료</a><br><br>
+<div id="popShareComp" class="pop-wrap">
+    <div class="pop-layer pop-share">
+        <h3>공유하기</h3>
+        <a class="close" href="#">닫기</a>
+        <div class="pop-content">
+            <div class="comp">
+                <p><strong>공유하기가 완료되었습니다.</strong>URL을 복사하여 특정 친구들에게 문자나 메일로 보낼 수 있습니다.</p>
+                <h4>공유 URL</h4>
+                <div class="url">
+                    <input type="text" id="" value="www.genie.co.kr/sljdlsk">
+                    <a class="btn-basic" href="#">복사</a>
+                </div>
+            </div>
+        </div>
+        <div class="pop-bottom">
+            <a class="btn-action confirm" href="#" onclick="$('#popShareComp').hide(); return false;">확인</a>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

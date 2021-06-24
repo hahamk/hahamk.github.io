@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>genie</title>
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/css/swiper.css">
+<link rel="stylesheet" type="text/css" href="/css/layout.css">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script type="text/javascript" src="/js/plugins/modernizr.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.transit.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.fakeform.min.js"></script>
+<script type="text/javascript" src="/js/plugins/swiper.min.js"></script>
+<script type="text/javascript" src="/js/ui-front.js"></script>
+</head>
+
+<body>
+
+<a href="#" onclick="$('#popMainNotice1').show(); return false;">팝업 하나</a><br><br>
+<a href="#" onclick="$('#popMainNotice2').show(); return false;">팝업 두개</a>
+<div id="popMainNotice1" class="pop-wrap" style="display:none">
+    <div class="pop-layer pop-main-notice">
+        <div class="pop-content">
+            <!-- 하나일 경우 -->
+            <div class="set one"><a href="#"><img src="/images/temp/main-pop-2x.jpg" alt=""></a></div>
+            <!-- //하나일 경우 -->
+            <!-- 두개일 경우 -->
+            <!--<div class="set"><a href="#"><img src="/images/temp/main-pop1-2x.jpg" alt=""></a></div>
+            <div class="set"><a href="#"><img src="/images/temp/main-pop2-2x.jpg" alt=""></a></div>-->
+            <!-- //두개일 경우 -->
+        </div>
+        <div class="pop-close">
+            <input type="checkbox" id="closeToday"><label for="closeToday">하루 동안 이 창 열지 않음</label>
+            <a class="close" href="#" onclick="$('#popMainNotice1').hide(); return false;">닫기</a>
+        </div>
+    </div>
+</div>
+
+<div id="popMainNotice2" class="pop-wrap" style="display:none">
+    <div class="pop-layer pop-main-notice">
+        <div class="pop-content">
+            <!-- 하나일 경우 -->
+            <!--<div class="set"><a href="#"><img src="/images/temp/main-pop-2x.jpg" alt=""></a></div>-->
+            <!-- //하나일 경우 -->
+            <!-- 두개일 경우 -->
+            <div class="set"><a href="#"><img src="/images/temp/main-pop1-2x.jpg" alt=""></a></div>
+            <div class="set"><a href="#"><img src="/images/temp/main-pop2-2x.jpg" alt=""></a></div>
+            <!-- //두개일 경우 -->
+        </div>
+        <div class="pop-close">
+            <input type="checkbox" id="closeToday"><label for="closeToday">하루 동안 이 창 열지 않음</label>
+            <a class="close" href="#" onclick="$('#popMainNotice2').hide(); return false;">닫기</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

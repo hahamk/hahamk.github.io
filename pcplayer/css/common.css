@@ -1,0 +1,839 @@
+@charset "UTF-8";
+
+/* for jscrollpane */
+.jspContainer{overflow:hidden;position:relative}.jspHorizontalBar,.jspPane,.jspVerticalBar{position:absolute}.jspVerticalBar{top:0;right:0;width:7px;height:100%}.jspHorizontalBar{bottom:0;left:0;width:100%;height:16px;background:red}.jspDrag,.jspTrack{position:relative}.jspCap{display:none}.jspHorizontalBar .jspCap{float:left}.jspDrag{background:#ccc;opacity:.4;top:0;left:0;width:3px;cursor:pointer;-webkit-transition:opacity .5s;transition:opacity .5s;border-radius:1.5px}.jspScrollable:hover .jspDrag{opacity:1}.jspHorizontalBar .jspDrag,.jspHorizontalBar .jspTrack{float:left;height:100%}.jspArrow{background:#50506d;text-indent:-20000px;display:block;cursor:pointer;padding:0;margin:0}.jspArrow.jspDisabled{cursor:default;background:#80808d}.jspVerticalBar .jspArrow{height:16px}.jspHorizontalBar .jspArrow{width:16px;float:left;height:100%}.jspVerticalBar .jspArrow:focus{outline:0}.jspCorner{background:#eeeef4;float:left;height:100%}
+/**/ .jspPane {width:100% !important}
+
+/* for jquery selectbox */
+.select-title {display:inline-block; position:relative; border:1px solid #d9d9d9}
+.select-title:after {content:''; position:absolute; right:10px; top:12px; width:7px; height:4px; background:url(/images/common/ico-select-tri.png)}
+.select-title ~ .select-title {margin-left:5px}
+.select-title strong {display:block; overflow:hidden; width:100%; height:100%; padding:0 12px; height:28px; line-height:28px; font-weight:normal; box-sizing:border-box}
+.windows7 .select-title strong {line-height:26px}
+.select-title.focus,
+.select-title.active {border-color:#adb6c7}
+.select-title.wide {width:100% !important}
+.select-option {border:1px solid #adb6c7; background:#fff; overflow:auto; -webkit-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); -moz-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1)}
+.select-option ul {margin:0; padding:6px 0}
+.select-option li {list-style:none}
+.select-option span,
+.select-option strong {white-space:nowrap; text-decoration:none; line-height:30px; padding:0 12px; display:block; overflow:hidden; text-overflow:ellipsis; cursor:default; color:#666}
+.select-option span:hover {color:#27282d; background:#f5f7fa}
+.select-option span.selected {color:#0096ff; background:#fff}
+.select-option .disabled span,
+.select-option .disabled strong {text-decoration:line-through; background:none}
+
+.accessibility {position:absolute; left:-999em; width:1px; height:1px; opacity:0; font-size:0; line-height:0; cursor:default}
+.t_point {color:#0096ff}
+.fake-scroll-track {display:none; position:fixed; right:0; top:70px; bottom:0; width:10px; overflow-x:hidden; overflow-y:scroll}
+
+/** 박스,텍스트 리스트 타입 **/
+/* 목록 상단 공지 */
+.bx-notice {padding:18px 20px 16px; background:#f5f7fa; border-bottom:1px solid #e6e6e6}
+.bx-notice h3 {font-size:12px; font-weight:normal}
+.bx-notice h3 + ul {margin-top:10px}
+.bx-notice ul li {position:relative; padding-left:7px;  line-height:1.666em; color:#8c8c8c}
+.bx-notice ul li:after {content:''; position:absolute; left:0; top:0.8em; width:1px; height:1px; background:#8c8c8c}
+.windows7 .bx-notice ul li:after {top:0.9em}
+.bx-notice ul li ~ li {margin-top:0.4em}
+/* 공통 기본 텍스트+불릿 */
+.list-txt li {position:relative; padding-left:6px;  line-height:1.666em; color:#666}
+.list-txt li:after {content:''; position:absolute; left:0; top:0.8em; width:1px; height:1px; background:#666}
+.windows7 .list-txt li:after {top:0.9em}
+.list-txt li ~ li {margin-top:0.3em}
+.list-txt li .btn-link {vertical-align:text-bottom}
+
+/** 폼 **/
+/* 인풋 + 클리어 + 서치 타입 */
+.input-clear {display:inline-block; position:relative}
+.input-clear .clear {display:none; position:absolute; right:10px; top:9px; width:13px; height:13px; padding:0; border:0; background:url(/images/layout/btn-clear-field.png)}
+.input-clear .clear:hover,
+.input-clear .clear:focus {background-position:0 -13px}
+
+/** 아이콘, 뱃지, 레이블 등 **/
+.ico-badge {display:inline-block; vertical-align:middle; text-align:left; text-indent:-999em; background:url(/images/common/ico-badge-mv.png)}
+.ico-badge.teaser {width:27px; height:14px}
+.ico-badge.making {width:35px; height:14px; background-position:-47px 0}
+.ico-badge.perform {width:27px; height:14px; background-position:-102px 0}
+.ico-badge.cast {width:27px; height:14px; background-position:-149px 0}
+.ico-badge.fanmeet {width:35px; height:14px; background-position:-196px 0}
+.ico-badge.special {width:35px; height:14px; background-position:-251px 0}
+.ico-badge.gpick {width:43px; height:14px; background-position:-306px 0}
+.ico-badge.etc {width:27px; height:14px; background-position:100% 0}
+.ico-badge.n19 {width:14px; height:14px; background:url(/images/common/ico-badge-19.png)}
+.ico-badge.n15 {width:14px; height:14px; background:url(/images/common/ico-badge-15.png)}
+.ico-badge.n12 {width:14px; height:14px; background:url(/images/common/ico-badge-12.png)}
+.ico-badge.all {width:14px; height:14px; background:url(/images/common/ico-badge-all.png)}
+.ico-badge.hot {width:20px; height:7px; background:url(/images/common/ico-badge-hot.png)}
+.ico-badge.title {width:26px; height:7px; background:url(/images/common/ico-badge-title_5.0.png)}
+
+/** 버튼, 링크 타입 **/
+[class*="btn-"] {overflow:hidden} /* mozilla focus bug fix */
+/* 페이지 하단 컨펌 버튼 영역 */
+.btns-confirm {margin-top:20px; text-align:center}
+.btns-confirm .btn-action {margin:0 1px}
+.btn-refresh {display:inline-block; vertical-align:middle; height:18px; padding-left:26px; line-height:18px; color:#adb6c7; background:url(/images/common/ico-refresh.png) 0 0 no-repeat}
+.btn-refresh:hover,
+.btn-refresh:focus {background-position:0 -18px; text-decoration:none; color:#27282d}
+/* 링크 타입 */
+.btn-link {display:inline-block; padding-right:10px; background:url(/images/common/ico-link.png) 100% 4px no-repeat; line-height:normal; color:#63717d; vertical-align:middle}
+/* 기본 사각 버튼 */
+.btn-basic {display:inline-block; min-width:60px; height:30px; line-height:28px; padding:0 14px; border:1px solid #adb6c7; background:#fff; color:#63717d; text-align:center; box-sizing:border-box; vertical-align:middle}
+.btn-basic:hover,
+.btn-basic:focus {border-color:#63717d; text-decoration:none}
+/* 아이콘 + 텍스트 형태 링크, 버튼 */
+.btn-ico {display:inline-block; position:relative; color:#63717d; font-size:11px}
+.btn-ico.active,
+.btn-ico:hover,
+.btn-ico:focus {color:#27282d; text-decoration:none}
+.btn-ico.caution {height:14px; line-height:12px; padding-left:20px}
+.btn-ico.caution:after {content:''; position:absolute; left:0; top:50%; margin-top:-7px; width:12px; height:12px; border:1px solid #adb6c7; border-radius:100%; background:url(/images/common/ico-caution.png) 5px 2px no-repeat}
+.btn-ico.caution.active:after,
+.btn-ico.caution:hover:after,
+.btn-ico.caution:focus:after {background-position:5px -18px; border-color:#27282d}
+/* 목록 하단 기능 버튼 */
+.btn-func {display:inline-block; height:28px; padding:0 8px; background:#fff; border:1px solid #d9d9d9; border-top-left-radius:14px; border-top-right-radius:14px; border-bottom-left-radius:14px; border-bottom-right-radius:14px; box-sizing:border-box}
+.btn-func:hover,
+.btn-func:focus {border-color:#27282d; text-decoration:none}
+.btn-func .ico {display:block; height:26px; line-height:25px; font-size:11px}
+.windows7 .btn-func .ico {line-height:23px}
+.btn-func.play .ico {padding-left:18px; background:url(/images/common/ico-func-play.png) 0 50% no-repeat}
+.btn-func.play-mv .ico {padding-left:20px; background:url(/images/common/ico-func-playmv.png) 0 50% no-repeat}
+.btn-func.put .ico {padding-left:19px; background:url(/images/common/ico-func-folder.png) 0 50% no-repeat}
+.btn-func.down .ico {padding-left:18px; background:url(/images/common/ico-func-download.png) 0 50% no-repeat}
+.btn-func.add .ico {position:relative; padding-left:17px}
+.btn-func.add .ico:before,
+.btn-func.add .ico:after {content:''; position:absolute; top:50%; left:0}
+.btn-func.add .ico:before {width:11px; border-top:1px solid #27282d; margin-top:-1px}
+.btn-func.add .ico:after {height:11px; margin:-6px 0 0 5px; border-left:1px solid #27282d}
+.btn-func.after .ico {padding-left:14px; background:url(/images/common/ico-order-down.png) 0 8px no-repeat}
+.btn-func.before .ico {padding-left:14px; background:url(/images/common/ico-order-up.png) 0 8px no-repeat}
+.btn-func.last .ico {padding-left:14px; background:url(/images/common/ico-order-last.png) 0 8px no-repeat}
+.btn-func.first .ico {padding-left:14px; background:url(/images/common/ico-order-first.png) 0 8px no-repeat}
+.btn-func.alone {width:28px; min-width:0; padding:0}
+.btn-func.alone .ico {display:block; width:100%; padding-left:0; text-indent:-999em; background-position:50% 8px}
+.btn-func.delete .ico {position:relative; padding-left:16px}
+.btn-func.delete .ico:after {content:''; position:absolute; left:0; top:8px; width:11px; height:11px; background:url(/images/common/btn-delete.png) 0 -11px no-repeat}
+/* 목록 기능 버튼 */
+.btn-list {display:inline-block; width:27px; height:27px; border:1px solid #adb6c7; border-radius:100%}
+.btn-list:not(.disabled):hover,
+.btn-list:not(.disabled):focus {border-color:#27282d}
+.btn-list .ico {display:block; position:relative; height:100%; text-indent:-999em}
+.btn-list.play .ico:after {content:''; position:absolute; left:10px; top:8px; width:10px; height:11px; background:url(/images/common/btn-list-play.png)}
+.btn-list.play:not(.disabled):hover .ico:after,
+.btn-list.play:not(.disabled):focus .ico:after {background-position:0 100%}
+.btn-list.add .ico:before,
+.btn-list.add .ico:after {content:''; position:absolute}
+.btn-list.add .ico:before {width:13px; left:7px; top:13px; border-top:1px solid #adb6c7}
+.btn-list.add .ico:after {height:13px; left:13px; top:7px; border-left:1px solid #adb6c7}
+.btn-list.add:not(.disabled):hover .ico:before,
+.btn-list.add:not(.disabled):focus .ico:before,
+.btn-list.add:not(.disabled):hover .ico:after,
+.btn-list.add:not(.disabled):focus .ico:after {border-color:#27282d}
+.btn-list.info {border:0; border-radius:0; width:14px; height:14px}
+.btn-list.info .ico {background:url(/images/common/btn-list-song.png)}
+.btn-list.info:not(.disabled):hover .ico,
+.btn-list.info:not(.disabled):focus .ico {background-position:0 100%}
+.btn-list.put .ico:after,
+.btn-list.down .ico:after,
+.btn-list.mp3 .ico:after,
+.btn-list.mv .ico:after,
+.btn-list.share .ico:after {content:''; position:absolute; left:6px; top:7px; width:15px; height:13px}
+.btn-list.put .ico:after {background:url(/images/common/btn-list-put.png)}
+.btn-list.down .ico:after {background:url(/images/common/btn-list-down.png)}
+.btn-list.mv .ico:after {background:url(/images/common/btn-list-mv.png)}
+.btn-list.share .ico:after {background:url(/images/common/btn-list-share.png)}
+.btn-list.mp3 .ico:after {left:6px; top:5px; width:16px; height:17px; background:url(/images/common/btn-list-down-mp3.png)}
+.btn-list.put:not(.disabled):hover .ico:after,
+.btn-list.put:not(.disabled):focus .ico:after,
+.btn-list.down:not(.disabled):hover .ico:after,
+.btn-list.down:not(.disabled):focus .ico:after,
+.btn-list.mp3:not(.disabled):hover .ico:after,
+.btn-list.mp3:not(.disabled):focus .ico:after,
+.btn-list.mv:not(.disabled):hover .ico:after,
+.btn-list.mv:not(.disabled):focus .ico:after,
+.btn-list.share:not(.disabled):hover .ico:after,
+.btn-list.share:not(.disabled):focus .ico:after {background-position:0 100%}
+.btn-list.pmv {width:29px; height:23px; border:0; border-radius:0; background:url(/images/common/btn-list-pmv.png)}
+.btn-list.pmv:not(.disabled):hover,
+.btn-list.pmv:not(.disabled):focus {background-position:0 100%}
+.btn-list.pmv .ico:after {border-width:5.5px 0 5.5px 10px; top:6px; left:11px}
+/* 팝업 등 하단 컨펌 취소 버튼 */
+.btn-action {display:inline-block; height:34px; min-width:30px; padding:0 20px; line-height:34px; border-radius:18px; border:1px solid #adb6c7; background:#fff; color:#63717d; white-space:nowrap;}
+.windows7 .btn-action {line-height:32px}
+.btn-action:hover,
+.btn-action:focus {text-decoration:none; border-color:#63717d}
+.btn-action.confirm {color:#fff; background:#0096ff; border-color:#0096ff}
+.btn-action.confirm:hover,
+.btn-action.confirm:focus {background:#008ef2; border-color:#008ef2}
+/* 태그 */
+.btn-tag {display:inline-block; height:26px; padding:0 9px; line-height:24px; font-size:11px; color:#8c8c8c; letter-spacing:-0.075em; border:1px solid #e6e6e6; border-radius:14px; background:#fff}
+.windows7 .btn-tag {line-height:22px}
+.btn-tag:hover,
+.btn-tag:focus {color:#0096ff; border-color:#0096ff; text-decoration:none}
+/* 유저 아이콘+닉네임 */
+.link-user {display:inline-block; /*height:30px;*/ /*line-height:30px*/}
+.link-user > *{display:inline-block; vertical-align:middle}
+.link-user .pic {position:relative; width:30px; height:30px; background-position:50% 50%; background-size:cover; border-radius:100%}
+.link-user .pic:after {content:''; position:absolute; left:0; top:0; right:0; bottom:0; border:1px solid #000; opacity:.1; border-radius:100%}
+.link-user .name {margin-left:5px; color:#8c8c8c}
+.link-user .pic.facebook,
+.link-user .pic.twitter,
+.link-user .pic.kakao {width:20px; height:20px; border-radius:0}
+.link-user .pic.facebook:after,
+.link-user .pic.twitter:after,
+.link-user .pic.kakao:after {display:none}
+.link-user .pic.facebook {background-image:url(/images/common/ico-account-fb.png)}
+.link-user .pic.twitter {background-image:url(/images/common/ico-account-tt.png)}
+.link-user .pic.kakao {background-image:url(/images/common/ico-account-kk.png)}
+.link-user:hover,
+.link-user:focus,
+.link-user:hover .pic,
+.link-user:focus .pic,
+.link-user:hover .name,
+.link-user:focus .name {text-decoration:none; color:#27282d}
+.link-user:hover .name,
+.link-user:focus .name {text-decoration:underline}
+
+/** 테이블 **/
+.tbl-rows {border-bottom:1px solid #adb6c7; border-top:1px solid #adb6c7}
+.tbl-rows tr th,
+.tbl-rows tr td {padding:11px 12px}
+/*
+.windows7 .tbl-rows tr th,
+.windows7 .tbl-rows tr td {padding-top:10px; padding-bottom:12px}
+*/
+.tbl-rows tr ~ tr th,
+.tbl-rows tr ~ tr td {border-top:1px solid #e6e6e6}
+.tbl-rows tr th {background:#f5f7fa; color:#63717d; font-weight:normal; text-align:left; vertical-align:top}
+.tbl-rows tr td {border-left:1px solid #e6e6e6; background:#fff; color:#666; vertical-align:middle}
+.tbl-rows tr td strong {color:#27282d}
+.tbl-rows tr td .clr-r {color:#ff5b62}
+.tbl-rows tr td .clr-b {color:#0096ff}
+.tbl-rows tr td .clr-gb {color:#63717d}
+
+/** 팝업 **/
+/* 기본 팝업 */
+.pop-layer {display:none; position:absolute; left:0; top:0; z-index:200; border:1px solid #adb6c7; background:#fff; -webkit-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); -moz-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1)}
+.pop-layer h3 {padding-left:16px; font-size:12px; line-height:40px; border-bottom:1px solid #e6e6e6}
+.pop-layer .close {position:absolute; right:12px; top:13px; width:15px; height:15px; text-indent:-999em; background:url(/images/common/btn-close.png)}
+.pop-layer .close:hover,
+.pop-layer .close:focus {background-position:0 -15px}
+.pop-layer .pop-content {padding:12px}
+.pop-layer .pop-bottom {height:76px; padding-top:20px; text-align:center}
+.pop-layer .pop-bottom .btn-action {margin:0 1px}
+.pop-layer .pop-bottom-notice {padding:20px; padding-bottom:17px; background:#f5f7fa}
+.pop-layer .pop-bottom-notice h4 {font-size:12px; font-weight:normal}
+.pop-layer .pop-bottom-notice h4 + .list-txt {margin-top:8px}
+.pop-layer .pop-bottom-notice .list-txt li {color:#8c8c8c}
+.pop-layer .pop-bottom-notice .list-txt li ~ li {margin-top:0.4em}
+.pop-wrap {display:none; position:fixed; z-index:100; left:0; top:0; right:0; bottom:0; padding-left:180px; text-align:center}
+.pop-wrap:after {content:''; display:inline-block; width:0; height:100%; vertical-align:middle}
+.pop-wrap .pop-layer {display:inline-block; position:relative; left:auto; top:auto; text-align:left; vertical-align:middle; margin:0 0 0 0}
+/* 기본-마이앨범 담기 */
+.pop-add-myalbum {width:300px}
+.pop-add-myalbum .pop-content {padding:12px 0}
+.pop-add-myalbum .pop-content .add {position:relative; padding:0 64px 8px 0; margin:0 12px}
+.pop-add-myalbum .pop-content .add a,
+.pop-add-myalbum .pop-content .add input[type="button"] {position:absolute; right:0; top:0; width:60px; height:30px; line-height:28px; border:1px solid #adb6c7; background:#fff; color:#63717d}
+.pop-add-myalbum .pop-content .add a:hover,
+.pop-add-myalbum .pop-content .add a:focus,
+.pop-add-myalbum .pop-content .add input[type="button"]:hover,
+.pop-add-myalbum .pop-content .add input[type="button"]:focus {border-color:#63717d}
+.pop-add-myalbum .pop-content .add input[type="text"] {display:block; width:100%}
+.pop-add-myalbum .pop-content .list {height:150px; overflow-x:hidden; overflow-y:auto}
+.pop-add-myalbum .pop-content .list ul li {position:relative; padding:0 40px 0 12px; height:30px; overflow:hidden}
+.pop-add-myalbum .pop-content .list ul li:hover {background:#f5f7fa}
+.pop-add-myalbum .pop-content .list ul li .album {display:inline-block; padding-left:24px; line-height:30px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; background:url(/images/common/ico-folder.png) 0 50% no-repeat; color:#666}
+.pop-add-myalbum .pop-content .list ul li .album:hover,
+.pop-add-myalbum .pop-content .list ul li .album:focus {color:#27282d; text-decoration:none}
+.pop-add-myalbum .pop-content .list ul li .del {position:absolute; right:-122px; top:10px; width:11px; height:11px; text-indent:-999em; overflow:hidden; background:url(/images/common/btn-delete.png) 0 -11px}
+.pop-add-myalbum .pop-content .list ul li:hover .del,
+.pop-add-myalbum .pop-content .list ul li .album:focus ~ .del,
+.pop-add-myalbum .pop-content .list ul li .del:focus {right:22px}
+/* 아티스트 정보 */
+.pop-artist-info {display:none; position:absolute; z-index:100; left:0; top:0; border:1px solid #adb6c7; background:#fff; -webkit-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); -moz-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1);}
+.pop-artist-info .scrollable {min-width:98px; max-width:178px; max-height:398px; overflow-x:hidden; overflow-y:auto; }
+.pop-artist-info ul {padding:15px 12px}
+.pop-artist-info ul li {line-height:2em}
+.pop-artist-info ul li ~ li {margin-top:10px}
+.pop-artist-info ul li span {display:block; margin-bottom:6px}
+.pop-artist-info ul li > span {color:#8c8c8c}
+.pop-artist-info ul li > a {margin-top:11px}
+/* 뮤직비디오 목록 */
+.pop-music-video {display:none; position:absolute; z-index:100; left:0; top:0; width:300px; padding:6px 0; border:1px solid #adb6c7; background:#fff; -webkit-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); -moz-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1);}
+.pop-music-video .pop-mv-inner {max-height:150px; overflow-x:hidden; overflow-y:auto}
+.pop-music-video ul li {position:relative; /*padding:5px 12px*/ height:50px; padding:5px 12px 5px 94px}
+.pop-music-video ul li:hover {background:#f5f7fa}
+.pop-music-video ul li:after {content:''; display:block; clear:both}
+.pop-music-video ul li br {display:none}
+.pop-music-video ul li a {/*display:inline-block;*/ display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.pop-music-video ul li .thumb {/*float:left; margin-right:11px*/ position:absolute; left:12px; top:5px}
+.pop-music-video ul li .thumb img {width:71px; height:40px; }
+.pop-music-video ul li .title {margin-top:4px; line-height:14px}
+.pop-music-video ul li .title .ico-badge {margin-right:5px}
+.pop-music-video ul li .artist {color:#8c8c8c; margin-top:6px}
+.windows7 .pop-music-video ul li .title {margin-top:2px;}
+.windows7 .pop-music-video ul li .artist {margin-top:4px; line-height:1.1em; padding-bottom:1px}
+/*.windows7 .pop-music-video ul li .artist {margin-top:4px; line-height:1.1em; padding-bottom:1px}*/
+/* 기본 텍스트 팝업 */
+.pop-notice {display:none; position:absolute; z-index:1; border:1px solid #adb6c7; background:#fff; padding:11px 12px 12px; -webkit-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); -moz-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1)}
+.pop-notice .close {position:absolute; right:8px; height:8px; width:11px; height:11px; text-indent:-999em; background:url(/images/common/btn-delete.png)}
+.pop-notice .close:hover,
+.pop-notice .close:focus {background-position:0 100%}
+.pop-notice p {line-height:1.636em; font-size:11px; color:#666}
+
+/* tab and navigation */
+/* 장르 탭 + 시간, 날짜 등 기간 정렬 */
+.list-sort {padding:8px 10px; border-bottom:1px solid #adb6c7; }
+.list-sort:after {content:''; display:block; clear:both}
+.list-sort .tab,
+.list-sort .tab * {float:left}
+.list-sort .tab li {position:relative; padding-left:12px}
+.list-sort .tab li:after {content:''; position:absolute; left:0; top:50%; width:2px; height:2px; background:#8c8c8c}
+.list-sort .tab li ~ li {margin-left:9px}
+.list-sort .tab li a {height:24px; line-height:24px; color:#8c8c8c}
+.windows7 .list-sort .tab li a {line-height:22px}
+.list-sort .tab li.active:after {background:#ff5b62}
+.list-sort .tab li.active a {color:#ff5b62; font-weight:bold}
+.list-sort .nav {float:right; position:relative}
+.list-sort .nav > *{float:left; position:relative}
+.list-sort .nav .move {width:22px; height:22px; line-height:22px; border:1px solid #dadada; border-radius:100%; text-indent:-999em; overflow:hidden}
+.list-sort .nav .move:hover,
+.list-sort .nav .move:focus {border-color:#27282d}
+.list-sort .nav .move:after {content:''; position:absolute; top:7px; left:9px; width:5px; height:9px}
+.list-sort .nav .move.prev {margin-right:10px}
+.list-sort .nav .move.prev:after {background:url(/images/common/ico-lt-gt.png) 0 -2px}
+.list-sort .nav .move.next {margin-left:10px}
+.list-sort .nav .move.next:after {background:url(/images/common/ico-lt-gt.png) 100% -2px}
+.list-sort .nav .move.disabled {opacity:.3; cursor:default}
+.list-sort .nav .move.disabled:hover,
+.list-sort .nav .move.disabled:focus {border-color:#dadada}
+.list-sort .nav .current {height:24px; line-height:24px}
+.windows7 .list-sort .nav .current {line-height:22px}
+.list-sort .nav .current + .select-box {margin-left:3px}
+.list-sort .nav .select-box + .select-box {margin-left:14px}
+/*.list-sort .nav .select-box {margin-left:3px}*/
+.list-sort .nav .select-box .drop {text-align:center}
+.list-sort .nav .select-box.time .drop {left:-20px; width:80px}
+.list-sort .caution {float:right; position:relative; height:24px; line-height:22px; font-size:11px; color:#63717d; padding-left:20px}
+.list-sort .caution:after {content:''; position:absolute; left:0; top:50%; margin-top:-7px; width:12px; height:12px; border:1px solid #adb6c7; border-radius:100%; background:url(/images/common/ico-caution.png) 5px 2px no-repeat}
+.list-sort .caution:hover,
+.list-sort .caution:focus {color:#27282d; text-decoration:none}
+.list-sort .caution:hover:after,
+.list-sort .caution:focus:after {background-position:5px -18px; border-color:#27282d}
+.list-sort .select-box.sort {float:right}
+.list-sort .select-box.sort .drop {width:110px; left:auto; right:-10px}
+/* 목록 소팅용 달력 */
+.pop-calendar {display:none; position:absolute; z-index:100; right:0; top:100%; width:274px; margin:4px -44px 0 0; padding:11px 10px; border:1px solid #adb6c7; background:#fff; text-align:center}
+.pop-calendar.no-btn {margin-right:-24px}
+.pop-calendar .nav {float:none; display:inline-block}
+.pop-calendar .nav:after {content:''; display:block; clear:both}
+.pop-calendar .nav .select-box.year .drop {width:69px; margin-left:-9px}
+.pop-calendar .nav .select-box.month .drop {width:62px; margin-left:-10px}
+.pop-calendar .nav .select-box.period .drop {width:78px; margin-left:-9px}
+.pop-calendar .cal {margin-top:8px; border-top:1px solid #e6e6e6}
+.pop-calendar .cal:after {content:''; display:block; clear:both}
+.pop-calendar .cal .h {border-bottom:1px solid #e6e6e6}
+.pop-calendar .cal .h:after {content:''; display:block; clear:both}
+.pop-calendar .cal .h span {float:left; width:36px; height:22px;}
+.pop-calendar .cal .h span:after {content:""; display:block; width:100%; text-align:center; line-height:22px; font-size:11px;}
+.pop-calendar .cal .h span.h1:after {content:"일"; color:#ff5b62}
+.pop-calendar .cal .h span.h2:after {content:"월"}
+.pop-calendar .cal .h span.h3:after {content:"화"}
+.pop-calendar .cal .h span.h4:after {content:"수"}
+.pop-calendar .cal .h span.h5:after {content:"목"}
+.pop-calendar .cal .h span.h6:after {content:"금"}
+.pop-calendar .cal .h span.h7:after {content:"토"}
+.pop-calendar .cal .days .disabled,
+.pop-calendar .cal .days .dmy,
+.pop-calendar .cal .days a {float:left; width:36px; height:30px; line-height:30px; font-family:Verdana; font-size:11px; color:#666}
+.pop-calendar .cal .days a:hover,
+.pop-calendar .cal .days a:focus {background:#f5f7fa; color:#27282d; text-decoration:none}
+.pop-calendar .cal .days a.sun {color:#ff5b62}
+.pop-calendar .cal .days a.selected {background:#0096ff; color:#fff}
+.pop-calendar .cal .days .disabled {color:#ccc}
+.pop-calendar .cal .days .week.selected a,
+.pop-calendar .cal .days .week:hover a {background:#f5f7fa; color:#27282d}
+.pop-calendar .cal .days .week a.sun {color:#ff5b62}
+.pop-calendar .bottom {padding-top:7px; border-top:1px solid #e6e6e6}
+.pop-calendar .bottom:after {content:''; display:block; clear:both}
+.pop-calendar .bottom a {font-size:11px; color:#666}
+.pop-calendar .bottom .latest {float:right}
+.pop-cal-month {width:206px}
+.pop-cal-month.cal-period{width:244px}
+.pop-cal-month .cal > *{float:left; width:25%; height:30px; line-height:30px}
+.pop-cal-month .cal span {color:#ccc}
+.pop-cal-month .cal a {color:#666}
+.pop-cal-month .cal a:hover,
+.pop-cal-month .cal a:focus {background:#f5f7fa; color:#27282d; text-decoration:none}
+.pop-cal-month .cal a.selected {font-weight:bold; color:#0096ff}
+
+/* 자문위원 */
+.consult_ly .consult_view{position:absolute; right:173px;line-height:23px; font-size:11px; color:#63717d;padding-left:20px}
+.consult_ly .consult_view:after{content:''; position:absolute; left:0; top:50%; margin-top:-7px; width:12px; height:12px; border:1px solid #adb6c7; border-radius:100%; background:url(/images/common/ico-caution.png) 5px 2px no-repeat}
+.consult_ly .consult_view:hover,
+.consult_ly .consult_view:focus {color:#27282d;text-decoration:none;}
+.consult_ly .consult_view:hover:after,
+.consult_ly .consult_view:focus:after {background-position:5px -18px; border-color:#27282d}
+.consult_ly .consultbox{width:478px; height:517px; position:absolute; left:50%; top:50%;margin:-258px auto 0 -239px;  z-index:10}
+.consult_ly .consultbox .photo{padding:20px 20px 0px 118px; }
+.consult_ly .consultbox .photo dt{font-weight: bold; color:#27282d; position:relative; padding-top:5px}
+.consult_ly .consultbox .photo dt:after{content:""; position:absolute; left:-100px; top:-1px; width:82px; height:82px; background:url(/images/common/consult_photo.jpg) no-repeat}
+.consult_ly .consultbox .photo dt.p02:after{background-position: 0 -100px}
+.consult_ly .consultbox .photo dt.p03:after{background-position: 0 -200px}
+.consult_ly .consultbox .photo dt.p04:after{background-position: 0 -300px}
+.consult_ly .consultbox .photo dt span{font-weight:normal;display:block;padding:8px 0 4px}
+.consult_ly .consultbox .photo dd{color:#666666;line-height:20px; padding-bottom:18px}
+.consult_ly .consultbox .photo dd:last-of-type{padding-bottom: 0}
+
+/* 롤링 탭 */
+.tab-carousel {position:relative}
+.tab-carousel:before {content:''; position:absolute; left:0; bottom:0; width:100%; border-bottom:1px solid #adb6c7}
+.tab-carousel .btn {position:absolute; z-index:2; top:0; width:30px; height:40px}
+.tab-carousel .btn.prev {left:0}
+.tab-carousel .btn.next {right:0}
+.tab-carousel .btn button {position:relative; width:100%; height:100%; border:0; cursor:pointer; text-indent:-999em; overflow:hidden; background:#fff}
+.tab-carousel .btn button:after {content:''; position:absolute; top:14px; width:7px; height:13px; opacity:.4; background:url(/images/common/ico-lt-gt.png)}
+.tab-carousel .btn button:hover:after,
+.tab-carousel .btn button:focus:after {opacity:1}
+.tab-carousel .btn.swiper-button-disabled button,
+.tab-carousel .btn.disabled button {cursor:default}
+.tab-carousel .btn.swiper-button-disabled button:after,
+.tab-carousel .btn.disabled button:after {opacity:.2}
+.tab-carousel .btn.prev button:after {left:5px}
+.tab-carousel .btn.next button:after {background-position:100% 0; right:5px}
+.tab-carousel .holder {position:relative; margin:0 30px; z-index:1; height:41px; overflow:hidden}
+/*.tab-carousel .holder ul {position:absolute; left:0; top:0; width:1000em}
+.tab-carousel .holder ul:after {content:''; display:block; clear:both}
+.tab-carousel .holder ul li {float:left}*/
+.tab-carousel .holder ul li a {float:left; height:39px; min-width:60px; padding:0 15px; line-height:39px; box-sizing:border-box; text-align:center}
+.windows7 .tab-carousel .holder ul li a {line-height:37px}
+.tab-carousel .holder ul li a span ~ span {color:#0096ff}
+.tab-carousel .holder ul li.active a {height:41px; border-bottom:2px solid #0096ff}
+.tab-carousel .holder ul li a:focus{text-decoration: none;}
+.tab-carousel .holder ul li.active a span {color:#0096ff; font-weight:bold}
+.tab-carousel .holder ul li.active a span ~ span {font-weight:normal}
+.tab-carousel.no-carousel .holder {margin-left:0; margin-right:0}
+.tab-carousel.no-carousel .holder ul {left:0 !important}
+.tab-carousel.no-carousel .btn {display:none}
+.tab-carousel .swiper-slide {width:auto}
+.paginate {text-align:center; margin-top:14px}
+.paginate *{display:inline-block; vertical-align:middle; line-height:24px; margin:0 10px}
+.paginate .active {color:#0096ff; font-weight:bold}
+.paginate .btn {position:relative; width:22px; height:22px; border:1px solid #dadada; border-radius:100%; text-align:left; text-indent:-999em; overflow:hidden}
+.paginate .btn:hover,
+.paginate .btn:focus {border-color:#27282d}
+.paginate .btn:after {content:''; position:absolute; top:7px; left:9px; width:5px; height:9px}
+.paginate .btn.prev {margin-right:6px}
+.paginate .btn.prev:after {background:url(/images/common/ico-lt-gt.png) 0 -2px}
+.paginate .btn.next {margin-left:6px}
+.paginate .btn.next:after {background:url(/images/common/ico-lt-gt.png) 100% -2px}
+.paginate .btn.disabled {opacity:.3; cursor:default}
+.paginate .btn.disabled:hover,
+.paginate .btn.disabled:focus {border-color:#dadada}
+
+/* selectbox */
+.select-box {display:inline-block; position:relative}
+.select-box > a {display:block; height:24px; line-height:24px; padding-right:17px; background:url(/images/common/ico-select-tri.png) 100% 53% no-repeat;}
+.select-box .pre{color:#0096ff; font-weight:bold}
+.windows7 .select-box > a {line-height:22px; background-position:100% 50%}
+.select-box > a span {color:#0096ff}
+.select-box > a.active {background-image:url(/images/common/ico-select-tri-blk.png)}
+.select-box .drop {display:none; position:absolute; top:100%; left:0; z-index:100; margin-top:4px; min-width:100%; max-height:182px; overflow-y:auto; border:1px solid #adb6c7; background:#fff; -webkit-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); -moz-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1);}
+.select-box .drop ul {padding:6px 0}
+.select-box .drop ul li a,
+.select-box .drop ul li .disabled {display:block; height:30px; line-height:30px; padding:0 10px; white-space:nowrap; color:#666}
+.select-box .drop ul li .disabled {color:#ccc}
+.select-box .drop ul li a span {color:#0096ff}
+.select-box .drop ul li a:hover,
+.select-box .drop ul li a:focus {background:#f5f7fa; color:#27282d; text-decoration:none}
+.select-box .drop ul li.selected a {font-weight:bold; color:#0096ff}
+.select-box .drop ul li.selected a span {font-weight:normal}
+.select-box .drop .jspVerticalBar {width:5px; margin-left:-5px}
+.select-box .drop .jspPane {width:100% !important}
+
+/* 음악 등 목록 */
+.more-load {padding-top:17px; text-align:center}
+.more-load a {display:inline-block; position:relative; padding-right:19px; line-height:19px; color:#63717d}
+.more-load a:after {content:''; position:absolute; right:0; top:7px; width:11px; height:6px; background:url(/images/common/ico-arrow-all.png) -2px -9px}
+.windows7 .more-load a:after {top:8px}
+.more-load a:hover:after,
+.more-load a:focus:after {background-position:-2px -24px}
+.more-load a:hover,
+.more-load a:focus {text-decoration:none; color:#27282d}
+/* 목록 하단 기능 영역 */
+.list-function {position:fixed; z-index:200; bottom:0; left:180px; right:0; padding:7px 20px 6px 30px; background:#f5f7fa; border-top:1px solid #d9d9d9}
+.list-function:after {content:''; display:block; clear:both}
+.list-function > *{float:left}
+.list-function .num {float:right; line-height:28px; color:#8c8c8c}
+.list-function .check {padding-top:7px; margin-right:10px}
+.list-function .btn-func ~ .btn-func {margin-left:6px}
+/* 목록 - 기본 */
+.list-common-wrap {position:relative}
+.list-common-wrap:after {content:""; position:absolute; left:0; top:0; right:0; height:35px; background:rgba(255,255,255,0)}
+.list-common {padding-top:33px}
+.list-common .list-inner {display:table; table-layout:fixed; width:100%; border-top:1px solid #63717d; border-bottom:1px solid #adb6c7}
+.list-common .list-row {display:table-row}
+.list-common .list-cell {display:table-cell; position:relative; height:59px; padding:5px 0 4px; border-top:1px solid #e6e6e6; vertical-align:middle}
+.list-common .list-row:hover .list-cell {background:#f5f7fa}
+.list-common .list-row.selected .list-cell {background:#e6f8fc}
+.list-common .list-row:first-child .list-cell:before {content:attr(list-role); position:absolute; left:0; top:-35px; right:0; line-height:33px; text-align:center; font-size:11px; color:#8c8c8c; letter-spacing:-0.075em}
+.windows7 .list-common .list-row:first-child .list-cell:before {line-height:31px}
+.list-common .list-row:first-child .list-cell.check:before,
+.list-common .list-row:first-child .list-cell.info:before,
+.list-common .list-row:first-child .list-cell.artwork:before {display:none}
+.list-common .list-row:first-child .list-cell.summary:before,
+.list-common .list-row:first-child .list-cell.song:before,
+.list-common .list-row:first-child .list-cell.artist:before,
+.list-common .list-row:first-child .list-cell.album:before {text-align:left}
+.list-common .list-row:first-child .list-cell.button.last:before {right:7px}
+.list-common .list-cell .added-app {position:absolute; left:0; top:0; z-index:1; height:59px; line-height:59px; white-space:nowrap; color:#fc7700}
+.list-common .list-cell .more {cursor:pointer; text-indent:-9999em; overflow:hidden}
+.list-common .list-cell .ellipsis {margin-top:-0.2em; padding-right:1em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:normal}
+.list-common .list-cell .ellipsis .ico-badge {margin-top:-0.4em; margin-right:5px}
+.windows7 .list-common .list-cell .ellipsis .ico-badge {margin-top:-0.2em}
+.list-common .list-cell.merge {display:none}
+.list-common .list-cell.extend {display:table-cell}
+.list-common .list-cell.check {width:24px; text-align:right}
+.list-common .list-cell.rank {width:46px; text-align:center}
+.list-common .list-cell.artwork {width:57px}
+.list-common .list-cell.artwork a {display:inline-block; position:relative; width:50px; height:50px; background:url(/images/common/img-noimage-50x50.jpg)}
+.list-common .list-cell.artwork a:after {content:''; position:absolute; left:0; top:0; right:0; bottom:0; border:1px solid #000; opacity:.1}
+.list-common .list-cell.artwork a img {display:block; width:50px; height:50px}
+.list-common .list-cell.button {width:35px; text-align:center}
+.list-common .list-cell.button.last {width:42px; padding-right:7px}
+.list-common .list-cell.action {width:48px; text-align:center}
+.list-common .list-cell.rank .num {display:block; position:relative; overflow:hidden; font-size:14px; font-weight:Verdana}
+.list-common .list-cell.rank.number .num {color:#63717d}
+.list-common .list-cell.rank .num span {position:absolute; left:-999em}
+.list-common .list-cell.rank .history {display:inline-block; position:relative; overflow:hidden; min-width:10px; height:10px; line-height:10px; margin-top:8px; font-family:Tahoma; font-size:11px; color:#adb6c7; box-sizing:border-box}
+.list-common .list-cell.rank .history span {position:absolute; left:-999em}
+.list-common .list-cell.rank .history.rising {padding-left:12px; background:url(/images/common/ico-rank-up.png) 0 0 no-repeat;}
+.list-common .list-cell.rank .history.falling {padding-left:12px; background:url(/images/common/ico-rank-down.png) 0 0 no-repeat;}
+.list-common .list-cell.rank .history.new {width:20px; background:url(/images/common/txt-list-new.png) 50% 50% no-repeat}
+.list-common .list-cell.rank .history.steady:after {content:''; position:absolute; left:50%; top:50%; margin:-1px 0 0 -5px; width:10px; border-top:2px solid #adb6c7}
+.list-common .list-cell.song,
+.list-common .list-cell.artist,
+.list-common .list-cell.album {width:calc((100% - 379px) / 3); }
+.list-common .list-cell.artist .ellipsis > a,
+.list-common .list-cell.album .ellipsis > a {color:#8c8c8c}
+.list-common .list-cell.summary .ellipsis .more,
+.list-common .list-cell.artist .ellipsis .more {display:inline-block; /*margin-left:-2px; padding-left:5px; width:27px;*/ width:12px; height:17px; color:#8c8c8c; background:url(/images/common/ico-select-tri.png) 100% 57% no-repeat}
+.windows7 .list-common .list-cell.summary .ellipsis .more,
+.windows7 .list-common .list-cell.artist .ellipsis .more {background-position:100% 59%}
+.list-common .list-cell.artist .ellipsis .ext {display:inline-block; position:relative; z-index:1; max-width:calc(100% - 20px); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height:normal; vertical-align:top}
+.list-common .list-cell.artist .ellipsis .ext ~ .more {position:relative; vertical-align:top}
+.list-common .list-cell.artist .ellipsis .ext.active ~ .more,
+.list-common .list-cell.artist .ellipsis .ext:hover ~ .more,
+.list-common .list-cell.artist .ellipsis .ext:focus ~ .more {text-decoration:underline; background-image:url(/images/common/ico-select-tri-blk.png)}
+/*.list-common .list-cell.artist .ellipsis .ext ~ .more:hover,
+.list-common .list-cell.artist .ellipsis .ext ~ .more:focus,
+.list-common .list-cell.artist .ellipsis .ext ~ .more.active {text-decoration:underline; background-image:url(/images/common/ico-select-tri-blk.png)}*/
+.list-common .list-cell.summary .ellipsis.col {margin-top:0.3em; color:#d9d9d9; line-height:1em}
+.list-common .list-cell.summary .ellipsis.col > a {color:#8c8c8c; line-height:normal; vertical-align:top}
+.list-common .list-cell.summary .ellipsis.col .bar {display:inline-block; position:relative; width:16px; line-height:normal; text-indent:-999em; vertical-align:top}
+.list-common .list-cell.summary .ellipsis.col .bar:after {content:''; position:absolute; left:50%; top:0.35em; height:9px; border-left:1px solid #d9d9d9}
+.list-common .list-cell.summary .ellipsis.col .artist {display:inline-block; max-width:50%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.list-common .list-cell.summary .ellipsis.col .artist.ext {position:relative; z-index:1; max-width:calc(50% - 32px)}
+.list-common .list-cell.summary .ellipsis.col .artist.ext ~ .more {position:relative}
+.list-common .list-cell.summary .ellipsis.col .artist.ext.active ~ .more,
+.list-common .list-cell.summary .ellipsis.col .artist.ext:hover ~ .more,
+.list-common .list-cell.summary .ellipsis.col .artist.ext:focus ~ .more {text-decoration:underline; background-image:url(/images/common/ico-select-tri-blk.png)}
+.list-common .list-cell.action .wrap {display:inline-block; position:relative; text-align:left}
+.list-common .list-cell.action .wrap > a {display:block; position:relative; width:11px; height:19px; overflow:hidden}
+.list-common .list-cell.action .wrap > a:before,
+.list-common .list-cell.action .wrap > a:after {content:'';}
+.list-common .list-cell.action .wrap > a span,
+.list-common .list-cell.action .wrap > a:before,
+.list-common .list-cell.action .wrap > a:after {position:absolute; left:4px; top:0; width:3px; height:3px; background:#adb6c7; border-radius:100%}
+.list-common .list-cell.action .wrap > a span {top:8px; text-indent:-999em}
+.list-common .list-cell.action .wrap > a:after {top:16px}
+.list-common .list-cell.action .wrap > a.active span,
+.list-common .list-cell.action .wrap > a:hover span,
+.list-common .list-cell.action .wrap > a:focus span,
+.list-common .list-cell.action .wrap > a.active:before,
+.list-common .list-cell.action .wrap > a:hover:before,
+.list-common .list-cell.action .wrap > a:focus:before,
+.list-common .list-cell.action .wrap > a.active:after,
+.list-common .list-cell.action .wrap > a:hover:after,
+.list-common .list-cell.action .wrap > a:focus:after {background:#27282d}
+.list-common .list-cell .list-layer-action {display:none; position:absolute; z-index:100; right:0; top:100%; width:100px; margin:11px -9px 0 0; border:1px solid #adb6c7; background:#fff; -webkit-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); -moz-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1); box-shadow:3px 3px 6px 0px rgba(0,0,0,0.1);}
+.list-common .list-cell .list-layer-action ul li a {display:block; position:relative; line-height:30px; color:#666; padding:0 12px}
+.list-common .list-cell .list-layer-action ul li a.disabled {color:#ccc; opacity:1}
+.list-common .list-cell .list-layer-action ul li a:not(.disabled):hover,
+.list-common .list-cell .list-layer-action ul li a:not(.disabled):focus {color:#27282d; background:#f5f7fa; text-decoration:none}
+.list-common .list-cell .list-layer-action ul li a:not(.disabled):hover:after,
+.list-common .list-cell .list-layer-action ul li a:not(.disabled):focus:after {content:''; position:absolute; right:12px; top:10px; width:6px; height:11px; background:url(/images/common/ico-lt-gt.png) 100% -1px no-repeat}
+.list-common .list-cell.action .wrap > a.active + .list-layer-action {display:block}
+.list-common .list-cell.action .wrap > a.active + .list-layer-action.upper,
+.list-common .list-cell.action .wrap > a.active.upper + .list-layer-action {top:auto; bottom:100%}
+/*.list-common .list-row.disabled .list-cell {overflow:hidden}
+.list-common .list-row.disabled .list-cell:after {content:''; position:absolute; z-index:5; left:0; top:0; width:100%; height:500px;}
+.list-common .list-row.disabled .list-cell .btn-list,
+.list-common .list-row.disabled .list-cell.action .wrap > a {opacity:.3; cursor:default}
+.list-common .list-row.disabled .list-cell.summary a,
+.list-common .list-row.disabled .list-cell.song a,
+.list-common .list-row.disabled .list-cell.artist a,
+.list-common .list-row.disabled .list-cell.album a {cursor:default; text-decoration:none}
+.list-common .list-row.disabled .list-cell.summary .ellipsis,
+.list-common .list-row.disabled .list-cell.song .ellipsis,
+.list-common .list-row.disabled .list-cell.artist .ellipsis,
+.list-common .list-row.disabled .list-cell.album .ellipsis {opacity:.3}*/
+.list-common .list-cell input:disabled + label {opacity:.3}
+.list-common .list-cell a.disabled {opacity:.3; cursor:default; text-decoration:none}
+.list-common.nodata .list-inner {border-bottom:0}
+.list-common.nodata .list-cell {height:0; padding:0; border-top:1px solid #fff}
+.list-nodata {padding-top:39px; text-align:center; color:#8c8c8c}
+.list-loading {padding-top:80px; text-align:center; color:#8c8c8c}
+.list-loading p {margin-top:20px}
+.list-common .list-cell .song a:link,
+.list-common .list-cell .song a:visited,
+.list-common .list-cell .song a:hover,
+.list-common .list-cell .song a:active,
+.list-common .list-cell .song a:focus {text-decoration:none}
+/* 뮤직비디오 */
+.list-mv .list-cell.artwork {width:114px}
+.list-mv .list-cell.artwork .pic {position:relative; width:107px; height:60px; background:url(/images/common/img-noimage-107x60.jpg)}
+.list-mv .list-cell.artwork .pic span {position:absolute; right:0; bottom:0; padding:0 3px; min-width:34px; text-align:center; line-height:14px; font-size:10px; font-family:Verdana; letter-spacing:-0.1em; color:#fff; background:rgba(0,0,0,.3)}
+.list-mv .list-cell.artwork .pic img {display:block; width:107px; height:60px}
+.list-mv .list-cell.button.last {width:45px; padding-right:0}
+.list-mv .list-cell.song,
+.list-mv .list-cell.artist,
+.list-mv .list-cell.album {width:calc((100% - 299px) / 3)}
+/* 수록곡(앨범 상세 하단) */
+.list-songs-album .list-cell {height:59px}
+.list-songs-album .list-cell.song,
+.list-songs-album .list-cell.artist {width:calc((100% - 322px) / 2); width:-webkit-calc(100% - 322px) / 2; /* for Chrome, Safari */}
+.list-songs-album .list-cell.summary .ellipsis.col .artist {max-width:100%}
+.list-songs-album .list-cell.summary .ellipsis.col .artist.ext {max-width:calc(100% - 32px)}
+/* 앨범 */
+.list-album .list-cell {height:95px}
+.list-album .list-cell.artwork {width:87px}
+.list-album .list-cell.artwork a {width:80px; height:80px; background:url(/images/common/img-noimage-80x80.jpg)}
+.list-album .list-cell.artwork a img {display:block; width:80px; height:80px}
+.list-album .list-cell.album {padding-left:13px}
+.list-album .list-cell.album .ellipsis a {color:#27282c}
+.list-album .list-cell.summary {padding-left:13px}
+.list-album .list-cell.summary .etc {margin-top:5px}
+.list-album .list-cell.summary .etc:after {content:''; display:block; clear:both}
+.list-album .list-cell.summary .etc li {float:left; color:#8c8c8c}
+.list-album .list-cell.summary .etc li ~ li {position:relative; padding-left:6px; margin-left:5px}
+.list-album .list-cell.summary .etc li ~ li:after {content:''; position:absolute; left:0; top:3px; height:9px; border-left:1px solid #d9d9d9}
+.list-album .list-cell.summary .ellipsis.col {margin-top:4px}
+.list-album .list-cell.summary .ellipsis.col .artist.ext {max-width:calc(100% - 32px)}
+.list-album .list-cell.summary .ellipsis.song {margin-top:4px}
+.list-album .list-cell.date,
+.list-album .list-cell.type,
+.list-album .list-cell.length {color:#8c8c8c}
+.list-album .list-cell.date {width:87px}
+.list-album .list-cell.type {width:87px; text-align:center}
+.list-album .list-cell.length {width:80px; text-align:center}
+.list-album .list-cell.album,
+.list-album .list-cell.artist,
+.list-album .list-cell.song {/*width:calc(100% - 593px)*/ width:calc((100% - 569px) / 3)}
+.list-album .list-cell.album .album,
+.list-album .list-cell.song .song {padding-right:15px; line-height:1.666em}
+.list-album .list-cell.album .album,
+.list-album .list-cell.song .song {max-height:3.2em; overflow:hidden; text-overflow:inherit; white-space:inherit}
+.list-album .list-row:first-child .list-cell.date:before {text-align:left}
+.list-album .list-row:first-child .list-cell.summary:before,
+.list-album .list-row:first-child .list-cell.album:before {text-indent:13px}
+.list-album .list-cell .song a:hover,
+.list-album .list-cell .song a:focus {text-decoration:underline}
+/*.list-album .list-cell .album a:link,
+.list-album .list-cell .album a:visited,
+.list-album .list-cell .album a:hover,
+.list-album .list-cell .album a:active,
+.list-album .list-cell .album a:focus {text-decoration:none}*/
+
+/* 추천 */
+.list-recomm .list-row:first-child .list-cell.selection:before,
+.list-recomm .list-row:first-child .list-cell.dj:before,
+.list-recomm .list-row:first-child .list-cell.date:before,
+.list-recomm .list-row:first-child .list-cell.like:before,
+.list-recomm .list-row:first-child .list-cell.length:before {text-align:left}
+.list-recomm .list-row:first-child .list-cell.selection:before {padding-left:12px}
+.list-recomm .list-cell {padding-top:10px; padding-bottom:10px}
+.list-recomm .list-cell.artwork {width:127px}
+.list-recomm .list-cell.dj,
+.list-recomm .list-cell.date,
+.list-recomm .list-cell.like,
+.list-recomm .list-cell.length {color:#8c8c8c}
+.list-recomm .list-cell.dj {width:130px}
+.list-recomm .list-cell.date {width:100px}
+.list-recomm .list-cell.like{width:80px}
+.list-recomm .list-cell.length {width:60px}
+.list-recomm .list-cell.artwork .pic {width:120px; height:120px; background:url(/images/common/img-noimage-120x120.jpg) 50% 50% no-repeat}
+.list-recomm .list-cell.artwork .pic img {display:block; width:120px; height:120px}
+.list-recomm .list-cell.artwork .pic .best {position:absolute; z-index:1; left:0; top:0; width:34px; height:44px; background:url(/images/common/ico-label-best.png); text-indent:-999em}
+.list-recomm .list-cell.selection {padding-left:12px; padding-right:15px}
+.list-recomm .list-cell.selection .top {/*margin-bottom:8px*/}
+.list-recomm .list-cell.selection .top span {display:inline-block; margin-bottom:8px}
+.list-recomm .list-cell.selection .top .category {color:#63717d}
+.list-recomm .list-cell.selection .top .date {display:none; position:relative; /*padding-left:11px; margin-left:6px;*/ color:#8c8c8c}
+/*.list-recomm .list-cell.selection .top .date:after {content:''; position:absolute; left:0; top:2px; height:9px; border-left:1px solid #d9d9d9}*/
+.list-recomm .list-cell.selection .top .category ~ .date {padding-left:11px; margin-left:6px}
+.list-recomm .list-cell.selection .top .category ~ .date:after {content:''; position:absolute; left:0; top:2px; height:9px; border-left:1px solid #d9d9d9}
+.list-recomm .list-cell.selection .title {font-size:14px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height:1.2em}
+.list-recomm .list-cell.selection .tags {height:28px; overflow:hidden; margin-top:9px}
+.list-recomm .list-cell.selection .tags li {float:left}
+.list-recomm .list-cell.selection .tags li ~ li {margin-left:6px}
+.list-recomm .list-cell.selection .info {display:none; width:100%; margin-top:13px}
+.list-recomm .list-cell.selection .info ul {/*display:table-row*/}
+.list-recomm .list-cell.selection .info ul li {display:inline-block; /*display:table-cell;*/ /*width:99%*/ padding-right:15px; width:auto}
+.list-recomm .list-cell.selection .info ul li.i3 {/*padding-right:10px*/}
+.list-recomm .list-cell.selection .info ul li.i4 a{margin-left:8px}
+.list-recomm .list-cell .link-user .name {color:#8c8c8c}
+.list-recomm .list-cell .link-user:hover .name,
+.list-recomm .list-cell .link-user:focus .name {color:#27282d}
+.list-recomm .list-cell .link-user:focus .name {color:#27282d}
+.list-recomm .list-cell [class*="ico-"] {display:inline-block; white-space:nowrap; height:15px; line-height:13px; vertical-align:middle; color:#8c8c8c}
+.list-recomm .list-cell .ico-like {padding-left:25px; background:url(/images/common/ico-like-length.png) 0 0 no-repeat}
+.list-recomm .list-cell .ico-length {padding-left:22px; background:url(/images/common/ico-song-length.png) 0 0 no-repeat}
+.list-recomm .list-cell .ico-date{color:#8c8c8c; padding-left:10px; position:relative;}
+.list-recomm .list-cell .ico-date:after{content: ''; position: absolute; left: -4px; top: 2px;  height: 9px; border-left: 1px solid #d9d9d9;}
+
+/* 멤버,아티스트 */
+.list-member:after {content:''; display:block; clear:both}
+.list-member li {float:left; width:144px; height:216px; padding:0 8px 0 7px; padding-bottom:20px; text-align:center}
+.list-member li a {display:block}
+.list-member li .pic {display:block; position:relative; width:120px; height:120px; margin-bottom:6px; background:url(/images/common/img-noimage-120x120.jpg) 50% 50% no-repeat; background-size:cover; border-radius:100%}
+.list-member li .pic:after {content:''; position:absolute; left:0; top:0; right:0; bottom:0; border:1px solid #000; border-radius:100%; opacity:.1}
+.list-member li .name {display:block; max-height:3.4em; overflow:hidden; line-height:1.666em}
+.list-member li .times {display:block; color:#8c8c8c; margin-top:4px}
+.list-member li .like-my{display:block; color:#8c8c8c; margin-top:4px; line-height:15px; position:relative;}
+.list-member li .like-my a{display:inline-block; width:17px; height:14px; background: url(/images/common/ico-like-detail.png) 0 100%; text-indent:-9999em; margin-left:5px}
+
+/* 가사 */
+.list-lyrics .list-inner,
+.list-lyrics .list-row {display:block}
+.list-lyrics .list-row {position:relative; padding:10px 0 10px 70px; border-top:1px solid #e6e6e6}
+.list-lyrics .list-row:after {content:''; display:block; clear:both}
+.list-lyrics .list-cell {display:block; float:left; height:50px; border-top:0; padding:0}
+.list-lyrics .list-row:first-child .list-cell::before {top:-45px}
+.list-lyrics .list-row:hover .list-cell,
+.list-lyrics .list-row.selected .list-cell {background:transparent}
+.list-lyrics .list-row:hover {background:#f5f7fa}
+.list-lyrics .list-row.selected {background:#e6f8fc}
+.list-lyrics .list-cell.lyrics {float:none; height:auto; clear:both; padding:3px 0 1px}
+.list-lyrics .list-cell.lyrics p {line-height:1.666em; color:#666; max-height:5em; overflow:hidden}
+.list-lyrics .list-cell.song,
+.list-lyrics .list-cell.artist,
+.list-lyrics .list-cell.album {width:calc((100% - 310px) / 3); padding-top:19px}
+.list-lyrics .list-cell.check {position:absolute; left:10px; top:50%; margin-top:-7px; width:auto; height:auto}
+.list-lyrics .list-cell.rank {position:absolute; height:calc(100% - 20px); margin-left:-46px}
+.list-lyrics .list-cell.rank .num {position:absolute; left:0; top:50%; width:100%; height:14px; line-height:14px; margin-top:-7px}
+.list-lyrics .list-cell.button {padding-top:10px}
+.list-lyrics .list-cell.button.info {padding-top:18px}
+.list-lyrics .list-cell.summary {width:calc(100% - 210px); padding-top:8px}
+.list-lyrics .list-cell.action {padding-top:15px}
+
+@media screen and (max-width: 1200px) {
+    .list-common .list-cell.merge {display:table-cell}
+    .list-common .list-cell.extend, .list-common .list-cell.day {display:none}
+    .list-recomm .list-cell.selection .info {display:table}
+    .list-recomm .list-cell.selection .top .date {display:inline-block}
+    .list-lyrics .list-cell.merge {display:block}
+    .list-lyrics .list-cell.extend {display:none}
+    .list-recomm .list-cell.like-my{display:none}
+}
+
+
+
+/*맥용 플레이어*/
+.mac .btn-link {background:url(/images/common/2x/ico-link.png) 100% 2px no-repeat; background-size: 5px 9px}
+.mac .tab-carousel .btn button:after {background:url(/images/common/2x/ico-lt-gt.png) 0 0; background-size:11px 9px;width:5px;height:9px}
+.mac .tab-carousel .btn.next button:after {background-position:100% 0; }
+.mac .list-sort .nav .move.prev:after {background:url(/images/common/2x/ico-lt-gt.png) 0 0; background-size:11px 9px }
+.mac .list-sort .nav .move.next:after {background:url(/images/common/2x/ico-lt-gt.png) 100% 0; background-size:11px 9px}
+.mac .select-box > a {background:url(/images/common/2x/ico-select-tri.png) 100% 50% no-repeat;background-size:7px 4px; }
+.mac .select-box > a.active {background:url(/images/common/2x/ico-select-tri-blk.png) 100% 50% no-repeat; background-size:7px 4px}
+
+.mac .btn-func.play .ico {background:url(/images/common/2x/ico-func-play.png) 0 50% no-repeat; background-size: 14px}
+.mac .btn-func.play-mv .ico {background:url(/images/common/2x/ico-func-playmv.png) 0 50% no-repeat; background-size:16px 14px}
+.mac .btn-func.put .ico {background:url(/images/common/2x/ico-func-folder.png) 0 50% no-repeat; background-size:14px 12px}
+.mac .btn-func.down .ico {background:url(/images/common/2x/ico-func-download.png) 0 50% no-repeat; background-size:13px}
+.mac .btn-list.pmv {background:url(/images/common/2x/btn-list-pmv.png); background-size: 29px 46px}
+.mac .btn-list.play .ico:after{background:url(/images/common/2x/btn-list-play.png) ; background-size:10px 22px }
+.mac .btn-list.play:not(.disabled):hover .ico:after,
+.mac .btn-list.play:not(.disabled):focus .ico:after {background-position:0 100%}
+.mac .btn-list.info .ico {background:url(/images/common/2x/btn-list-song.png); background-size:14px 28px}
+.mac .btn-list.info:not(.disabled):hover .ico,
+.mac .btn-list.info:not(.disabled):focus .ico {background-position:0 100%}
+
+.mac .list-sort .tab li:after{top:42%}
+
+/** 아이콘, 뱃지, 레이블 등 **/
+.mac .ico-badge {background:url(/images/common/2x/ico-badge-mv.png); background-size:396px 14px}
+.mac .ico-badge.teaser {width:27px; height:14px}
+.mac .ico-badge.making {width:35px; height:14px; background-position:-47px 0}
+.mac .ico-badge.perform {width:27px; height:14px; background-position:-102px 0}
+.mac .ico-badge.cast {width:27px; height:14px; background-position:-149px 0}
+.mac .ico-badge.fanmeet {width:35px; height:14px; background-position:-196px 0}
+.mac .ico-badge.special {width:35px; height:14px; background-position:-251px 0}
+.mac .ico-badge.gpick {width:43px; height:14px; background-position:-306px 0}
+.mac .ico-badge.etc {width:27px; height:14px; background-position:100% 0}
+.mac .ico-badge.n19 {background:url(/images/common/2x/ico-badge-19.png); background-size: 100%}
+.mac .ico-badge.n15 {background:url(/images/common/2x/ico-badge-15.png); background-size: 100%}
+.mac .ico-badge.n12 {background:url(/images/common/2x/ico-badge-12.png); background-size: 100%}
+.mac .ico-badge.all {background:url(/images/common/2x/ico-badge-all.png); background-size: 100%}
+.mac .ico-badge.hot {background:url(/images/common/2x/ico-badge-hot.png); background-size: 100%}
+.mac .ico-badge.title {background:url(/images/common/2x/ico-badge-title_5.0.png) no-repeat; background-size: 100%}
+.mac .list-common .list-cell .ellipsis .ico-badge{margin-top:-2px}
+.mac .list-common .list-cell.song,
+.mac .list-common .list-cell.artist,
+.mac .list-common .list-cell.album {width:auto}
+.mac .list-common .list-cell.rank .history.rising {background:url(/images/common/2x/ico-rank-up.png) 0 0 no-repeat; background-size: 8px 10px}
+.mac .list-common .list-cell.rank .history.falling {background:url(/images/common/2x/ico-rank-down.png) 0 0 no-repeat;background-size: 8px 10px}
+.mac .list-common .list-cell.rank .history.new {background:url(/images/common/2x/txt-list-new.png) 50% 50% no-repeat;background-size: 20px 7px}
+
+.mac .list-common .list-cell.summary .ellipsis .more,
+.mac .list-common .list-cell.artist .ellipsis .more {background:url(/images/common/2x/ico-select-tri.png) 100% 53% no-repeat; background-size: 7px 4px;}
+.mac .list-common .list-cell.artist .ellipsis .ext.active ~ .more,
+.mac .list-common .list-cell.artist .ellipsis .ext:hover ~ .more,
+.mac .list-common .list-cell.artist .ellipsis .ext:focus ~ .more {background-image:url(/images/common//2x/ico-select-tri-blk.png); background-size: 7px 4px;}
+
+.mac .list-cell .likebtn{background:url(/images/common/2x/ico-like-detail.png) 0 100%; background-size: 100%; vertical-align:top}
+.mac .list-member li .like-my a{background:url(/images/common/2x/ico-like-detail.png) 0 100%; background-size: 100%; vertical-align:top}
+.mac .btn-list.put .ico:after {background:url(/images/common/2x/btn-list-put.png); background-size: 100%}
+.mac .btn-list.down .ico:after {background:url(/images/common/2x/btn-list-down.png); background-size: 100%}
+.mac .btn-list.mv .ico:after {background:url(/images/common/2x/btn-list-mv.png); background-size: 100%}
+.mac .btn-list.share .ico:after {background:url(/images/common/2x/btn-list-share.png); background-size: 100%}
+.mac .btn-list.mp3 .ico:after {background:url(/images/common/2x/btn-list-down-mp3.png); background-size: 100%}
+
+.mac .more-load a:after{background:url(/images/common/2x/ico-arrow-all.png) 0 -6px; background-size:11px 24px }
+.mac .more-load a:hover:after,
+.mac .more-load a:focus:after {background-position:0 -18px}
+
+.mac .list-recomm .list-cell .ico-like {background:url(/images/common/2x/ico-like-length.png) 0 0 no-repeat; background-size: 17px 14px}
+.mac .list-recomm .list-cell .ico-length {background:url(/images/common/2x/ico-song-length.png) 0 0 no-repeat; background-size: 14px 15px}
+.mac .list-recomm .list-cell [class*="ico-"] {line-height:17px;}
+
+.mac .list-recomm .list-cell.artwork .pic .best {background:url(/images/common/2x/ico-label-best.png); background-size: 34px 44px}
+.mac .btn-tag{line-height:26px}
+
+.mac .pop-layer .close {background:url(/images/common/2x/btn-close.png) no-repeat; background-size:15px 30px}
+.mac .pop-layer .close:hover, .mac .pop-layer .close:focus {background-position:0 -18px}
+.mac .btn-func.after .ico{background:url(/images/common/2x/ico-order-down.png) 0 8px no-repeat; background-size:9px 11px}
+.mac .btn-func.before .ico {background:url(/images/common/2x/ico-order-up.png) 0 8px no-repeat; background-size:9px 11px}
+.mac .btn-func.last .ico {background:url(/images/common/2x/ico-order-last.png) 0 8px no-repeat; background-size:11px}
+.mac .btn-func.first .ico {background:url(/images/common/2x/ico-order-first.png) 0 8px no-repeat; background-size:11px}
+.mac .btn-func.alone .ico {background-position:50% 8px}
+.mac .btn-func.delete .ico:after {background:url(/images/common/2x/btn-delete.png) 0 -11px no-repeat; background-size: 11px 22px}
+
+.mac .btn-ico.caution{height:20px; line-height:20px}
+.mac .btn-ico.caution:after {background:url(/images/common/2x/ico-caution.png) 5px 2px no-repeat; background-size: 2px 30px; }
+.mac .btn-ico.caution.active:after,
+.mac .btn-ico.caution:hover:after,
+.mac .btn-ico.caution:focus:after {background-position:5px -20px; border-color:#27282d}
+
+.mac .list-lyrics .list-cell.song,
+.mac .list-lyrics .list-cell.artist,
+.mac .list-lyrics .list-cell.album {width:calc((100% - 320px) / 3); padding-top:19px}
+
+.mac .btn-refresh {background:url(/images/common/2x/ico-refresh.png) 0 0 no-repeat; background-size: 18px 36px}
+.mac .btn-refresh:hover,
+.mac .btn-refresh:focus {background-position:0 -20px;}
+
+.mac .consult_ly .consultbox{margin-top:-220px}

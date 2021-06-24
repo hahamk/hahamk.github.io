@@ -1,0 +1,723 @@
+@charset "UTF-8";
+
+/* 에러 페이지 */
+.page-error {position:absolute; left:0; top:0; right:0; bottom:0; text-align:center}
+.page-error:after {content:''; display:inline-block; width:0; height:100%; vertical-align:middle}
+.page-error .message {display:inline-block; padding-top:114px; vertical-align:middle}
+.page-error .message .txt1 {font-size:14px; line-height:1.714em}
+.page-error .message .txt2 {margin-top:12px; line-height:1.666em; color:#666}
+.page-error .message .btns {margin-top:28px}
+.page-error .message .btn-action {/*padding:0 15px*/}
+.page-error .message.caution {background:url(/images/common/ico-error-caution.png) 50% 0 no-repeat}
+.page-error .message.network {background:url(/images/common/ico-error-net.png) 50% 0 no-repeat}
+.page-error .message.inspect {background:url(/images/common/ico-error-inspect_5.0.png) 50% 0 no-repeat}
+.btn-action .ico {display:inline-block; height:34px; line-height:32px; vertical-align:top}
+.windows7 .btn-action .ico {line-height:30px}
+.btn-action.ie .ico {padding-left:29px; background:url(/images/common/ico-ie.png) 0 7px no-repeat}
+.btn-action.go .ico {padding-right:11px; background:url(/images/common/ico-gt-more-w.png) 100% 50% no-repeat}
+/* 메인 팝업 */
+.pop-main-notice .pop-content {padding:10px}
+.pop-main-notice .pop-content:after {content:''; display:block; clear:both}
+.pop-main-notice .pop-content .set {float:left}
+.pop-main-notice .pop-content .set *{float:left}
+.pop-main-notice .pop-content .set ~ .set {margin-left:10px}
+.pop-main-notice .pop-content .set a {position:relative}
+.pop-main-notice .pop-content .set a:after {content:''; position:absolute; left:0; top:0; right:0; bottom:0; border:1px solid #000; opacity:.1}
+.pop-main-notice .pop-close {position:relative; margin-top:3px; padding:0 10px; padding-bottom:13px}
+.pop-main-notice .pop-close .close {top:0; right:10px; text-indent:0; color:#666; padding-right:19px; height:13px; line-height:13px; width:auto; background:none}
+.pop-main-notice .pop-close .close:after {content:''; position:absolute; right:0; top:1px; width:11px; height:11px; background:url(/images/common/btn-close.png) -2px -2px no-repeat}
+.windows7 .pop-main-notice .pop-close .close {line-height:11px}
+.pop-main-notice .pop-close .close:hover,
+.pop-main-notice .pop-close .close:focus {text-decoration:none; color:#27282d}
+.pop-main-notice .pop-close .close:hover:after,
+.pop-main-notice .pop-close .close:focus:after {background-position:-2px -17px}
+
+/* */
+.section-chart.like h2 {border-bottom:0}
+.section-chart.like .list-sort {margin-top:-45px; padding-bottom:15px}
+
+/** 곡,앨범 등 상세 **/
+/* 상세 공통 */
+.section-detail {padding-top:0}
+.section-detail .header-detail {/*padding:25px 20px 30px;*/ padding:16px 20px 30px; margin:0 -20px; background:#f5f7fa; border-bottom:1px solid #e6e6e6}
+.section-detail .header-detail h2 {border-bottom:0; line-height:1.5em; padding-bottom:0; /*margin-bottom:21px*/ margin-bottom:16px}
+.section-detail .header-detail h2 strong{display:inline-block; width:18px; height:18px; margin-right:10px; text-indent:-999em; vertical-align:-2px}
+.section-detail .header-detail h2 .n19 {background:url(/images/common/ico-19-detail.png)}
+.section-detail .header-detail h2 .n15 {background:url(/images/common/ico-15-detail.png)}
+.section-detail .header-detail h2 .n12 {background:url(/images/common/ico-12-detail.png)}
+.section-detail .header-detail h2 .all {background:url(/images/common/ico-all-detail.png)}
+.section-detail .header-detail:after {content:''; display:block; clear:both}
+.section-detail .header-detail .artwork {float:left; position:relative; width:200px; height:200px; background:url(/images/common/img-noimage-200x200.jpg) 50% 50% no-repeat; background-size:cover; text-indent:-999em}
+.section-detail .header-detail .artwork img {display:block; width:200px; height:200px}
+.section-detail .header-detail .artwork:after {content:''; position:absolute; left:0; top:0; right:0; bottom:0; border:1px solid #000; opacity:.1}
+.section-detail .header-detail .summary {float:right; width:calc(100% - 220px)}
+.section-detail .header-detail .summary .info {padding-top:3px}
+.section-detail .header-detail .summary .info li:after {content:''; display:block; clear:both}
+.section-detail .header-detail .summary .info li p {float:left; width:calc(100% - 61px); line-height:2em}
+.section-detail .header-detail .summary .info li span {float:left; width:61px; color:#8c8c8c; line-height:2em}
+.section-detail .header-detail .btns {margin-top:15px}
+.section-detail .header-detail .btns:after {content:''; display:block; clear:both}
+.section-detail .header-detail .btn-func {display:inline-block; height:32px; line-height:30px; padding:0 11px; border-color:#adb6c7; border-radius:16px}
+.windows7 .section-detail .header-detail .btn-func {line-height:28px}
+.section-detail .header-detail .btns .btn-func {float:left; margin-right:6px}
+.section-detail .header-detail .btn-func:hover,
+.section-detail .header-detail .btn-func:focus {border-color:#63717d}
+.section-detail .header-detail .btn-func .ico {padding-left:25px; height:30px; line-height:30px; font-size:12px; color:#63717d}
+.windows7 .section-detail .header-detail .btn-func .ico {line-height:28px}
+.section-detail .header-detail .btn-func.play {padding-left:7px}
+.section-detail .header-detail .btn-func.play .ico {background-image:url(/images/common/ico-func-play-detail.png)}
+.section-detail .header-detail .btn-func.like {position:relative; overflow:hidden}
+.section-detail .header-detail .btn-func.like input[type="checkbox"] + label {position:absolute; left:0; top:0; width:100%; height:100%; z-index:1; text-indent:-999em; background:rgba(255,255,255,0); color:#fff; cursor:pointer}
+.section-detail .header-detail .btn-func.like input[type="checkbox"] + label:after {content:''; position:absolute; left:11px; top:50%; margin-top:-7px; width:17px; height:14px; background:url(/images/common/ico-like-detail.png); border:0}
+.section-detail .header-detail .btn-func.like input[type="checkbox"]:checked + label:after {background-position:0 100%}
+.section-detail .header-detail .btn-func.share .ico {padding-left:25px; background:url(/images/common/ico-func-share.png) 0 50% no-repeat}
+.section-detail .content-detail .list-common .list-cell.rank .num {color:#63717d}
+.section-detail .content-detail .list-member {margin-bottom:20px; border-bottom:1px solid #e6e6e6}
+.section-detail .content-detail.lyrics .join {line-height:1.666em; color:#8c8c8c}
+.section-detail .content-detail.lyrics .title,
+.section-detail .content-detail.lyrics .join {margin-top:20px}
+.section-detail .content-detail.lyrics .title + .join {margin-top:-6px}
+.section-detail .content-detail.lyrics .title + .lyrics {margin-top:-16px}
+.section-detail .content-detail.lyrics .join + .lyrics {margin-top:-16px}
+.section-detail .content-detail.lyrics .lyrics {line-height:1.666em; color:#666}
+.section-detail .content-detail.similar,
+.section-detail .content-detail.intro {padding-top:15px}
+.section-detail .content-detail.intro h3 {margin-bottom:10px}
+.section-detail .content-detail.intro .intro-db,
+.section-detail .content-detail.intro .intro-db *{font-family:'맑은 고딕','Malgun Gothic','돋움',Dotum, 'APPLE SD Gothic NEO', sans-serif; ; font-size:12px; line-height:1.666em; color:#666}
+.section-detail .content-detail.similar .list-member {border-bottom:0}
+.section-detail .content-detail.similar .how {position:relative; margin-bottom:12px}
+.section-detail .content-detail.similar .how:after {content:''; display:block; clear:both}
+.section-detail .content-detail.similar .how .btn-ico {float:right}
+.section-detail .content-detail.similar .how .pop-notice {right:0; top:100%; margin-top:6px}
+.section-detail .content-detail.n19 {padding:39px 0}
+.section-detail .content-detail.n19 p {color:#666; line-height:1.666em}
+.section-detail .content-detail.n19 p .clr-r {color:#ff5b62; font-weight:normal}
+.wrap-comment {padding-top:7px; text-align:right}
+.wrap-comment .caution {display:inline-block; position:relative; height:24px; line-height:22px; font-size:11px; color:#63717d; padding-left:20px}
+.wrap-comment .caution:after {content:''; position:absolute; left:0; top:50%; margin-top:-7px; width:12px; height:12px; border:1px solid #adb6c7; border-radius:100%; background:url(/images/common/ico-caution.png) 5px 2px no-repeat}
+.wrap-comment .caution:hover,
+.wrap-comment .caution:focus {color:#27282d; text-decoration:none}
+.wrap-comment .caution:hover:after,
+.wrap-comment .caution:focus:after {background-position:5px -18px; border-color:#27282d}
+.wrap-comment .write {position:relative; margin-top:8px; padding:0 74px 20px 0; /*border-bottom:1px solid #adb6c7;*/ text-align:left}
+.wrap-comment .write:after {content:''; display:block; clear:both}
+.wrap-comment .write textarea {height:70px}
+.wrap-comment .write .btn-basic {position:absolute; right:0; top:0; width:70px; height:70px; line-height:68px; padding:0}
+.wrap-comment .write .check {float:left; padding-top:10px; color:#666}
+.wrap-comment .write .check *{vertical-align:top}
+.wrap-comment .write .length {float:right; padding-top:10px}
+.wrap-comment .write .length span ~ span {color:#8c8c8c}
+.wrap-comment .list-comment {/*border-bottom:1px solid #adb6c7; border-top:1px solid #adb6c7;*/ text-align:left}
+.wrap-comment .list-comment .item-comment {border-bottom:1px solid #e6e6e6}
+.wrap-comment .list-comment .item-comment:first-child {border-top:1px solid #adb6c7}
+.wrap-comment .list-comment .item-comment:last-child {border-bottom:1px solid #adb6c7}
+.wrap-comment .list-comment .item-comment .comment {position:relative; padding:15px 115px 17px 130px}
+.wrap-comment .list-comment .item-comment .comment .user {position:absolute; left:0; top:10px; height:30px; line-height:30px; font-size:0}
+.wrap-comment .list-comment .item-comment .comment .user > *{display:inline-block; vertical-align:middle}
+.wrap-comment .list-comment .item-comment .comment .user .pic {position:relative; width:30px; height:30px; background-position:50% 50%; background-size:cover; border-radius:100%}
+.wrap-comment .list-comment .item-comment .comment .user .pic:after {content:''; position:absolute; left:0; top:0; right:0; bottom:0; border:1px solid #000; opacity:.1; border-radius:100%}
+.wrap-comment .list-comment .item-comment .comment .user .name {margin-left:8px; font-size:12px}
+.wrap-comment .list-comment .item-comment .comment .user .pic.facebook,
+.wrap-comment .list-comment .item-comment .comment .user .pic.twitter,
+.wrap-comment .list-comment .item-comment .comment .user .pic.kakao {width:20px; height:20px; border-radius:0}
+.wrap-comment .list-comment .item-comment .comment .user .pic.facebook:after,
+.wrap-comment .list-comment .item-comment .comment .user .pic.twitter:after,
+.wrap-comment .list-comment .item-comment .comment .user .pic.kakao:after {display:none}
+.wrap-comment .list-comment .item-comment .comment .user .pic.facebook {background-image:url(/images/common/ico-account-fb.png)}
+.wrap-comment .list-comment .item-comment .comment .user .pic.twitter {background-image:url(/images/common/ico-account-tt.png)}
+.wrap-comment .list-comment .item-comment .comment .user .pic.kakao {background-image:url(/images/common/ico-account-kk.png)}
+.wrap-comment .list-comment .item-comment .comment .text {line-height:1.666em; word-break:break-all;}
+.wrap-comment .list-comment .item-comment .comment .text.block {color:#fc7700}
+.wrap-comment .list-comment .item-comment .comment .info {margin-top:8px}
+.wrap-comment .list-comment .item-comment .comment .info:after {content:''; display:block; clear:both}
+.wrap-comment .list-comment .item-comment .comment .info > *{float:left; line-height:14px}
+.wrap-comment .list-comment .item-comment .comment .info .date {color:#8c8c8c}
+.wrap-comment .list-comment .item-comment .comment .info .like label {float:left; padding-left:21px; margin-left:13px; line-height:14px; height:14px; cursor:pointer}
+.wrap-comment .list-comment .item-comment .comment .info .like input[type="checkbox"] + label:after {content:''; position:absolute; left:0; top:1px; width:15px; height:12px; border:0; background:url(/images/common/ico-like.png) 0 0 no-repeat}
+.wrap-comment .list-comment .item-comment .comment .info .like input[type="checkbox"]:checked + label:after {background-position:0 100%}
+.wrap-comment .list-comment .item-comment .comment .info .rpnum {padding-left:20px; margin-left:13px; background:url(/images/common/ico-reply.png) 0 1px no-repeat}
+.wrap-comment .list-comment .item-comment .comment .btns {position:absolute; right:10px; top:18px}
+.wrap-comment .list-comment .item-comment .comment .btns a {float:left; position:relative; padding-left:17px; line-height:16px; font-size:11px; color:#63717d}
+.wrap-comment .list-comment .item-comment .comment .btns a:hover,
+.wrap-comment .list-comment .item-comment .comment .btns a:focus {text-decoration:none; color:#27282d}
+.wrap-comment .list-comment .item-comment .comment .btns a:after {content:''; position:absolute; left:0; top:0}
+.wrap-comment .list-comment .item-comment .comment .btns .del {padding-left:16px}
+.wrap-comment .list-comment .item-comment .comment .btns .del:after {width:11px; height:11px; top:3px; background:url(/images/common/btn-delete.png)}
+.wrap-comment .list-comment .item-comment .comment .btns .del:hover:after,
+.wrap-comment .list-comment .item-comment .comment .btns .del:focus:after {background-position:0 100%}
+.wrap-comment .list-comment .item-comment .comment .btns .report {margin-left:15px}
+.wrap-comment .list-comment .item-comment .comment .btns .report:after {width:13px; height:14px; background:url(/images/common/ico-report.png)}
+.wrap-comment .list-comment .item-comment .comment .btns .report:hover:after,
+.wrap-comment .list-comment .item-comment .comment .btns .report:focus:after {background-position:0 100%}
+.wrap-comment .list-comment .item-comment .comment .btns .reply {padding-left:19px; margin-left:15px}
+.wrap-comment .list-comment .item-comment .comment .btns .reply:after {top:2px; width:15px; height:13px; background:url(/images/common/ico-reply.png)}
+.wrap-comment .list-comment .item-comment .comment .btns .reply:hover:after,
+.wrap-comment .list-comment .item-comment .comment .btns .reply:focus:after {background-position:0 100%}
+.wrap-comment .list-comment .item-comment .write,
+.wrap-comment .list-comment .item-comment .comment.reply {background:#f6f7fb url(/images/common/ico-reply-arrow.png) 15px 10px no-repeat}
+.wrap-comment .list-comment .item-comment .write {margin-top:0; padding:14px 84px 14px 40px; border-top:1px solid #e6e6e6; border-bottom:0}
+.wrap-comment .list-comment .item-comment .comment.reply {padding-left:160px; border-top:1px solid #e6e6e6}
+.wrap-comment .list-comment .item-comment .comment.reply .user {left:40px;}
+.wrap-comment .list-comment .item-comment .write .btn-basic {right:10px; top:14px}
+/* 댓글 운영정책 팝업 */
+.pop-policy-comment {display:block; position:fixed; left:50%; top:50%; width:480px; height:480px; margin:-240px 0 0 -150px}
+.pop-policy-comment .pop-content {height:361px; overflow-x:hidden; overflow-y:auto}
+.pop-policy-comment .pop-content .pop-content-inner {padding:16px 20px}
+.pop-policy-comment .pop-content ol li,
+.pop-policy-comment .pop-content p {line-height:1.666em}
+.pop-policy-comment .pop-content p + .text {margin-top:0.8em}
+.pop-policy-comment .pop-content .text ol li,
+.pop-policy-comment .pop-content .text p {color:#666}
+.pop-policy-comment .pop-content .text > li ~ li {margin-top:0.8em}
+.pop-policy-comment .pop-content .text > li p + ol {margin-top:0.4em}
+.pop-policy-comment .pop-content .text {counter-reset:policy-counter1;}
+.pop-policy-comment .pop-content .text > li:before {content:counter(policy-counter1) ". "; counter-increment:policy-counter1; line-height:1.666em}
+.pop-policy-comment .pop-content .text ol {counter-reset:policy-counter2;}
+.pop-policy-comment .pop-content .text ol > li {padding-left:1.5em; text-indent:-1.5em}
+.pop-policy-comment .pop-content .text ol > li:before {content:"(" counter(policy-counter2) ") "; counter-increment:policy-counter2; line-height:1.666em}
+/* 아티스트 상세 */
+.section-detail.artist .header-detail {position:relative}
+.section-detail.artist .header-detail .artwork,
+.section-detail.artist .header-detail .artwork:after {border-radius:100%}
+.section-detail.artist .header-detail .btns {position:absolute; bottom:30px}
+
+/* 추천 - 태그 */
+.recomm-tag .division {padding:20px 0 10px}
+.recomm-tag .division ~ .division {border-top:1px solid #e6e6e6}
+.recomm-tag .division h3 {font-size:14px}
+.recomm-tag .division ul {margin-top:16px}
+.recomm-tag .division ul:after {content:''; display:block; clear:both}
+.recomm-tag .division ul li {float:left; margin:0 10px 10px 0}
+.recomm-tag .division ul li a {float:left; height:34px; padding:0 20px; border:1px solid #e6e6e6; background:#fff; line-height:34px; color:#8c8c8c; border-radius:18px}
+.windows7 .recomm-tag .division ul li a {line-height:32px}
+.recomm-tag .division ul li a:hover,
+.recomm-tag .division ul li a:focus {background:#0096ff; border-color:#0096ff; color:#fff; text-decoration:none}
+.list-sort .relate-tag {float:right; line-height:24px; color:#8c8c8c}
+.list-sort .relate-tag strong {font-weight:normal; color:#0096ff; padding-left:4px}
+/* 추천 - 상세 */
+.section-detail.recomm .header-detail {text-align:center}
+.section-detail.recomm .header-detail .category {display:inline-block; color:#63717d; margin-top:7px}
+.section-detail.recomm .header-detail .category:before,
+.section-detail.recomm .header-detail .category:after {content:''; display:inline-block; width:30px; border-top:1px solid #adb6c7; vertical-align:middle; font-size:0; line-height:0; margin:0 9px; margin-top:-3px}
+.section-detail.recomm .header-detail h2 {font-size:20px; margin:0; padding:0; margin-top:17px}
+.section-detail.recomm .header-detail .category ~ h2 {margin-top:13px}
+.section-detail.recomm .header-detail .copy {color:#666; /*margin-top:10px;*/ margin-top:3px; line-height:1.666em}
+.section-detail.recomm .header-detail .dj-date {/*margin-top:10px;*/ margin-top:6px; padding:6px 0}
+.section-detail.recomm .header-detail .dj-date .date,
+.section-detail.recomm .header-detail .dj-date .name {display:inline-block; vertical-align:middle}
+.section-detail.recomm .header-detail .dj-date .name {margin-left:0}
+.section-detail.recomm .header-detail .dj-date .link-user {line-height:0}
+.section-detail.recomm .header-detail .dj-date .date {position:relative; margin-left:5px; padding-left:10px; /*padding-bottom:1px;*/ color:#8c8c8c}
+.section-detail.recomm .header-detail .dj-date .date:after {content:''; position:absolute; left:0; top:2px; height:9px; border-left:1px solid #d9d9d9}
+.windows7 .section-detail.recomm .header-detail .dj-date .date {padding-bottom:1px}
+.section-detail.recomm .header-detail .cover {margin-top:10px; font-size:0}
+.section-detail.recomm .header-detail .cover .artwork {float:none; display:inline-block; margin:0 3px; width:120px; height:120px}
+.section-detail.recomm .header-detail .cover .artwork img {display:block; width:120px; height:120px}
+.section-detail.recomm .header-detail .tags {height:28px; overflow:hidden; margin-top:16px; font-size:0}
+.section-detail.recomm .header-detail .tags li {display:inline-block; margin:0 3px}
+.section-detail.recomm .header-detail .bottom {margin-top:16px; font-size:0}
+.section-detail.recomm .header-detail .bottom > *{vertical-align:middle}
+.section-detail.recomm .header-detail .bottom [class*="ico-"] {display:inline-block; white-space:nowrap; height:15px; line-height:13px; margin-right:16px; color:#8c8c8c; font-size:12px}
+.section-detail.recomm .header-detail .bottom .ico-listen {padding-left:24px; background:url(/images/common/ico-listen.png) 0 0 no-repeat}
+.section-detail.recomm .header-detail .bottom .ico-length {padding-left:22px; background:url(/images/common/ico-song-length.png) 0 0 no-repeat}
+.section-detail.recomm .header-detail .bottom .btn-func.play {margin-left:6px}
+.section-detail.recomm .content-detail.mix .list-sort .mix {float:left; font-size:0}
+.section-detail.recomm .content-detail.mix .list-sort .mix *{display:inline-block; line-height:24px; vertical-align:middle; font-size:12px; color:#0096ff}
+.section-detail.recomm .content-detail.mix .list-sort .mix .x {display:inline-block; width:9px; height:9px; margin:0 12px; background:url(/images/common/ico-x.png); text-indent:-999em}
+
+/* 마이앨범 */
+.section-myalbum .list-sort .select-box.sort .drop {width:auto}
+.section-myalbum .list-sort .func,
+.section-myalbum .list-sort .func *{float:left}
+.section-myalbum .list-sort .func li {position:relative}
+.section-myalbum .list-sort .func li ~ li {margin-left:16px; padding-left:17px}
+.section-myalbum .list-sort .func li ~ li:after {content:''; position:absolute; left:0; top:7px; height:11px; border-left:1px solid #d9d9d9}
+.section-myalbum .list-sort .func li a {position:relative; line-height:24px; padding-left:25px}
+.section-myalbum .list-sort .func li a:after {content:''; position:absolute; left:0; top:50%; margin-top:-6px; width:16px; height:12px; background-position:0 0; background-repeat:no-repeat}
+.section-myalbum .list-sort .func li.make a:after {background-image:url(/images/common/ico-make-folder.png)}
+.section-myalbum .list-sort .func li.edit a:after {background-image:url(/images/common/ico-edit-order.png)}
+.section-myalbum .list-sort .func li.info a:after {width:14px; background-image:url(/images/common/ico-edit-album.png)}
+.section-myalbum .list-sort .func li.delete a:after {background-image:url(/images/common/ico-delete-folder.png)}
+.section-myalbum .list-sort .func li.info a,
+.section-myalbum .list-sort .func li.edit a {padding-left:23px}
+.section-myalbum .list-sort .func li a:hover,
+.section-myalbum .list-sort .func li a:focus {color:#0096ff; text-decoration:none}
+.section-myalbum .list-sort .func li a:hover:after,
+.section-myalbum .list-sort .func li a:focus:after {background-position:0 -12px}
+.section-myalbum .list-member {margin-top:20px}
+.list-my-album .list-row:first-child .list-cell.summary:before {text-indent:13px}
+.list-my-album .list-row:first-child .list-cell.extend:before {text-align:center}
+.list-my-album .list-cell.extend {width:80px; text-align:center; color:#8c8c8c}
+.list-my-album .list-cell.summary .copy {margin-top:0.2em}
+.list-my-album .list-cell.summary .copy a {color:#8c8c8c}
+.list-my-album .list-cell.summary .etc {display:none}
+.pop-new-album {width:480px}
+.pop-new-album .pop-content {padding:20px; padding-bottom:0}
+.pop-new-album .pop-content table {margin-bottom:10px}
+.pop-new-album .pop-content table tr th {width:54px; font-weight:normal; vertical-align:top; padding-top:9px; text-align:left}
+.pop-new-album .pop-content table tr td input[type="text"] {width:100%}
+.pop-new-album .pop-content table tr td textarea {height:180px}
+.pop-new-album .pop-content table tr td .length {margin-top:10px; text-align:right}
+.pop-new-album .pop-content table tr td .length span ~ span {color:#8c8c8c}
+.pop-new-album .pop-content table tr.title td {padding-bottom:20px}
+.pop-edit-album {width:480px}
+.pop-edit-album .pop-content {padding:20px; padding-bottom:0;}
+.pop-edit-album .order-myalbum {border:1px solid #adb6c7}
+.pop-edit-album .sort-myalbum {margin-bottom:14px}
+.pop-edit-album .sort-myalbum:after {content:""; display:block; clear:both}
+.pop-edit-album .sort-myalbum .select-box {float:right}
+.pop-edit-album .sort-myalbum .select-box .drop {left:auto; right:0; max-height:1000px}
+.pop-edit-album .order-myalbum .head {padding-left:24px; border-bottom:1px solid #adb6c7}
+.pop-edit-album .order-myalbum .head:after {content:''; display:block; clear:both}
+.pop-edit-album .order-myalbum .head span {float:left; height:33px}
+.pop-edit-album .order-myalbum .head span.h1 {width:50px}
+.pop-edit-album .order-myalbum .head span.h3 {float:right; width:85px}
+.pop-edit-album .order-myalbum .head span:before {content:attr(data-role-thead); display:block; line-height:33px; font-size:11px; color:#8c8c8c; text-align:center}
+.pop-edit-album .order-myalbum .head span.h1:before {/*content:'번호'*/}
+.pop-edit-album .order-myalbum .head span.h2:before {/*content:'마이앨범명';*/ text-align:left}
+.pop-edit-album .order-myalbum .head span.h3:before {/*content:'수록곡 수'*/}
+.pop-edit-album .order-myalbum .scrollable {max-height:349px; overflow-x:hidden; overflow-y:auto}
+.pop-edit-album .order-myalbum .list li {position:relative}
+.pop-edit-album .order-myalbum .list li ~ li {border-top:1px solid #e6e6e6}
+.pop-edit-album .order-myalbum .list li:after {content:''; display:block; clear:both}
+.pop-edit-album .order-myalbum .list li input[type="checkbox"] + label {display:block; height:34px; padding-left:24px}
+.pop-edit-album .order-myalbum .list li input[type="checkbox"] + label:hover,
+.pop-edit-album .order-myalbum .list li input[type="checkbox"] + label:focus {background:#f6f7fb}
+.pop-edit-album .order-myalbum .list li input[type="checkbox"] + label:after {left:10px; top:10px}
+.pop-edit-album .order-myalbum .list li input[type="checkbox"]:checked + label {background:#e6f8fc}
+.pop-edit-album .order-myalbum .list li .num,
+.pop-edit-album .order-myalbum .list li .title,
+.pop-edit-album .order-myalbum .list li .length {float:left; line-height:34px; text-align:center}
+.pop-edit-album .order-myalbum .list li .num {width:50px; color:#63717d}
+.pop-edit-album .order-myalbum .list li .title {width:calc(100% - 135px); text-align:left; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.pop-edit-album .order-myalbum .list.song li .title {width:calc(100% - 50px)}
+.pop-edit-album .order-myalbum .list li .title span {color:#8c8c8c}
+.pop-edit-album .order-myalbum .list li .title.added-app {color:#fc7700}
+.pop-edit-album .order-myalbum .list li .length {float:right; width:85px; color:#8c8c8c}
+.pop-edit-album .order-myalbum .list li .title span:before {content:"|"; display:inline-block; vertical-align:middle; padding:0 0.5em 0 0.6em; margin-top:-0.5em; color:#d9d9d9}
+.pop-edit-album .order-myalbum .list li.nodata {padding:40px 0; text-align:center; color:#8c8c8c}
+.pop-edit-album .order {margin-top:7px}
+.pop-edit-album .order:after {content:''; display:block; clear:both}
+.pop-edit-album .order > *{float:left}
+.pop-edit-album .order .check {width:24px; padding:7px 0 0 11px}
+.pop-edit-album .order .btn-func ~ .btn-func {margin-left:6px}
+.pop-edit-album .order .length {float:right; line-height:28px; font-size:11px; color:#8c8c8c}
+.pop-edit-album .order .length .selected {color:#0096ff}
+.pop-edit-album-song .pop-content {padding-bottom:0}
+.pop-edit-album-song .order-myalbum .scrollable {/*max-height:384px*/}
+.pop-edit-album-song .edit {/*margin-bottom:20px*/}
+.pop-edit-album-song .edit:after {content:''; display:block; clear:both}
+.pop-edit-album-song .edit .input-clear {display:block;/*float:left*/}
+.pop-edit-album-song .edit .input-clear {margin-bottom:10px}
+.pop-edit-album-song .edit .input-clear:first-child{margin-bottom:20px}
+.pop-edit-album-song .edit .input-clear:after {content:''; display:block; clear:both}
+.pop-edit-album-song .edit .input-clear label,
+.pop-edit-album-song .edit .input-clear input[type="text"],
+.pop-edit-album-song .edit .input-clear textarea{float:left}
+.pop-edit-album-song .edit .input-clear label {width:53px; line-height:30px}
+.pop-edit-album-song .edit .input-clear input[type="text"],
+.pop-edit-album-song .edit .input-clear textarea{width:calc(100% - 53px)}
+.pop-edit-album-song .edit .input-clear textarea{height:180px}
+.pop-edit-album-song .edit .open {display:block}
+.pop-edit-album-song .edit .length {margin-top:10px; text-align:right;float:right}
+.pop-edit-album-song .edit .length span ~ span {color:#8c8c8c}
+.list-song-history .list-cell.times {width:80px; text-align:center; color:#8c8c8c}
+.list-song-history .list-cell.song,
+.list-song-history .list-cell.artist,
+.list-song-history .list-cell.album {width:calc((100% - 459px) / 3)}
+.list-recomm .list-cell.time {width:80px; text-align:center; color:#8c8c8c}
+.list-keep-download .list-cell.exp {width:120px; text-align:center; color:#8c8c8c}
+.list-keep-download .list-cell.song,
+.list-keep-download .list-cell.artist,
+.list-keep-download .list-cell.album {width:calc((100% - 419px) / 3)}
+
+/* 마이뮤직 - 좋아요 */
+.list-cell.day {width:80px; text-align:center; color:#8c8c8c}
+.list-cell.like-my{width:50px; text-align:center; color:#8c8c8c}
+.list-cell .likebtn{text-indent:-999em;width:17px; height:14px; background:url(/images/common/ico-like-detail.png) 0 100% no-repeat; cursor:pointer; display:inline-block;}
+.list-cell .likebtn.disabled{background:url(/images/common/ico-like-disabled.png) no-repeat; cursor:default;}
+
+/* 검색 */
+.section-search .nodata {margin-top:38px; text-align:center}
+.section-search .nodata h3 {font-size:14px}
+.section-search .nodata h3 strong {color:#0096ff}
+.section-search .nodata h3 + ul {margin-top:15px}
+.section-search .nodata ul {display:inline-block; text-align:left}
+.section-search .nodata ul li {position:relative; padding-left:7px; color:#666; line-height:1.666em}
+.section-search .nodata ul li:after {content:''; position:absolute; left:0; top:11px; width:1px; height:1px; background:#666}
+.section-search {position:relative}
+.section-search .search-result {position:relative}
+.section-search .search-result ~ .search-result {margin-top:38px}
+.section-search .search-result h3 {font-size:14px}
+.section-search .search-result h3 strong {color:#0096ff}
+.section-search .search-result .list-common {margin-top:15px; border-top:1px solid #adb6c7}
+.section-search .search-result .list-common .list-inner {/*border-bottom:0*/}
+.section-search .search-result .more-result {position:absolute; top:1px; right:0; padding-right:11px; color:#8c8c8c; font-size:11px}
+.section-search .search-result .more-result:after {content:''; position:absolute; right:0; top:1px; width:5px; height:9px; background:url(/images/common/ico-gt-more.png)}
+.windows7 .section-search .search-result .more-result:after {top:2px}
+.section-search .search-result .list-function {position:static; padding:7px 0 0 10px; border-top:0; background:#fff}
+.section-search .tab-carousel {margin-bottom:19px}
+.section-search .search-result.artist .result {position:relative; margin-top:16px}
+.section-search .search-result.artist .result:after {content:''; display:block; clear:both}
+.section-search .search-result.artist .result h4 {font-size:20px}
+.section-search .search-result.artist .result h4 a:hover,.section-search .search-result.artist .result h4 a:link{text-decoration:none}
+.section-search .search-result.artist .result .artwork {float:left; position:relative; width:200px; height:200px; background:url(/images/common/img-noimage-200x200.jpg) 50% 50% no-repeat; background-size:cover; text-indent:-999em}
+.section-search .search-result.artist .result .artwork img {display:block}
+.section-search .search-result.artist .result .artwork:after {content:''; position:absolute; left:0; top:0; right:0; bottom:0; border:1px solid #000; opacity:.1}
+.section-search .search-result.artist .result .artwork,
+.section-search .search-result.artist .result .artwork:after {border-radius:100%}
+.section-search .search-result.artist .result .summary {float:right; width:calc(100% - 220px)}
+.section-search .search-result.artist .result .summary .info {padding-top:13px}
+.section-search .search-result.artist .result .summary .info li:after {content:''; display:block; clear:both}
+.section-search .search-result.artist .result .summary .info li p {line-height:2em}
+.section-search .search-result.artist .result .summary .info li span {float:left; width:61px; color:#8c8c8c; line-height:2em}
+.section-search .search-result.artist .result .btns {position:absolute; bottom:0; margin-top:15px}
+.section-search .search-result.artist .result .btns:after {content:''; display:block; clear:both}
+.section-search .search-result.artist .result .btn-func {display:inline-block; height:32px; padding:0 11px; border-color:#adb6c7; border-radius:16px}
+.section-search .search-result.artist .result .btns .btn-func {float:left; margin-right:6px}
+.section-search .search-result.artist .result .btn-func:hover,
+.section-search .search-result.artist .result .btn-func:focus {border-color:#63717d}
+.section-search .search-result.artist .result .btn-func .ico {padding-left:25px; height:30px; line-height:30px; font-size:12px; color:#63717d}
+.windows7 .section-search .search-result.artist .result .btn-func .ico {line-height:28px}
+.section-search .search-result.artist .result .btn-func.play {padding-left:7px}
+.section-search .search-result.artist .result .btn-func.play .ico {background-image:url(/images/common/ico-func-play-detail.png)}
+.section-search .search-result.artist .result .btn-func.like {position:relative; overflow:hidden}
+.section-search .search-result.artist .result .btn-func.like input[type="checkbox"] + label {position:absolute; left:0; top:0; width:100%; height:100%; text-indent:-999em; cursor:pointer}
+.section-search .search-result.artist .result .btn-func.like input[type="checkbox"] + label:after {content:''; position:absolute; left:11px; top:50%; margin-top:-7px; width:17px; height:14px; background:url(/images/common/ico-like-detail.png); border:0}
+.section-search .search-result.artist .result .btn-func.like input[type="checkbox"]:checked + label:after {background-position:0 100%}
+.section-search .search-result.artist .result .btn-func.share .ico {padding-left:25px; background:url(/images/common/ico-func-share.png) 0 50% no-repeat}
+.section-search .list-sort .input-clear {float:right; width:188px; margin:-2px 0; margin-right:-10px}
+.section-search .list-sort .input-clear input[type="text"] {width:100%; padding-right:38px}
+.section-search .list-sort .input-clear .clear {right:33px}
+.section-search .list-sort .input-clear .search {position:absolute; right:0; top:0; width:30px; height:30px; background:url(/images/common/btn-search.png) 7px 0; border:0; cursor:pointer; text-indent:-999em}
+.section-search .list-sort .input-clear .search:hover,
+.section-search .list-sort .input-clear .search:focus {background-position:7px -30px}
+.sort-keyword {margin-bottom:16px}
+.sort-keyword:after {content:""; display:block; clear:both}
+.sort-keyword > *,
+.sort-keyword .sort > *{float:left}
+.sort-keyword h3 {margin:-1px 20px 0 0; font-size:14px}
+.sort-keyword h3 strong,
+.sort-keyword h3 span {color:#0096ff}
+.sort-keyword input[type="radio"] + label ~ label {margin-left:20px}
+.sort-keyword input[type="radio"] + label span {color:#0096ff}
+.sort-division {border:1px solid #adb6c7}
+.sort-division:after {content:""; display:block; clear:both}
+.sort-division .set,
+.sort-division .set > *{float:left}
+.sort-division .set {width:33.33%; max-width:181px; padding:5px 0; border-right:1px solid #e6e6e6; box-sizing:border-box}
+.sort-division .set + .set + .set {margin-right:-1px}
+/*.sort-division .set ~ .set {border-left:1px solid #e6e6e6}*/
+.sort-division .set label {width:55px; height:28px; text-indent:20px; line-height:30px; color:#8c8c8c}
+.windows7 .sort-division .set label {line-height:28px}
+.sort-division .set .select-title {width:100%; border-color:#fff}
+.sort-keyword + .list-sort {border-top:1px solid #e6e6e6}
+.section-search .list-member li {position:relative; height:120px; width:25%; padding:0 0 0 134px; margin-top:20px; text-align:left}
+.section-search .list-member li:after {content:''; display:inline-block; width:0; height:120px; vertical-align:middle}
+.section-search .list-member li .pic {position:absolute; left:0; top:0}
+.section-search .list-member li .summary {display:inline-block; width:calc(100% - 20px); vertical-align:middle}
+.section-search .list-member li .summary span {display:block; line-height:1.666em; max-height:3.4em; overflow:hidden}
+.section-search .list-member li .summary span a {line-height:1.666em}
+.section-search .list-member li .summary .info {color:#8c8c8c}
+
+/* 다운로드 */
+.section-download h2 {border-bottom:0}
+.section-download .process {border:1px solid #eaebf0; background:#f6f7fb}
+.section-download .process ol {margin:-1px 0; overflow:hidden}
+.section-download .process ol:after {content:''; display:block; clear:both}
+.section-download .process ol li {float:left; position:relative; width:33.33%; padding:0 9px; text-align:center; color:#63717d}
+.section-download .process ol li.step1 {padding-left:0}
+.section-download .process ol li.step3 {padding-right:0; width:33.34%}
+.section-download .process ol li p {height:36px; line-height:36px}
+.windows7 .section-download .process ol li p {line-height:34px}
+.section-download .process ol li span {padding-right:.2em}
+.section-download .process ol li p:after {content:''; position:absolute; right:-9px; top:0; width:18px; height:36px; background:url(/images/common/bg-process-idle.png)}
+.section-download .process ol li p:before {content:''; display:none; position:absolute; left:-9px; top:0; width:18px; height:36px; background:url(/images/common/bg-precess-active-left.png)}
+.section-download .process ol li.step3 p:after {display:none}
+.section-download .process.step1 ol li.step1,
+.section-download .process.step2 ol li.step2,
+.section-download .process.step3 ol li.step3 {z-index:1; color:#fff}
+.section-download .process.step1 ol li.step1 p,
+.section-download .process.step2 ol li.step2 p,
+.section-download .process.step3 ol li.step3 p {background:#63717d}
+.section-download .process.step1 ol li.step1 p:after,
+.section-download .process.step2 ol li.step2 p:after {background:url(/images/common/bg-precess-active-right.png) 0 1px no-repeat}
+.section-download .process.step2 ol li.step2 p:before,
+.section-download .process.step3 ol li.step3 p:before {display:block}
+.section-download .process.step2 ol li.step1 p:after,
+.section-download .process.step3 ol li.step2 p:after {display:none}
+.section-download .content-download {margin-top:20px}
+.section-download .content-download:after {content:''; display:block; clear:both}
+.section-download .content-download h3 {font-size:14px; margin-bottom:14px}
+.section-download .content-download h3 span {color:#0096ff}
+.section-download .bx-stay {border:1px solid #adb6c7}
+.section-download .bx-stay .head {height:34px; border-bottom:1px solid #adb6c7; padding-left:24px}
+.section-download .bx-stay .head:after {content:''; display:block; clear:both}
+.section-download .bx-stay .head > *{float:left}
+.section-download .bx-stay .head [class*="h"] {height:33px}
+.section-download .bx-stay .head [class*="h"]:after {content:''; display:block; line-height:33px; font-size:11px; color:#8c8c8c}
+.section-download .bx-stay .head .h1 {width:59px}
+.section-download .bx-stay .head .h2 {width:calc(100% - 325px)}
+.section-download .bx-stay .head .h3 {width:156px}
+.section-download .bx-stay .head .h4 {width:110px}
+.section-download .bx-stay .head .h1:after {content:'번호'}
+.section-download .bx-stay .head .h2:after {content:'곡정보'}
+.section-download .bx-stay .head .h4:after {content:'금액(차감)'; text-align:center}
+.section-download .bx-stay .select-title.quality {width:100% !important; margin-top:1px; border-color:transparent; text-align:center}
+.section-download .bx-stay .select-title.quality:after {right:0}
+.section-download .bx-stay .select-title.quality strong {display:inline-block; padding:0 0 0 0; font-size:11px}
+.select-option.quality ul {padding:3px 0}
+.select-option.quality ul li span {padding:0 5px; font-size:11px; line-height:24px; text-align:center}
+.select-option.upper{top:10px !important}
+.section-download .bx-stay .list {height:704px; overflow-x:hidden; overflow-y:auto}
+.section-download .bx-stay .list ul {display:table; table-layout:fixed; width:100%}
+.section-download .bx-stay .list ul li {display:table-row}
+.section-download .bx-stay .list ul li .cell {display:table-cell; height:34px; border-bottom:1px solid #e6e6e6; text-align:center; vertical-align:middle; box-sizing:content-box}
+.section-download .bx-stay .list ul li.selected .cell {background:#e6f8fc}
+.section-download .bx-stay .list ul li .cell.check {width:24px; text-align:right}
+.section-download .bx-stay .list ul li .cell.number {width:59px; color:#63717d}
+.section-download .bx-stay .list ul li .cell.info {text-align:left}
+.section-download .bx-stay .list ul li .cell.info p {overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#8c8c8c}
+.section-download .bx-stay .list ul li .cell.info p span {line-height:1.1em}
+.section-download .bx-stay .list ul li .cell.info p .title {color:#27282d; margin-right:2px}
+.section-download .bx-stay .list ul li .cell.info p .title:after {content:"|"; color:#d9d9d9; padding-left:6px}
+.section-download .bx-stay .list ul li .cell.info p .artist {}
+.section-download .bx-stay .list ul li .cell.quality {width:156px}
+.section-download .bx-stay .list ul li .cell.price {width:110px; color:#63717d}
+.section-download .bx-stay .list ul li .cell.price strong {font-weight:normal; color:#ff5b62}
+.section-download .stay-list {float:left; width:calc(50% - 10px)}
+.section-download .stay-list .function {margin-top:7px; padding-left:11px}
+.section-download .stay-list .function *{vertical-align:middle}
+.section-download .stay-list .function .alone {margin-right:15px}
+.section-download .stay-list .function .btn-func {margin:0 1px}
+.section-download .payment {float:right; width:calc(50% - 10px)}
+.section-download .payment .coupon {display:table; width:100%; /* padding:18px 20px 17px; */ border:1px solid #d7ecf1; background:#e6f8fc}
+.windows7 .section-download .payment .coupon {/*padding:16px 20px 19px*/}
+/*.section-download .payment .coupon:after {content:""; display:block; clear:both}*/
+.section-download .payment .coupon .row {display:table-row}
+.section-download .payment .coupon .col {display:table-cell; vertical-align:middle; padding:17px 0}
+.section-download .payment .coupon .inf {text-align:right; padding-right:20px; padding-left:30px}
+.section-download .payment .coupon .tit {padding-left:20px}
+.section-download .payment .coupon .tit > a,
+.section-download .payment .coupon .tit > strong {padding-right:12px; white-space:nowrap; font-weight:bold; background:url(/images/common/ico-gt-more.png) 100% 50% no-repeat}
+.windows7 .section-download .payment .coupon .tit > a,
+.windows7 .section-download .payment .coupon .tit > strong {background-position:100% 54%}
+/*.section-download .payment .coupon p {float:right}*/
+.section-download .payment .coupon .inf p {line-height:1.666em}
+.section-download .payment .coupon .inf p span ~ span {white-space:nowrap; color:#8c8c8c}
+.section-download .payment .no-coupon {margin-top:8px}
+.section-download .payment .no-coupon > *{vertical-align:middle}
+.section-download .payment .no-coupon > span {color:#666; padding-right:4px}
+.section-download .payment .check-coupon {margin-top:12px}
+.section-download .payment .check-coupon input[type="checkbox"] + label {height:auto}
+.section-download .payment .check-coupon input[type="checkbox"] + label:after {top:4px}
+.section-download .payment .check-coupon input[type="checkbox"] + label span {line-height:1.666em; color:#666}
+.section-download .payment .check-coupon input[type="checkbox"] + label span ~ span {white-space:nowrap}
+.section-download .payment .calculate {display:table; margin-top:20px; width:100%; table-layout:fixed; border:1px solid #d9d9d9}
+.section-download .payment .check-coupon + .calculate {margin-top:17px}
+.section-download .payment .calculate .inner {display:table-row}
+.section-download .payment .calculate .cell {display:table-cell; position:relative; width:50%; padding:18px 19px; vertical-align:middle; text-align:center}
+.section-download .payment .calculate .cell ul li:after {content:''; display:block; clear:both}
+.section-download .payment .calculate .cell ul li ~ li {margin-top:11px}
+.section-download .payment .calculate .cell ul li span {float:left; color:#666}
+.section-download .payment .calculate .cell ul li strong {float:right}
+.section-download .payment .calculate .cell ul li.cpn *{color:#0096ff; font-weight:bold}
+.section-download .payment .calculate .cell ul li.sng *{color:#63717d}
+.section-download .payment .calculate .cell.right {border-left:1px solid #e6e6e6}
+.section-download .payment .calculate .cell.right .btn-action {width:100%; padding:0 0 0 0}
+.section-download .payment .calculate .cell.right .price {margin-bottom:17px}
+.section-download .payment .calculate .cell.right .price span {font-size:16px; font-weight:bold}
+.section-download .payment .calculate .cell.right .price strong {display:block; margin-top:10px; font-size:20px; color:#ff5b62}
+.section-download .payment .calculate .cell.right:after {content:""; position:absolute; left:-12px; top:50%; margin-top:-12px; width:22px; height:22px; border:1px solid #e6e6e6; border-radius:100%; background:#fff url(/images/common/ico-equal.png) 50% 50% no-repeat}
+.section-download .payment .bx-notice {margin-top:40px; background:#fff; padding:0 0 0 0; border-bottom:0}
+.section-download .payment .bx-notice h4 {font-weight:normal}
+.section-download .payment .bx-notice h4 ~ ul {margin-top:7px}
+.section-download .content-download.step2 .tbl-rows tr.method td ul li {min-height:26px}
+.section-download .content-download.step2 .tbl-rows tr.method td ul li > *{vertical-align:middle}
+.section-download .content-download.step2 .tbl-rows tr.method td ul li.gcash {margin-top:-7px}
+.section-download .content-download.step2 .tbl-rows tr.method td ul li.gcash .btn-basic {margin-left:8px; margin-right:-14px}
+.section-download .content-download.step2 .tbl-rows tr.method td ul li.gcash .btn-refresh {/*margin-left:10px*/ margin-left:24px}
+.section-download .content-download.step2 .tbl-rows tr td .list-txt {margin:-0.2em 0}
+.section-download .content-download.step2 ul.agree {margin-top:15px}
+.section-download .content-download.step2 ul.agree li {font-size:0}
+.section-download .content-download.step2 ul.agree li ~ li {margin-top:10px}
+.section-download .content-download.step2 ul.agree li *{vertical-align:middle; font-size:12px}
+.section-download .content-download.step2 ul.agree li label {color:#666}
+.section-download .content-download.step2 ul.agree li .btn-link {margin-left:4px}
+.section-download .content-download.step2 .btns-confirm .btn-action {width:238px; padding:0}
+.section-download .content-download.step3 .message {padding:40px 0 60px; text-align:center}
+.section-download .content-download.step3 .message *{display:block}
+.section-download .content-download.step3 .message strong {font-size:20px; color:#27282d}
+.section-download .content-download.step3 .message span {color:#666}
+.section-download .content-download.step3 .message strong + span {margin-top:18px}
+[class*="pop-payment-"] .pop-content {padding:20px; padding-bottom:0}
+.pop-payment-login {width:360px}
+.pop-payment-login fieldset {padding-bottom:14px; border-bottom:1px solid #e6e6e6}
+.pop-payment-login fieldset label,
+.pop-payment-login fieldset input[type="text"],
+.pop-payment-login fieldset input[type="password"] {float:left; margin-bottom:6px}
+.pop-payment-login fieldset label {line-height:30px; width:100px}
+.pop-payment-login fieldset input[type="text"],
+.pop-payment-login fieldset input[type="password"] {width:218px}
+.pop-payment-pay {width:480px}
+.pop-payment-pay .tbl-rows tr td {padding-right:0}
+.pop-payment-pay .tbl-rows tr.payment td {padding:0 0 0 12px}
+.pop-payment-pay .tbl-rows tr.payment td .clr-gb {display:inline-block; width:110px}
+.pop-payment-pay .tbl-rows tr.payment td .btn-refresh {margin-left:10px}
+.pop-payment-pay p.caution {margin-top:16px; margin-bottom:-2px; color:#ff5b62; line-height:1.666em; text-align:center}
+.pop-payment-okc .tbl-rows tr td {padding:3px 0 3px 10px}
+.pop-payment-okc .tbl-rows tr.number td span,
+.pop-payment-okc .tbl-rows tr.number td input[type='text'],
+.pop-payment-okc .tbl-rows tr.number td input[type='password'] {float:left}
+.pop-payment-okc .tbl-rows tr.number td span {width:10px; line-height:30px; text-align:center; color:#ccc}
+.pop-payment-okc .tbl-rows tr.number td input[type='text'],
+.pop-payment-okc .tbl-rows tr.number td input[type='password'] {width:64px}
+.pop-payment-okc .tbl-rows tr.password td input[type='password'] {width:138px}
+.pop-payment-okc .tbl-rows tr.password td .btn-link {margin-left:9px}
+.pop-payment-okc .pop-bottom-notice {padding:20px 0; margin-bottom:19px; background:#fff; border-bottom:1px solid #e6e6e6}
+.pop-payment-okc .pop-bottom-notice .list-txt li ~ li {margin-top:0.2em}
+.pop-payment-okc .pop-bottom-notice > p {color:#8c8c8c; margin-top:0.4em}
+.pop-payment-okc .agree label {color:#8c8c8c}
+.pop-change-password {width:360px}
+.pop-change-password .pop-content {padding:16px 19px 0}
+.pop-change-password .pop-content p {line-height:1.666em}
+.pop-change-password .pop-bottom {height:auto; padding-top:16px}
+.pop-change-password .pop-close {padding:10px; margin-top:20px; border-top:1px solid #e6e6e6}
+.pop-share {width:480px}
+.pop-share .pop-content {padding:20px; padding-bottom:0}
+.pop-share .pop-content .info:after {content:''; display:block; clear:both}
+.pop-share .pop-content .info .artwork {float:left; position:relative; width:120px; height:120px}
+.pop-share .pop-content .info .artwork img {width:120px; height:120px; background:url(/images/common/img-noimage-120x120.jpg)}
+.pop-share .pop-content .info .artwork:after {content:''; position:absolute; left:0; top:0; right:0; bottom:0; border:1px solid #000; opacity:.1}
+.pop-share .pop-content .info .artwork.artist {border-radius:100%; background-position:50% 50%; background-size:cover; text-indent:-999em}
+.pop-share .pop-content .info .artwork.artist:after {border-radius:100%}
+.pop-share .pop-content .info ul {float:right; width:calc(100% - 140px); padding-top:5px}
+.pop-share .pop-content .info ul li ~ li {margin-top:9px}
+.pop-share .pop-content .info ul li:after {content:''; display:block; clear:both}
+.pop-share .pop-content .info ul li > span {float:left; width:60px; color:#8c8c8c; line-height:1.2em}
+.pop-share .pop-content .info ul li > p {white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:1.2em}
+.pop-share .pop-content .check {margin-top:30px}
+.pop-share .pop-content .check label {color:#666}
+.pop-share .pop-content textarea {margin-top:20px; height:70px}
+.pop-share .pop-content .comp p {padding-top:20px; color:#666; text-align:center}
+.pop-share .pop-content .comp p strong {display:block; margin-bottom:19px; font-size:20px; color:#27282d}
+.pop-share .pop-content .comp h4 {font-size:12px; font-weight:normal; margin-top:36px; margin-bottom:10px}
+.pop-share .pop-content .comp .url {position:relative; padding-right:64px}
+.pop-share .pop-content .comp .url input[type="text"] {width:100%}
+.pop-share .pop-content .comp .url .btn-basic {position:absolute; right:0; top:0; width:60px; padding:0}
+@media screen and (max-width: 1200px) {
+    .list-my-album .list-cell.summary .etc {display:block}
+    .section-search .list-member li {width:50%}
+
+    .section-download .bx-stay .list {height:164px}
+    .section-download .stay-list,
+    .section-download .payment {float:none; width:100%}
+    .section-download .payment {margin-top:40px}
+}
+
+/*어뷰징 방어*/
+.pop-change-password .pop-content.capcha{padding-bottom:20px}
+.capcha_area{padding-top:13px; color:#8b8b8b; position: relative;}
+.capcha_area strong{color:#27282d}
+.capcha_area .capcha-img{padding:7px 0}
+.capcha_area .capcha-img img{width:156px; height:49px}
+.capcha_area .cpt_refresh{position:absolute; right:12px; top:72px;color:#adb6c7; background:url(/images/common/ico-refresh.png) 0 0 no-repeat; padding-left:25px; line-height:16px; display:block; }
+.capcha_area .cpt_refresh:hover{background-position: 0 -18px; cursor:pointer}
+.capcha_area .txt_area{position:relative; padding-bottom:7px}
+.capcha_area .txt_area em{position:absolute; right:8px; top:7px; color:#0096ff}
+.capcha_area .txt_area input{width:100%; border:1px solid #d9d9d9}
+.capcha_area .txt-error{padding:0 0 15px 7px; color:#8b8b8b; position:relative}
+.capcha_area .txt-error:after{content:''; position:absolute; left:1px; top:8px; width:2px; height:2px; background:#a6a6a6}
+.capcha_area .btn_complete{width:100%; display:block; color:#ffffff; background:#0096ff; font-weight:bold; line-height:40px;text-align:center;}
+.capcha_area a{text-decoration:none;}
+
+
+/*맥용 플레이어*/
+.mac .section-detail .header-detail h2 .n19 {background:url(/images/common/2x/ico-19-detail.png); background-size:100%;}
+.mac .section-detail .header-detail h2 .n15 {background:url(/images/common/2x/ico-15-detail.png); background-size:100%;}
+.mac .section-detail .header-detail h2 .n12 {background:url(/images/common/2x/ico-12-detail.png); background-size:100%;}
+.mac .section-detail .header-detail h2 .all {background:url(/images/common/2x/ico-all-detail.png); background-size:100%;}
+.mac .section-detail .header-detail .btn-func.like input[type="checkbox"] + label:after {background:url(/images/common/2x/ico-like-detail.png); background-size:100%;}
+.mac .section-detail .header-detail .btn-func.like input[type="checkbox"]:checked + label:after {background-position:0 100%}
+.mac .section-detail .header-detail .btn-func.share .ico {background:url(/images/common/2x/ico-func-share.png) 0 50% no-repeat; background-size:17px 14px;}
+.mac .section-detail .header-detail .btn-func.play .ico {background:url(/images/common//2x/ico-func-play-detail.png) 0 50% no-repeat; background-size:18px;}
+.mac .wrap-comment .caution:after{background:url(/images/common/2x/ico-caution.png) 5px 2px no-repeat; background-size: 2px 30px; top:42%}
+.mac .wrap-comment .caution:hover:after,
+.mac .wrap-comment .caution:focus:after {background-position:5px -20px; }
+
+.mac .wrap-comment .list-comment .item-comment .comment .btns .del:after {background:url(/images/common/2x/btn-delete.png) no-repeat; background-size: 11px 22px; top:2px;}
+.mac .wrap-comment .list-comment .item-comment .comment .btns .del:hover:after,
+.mac .wrap-comment .list-comment .item-comment .comment .btns .del:focus:after {background-position:0 100%}
+.mac .wrap-comment .list-comment .item-comment .comment .btns .report:after { background:url(/images/common/2x/ico-report.png) no-repeat; background-size: 13px 28px; top:-1px;}
+.mac .wrap-comment .list-comment .item-comment .comment .btns .report:hover:after,
+.mac .wrap-comment .list-comment .item-comment .comment .btns .report:focus:after {background-position:0 100%}
+.mac .wrap-comment .list-comment .item-comment .comment .btns .reply:after {background:url(/images/common/2x/ico-reply.png) no-repeat; background-size: 15px 26px}
+.mac .wrap-comment .list-comment .item-comment .comment .btns .reply:hover:after,
+.mac .wrap-comment .list-comment .item-comment .comment .btns .reply:focus:after {background-position:0 100%}
+.mac .wrap-comment .list-comment .item-comment .comment .user .pic.facebook {background:url(/images/common/2x/ico-account-fb.png); background-size: 20px}
+.mac .wrap-comment .list-comment .item-comment .comment .user .pic.twitter {background:url(/images/common/2x/ico-account-tt.png); background-size: 20px}
+.mac .wrap-comment .list-comment .item-comment .comment .user .pic.kakao {background:url(/images/common/2x/ico-account-kk.png); background-size: 20px}
+.mac .wrap-comment .list-comment .item-comment .comment .info .like input[type="checkbox"] + label:after {background:url(/images/common/2x/ico-like.png) 0 0 no-repeat; background-size:15px 24px; top:-1px}
+.mac .wrap-comment .list-comment .item-comment .comment .info .like input[type="checkbox"]:checked + label:after {background-position:0 100%}
+.mac .wrap-comment .write .check label:after{top:-2px}
+
+.mac .section-detail.recomm .header-detail .bottom .ico-listen {background:url(/images/common/2x/ico-listen.png) 0 0 no-repeat; background-size:18px 14px}
+.mac .section-detail.recomm .header-detail .bottom .ico-length {background:url(/images/common/2x/ico-song-length.png) 0 0 no-repeat; background-size:14px 15px}
+.mac .section-detail.recomm .header-detail .bottom [class*="ico-"] {line-height:15px;}
+
+.mac .section-myalbum .list-sort .func li.make a:after {background-image:url(/images/common/2x/ico-make-folder.png); background-size: 16px 24px}
+.mac .section-myalbum .list-sort .func li.edit a:after {background-image:url(/images/common/2x/ico-edit-order.png); background-size: 14px 24px}
+.mac .section-myalbum .list-sort .func li.info a:after {background-image:url(/images/common/2x/ico-edit-album.png); background-size: 14px 24px}
+.mac .section-myalbum .list-sort .func li.delete a:after {background-image:url(/images/common/2x/ico-delete-folder.png);background-size: 16px 24px}
+.mac .section-myalbum .list-sort .func li a{line-height: 28px; height:24px;}
+
+.mac .section-search .list-sort .input-clear .search{background:url(/images/common/2x/btn-search.png) no-repeat 4px 3px; background-size:23px 60px }
+.mac .section-search .list-sort .input-clear .search:hover,
+.mac .section-search .list-sort .input-clear .search:focus {background-position:4px -23px}
+
+.mac .page-error .message.caution{background:url(/images/common/2x/ico-error-caution.png) 50% 0 no-repeat; background-size:108px 96px}
+.mac .page-error .message.network{background:url(/images/common/2x/ico-error-net.png) 50% 0 no-repeat; background-size:84px 95px}
+.mac .page-error .message.inspect{background:url(/images/common/2x/ico-error-inspect_5.0.png) 50% 0 no-repeat; background-size:90px 90px}
+.mac .btn-action.ie .ico {padding-left:29px; background:url(/images/common/2x/ico-ie.png) 0 7px no-repeat; background-size:19px}
+.mac .btn-action.go .ico {padding-right:11px; background:url(/images/common/2x/ico-gt-more-w.png) 100% 50% no-repeat; background-size: 5px 9px}
+.mac .btn-action .ico{line-height:36px}
+.mac .section-download .payment .calculate .cell.right:after {background:#fff url(/images/common/2x/ico-equal.png) 50% 50% no-repeat; background-size:14px 5px }
+
+.mac .section-download .process ol li p:after {background:none}
+.mac .section-download .process ol li p:before {background:url(/images/common/2x/bg-precess-active-left.png); background-size:18px 36px}
+.mac .section-download .payment .coupon .tit > a,
+.mac .section-download .payment .coupon .tit > strong {background:url(/images/common/2x/ico-gt-more.png) 100% 40% no-repeat; background-size: 5px 9px;}
+.mac .windows7 .section-download .payment .coupon .tit > a,
+.mac .windows7 .section-download .payment .coupon .tit > strong {background-position:100% 54%}
+
+.pop-main-notice .pop-content .set img{width:255px; height:330px;}
+.pop-main-notice .pop-content .set.one img{width:350px; height:330px;}
+
+.mac .pop-main-notice .pop-close .close:after {background:url(/images/common/2x/btn-close.png) 0 0 no-repeat; background-size:11px}
+.mac .pop-main-notice .pop-close .close:hover:after,
+.mac .pop-main-notice .pop-close .close:focus:after {background-position:0 -13px}
+
+.mac .pop-edit-album .order-myalbum .scrollable{max-height:246px;}
+.mac .sort-division .set{max-width:155px}
+.mac .sort-division .set select{min-width: 110px}
+.mac .sort-division .set .select-title{min-width:100px; width:inherit !important;}
+.mac .sort-division .set label{width:45px; text-indent:10px;}
+.mac .section-search .list-sort .input-clear{width:128px}
+
+/*다운로드*/
+.mac .section-download .process ol li{width:50%}
+.mac .section-download .process ol li.step2{display:none}
+.mac .section-download .payment .calculate{margin-top:0}
+
+.section-download .payment .calculate .cell.my_area{background:#e6f8fc;position:relative;}
+.section-download .payment .calculate .cell.my_area:after{content:""; position:absolute; right:0; top:6px; height:90%; border-right:1px dotted #e6e6e6}
+.my_area dl{position:absolute; left:0; top:0; text-align: left; padding:18px 19px}
+.my_area dl dt{padding:1px 12px 7px 0; white-space:nowrap; font-weight:bold; background: url(/images/common/2x/ico-gt-more.png) right 1px no-repeat; background-size:5px 9px; display: inline-block;}
+.my_area dl dd{line-height:19px;}
+.my_area dl dd.date{display:block; color:#8c8c8c}
+.my_area dl dd.notxt{display:block; color:#ff5b62; padding-top:8px}
+
+/*어뷰징방어*/
+.mac .capcha_area .cpt_refresh{background: url(/images/common/2x/ico-refresh.png) 0 0 no-repeat; background-size:18px 36px;}
+.mac .capcha_area .cpt_refresh:hover{background-position:0 -20px}

@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>genie</title>
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/css/swiper.css">
+<link rel="stylesheet" type="text/css" href="/css/layout.css">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script type="text/javascript" src="/js/plugins/modernizr.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.transit.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="/js/plugins/swiper.min.js"></script>
+<script type="text/javascript" src="/js/ui-front.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+    <!-- header(좌측 메뉴 영역) -->
+    <div id="header">
+        <div class="side">
+            <div class="top">
+                <h1><a href="#">genie</a></h1>
+                <div class="history">
+                    <a class="prev" href="#">이전 페이지</a>
+                    <a class="next" href="#">다음 페이지</a>
+                </div>
+            </div>
+            <div id="gnb">
+                <ul class="quick">
+                    <li><a href="#">이용권구매</a></li>
+                    <li><a href="#">상품권등록</a></li>
+                </ul>
+                <ul class="nav">
+                    <li class="n1 open"><a href="#">지니차트</a><!-- 기본값이 열린 경우 클래스에 open 추가 -->
+                        <ul>
+                            <li class="selected"><a href="#">TOP100</a></li><!-- 선택시 li에 selected -->
+                            <li><a href="#">장르별</a></li>
+                            <li><a href="#">뮤직비디오</a></li>
+                            <li><a href="#">좋아요</a></li>
+                        </ul>
+                    </li>
+                    <li class="n2 open"><a href="#">최신음악</a><!-- 기본값이 열린 경우 클래스에 open 추가 -->
+                        <ul>
+                            <li><a href="#">곡</a></li>
+                            <li><a href="#">앨범</a></li>
+                            <li><a href="#">뮤직비디오</a></li>
+                        </ul>
+                    </li>
+                    <li class="n3"><a href="#">장르음악</a>
+                        <ul>
+                            <li><a href="#">가요</a></li>
+                            <li><a href="#">POP</a></li>
+                            <li><a href="#">OST</a></li>
+                            <li><a href="#">EDM</a></li>
+                            <li><a href="#">JAZZ</a></li>
+                            <li><a href="#">CLASSIC</a></li>
+                            <li><a href="#">JPOP</a></li>
+                            <li><a href="#">CCM</a></li>
+                            <li><a href="#">그 외 장르</a></li>
+                        </ul>
+                    </li>
+                    <li class="n4"><a href="#">추천음악</a></li>
+                    <li class="n5"><a href="#">마이뮤직</a>
+                        <ul>
+                            <li><a href="#">마이앨범</a></li>
+                            <li><a href="#">감상이력</a></li>
+                            <li><a href="#">다운로드 보관함</a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <div class="notice">
+                    <a href="#">[공지]11/11 정기점검 안내 정기점검 안내</a>
+                </div>
+                <div class="banner">
+                    <div class="list-bnr-side swiper-container">
+                        <div class="swiper-paginate"></div>
+                        <div class="swiper-wrapper">
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-content">
+            <fieldset>
+                <legend>검색</legend>
+                <span class="wrap">
+                    <input type="search" id="searchMusic" name="" value="기본검색값" title="검색어 입력">
+                    <input class="clear" type="button" id="searchMusicClear" name="" title="검색어 삭제">
+                    <input class="search" type="button" id="" name="" title="검색">
+                </span>
+            </fieldset>
+            <div class="my-info">
+                <!-- 로그인 전 -->
+                <!-- <div class="my">
+                    <span class="pic"></span>
+                    <a class="login" href="#">로그인</a>
+                </div> -->
+                <!-- //로그인 전 -->
+                <!-- 로그인 후 -->
+                <div id="wrapMyInfo" class="my">
+                    <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                    <a class="login toggle" id="btnMyInfo" href="#">로그인</a>
+                    <!-- 로그인 정보 -->
+                    <div id="divMyInfo" class="info">
+                        <ul>
+                            <li class="cash"><strong class="title">지니캐시</strong><a class="btn-func" href="#"><span class="ico">&#8361; 충전</span></a><strong class="value">4,700원</strong></li>
+                            <li><strong class="title">이용중인 상품</strong><span class="value">총 2개</span>
+                                <ul>
+                                    <li><p>30곡 다운로드(30일마다 자동결제)</p><p>잔여일 : D-5</p></li>
+                                    <li><p>스마트 다운로드 + 음악감상 (30일) 길어지면 줄임표 처리</p><p>잔여일 : 부가서비스 해지 시까지</p></li>
+                                </ul>
+                            </li>
+                            <li><strong class="title">이용권 보관함</strong><span class="value">총 2개</span>
+                                <ul>
+                                    <li><p>월 30곡 다운로드(30일)</p></li>
+                                    <li><p>스마트 다운로드+음악감상(30일)</p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="sign">
+                            <a href="#">내정보</a>
+                            <a href="#">로그아웃</a>
+                        </div>
+                    </div>
+                    <!-- //로그인 정보 -->
+                </div>
+                <!-- //로그인 후 -->
+                <a class="download" href="#"><!-- 1곡 이상일 경우 --><span class="num">1</span><!-- //1곡 이상일 경우 --></a>
+            </div>
+        </div>
+    </div>
+    <!-- //header(좌측 메뉴 영역) -->
+    <!-- content(우측 콘텐츠 영역) -->
+    <div id="container">
+    <div id="content">
+        <div class="section-detail song">
+            <div class="header-detail">
+                <h2>Henryk Szeryng Plays Vivaldi (4 Seasons) & Mozart (5th Violin Concerto) (1969 Recording) (헨릭 쉐링이 연주한 비발디 / 모차르트의 바이올린 협주곡) (1969년도 레코딩)</h2>
+                <span class="artwork"><img src="/images/temp/thumb-artwork-200x200-2.jpg" onerror="this.src='/images/common/img-noimage-200x200.jpg';" alt="앨범명"></span>
+                <div class="summary">
+                    <ul class="info">
+                        <li><span>아티스트</span><p><a href="#">EXO</a></p></li>
+                        <li><span>앨범유형</span><p>정규</p></li>
+                        <li><span>발매일</span><p>2017.06.26</p></li>
+                        <li><span>장르</span><p>가요/전체</p></li>
+                        <li><span>발매사</span><p>CJ E&amp;M MUSIC</p></li>
+                        <li><span>재생시간</span><p>03:45</p></li>
+                    </ul>
+                    <div class="btns">
+                        <span class="btn-func like" for=""><input type="checkbox" id="checkLikeThis" name=""><label for="checkLikeThis">좋아요</label><span class="accessibility">누적 좋아요</span><span class="ico">1,223</span><span class="accessibility">명</span></span>
+                        <a class="btn-func share" href="#"><span class="ico">공유</span></a>
+                        <a class="btn-func play" href="#"><span class="ico">전체듣기</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 상세 탭 -->
+            <div id="tabDetail" class="tab-carousel">
+                <span class="btn prev"><button>이전</button></span>
+                <div class="holder">
+                    <ul>
+                        <li class="active"><a href="#"><span>수록곡</span><span>(7)</span></a></li>
+                        <li><a href="#"><span>뮤직비디오</span><span>(5)</span></a></li>
+                        <li><a href="#"><span>댓글</span><span>(122)</span></a></li>
+                        <li><a href="#"><span>앨범소개</span></a></li>
+                    </ul>
+                </div>
+                <span class="btn next"><button>다음</button></span>
+            </div>
+            <!-- //상세 탭 -->
+            <!-- 수록곡 -->
+            <div class="content-detail album">
+                <!-- 목록 -->
+                <div class="list-common-wrap">
+                    <div class="list-common list-songs-album"><div class="list-inner">
+                        <!-- loop -->
+                        <div class="list-row">
+                            <div class="list-cell check" list-role="선택">
+                                <input type="checkbox" id="seqMusic1" name="">
+                                <label class="alone" for="seqMusic1">선택</label>
+                            </div>
+                            <div class="list-cell rank" list-role="번호">
+                                <strong class="num">1</strong>
+                            </div>
+                            <div class="list-cell button play" list-role="듣기">
+                                <a class="btn-list play" href="#"><span class="ico">듣기</span></a>
+                            </div>
+                            <div class="list-cell button add" list-role="추가">
+                                <a class="btn-list add" href="#"><span class="ico">재생목록에 추가</span></a>
+                            </div>
+                            <div class="list-cell button info" list-role="곡 상세정보">
+                                <a class="btn-list info" href="#"><span class="ico">곡 상세정보</span></a>
+                            </div>
+                            <!-- 좁은 화면 곡,아티스트,앨범 정보 -->
+                            <div class="list-cell summary merge" list-role="곡정보">
+                                <div class="ellipsis song"><span class="ico-badge title">TITLE</span><a href="#">다시 만나는 날 (Goodbye for now) 다시 만나는 날 (Goodbye for now) 다시 만나는 날 (Goodbye for now)</a></div>
+                                <div class="ellipsis col">
+                                    <!-- 추가 아티스트 정보 있을 경우 : 아티스트 a 태그에 ext 추가, more 엘리먼트 추가 -->
+                                    <a class="artist ext" href="#popInfoArtist">규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN)</a><span class="more"></span>
+                                    <!-- //추가 아티스트 정보 있을 경우 -->
+                                </div>
+                            </div>
+                            <!-- //좁은 화면 곡,아티스트,앨범 정보 -->
+                            <!-- 넓은 화면 곡,아티스트,앨범 정보 -->
+                            <div class="list-cell song extend" list-role="곡명">
+                                <div class="ellipsis song"><span class="ico-badge title">TITLE</span><a href="#">다시 만나는 날 (Goodbye for now) 다시 만나는 날 (Goodbye for now) 다시 만나는 날 (Goodbye for now)</a></div>
+                            </div>
+                            <div class="list-cell artist extend" list-role="아티스트명">
+                                <div class="ellipsis artist">
+                                    <!-- 추가 아티스트 정보 있을 경우 : 아티스트 a 태그에 ext 추가, more 엘리먼트 추가-->
+                                    <a class="ext" href="#popInfoArtist">규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN)</a><span class="more"></span>
+                                    <!-- //추가 아티스트 정보 있을 경우 -->
+                                </div>
+                            </div>
+                            <!-- //넓은 화면 곡,아티스트,앨범 정보 -->
+                            <!-- 좁은 화면 담기,다운로드,M/V,공유하기 -->
+                            <div class="list-cell action merge" list-role="기타">
+                                <div class="wrap">
+                                    <a href="#seqDivAction1"><span>담기,다운로드,M/V,공유하기</span></a>
+                                    <div id="seqDivAction1" class="list-layer-action">
+                                        <ul>
+                                            <li><a href="#">담기</a></li>
+                                            <li><a href="#">다운</a></li>
+                                            <li><a href="#">M/V</a></li>
+                                            <li><a href="#">공유</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //좁은 화면 담기,다운로드,M/V,공유하기 -->
+                            <!-- 넓은 화면 담기,다운로드,M/V,공유하기 -->
+                            <div class="list-cell button extend" list-role="담기">
+                                <a class="btn-list put" href="#"><span class="ico">담기</span></a>
+                            </div>
+                            <div class="list-cell button extend" list-role="다운">
+                                <a class="btn-list down" href="#"><span class="ico">다운</span></a>
+                            </div>
+                            <div class="list-cell button extend" list-role="M/V">
+                                <a class="btn-list mv" href="#"><span class="ico">M/V</span></a>
+                            </div>
+                            <div class="list-cell button extend last" list-role="공유">
+                                <a class="btn-list share" href="#"><span class="ico">공유</span></a>
+                            </div>
+                            <!-- //넓은 화면 담기,다운로드,M/V,공유하기 -->
+                        </div>
+                        <!-- //loop -->
+                        <!-- loop -->
+                        <div class="list-row disabled"><!-- 곡 비활성 처리 : disabled -->
+                            <div class="list-cell check" list-role="선택">
+                                <input type="checkbox" id="seqMusic2" name="">
+                                <label class="alone" for="seqMusic2">선택</label>
+                            </div>
+                            <div class="list-cell rank" list-role="번호">
+                                <strong class="num">2</strong>
+                            </div>
+                            <div class="list-cell button play" list-role="듣기">
+                                <a class="btn-list play" href="#"><span class="ico">듣기</span></a>
+                            </div>
+                            <div class="list-cell button add" list-role="추가">
+                                <a class="btn-list add" href="#"><span class="ico">재생목록에 추가</span></a>
+                            </div>
+                            <div class="list-cell button info" list-role="곡 상세정보">
+                                <a class="btn-list info" href="#"><span class="ico">곡 상세정보</span></a>
+                            </div>
+                            <div class="list-cell summary merge" list-role="곡정보">
+                                <div class="ellipsis song"><span class="ico-badge n19">19세 이상가</span><a href="#">다시 만나는 날 (Goodbye for now)</a></div>
+                                <div class="ellipsis col">
+                                    <a href="#" class="artist">규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN)</a>
+                                </div>
+                            </div>
+                            <div class="list-cell song extend" list-role="곡명">
+                                <div class="ellipsis song"><span class="ico-badge n19">19세 이상가</span><a href="#">다시 만나는 날 (Goodbye for now)</a></div>
+                            </div>
+                            <div class="list-cell artist extend" list-role="아티스트명">
+                                <div class="ellipsis artist">
+                                    <a href="#">규현 (KYUHYUN)</a>
+                                </div>
+                            </div>
+                            <div class="list-cell action merge" list-role="기타">
+                                <div class="wrap">
+                                    <a href="#seqDivAction2"><span>담기,다운로드,M/V,공유하기</span></a>
+                                    <div id="seqDivAction2" class="list-layer-action">
+                                        <ul>
+                                            <li><a href="#">담기</a></li>
+                                            <li><a href="#">다운</a></li>
+                                            <li><a href="#">M/V</a></li>
+                                            <li><a href="#">공유</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-cell button extend" list-role="담기">
+                                <a class="btn-list put" href="#"><span class="ico">담기</span></a>
+                            </div>
+                            <div class="list-cell button extend" list-role="다운">
+                                <a class="btn-list down" href="#"><span class="ico">다운</span></a>
+                            </div>
+                            <div class="list-cell button extend" list-role="M/V">
+                                <a class="btn-list mv" href="#"><span class="ico">M/V</span></a>
+                            </div>
+                            <div class="list-cell button extend last" list-role="공유">
+                                <a class="btn-list share" href="#"><span class="ico">공유</span></a>
+                            </div>
+                        </div>
+                        <!-- //loop -->
+                        <!-- loop -->
+                        <div class="list-row">
+                            <div class="list-cell check" list-role="선택">
+                                <input type="checkbox" id="seqMusic3" name="">
+                                <label class="alone" for="seqMusic3">선택</label>
+                            </div>
+                            <div class="list-cell rank" list-role="번호">
+                                <strong class="num">3</strong>
+                            </div>
+                            <div class="list-cell button play" list-role="듣기">
+                                <a class="btn-list play" href="#"><span class="ico">듣기</span></a>
+                            </div>
+                            <div class="list-cell button add" list-role="추가">
+                                <a class="btn-list add" href="#"><span class="ico">재생목록에 추가</span></a>
+                            </div>
+                            <div class="list-cell button info" list-role="곡 상세정보">
+                                <a class="btn-list info" href="#"><span class="ico">곡 상세정보</span></a>
+                            </div>
+                            <div class="list-cell summary merge" list-role="곡정보">
+                                <div class="ellipsis song"><span class="ico-badge hot">HOT</span><a href="#">다시 만나는 날 (Goodbye for now)</a></div>
+                                <div class="ellipsis col">
+                                    <a href="#" class="artist">규현 (KYUHYUN)</a>
+                                </div>
+                            </div>
+                            <div class="list-cell song extend" list-role="곡명">
+                                <div class="ellipsis song"><span class="ico-badge hot">HOT</span><a href="#">다시 만나는 날 (Goodbye for now)</a></div>
+                            </div>
+                            <div class="list-cell artist extend" list-role="아티스트명">
+                                <div class="ellipsis artist">
+                                    <a href="#">규현 (KYUHYUN)</a>
+                                </div>
+                            </div>
+                            <div class="list-cell action merge" list-role="기타">
+                                <div class="wrap">
+                                    <a href="#seqDivAction3"><span>담기,다운로드,M/V,공유하기</span></a>
+                                    <div id="seqDivAction3" class="list-layer-action">
+                                        <ul>
+                                            <li><a href="#">담기</a></li>
+                                            <li><a href="#">다운</a></li>
+                                            <li><a href="#">M/V</a></li>
+                                            <li><a href="#">공유</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-cell button extend" list-role="담기">
+                                <a class="btn-list put" href="#"><span class="ico">담기</span></a>
+                            </div>
+                            <div class="list-cell button extend" list-role="다운">
+                                <a class="btn-list down" href="#"><span class="ico">다운</span></a>
+                            </div>
+                            <div class="list-cell button extend" list-role="M/V">
+                                <a class="btn-list mv" href="#"><span class="ico">M/V</span></a>
+                            </div>
+                            <div class="list-cell button extend last" list-role="공유">
+                                <a class="btn-list share" href="#"><span class="ico">공유</span></a>
+                            </div>
+                        </div>
+                        <!-- //loop -->
+                        <!-- loop -->
+                        <div class="list-row">
+                            <div class="list-cell check" list-role="선택">
+                                <input type="checkbox" id="seqMusic4" name="">
+                                <label class="alone" for="seqMusic4">선택</label>
+                            </div>
+                            <div class="list-cell rank" list-role="번호">
+                                <strong class="num">4</strong>
+                            </div>
+                            <div class="list-cell button play" list-role="듣기">
+                                <a class="btn-list play" href="#"><span class="ico">듣기</span></a>
+                            </div>
+                            <div class="list-cell button add" list-role="추가">
+                                <a class="btn-list add" href="#"><span class="ico">재생목록에 추가</span></a>
+                            </div>
+                            <div class="list-cell button info" list-role="곡 상세정보">
+                                <a class="btn-list info" href="#"><span class="ico">곡 상세정보</span></a>
+                            </div>
+                            <div class="list-cell summary merge" list-role="곡정보">
+                                <div class="ellipsis song"><a href="#">다시 만나는 날 (Goodbye for now)</a></div>
+                                <div class="ellipsis col">
+                                    <a href="#" class="artist">규현 (KYUHYUN)</a>
+                                </div>
+                            </div>
+                            <div class="list-cell song extend" list-role="곡명">
+                                <div class="ellipsis song"><a href="#">다시 만나는 날 (Goodbye for now)</a></div>
+                            </div>
+                            <div class="list-cell artist extend" list-role="아티스트명">
+                                <div class="ellipsis artist">
+                                    <a href="#">규현 (KYUHYUN)</a>
+                                </div>
+                            </div>
+                            <div class="list-cell action merge" list-role="기타">
+                                <div class="wrap">
+                                    <a href="#seqDivAction4"><span>담기,다운로드,M/V,공유하기</span></a>
+                                    <div id="seqDivAction4" class="list-layer-action">
+                                        <ul>
+                                            <li><a href="#">담기</a></li>
+                                            <li><a href="#">다운</a></li>
+                                            <li><a href="#">M/V</a></li>
+                                            <li><a href="#">공유</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-cell button extend" list-role="담기">
+                                <a class="btn-list put" href="#"><span class="ico">담기</span></a>
+                            </div>
+                            <div class="list-cell button extend" list-role="다운">
+                                <a class="btn-list down" href="#"><span class="ico">다운</span></a>
+                            </div>
+                            <div class="list-cell button extend" list-role="M/V">
+                                <a class="btn-list mv" href="#"><span class="ico">M/V</span></a>
+                            </div>
+                            <div class="list-cell button extend last" list-role="공유">
+                                <a class="btn-list share" href="#"><span class="ico">공유</span></a>
+                            </div>
+                        </div>
+                        <!-- //loop -->
+                        <!-- loop -->
+                        <div class="list-row">
+                            <div class="list-cell check" list-role="선택">
+                                <input type="checkbox" id="seqMusic5" name="">
+                                <label class="alone" for="seqMusic5">선택</label>
+                            </div>
+                            <div class="list-cell rank" list-role="번호">
+                                <strong class="num">5</strong>
+                            </div>
+                            <div class="list-cell button play" list-role="듣기">
+                                <a class="btn-list play" href="#"><span class="ico">듣기</span></a>
+                            </div>
+                            <div class="list-cell button add" list-role="추가">
+                                <a class="btn-list add" href="#"><span class="ico">재생목록에 추가</span></a>
+                            </div>
+                            <div class="list-cell button info" list-role="곡 상세정보">
+                                <a class="btn-list info" href="#"><span class="ico">곡 상세정보</span></a>
+                            </div>
+                            <div class="list-cell summary merge" list-role="곡정보">
+                                <div class="ellipsis song"><a href="#">다시 만나는 날 (Goodbye for now) 다시 만나는 날 (Goodbye for now) 다시 만나는 날 (Goodbye for now)</a></div>
+                                <div class="ellipsis col">
+                                    <!-- 추가 아티스트 정보 있을 경우 : 아티스트 a 태그에 ext 추가, more 엘리먼트 추가 -->
+                                    <a class="artist ext" href="#popInfoArtist">규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN)</a><span class="more"></span>
+                                    <!-- //추가 아티스트 정보 있을 경우 -->
+                                </div>
+                            </div>
+                            <div class="list-cell song extend" list-role="곡명">
+                                <div class="ellipsis song"><a href="#">다시 만나는 날 (Goodbye for now) 다시 만나는 날 (Goodbye for now) 다시 만나는 날 (Goodbye for now)</a></div>
+                            </div>
+                            <div class="list-cell artist extend" list-role="아티스트명">
+                                <div class="ellipsis artist">
+                                    <!-- 추가 아티스트 정보 있을 경우 : 아티스트 a 태그에 ext 추가, more 엘리먼트 추가-->
+                                    <a class="ext" href="#popInfoArtist">규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN) 규현 (KYUHYUN)</a><span class="more"></span>
+                                    <!-- //추가 아티스트 정보 있을 경우 -->
+                                </div>
+                            </div>
+                            <div class="list-cell action merge" list-role="기타">
+                                <div class="wrap">
+                                    <a href="#seqDivAction5"><span>담기,다운로드,M/V,공유하기</span></a>
+                                    <div id="seqDivAction5" class="list-layer-action">
+                                        <ul>
+                                            <li><a href="#">담기</a></li>
+                                            <li><a href="#">다운</a></li>
+                                            <li><a href="#">M/V</a></li>
+                                            <li><a href="#">공유</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-cell button extend" list-role="담기">
+                                <a class="btn-list put" href="#"><span class="ico">담기</span></a>
+                            </div>
+                            <div class="list-cell button extend" list-role="다운">
+                                <a class="btn-list down" href="#"><span class="ico">다운</span></a>
+                            </div>
+                            <div class="list-cell button extend" list-role="M/V">
+                                <a class="btn-list mv" href="#"><span class="ico">M/V</span></a>
+                            </div>
+                            <div class="list-cell button extend last" list-role="공유">
+                                <a class="btn-list share" href="#"><span class="ico">공유</span></a>
+                            </div>
+                        </div>
+                        <!-- //loop -->
+                    </div></div>
+                    <div class="more-load">
+                        <a href="#">더보기</a>
+                    </div>
+                    <!-- 아티스트 정보 레이어 팝업 -->
+                    <div id="popInfoArtist" class="pop-artist-info">
+                        <ul>
+                            <!-- loop -->
+                            <li><span>메인</span><a href="#">아이유</a></li>
+                            <!-- //loop -->
+                            <li><span>Featuring</span><a href="#">G-DRAGON</a></li>
+                        </ul>
+                    </div>
+                    <!-- //아티스트 정보 레이어 팝업 -->
+                    <!-- 뮤직비디오 여러개일 경우 레이어 팝업 -->
+                    <div id="popMusicVideo" class="pop-music-video">
+                        <div class="pop-mv-inner">
+                        <ul>
+                            <!-- loop -->
+                            <li>
+                                <a class="thumb" href="#"><img src="/images/temp/thumb-mv-71x40.jpg" onerror="this.src='/images/common/img-noimage-71x40.jpg';" alt=""></a>
+                                <a class="title" href="#"><span class="ico-badge teaser">티저</span>RIVER</a><br>
+                                <a class="artist" href="#">Lasse Lindh</a>
+                            </li>
+                            <!-- //loop -->
+                            <li>
+                                <a class="thumb" href="#"><img src="/images/temp/thumb-mv-71x40.jpg" onerror="this.src='/images/common/img-noimage-71x40.jpg';" alt=""></a>
+                                <a class="title" href="#"><span class="ico-badge making">메이킹</span>RIVER</a><br>
+                                <a class="artist" href="#">Lasse Lindh</a>
+                            </li>
+                            <li>
+                                <a class="thumb" href="#"><img src="/images/temp/thumb-mv-71x40.jpg" onerror="this.src='/images/common/img-noimage-71x40.jpg';" alt=""></a>
+                                <a class="title" href="#">RIVER</a><br>
+                                <a class="artist" href="#">Lasse Lindh</a>
+                            </li>
+                            <li>
+                                <a class="thumb" href="#"><img src="/images/temp/thumb-mv-71x40.jpg" onerror="this.src='/images/common/img-noimage-71x40.jpg';" alt=""></a>
+                                <a class="title" href="#"><span class="ico-badge making">메이킹</span>RIVER</a><br>
+                                <a class="artist" href="#">Lasse Lindh</a>
+                            </li>
+                            <li>
+                                <a class="thumb" href="#"><img src="/images/temp/thumb-mv-71x40.jpg" onerror="this.src='/images/common/img-noimage-71x40.jpg';" alt=""></a>
+                                <a class="title" href="#">RIVER</a><br>
+                                <a class="artist" href="#">Lasse Lindh</a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                    <!-- //뮤직비디오 여러개일 경우 레이어 팝업 -->
+                    <!-- 마이앨범 담기 레이어 팝업 -->
+                    <div id="popPutMyAlbum" class="pop-layer pop-add-myalbum">
+                        <h3>마이앨범 담기</h3>
+                        <a class="close" href="#">닫기</a>
+                        <div class="pop-content">
+                            <div class="add">
+                                <input type="text" id="" name="" title="새로 만들 앨범명 입력" placeholder="새앨범">
+                                <input type="button" id="" name="" value="추가">
+                            </div>
+                            <div class="list">
+                                <ul>
+                                    <li><a class="album" href="#">봄에 듣기 좋은 노래</a><a class="del" href="#">삭제</a></li>
+                                    <li><a class="album" href="#">봄에 듣기 좋은 노래</a><a class="del" href="#">삭제</a></li>
+                                    <li><a class="album" href="#">봄에 듣기 좋은 노래</a><a class="del" href="#">삭제</a></li>
+                                    <li><a class="album" href="#">봄에 듣기 좋은 노래</a><a class="del" href="#">삭제</a></li>
+                                    <li><a class="album" href="#">봄에 듣기 좋은 노래</a><a class="del" href="#">삭제</a></li>
+                                    <li><a class="album" href="#">봄에 듣기 좋은 노래</a><a class="del" href="#">삭제</a></li>
+                                    <li><a class="album" href="#">봄에 듣기 좋은 노래</a><a class="del" href="#">삭제</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //마이앨범 담기 레이어 팝업 -->
+                </div>
+                <!-- //목록 -->
+                <!-- 목록 기능 영역 -->
+                <div class="list-function">
+                    <span class="check"><input type="checkbox" id="checkAllList" name=""><label class="alone" for="checkAllList">전체선택</label></span>
+                    <a class="btn-func play" href="#"><span class="ico">듣기</span></a>
+                    <a class="btn-func add" href="#"><span class="ico">재생목록추가</span></a>
+                    <a class="btn-func put" href="#"><span class="ico">담기</span></a>
+                    <a class="btn-func down" href="#"><span class="ico">다운</span></a>
+                    <p class="num"><span>0</span><span>곡 선택</span></p>
+                </div>
+                <!-- //목록 기능 영역 -->
+            </div>
+            <!-- //수록곡 -->
+        </div>
+    </div>
+    </div>
+    <!-- content(우측 콘텐츠 영역) -->
+</div>
+<script>
+    //gnb init
+    var initGnb = new gnbAction();
+
+    //좌하단 배너 롤링 init
+    var bnrSwiper = new Swiper ('.list-bnr-side', {
+        pagination: '.list-bnr-side .swiper-paginate',
+        paginationClickable: true
+    });
+
+    //로그인 버튼 클릭
+    var initMyInfo = new toggleElem($("#wrapMyInfo"),$("#btnMyInfo"),$("#divMyInfo"));
+
+    //상단 롤링 탭 init
+    var initCarouselTab = new carouselTab($("#tabDetail"));
+
+    $(function(){
+
+        //상단 검색 영역 커스텀 클리어 필드 버튼 동작 예시
+        var commonSearch = $("#searchMusic");
+        var commonSearchClear = $("#searchMusicClear");
+        var svalue = commonSearch.val();
+        commonSearch.on("focus",function(){
+            commonSearch.val("");
+        });
+        commonSearch.on("blur",function(){
+            if(commonSearch.val().length === 0){
+                commonSearch.val(svalue);
+            }
+        });
+        commonSearch.on("keyup",function(){
+            if(commonSearch.val().length > 0 && commonSearch.val() !== svalue){
+                commonSearchClear.show();
+            }
+        });
+        commonSearchClear.click(function(){
+           commonSearch.val("");
+        });
+
+
+        //음악 목록 UI 처리
+        var listMusic = $(".list-common");
+        listMusic.find(".list-row").each(function(index,element){
+            var _this = $(this);
+
+            //음악 목록 클릭 및 체크박스 선택시 토글 처리
+            /*_this.on("click",function(){
+                if(_this.hasClass("disabled")){
+                   return;
+                }
+                _this.find('input[type="checkbox"]').prop('checked',function(){
+                    return !$(this).prop('checked');
+                });
+                _this.toggleClass("selected");
+            });
+            _this.find('input[type="checkbox"]').on("change",function(){
+                if($(this).prop('checked')){
+                    _this.addClass("selected");
+                }else{
+                    _this.removeClass("selected");
+                }
+            });
+            _this.on("click","a",function(e){
+                e.stopPropagation();
+            });*/
+
+            //음악 목록 클릭 및 체크박스 선택시 토글 처리 - 변경
+            _this.on("click",function(e){
+                if(_this.hasClass("disabled")){
+                   return;
+                }
+                // 리스트 여백 혹은 제목 클릭시
+                if($(e.target).hasClass("list-cell") || $(e.target).hasClass("ellipsis") || (e.target.tagName = "a" && $(e.target).parent().hasClass("song"))){
+                    _this.siblings(".list-row").removeClass("selected");
+                    _this.siblings(".list-row").find('input[type="checkbox"]').prop('checked',false);
+                    _this.find('input[type="checkbox"]').prop('checked',true);
+                    _this.addClass("selected");
+                }else{
+                    e.stopPropagation();
+                }
+            });
+            _this.find('input[type="checkbox"]').on("change",function(){
+                if($(this).prop('checked')){
+                    _this.addClass("selected");
+                }else{
+                    _this.removeClass("selected");
+                }
+            });
+
+            //아티스트 정보 레이어 호출
+            var btnArtist = _this.find(".list-cell.summary, .list-cell.artist");
+            btnArtist.on("click",".more",function(e){ //셀렉터 .more에서 .ext로 변경
+                e.preventDefault();
+                var popa = $(".pop-artist-info");
+                popa.attr("tabindex","0").show();
+                posListPop(popa,$(this),"artist");
+                if(popa.is(":visible")){
+                    $(this).addClass("active");
+                }
+            });
+            $(document).on("mousedown click",function(e) {
+                var popa = $(".pop-artist-info");
+                if (popa.has(e.target).length === 0){
+                    popa.hide();
+                    btnArtist.find(".more").removeClass("active");
+                }
+            });
+
+            //마이앨범에 추가 팝업 호출
+            var btnAddList = _this.find(".list-cell.button");
+            btnAddList.on("click",".put",function(e){
+                e.preventDefault();
+                var _this = $(this);
+                var popb = $(".pop-add-myalbum");
+                popb.attr("tabindex","0").show();
+                posListPop(popb,$(this),"myalbum");
+                popb.find(".pop-content .list").jScrollPane();
+                focusJack(popb); //포커스 순환 처리
+                popb.find(".close").click(function(){
+                    popb.hide();
+                    _this.focus();
+                });
+            });
+             $(document).on("mousedown click",function(e) {
+                var popAdd = $(".pop-add-myalbum")
+                if (popAdd.has(e.target).length === 0){
+                    popAdd.hide();
+                }
+            });
+
+
+            //뮤직비디오 레이어 호출
+            /*var btnMusicVideo = _this.find(".list-cell.button");
+            btnMusicVideo.on("click",".btn-list.mv",function(e){
+                e.preventDefault();
+                var _this = $(this);
+                var popmv = $(".pop-music-video");
+                popmv.attr("tabindex","0").show();
+                posListPop(popmv,$(this),"musicvideo");
+                popmv.find(".pop-mv-inner").jScrollPane();
+            });
+            $(document).on("mousedown click",function(e) {
+                var popmv = $(".pop-music-video");
+                if (popmv.has(e.target).length === 0){
+                    popmv.hide();
+                }
+            });*/
+
+            //좁은 화면에서 우측 담기,M/V 등 액션 레이어 동작
+            var btnAct = _this.find(".list-cell.action");
+            btnAct.on("click",".wrap > a",function(e){
+                e.preventDefault();
+                _this.siblings(".list-row").find(".list-cell.action .wrap > a").removeClass("active");
+                $(this).toggleClass("active");
+                var elem = $(this).next(".list-layer-action");
+                //하단 잘릴 경우 처리(onScreenListLayer 함수로 false 리턴받으면 하단 잘림)
+                if($(this).hasClass("active") && !onScreenListLayer(elem)){
+                    $(this).addClass("upper");
+                }
+            });
+            $(document).on("mousedown click",function(e) {
+                if (btnAct.find(".wrap").has(e.target).length === 0){
+                    btnAct.find(".wrap > a").removeClass("active").removeClass("upper");
+                }
+            });
+
+        });
+
+
+        $(window).resize(function(){
+            //
+        });
+
+    });
+</script>
+
+</body>
+</html>

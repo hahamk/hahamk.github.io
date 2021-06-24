@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>genie</title>
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/css/swiper.css">
+<link rel="stylesheet" type="text/css" href="/css/layout.css">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script type="text/javascript" src="/js/plugins/modernizr.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.transit.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="/js/plugins/swiper.min.js"></script>
+<script type="text/javascript" src="/js/ui-front.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+    <!-- header(좌측 메뉴 영역) -->
+    <div id="header">
+        <div class="side">
+            <div class="top">
+                <h1><a href="#">genie</a></h1>
+                <div class="history">
+                    <a class="prev" href="#">이전 페이지</a>
+                    <a class="next" href="#">다음 페이지</a>
+                </div>
+            </div>
+            <div id="gnb">
+                <ul class="quick">
+                    <li><a href="#">이용권구매</a></li>
+                    <li><a href="#">상품권등록</a></li>
+                </ul>
+                <ul class="nav">
+                    <li class="n1 open"><a href="#">지니차트</a><!-- 기본값이 열린 경우 클래스에 open 추가 -->
+                        <ul>
+                            <li class="selected"><a href="#">TOP100</a></li><!-- 선택시 li에 selected -->
+                            <li><a href="#">장르별</a></li>
+                            <li><a href="#">뮤직비디오</a></li>
+                            <li><a href="#">좋아요</a></li>
+                        </ul>
+                    </li>
+                    <li class="n2 open"><a href="#">최신음악</a><!-- 기본값이 열린 경우 클래스에 open 추가 -->
+                        <ul>
+                            <li><a href="#">곡</a></li>
+                            <li><a href="#">앨범</a></li>
+                            <li><a href="#">뮤직비디오</a></li>
+                        </ul>
+                    </li>
+                    <li class="n3"><a href="#">장르음악</a>
+                        <ul>
+                            <li><a href="#">가요</a></li>
+                            <li><a href="#">POP</a></li>
+                            <li><a href="#">OST</a></li>
+                            <li><a href="#">EDM</a></li>
+                            <li><a href="#">JAZZ</a></li>
+                            <li><a href="#">CLASSIC</a></li>
+                            <li><a href="#">JPOP</a></li>
+                            <li><a href="#">CCM</a></li>
+                            <li><a href="#">그 외 장르</a></li>
+                        </ul>
+                    </li>
+                    <li class="n4"><a href="#">추천음악</a></li>
+                    <li class="n5"><a href="#">마이뮤직</a>
+                        <ul>
+                            <li><a href="#">마이앨범</a></li>
+                            <li><a href="#">감상이력</a></li>
+                            <li><a href="#">다운로드 보관함</a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <div class="notice">
+                    <a href="#">[공지]11/11 정기점검 안내 정기점검 안내</a>
+                </div>
+                <div class="banner">
+                    <div class="list-bnr-side swiper-container">
+                        <div class="swiper-paginate"></div>
+                        <div class="swiper-wrapper">
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-content">
+            <fieldset>
+                <legend>검색</legend>
+                <span class="wrap">
+                    <input type="search" id="searchMusic" name="" value="기본검색값" title="검색어 입력">
+                    <input class="clear" type="button" id="searchMusicClear" name="" title="검색어 삭제">
+                    <input class="search" type="button" id="" name="" title="검색">
+                </span>
+            </fieldset>
+            <div class="my-info">
+                <!-- 로그인 전 -->
+                <!-- <div class="my">
+                    <span class="pic"></span>
+                    <a class="login" href="#">로그인</a>
+                </div> -->
+                <!-- //로그인 전 -->
+                <!-- 로그인 후 -->
+                <div id="wrapMyInfo" class="my">
+                    <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span>
+                    <a class="login toggle" id="btnMyInfo" href="#">로그인</a>
+                    <!-- 로그인 정보 -->
+                    <div id="divMyInfo" class="info">
+                        <ul>
+                            <li class="cash"><strong class="title">지니캐시</strong><a class="btn-func" href="#"><span class="ico">&#8361; 충전</span></a><strong class="value">4,700원</strong></li>
+                            <li><strong class="title">이용중인 상품</strong><span class="value">총 2개</span>
+                                <ul>
+                                    <li><p>30곡 다운로드(30일마다 자동결제)</p><p>잔여일 : D-5</p></li>
+                                    <li><p>스마트 다운로드 + 음악감상 (30일) 길어지면 줄임표 처리</p><p>잔여일 : 부가서비스 해지 시까지</p></li>
+                                </ul>
+                            </li>
+                            <li><strong class="title">이용권 보관함</strong><span class="value">총 2개</span>
+                                <ul>
+                                    <li><p>월 30곡 다운로드(30일)</p></li>
+                                    <li><p>스마트 다운로드+음악감상(30일)</p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="sign">
+                            <a href="#">내정보</a>
+                            <a href="#">로그아웃</a>
+                        </div>
+                    </div>
+                    <!-- //로그인 정보 -->
+                </div>
+                <!-- //로그인 후 -->
+                <a class="download" href="#"><!-- 1곡 이상일 경우 --><span class="num">1</span><!-- //1곡 이상일 경우 --></a>
+            </div>
+        </div>
+    </div>
+    <!-- //header(좌측 메뉴 영역) -->
+    <!-- content(우측 콘텐츠 영역) -->
+    <div id="container">
+    <div id="content">
+        <div class="section-detail album">
+            <div class="header-detail">
+                <h2>/// (너 먹구름 비)</h2>
+                <span class="artwork"><img src="/images/temp/thumb-artwork-200x200-2.jpg" onerror="this.src='/images/common/img-noimage-200x200.jpg';" alt="앨범명"></span>
+                <div class="summary">
+                    <ul class="info">
+                        <li><span>아티스트</span><p><a href="#">EXO</a></p></li>
+                        <li><span>앨범유형</span><p>정규</p></li>
+                        <li><span>발매일</span><p>2017.06.26</p></li>
+                        <li><span>장르</span><p>가요/전체</p></li>
+                        <li><span>발매사</span><p>CJ E&amp;M MUSIC</p></li>
+                        <li><span>재생시간</span><p>03:45</p></li>
+                    </ul>
+                    <div class="btns">
+                        <span class="btn-func like" for=""><input type="checkbox" id="checkLikeThis" name=""><label for="checkLikeThis">좋아요</label><span class="accessibility">누적 좋아요</span><span class="ico">1,223</span><span class="accessibility">명</span></span>
+                        <a class="btn-func share" href="#"><span class="ico">공유</span></a>
+                        <a class="btn-func play" href="#"><span class="ico">전체듣기</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 상세 탭 -->
+            <div id="tabDetail" class="tab-carousel">
+                <span class="btn prev"><button>이전</button></span>
+                <div class="holder">
+                    <ul>
+                        <li><a href="#"><span>수록곡</span><span>(7)</span></a></li>
+                        <li><a href="#"><span>뮤직비디오</span><span>(5)</span></a></li>
+                        <li><a href="#"><span>댓글</span><span>(122)</span></a></li>
+                        <li class="active"><a href="#"><span>앨범소개</span></a></li>
+                    </ul>
+                </div>
+                <span class="btn next"><button>다음</button></span>
+            </div>
+            <!-- //상세 탭 -->
+            <!-- 소개 -->
+            <div class="content-detail intro">
+                <h3 class="accessibility">앨범소개</h3>
+                <!-- 앨범소개 없을 때 -->
+                <div class="list-nodata"><p>앨범소개 정보가 없습니다.</p></div>
+
+                <div class="intro-db">
+                <!-- 소개 내용 -->
+
+                <div>1. 널 너무 모르고</div><div>작사: 헤이즈(Heize)</div><div>작곡: 헤이즈(Heize), GroovyRoom(그루비룸)</div><div>편곡: GroovyRoom(그루비룸)</div><div><br></div><div>produced by 헤이즈(Heize), GroovyRoom(그루비룸)</div><div>vocal arranged by 헤이즈 (Heize)</div><div>chorus by 헤이즈(Heize)</div><div><div>Drum 이휘민</div><div>Piano 박규정</div><div>Synthesizer 이휘민</div><div>Bass 박규정</div></div><div><br></div><div>2. 먹구름 (feat. nafla)</div><div>작사: 헤이즈(Heize), nafla</div><div>작곡: 헤이즈(Heize), GroovyRoom(그루비룸)</div><div>편곡: GroovyRoom(그루비룸)</div><div><br></div><div>produced by 헤이즈(Heize), GroovyRoom(그루비룸)</div><div>vocal arranged by 헤이즈(Heize)</div><div>chorus by 헤이즈(Heize)</div><div><div>Drum 이휘민</div><div>Piano 박규정</div><div>Synthesizer 이휘민</div><div>Bass 박규정</div></div><div><br></div><div>3. rainin' with u</div><div>작곡: 다비(DAVII)</div><div>편곡: 다비(DAVII)</div><div><br></div><div>produced by 다비(DAVII)</div><div>piano by 다비(DAVII)</div><div><br></div><div>4. 비도 오고 그래서 (feat. 신용재)&nbsp;</div><div>작사: 헤이즈(Heize)</div><div>작곡: 헤이즈(Heize), 다비(DAVII)</div><div>편곡: 다비(DAVII)</div><div><br></div><div>produced by 헤이즈(Heize), 다비(DAVII)</div><div>vocal arranged by 헤이즈(Heize)</div><div>chorus by 헤이즈(Heize)</div><div>piano by 다비(DAVII)</div><div>guitar by 임민기</div><div><br></div><div>5. 저 별 (rain ver.)</div><div>작사: 헤이즈(Heize)</div><div>작곡: 헤이즈(Heize), 다비(DAVII)</div><div>편곡: 다비(DAVII)</div><div><br></div><div>produced by 헤이즈(Heize), 다비(DAVII)</div><div>vocal arranged by 헤이즈(Heize)</div><div>chorus by 헤이즈(Heize)</div><div>piano 다비(DAVII)</div><div>guitar 임민기</div><div><br></div><div>music producer 헤이즈(Heize)</div><div>recorded by 배소윤</div><div>mixed by 조준성 at Wsound</div><div>Mastered by 권남우 at 821 Sound Mastering</div>
+
+                <!-- //소개 내용 -->
+                </div>
+            </div>
+            <!-- //소개 -->
+        </div>
+    </div>
+    </div>
+    <!-- content(우측 콘텐츠 영역) -->
+</div>
+<script>
+    //gnb init
+    var initGnb = new gnbAction();
+
+    //좌하단 배너 롤링 init
+    var bnrSwiper = new Swiper ('.list-bnr-side', {
+        pagination: '.list-bnr-side .swiper-paginate',
+        paginationClickable: true
+    });
+
+    //로그인 버튼 클릭
+    var initMyInfo = new toggleElem($("#wrapMyInfo"),$("#btnMyInfo"),$("#divMyInfo"));
+
+    //상단 롤링 탭 init
+    var initCarouselTab = new carouselTab($("#tabDetail"));
+
+
+    $(function(){
+
+        //상단 검색 영역 커스텀 클리어 필드 버튼 동작 예시
+        var commonSearch = $("#searchMusic");
+        var commonSearchClear = $("#searchMusicClear");
+        var svalue = commonSearch.val();
+        commonSearch.on("focus",function(){
+            commonSearch.val("");
+        });
+        commonSearch.on("blur",function(){
+            if(commonSearch.val().length === 0){
+                commonSearch.val(svalue);
+            }
+        });
+        commonSearch.on("keyup",function(){
+            if(commonSearch.val().length > 0 && commonSearch.val() !== svalue){
+                commonSearchClear.show();
+            }
+        });
+        commonSearchClear.click(function(){
+           commonSearch.val("");
+        });
+
+
+    });
+</script>
+
+</body>
+</html>

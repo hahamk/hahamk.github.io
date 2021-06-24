@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>genie</title>
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/css/swiper.css">
+<link rel="stylesheet" type="text/css" href="/css/layout.css">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script type="text/javascript" src="/js/plugins/modernizr.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.transit.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="/js/plugins/swiper.min.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery.fakeform.min.js"></script>
+<script type="text/javascript" src="/js/ui-front.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+    <!-- header(좌측 메뉴 영역) -->
+    <div id="header">
+        <div class="side">
+            <div class="top">
+                <h1><a href="#">genie</a></h1>
+                <div class="history">
+                    <a class="prev" href="#">이전 페이지</a>
+                    <a class="next" href="#">다음 페이지</a>
+                </div>
+            </div>
+            <div id="gnb">
+                <ul class="quick">
+                    <li><a href="#">이용권구매</a></li>
+                    <li><a href="#">상품권등록</a></li>
+                </ul>
+                <ul class="nav">
+                    <li class="n1 open"><a href="#">지니차트</a><!-- 기본값이 열린 경우 클래스에 open 추가 -->
+                        <ul>
+                            <li class="selected"><a href="#">TOP100</a></li><!-- 선택시 li에 selected -->
+                            <li><a href="#">장르별</a></li>
+                            <li><a href="#">뮤직비디오</a></li>
+                            <li><a href="#">좋아요</a></li>
+                        </ul>
+                    </li>
+                    <li class="n2 open"><a href="#">최신음악</a><!-- 기본값이 열린 경우 클래스에 open 추가 -->
+                        <ul>
+                            <li><a href="#">곡</a></li>
+                            <li><a href="#">앨범</a></li>
+                            <li><a href="#">뮤직비디오</a></li>
+                        </ul>
+                    </li>
+                    <li class="n3"><a href="#">장르음악</a>
+                        <ul>
+                            <li><a href="#">가요</a></li>
+                            <li><a href="#">POP</a></li>
+                            <li><a href="#">OST</a></li>
+                            <li><a href="#">EDM</a></li>
+                            <li><a href="#">JAZZ</a></li>
+                            <li><a href="#">CLASSIC</a></li>
+                            <li><a href="#">JPOP</a></li>
+                            <li><a href="#">CCM</a></li>
+                            <li><a href="#">그 외 장르</a></li>
+                        </ul>
+                    </li>
+                    <li class="n4"><a href="#">추천음악</a></li>
+                    <li class="n5"><a href="#">마이뮤직</a>
+                        <ul>
+                            <li><a href="#">마이앨범</a></li>
+                            <li><a href="#">감상이력</a></li>
+                            <li><a href="#">다운로드 보관함</a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <div class="notice">
+                    <a href="#">[공지]11/11 정기점검 안내 정기점검 안내</a>
+                </div>
+                <div class="banner">
+                    <div class="list-bnr-side swiper-container">
+                        <div class="swiper-paginate"></div>
+                        <div class="swiper-wrapper">
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                            <!-- loop -->
+                            <div class="swiper-slide"><a href="#"><img src="/images/temp/thumb-banner-178x116.jpg" alt="트리탑스 싱글 발매"></a></div>
+                            <!-- //loop -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-content">
+            <fieldset>
+                <legend>검색</legend>
+                <div class="wrap">
+                    <input class="blur" type="search" id="searchMusic" name="" value="기본 검색값" placeholder="" title="검색어 입력">
+                    <!--<input type="search" id="searchMusic" name="" value="" placeholder="기본 검색값" title="검색어 입력">-->
+                    <input class="clear" type="button" id="searchMusicClear" name="" title="검색어 삭제">
+                    <input class="search" type="button" id="" name="" title="검색">
+                    <div id="searchAutoComp" class="autocomplete">
+                        <div class="data">
+                            <h3>아티스트</h3>
+                            <ul>
+                                <li><a href="#"><strong>EXO</strong><span>한국 / 남성 / 그룹</span></a></li>
+                                <li><a href="#"><strong>EXO-CBX (첸백시)</strong><span>한국 / 남성 / 그룹</span></a></li>
+                                <li><a href="#"><strong>DPR LIVE</strong><span>한국 / 남성 / 그룹</span></a></li>
+                                <li><a href="#"><strong>EXO-K</strong><span>한국 / 남성 / 그룹</span></a></li>
+                            </ul>
+                            <h3>곡</h3>
+                            <ul>
+                                <li><a href="#"><strong>ko ko Bop</strong><span>EXO</span></a></li>
+                                <li><a href="#"><strong>For Life</strong><span>EXO</span></a></li>
+                                <li><a href="#"><strong>기억을 걷는 밤 (Walk On Memories)</strong><span>EXO</span></a></li>
+                                <li><a href="#"><strong>기억을 걷는 밤 (Walk On Memories)</strong><span>EXO</span></a></li>
+                            </ul>
+                            <h3>앨범</h3>
+                            <ul>
+                                <li><a href="#"><strong>THE WAR - The 4th Album</strong><span>EXO</span></a></li>
+                                <li><a href="#"><strong>For Life - 겨울 스페셜 앨범, 2016</strong><span>EXO</span></a></li>
+                                <li><a href="#"><strong>For Life - 겨울 스페셜 앨범, 2016</strong><span>EXO</span></a></li>
+                                <li><a href="#"><strong>For Life - 겨울 스페셜 앨범, 2016</strong><span>EXO</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="my-info">
+                <!-- 로그인 전 -->
+                <!-- <div class="my">
+                    <span class="pic"></span>
+                    <a class="login" href="#">로그인</a>
+                </div> -->
+                <!-- //로그인 전 -->
+                <!-- 로그인 후 -->
+                <div id="wrapMyInfo" class="my">
+                    <span class="pic" style="background-image:url(/images/temp/pic-user.jpg)"></span><!-- 페이스북, 트위터, 카카오 로그인일 경우 class="pic" 에 각각 facebook / twitter / kakao 클래스 추가 -->
+                    <a class="login toggle" id="btnMyInfo" href="#">로그인</a>
+                    <!-- 로그인 정보 -->
+                    <div id="divMyInfo" class="info">
+                        <ul>
+                            <li class="cash"><strong class="title">지니캐시</strong><a class="btn-func" href="#"><span class="ico">&#8361; 충전</span></a><strong class="value">4,700원</strong></li>
+                            <li><a href="#" class="title">이용중인 상품</a><span class="value">총 2개</span>
+                                <ul>
+                                    <li><p>30곡 다운로드(30일마다 자동결제)</p><p>잔여일 : D-5</p></li>
+                                    <li><p>스마트 다운로드 + 음악감상 (30일) 길어지면 줄임표 처리</p><p>잔여일 : 부가서비스 해지 시까지</p></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"  class="title">이용권 보관함</a><span class="value">총 2개</span>
+                                <ul>
+                                    <li><p>월 30곡 다운로드(30일)</p></li>
+                                    <li><p>스마트 다운로드+음악감상(30일)</p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="sign">
+                            <a href="#">내정보</a>
+                            <a href="#">로그아웃</a>
+                        </div>
+                    </div>
+                    <!-- //로그인 정보 -->
+                </div>
+                <!-- //로그인 후 -->
+                <a class="download" href="#"><!-- 1곡 이상일 경우 --><span class="num">1</span><!-- //1곡 이상일 경우 --></a>
+            </div>
+        </div>
+    </div>
+    <!-- //header(좌측 메뉴 영역) -->
+    <!-- content(우측 콘텐츠 영역) -->
+    <div id="container">
+    <div id="content">
+
+        <div class="section-download">
+            <h2>다운로드 및 결제</h2>
+            <div class="process step2">
+                <ol>
+                    <li class="step1"><p><span>step1</span><strong>다운로드 대기곡</strong></p></li>
+                    <li class="step2" title="현재 스텝"><p><span>step2</span><strong>결제수단 선택</strong></p></li>
+                    <li class="step3"><p><span>step3</span><strong>결제완료</strong></p></li>
+                </ol>
+            </div>
+            <div class="content-download step2">
+                <h3>결제정보</h3>
+                <table class="tbl-rows">
+                    <caption>결제수단 선택 및 결제정보,구매곡 수, 상세설명 확인</caption>
+                    <colgroup>
+                        <col style="width:160px">
+                        <col>
+                    </colgroup>
+                    <tr>
+                        <th scope="row">결제금액 (VAT 별도)</th>
+                        <td><strong class="clr-r">123,456원</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">구매할 곡 수</th>
+                        <td><strong>100곡</strong></td>
+                    </tr>
+                    <tr class="method">
+                        <th scope="row">결제수단 선택</th>
+                        <td>
+                            <ul>
+                                <li><input type="radio" id="paymentMethod1" name="paymentMethod" checked onchange="if($(this).prop('checked')){changeTxtMethod(1)}"><label for="paymentMethod1">휴대폰 소액결제</label></li>
+                                <li><input type="radio" id="paymentMethod2" name="paymentMethod" onchange="if($(this).prop('checked')){changeTxtMethod(2)}"><label for="paymentMethod2">해피머니 상품권</label></li>
+                                <li><input type="radio" id="paymentMethod3" name="paymentMethod" onchange="if($(this).prop('checked')){changeTxtMethod(3)}"><label for="paymentMethod3">도서문화 상품권</label></li>
+                                <li><input type="radio" id="paymentMethod4" name="paymentMethod" onchange="if($(this).prop('checked')){changeTxtMethod(4)}"><label for="paymentMethod4">OK캐쉬백</label></li>
+                                <li class="gcash">
+                                    <input type="radio" id="paymentMethod5" name="paymentMethod" onchange="if($(this).prop('checked')){changeTxtMethod(5)}"><label for="paymentMethod5">지니캐시 (잔액 : <strong class="clr-b">5000원</strong>)</label>
+                                    <a class="btn-basic" href="#">충전하기</a>
+                                    <a class="btn-refresh" href="#">새로고침</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">상세 설명</th>
+                        <td>
+                            <ul id="txtMethod1" class="list-txt" style="display:block">
+                                <li>휴대폰 번호로 소액결제 가능합니다.</li>
+                            </ul>
+                            <ul id="txtMethod2" class="list-txt" style="display:none">
+                                <li>해피머니 사이트에서 해피캐시 잠금 풀기 후 로그인이 가능합니다.</li>
+                                <li>결제 비밀번호 이용 고객은 비밀번호 입력란에 결제 비밀번호를 입력해 주세요.</li>
+                            </ul>
+                            <ul id="txtMethod3" class="list-txt" style="display:none">
+                                <li>도서상품권을 북앤라이프 캐시로 전환한 후 사용하실 수 있습니다.</li>
+                            </ul>
+                            <ul id="txtMethod4" class="list-txt" style="display:none">
+                                <li>OK캐쉬백으로 결제 가능합니다.</li>
+                            </ul>
+                            <ul id="txtMethod5" class="list-txt" style="display:none">
+                                <li>보유하신 지니캐시로 결제 가능합니다</li>
+                                <!-- <li>지니캐시가 부족합니다.<br>충전 후 결제하시거나 다른 결제 수단을 선택해 주세요</li> -->
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <ul class="agree">
+                    <li>
+                        <input type="checkbox" id="confirmPayment1" checked><label for="confirmPayment1">이용약관을 확인하였습니다.</label>
+                        <a class="btn-link" href="#">약관보기</a>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="confirmPayment2" checked><label for="confirmPayment2">결제 내용을 확인하였습니다.</label>
+                        <a class="btn-link" href="#">요금/상품 FAQ</a>
+                    </li>
+                </ul>
+                <div class="btns-confirm">
+                    <a class="btn-action confirm" href="#">결제하기</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <!-- content(우측 콘텐츠 영역) -->
+</div>
+<script>
+    //gnb init
+    var initGnb = new gnbAction();
+
+    //좌하단 배너 롤링 init
+    var bnrSwiper = new Swiper ('.list-bnr-side', {
+        pagination: '.list-bnr-side .swiper-paginate',
+        paginationClickable: true,
+        autoplay: 4000
+    });
+
+    //로그인 버튼 클릭
+    var initMyInfo = new toggleElem($("#wrapMyInfo"),$("#btnMyInfo"),$("#divMyInfo"));
+
+    $("select").fakeselect();
+
+    //결제수단 설명 텍스트 체크박스 선택시 변경
+    function changeTxtMethod(n){
+        var txt = $("#txtMethod" + n);
+        txt.show();
+        txt.siblings(".list-txt").hide();
+    };
+
+    $(function(){
+
+        //커스텀 클리어 필드(상단 통합검색) 동작 예시
+        var commonSearch = $("#searchMusic");
+        var commonSearchClear = $("#searchMusicClear");
+        var svalue = commonSearch.val();
+        commonSearch.on("focus",function(){
+            commonSearch.val("");
+            commonSearch.removeClass("blur");
+        });
+        commonSearch.on("blur",function(){
+            if(commonSearch.val().length === 0){
+                commonSearch.val(svalue);
+                commonSearch.addClass("blur");
+            }
+            $("#searchAutoComp").hide();
+        });
+        commonSearch.on("keyup",function(){
+            if(commonSearch.val().length > 0 && commonSearch.val() !== svalue){
+                commonSearchClear.show();
+                $("#searchAutoComp").show();
+                $("#searchAutoComp").jScrollPane();
+            }
+        });
+        commonSearchClear.click(function(){
+           commonSearch.val("");
+        });
+    });
+</script>
+
+</body>
+</html>
