@@ -1,0 +1,1241 @@
+@charset 'utf-8';
+
+/***** common *****/
+/* heading */
+h2 {position:relative;line-height:2.5625em;padding:0.125em 0.75em 0}
+h2:first {padding-top:0.25em}
+h3 {font-size:0.875rem;line-height:1.6904761904em;padding:0.9047619047619em 1.142857142857em 0}
+
+/* swiper */
+.swiper-container {margin:0 auto;position:relative;overflow:hidden;z-index:1}
+.swiper-container-no-flexbox .swiper-slide {float:left}
+.swiper-container-vertical > .swiper-wrapper {-webkit-box-orient:vertical;-moz-box-orient:vertical;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}
+.swiper-wrapper {position:relative;width:100%;height:100%;z-index:1;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;-o-transition-property:-o-transform;-ms-transition-property:-ms-transform;transition-property:transform;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}
+.swiper-container-android .swiper-slide, .swiper-wrapper {-webkit-transform:translate3d(0px, 0, 0);-moz-transform:translate3d(0px, 0, 0);-o-transform:translate(0px, 0px);-ms-transform:translate3d(0px, 0, 0);transform:translate3d(0px, 0, 0)}
+.swiper-container-multirow > .swiper-wrapper {-webkit-box-lines:multiple;-moz-box-lines:multiple;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}
+.swiper-container-free-mode > .swiper-wrapper {-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;margin:0 auto}
+.swiper-slide {-webkit-flex-shrink:0;-ms-flex:0 0 auto;flex-shrink:0;width:100%;height:100%;position:relative}
+.swiper-wp8-horizontal {-ms-touch-action:pan-y;touch-action:pan-y}
+.swiper-button-prev, .swiper-button-next {position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;-moz-background-size:27px 44px;-webkit-background-size:27px 44px;background-size:27px 44px;background-position:center;background-repeat:no-repeat}
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {opacity:0.35;cursor:auto;pointer-events:none}
+.swiper-pagination {position:absolute;text-align:center;-webkit-transition:300ms;-moz-transition:300ms;-o-transition:300ms;transition:300ms;-webkit-transform:translate3d(0, 0, 0);-ms-transform:translate3d(0, 0, 0);-o-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0);z-index:10}
+.swiper-pagination.swiper-pagination-hidden {opacity:0}
+.swiper-pagination-bullets {bottom:10px;left:0;width:100%}
+.swiper-pagination-bullet {width:8px;height:8px;display:inline-block;border-radius:100%;background:#000;opacity:0.2}
+button.swiper-pagination-bullet {border:none;margin:0;padding:0;box-shadow:none;-moz-appearance:none;-ms-appearance:none;-webkit-appearance:none;appearance:none}
+.swiper-pagination-clickable .swiper-pagination-bullet {cursor:pointer}
+.swiper-pagination-bullet-active {opacity:1;background:#007aff}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {margin:0 5px}
+.swiper-container-fade.swiper-container-free-mode .swiper-slide {-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}
+.swiper-container-fade .swiper-slide {pointer-events:none;-webkit-transition-property:opacity;-moz-transition-property:opacity;-o-transition-property:opacity;transition-property:opacity}
+.swiper-container-fade .swiper-slide .swiper-slide {pointer-events:none}
+.swiper-container-fade .swiper-slide-active, .swiper-container-fade .swiper-slide-active .swiper-slide-active {pointer-events:auto}
+
+/***** payment *****/
+.payment{padding-bottom:1.4583333333em; background:#f7f9fc}
+.payment .desc-title {display:block;font-size:0.75rem;padding:0 1em 0.6944444444em;margin-top:-0.8333333333em}
+.payment .desc {display:block;padding:0.5em 1.2em;line-height:1.6666666666em}
+.payment .desc-point {padding-top:0.63333333333em;line-height:1.4em}
+.payment .total {margin:1.42857142857em 1.142857142857em 0;padding:0 0.857142857em;font-size:0.875rem;line-height:2.1190476em;border:0.07142857142857em solid #27282d;background-color:#fff;border-radius:0.16666em}
+.payment .total h2 {width:100%;font-weight:bold;font-size:1rem;line-height:2.75em;padding:0}
+.payment .total dl {overflow:hidden;border-top:0.07142857142857em solid #eef1f4}
+.payment .total dt {clear:both;width:50%;float:left;color:#63717d}
+.payment .total dd {width:50%;float:right;text-align:right}
+.payment .total .price-info {padding:0.833333333em 0}
+.payment .total .total-price {padding:1.0476190476em 0 0.738095238em;line-height:1.2142857142857em}
+.payment .total .text-large {font-size:1.5rem;vertical-align:top}
+.payment .list-agree {font-size:0.75rem;padding:0.9166666666em 1.3333333333em 1.25em}
+.payment .list-agree li {padding:0.4166666666em 0;word-break:keep-all}
+.payment .btn-wrap {padding:0 1em 0.0833333333em}
+.payment .btn-wrap.submit {margin:1.25em 0 0.8958333333em}
+.payment .btn-wrap.pd {padding:1.25em 1em 0.625em}
+.payment .btn-wrap.col-2 .btn {width:49.3902439%;float:left}
+.payment .btn-wrap.col-2 .btn:last-child {float:right}
+.payment .kt-auth-before {line-height:1.38095238em;padding:0.90476190476em 1.142857em 1em 1.142857em;text-align:center}
+.payment .kt-auth-before .btn, .payment .kt-auth-after .btn {display:block;width:11.857142857em;margin:0.523809523em auto 0}
+.payment .kt-auth-before .desc{display:block;font-size:0.75rem;line-height:1.3333333333em;padding:0.75em 1.5em 0}
+.payment .kt-auth-after {font-size:1.125rem;line-height:1.3333333333em;border-top:0;text-align:center;overflow:hidden;padding:0}
+.payment .kt-auth-after dl {display:block;position:relative;width:33%;float:left;padding:0.5555555555em 0 0.6666666666em}
+.payment .kt-auth-after dl:nth-child(2) {width:34%;border-left:0.0555555555em solid #eef1f4;border-right:0.0555555555em solid #eef1f4}
+.payment .kt-auth-after dl:nth-child(2):before {content:'';display:block;position:absolute;top:50%;left:-0.75em;width:1.5em;height:1.5em;font-size:1rem;margin-top:-0.75em;background:url('//image.genie.co.kr/imageg/mobile/payment/icon_math_sign.png') no-repeat 0 0;background-size:300% 100%}
+.payment .kt-auth-after dl:nth-child(2):after {content:'';display:block;position:absolute;top:50%;right:-0.75em;width:1.5em;height:1.5em;font-size:1rem;margin-top:-0.75em;background:url('//image.genie.co.kr/imageg/mobile/payment/icon_math_sign.png') no-repeat 100% 0;background-size:300% 100%}
+.payment .kt-auth-after dt {font-size:0.75rem;line-height:1.6666666666em;padding-top:0.2222222222em}
+.payment .kt-auth-after.lack-point {font-size:0.875rem;padding:1em 1em 1.07142857142857em 1em}
+.payment .lack-point .desc {font-size:0.75rem;line-height:1.3333333333em;padding:0.75em 0 0.083333333em}
+.payment .list-point li {width:100%;min-height:3.142857142857em;padding:0.857142857142857em 12.380952em 0.7142857142857em 0;border-bottom:0.07142857142857em solid #eef1f4}
+.payment .list-point li:last-child {border:0}
+.payment .list-point .has-desc {padding:0}
+.payment .list-point .li-wrap {position:relative;width:100%;min-height:3.142857142857em;padding:0.8809523809523em 14.38095238095em 0.8809523809523em 0}
+.payment .list-point .point-name {display:inline-block}
+.payment .list-point li:first-child .point-name {padding-left:1.7142857142857em}
+.payment .list-point .btn-charge {display:inline-block;font-size:0.75rem;vertical-align:top;padding-right:0.7777777777em;background:url('//image.genie.co.kr/imageg/mobile/common/icon_arrow_blue.png') no-repeat 100% 50%;background-size:0.5833333333em auto}
+.payment .list-point .point {position:absolute;top:50%;right:10em;width:5.523809523em;line-height:2.142857142857em;margin-top:-1em;text-align:center;vertical-align:middle;word-break:break-all}
+.payment .list-point .btn-point {position:absolute;top:50%;right:11.6666666666em;width:6.4444444444em;font-size:0.75rem;line-height:2.5em;;margin-top:-1.1666666666em;text-align:center}
+.payment .list-point .ipt {position:absolute;top:50%;right:5em;width:5em;margin-top:-1.07142857142857em;text-align:right;font-weight:bold}
+.payment .list-point .btn {position:absolute;top:50%;right:1.3333333333em;width:4.1666666666em;margin-top:-1.25em}
+.payment .list-point .icon-hot {display:block;position:absolute;top:-0.0625em;left:-0.60416666666em;width:1.5625em;height:2.0625em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile/payment/icon_hot.png') no-repeat 0 0;background-size:100% auto;line-height:0;text-indent:-9999px}
+.payment .list-point .desc {position:relative;line-height:1.4em;margin:-0.1333333333em 1.6em 1em 0;background-color:#f7f9fc;border:0.1em solid #eef1f4;border-radius:0.2em;word-break:keep-all}
+.payment .list-point .desc:before {content:'';display:block;position:absolute;top:-0.6666666666em;left:3.0833333333em;width:0.75em;height:0.66667em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile/payment/icon_edge.png') no-repeat 0 0;background-size:100% auto}
+.payment .list-ipt {padding-top:0.2619047619em;padding-bottom:0.07142857em}
+.payment .list-ipt dt {border:0;padding:0.5em 0}
+.payment .list-ipt dt.bt, .payment .list-ipt dd.bt {border-top:0.07142857142857em solid #eef1f4}
+.payment .list-ipt .middle {padding:0.8095238095238em 0 0 0}
+.payment .list-ipt dd {padding:0.5em 1.1190476190476em 0.5em 0;border:0}
+.payment .list-ipt dd .desc {padding:0.5em 0 0.3333333333em}
+.payment .list-ipt dd .ipt, .payment .list-ipt dd .selectbox, .payment .list-ipt dd .textarea {width:99.8%}
+.payment .list-ipt .col-2 {margin-right:1.142857142857em}
+.payment .list-ipt .col-2 label {width:49.9%;float:left}
+.payment .list-ipt .list-select li{margin-bottom:1.94444444444vw}
+.payment .list-ipt .list-select li img{height:14.30555555556vw;vertical-align:middle;position: absolute;top:0.333333vw;left:-21vw}
+.payment .list-ipt .list-select li label{margin-left:21vw;height:14.30555555556vw;vertical-align: middle;line-height:14.30555555556vw;padding-left: 1.871429em;}
+.payment .list-ipt .list-select li .radio + label:before{top:50%;margin-top:-0.625em}
+.payment .list-ipt .list-select li label span{line-height:5vw;display:inline-block;vertical-align:middle;padding-right:0;word-break: keep-all;min-height:24px}
+.payment .list-ipt .list-select li:last-child {padding-bottom:0}
+.payment .gift-addr{line-height:36px}
+.payment .gift-addr input:first-child{width:55%;float:left}
+.payment .gift-addr *{vertical-align:top;display:block;margin-bottom:0.416666rem}
+.payment .gift-addr .find{background:#acb7c7;height:1.875rem;overflow:hidden;border:0;color:#fff;width:42%;float:right;border-radius:0.142857142857em;line-height:1.875rem;font-size:0.875rem}
+.payment .gift-addr input::-webkit-input-placeholder {color:#a0a0a0}
+.payment .gift-addr input::-moz-placeholder {color:#a0a0a0}
+.payment .gift-addr input:-ms-input-placeholder {color:#a0a0a0}
+.payment .list.dash li small {display:block;line-height:1.4em}
+.payment .caution-duplication {padding:30.74074074% 0 1.9583333333em;background:url('//image.genie.co.kr/imageg/mobile/common/icon_caution.png') #fff no-repeat 50% 1.875em;background-size:19.4444444444% auto;text-align:center;border-bottom:0.0625em solid #eef1f4}
+.payment .caution-duplication .title {line-height:1.8333333333em;padding:0}
+.payment .caution-duplication .txt {font-size:0.75rem;line-height:1.5em}
+.payment .list.indent {padding-left:1.3888888888em}
+.payment .list-title{display:block;padding:1em 1.2em 0 1.2em;font-size:0.625rem;}
+.payment .list.presa {padding:0.5em 1.2em;border-top:none;border-bottom:0;font-size:0.625rem;line-height:1.5em}
+.payment .list.presa li {padding:0.1666666666em 0 0.1666666666em 1.2em;word-break:keep-all}
+.payment .list.presa li:before {content:'※';display:block;position:absolute;left:0;width:0.25em;height:0.0625em;font-size:0.625rem}
+.payment .list.presa li a {vertical-align:baseline}
+.payment .list .indent {position:relative}
+.payment .list .indent-none {position:relative;padding-left:1.0555555555em;line-height:1.5em}
+.payment .list .indent-none:before {content:'-';display:block;position:absolute;top:0;left:0}
+.payment .box-agree {padding:0.9375em 1em 1.75em}
+.payment .list.complete .desc {display:block;padding:0.5em 1.2em 0.5em 0;margin-top:-0.2666666666em}
+.payment .discount-graph {display:block;font-size:1rem;padding:0 1.56862745098vw 0;margin-top:0.8333333333em;position:relative}
+.payment .discount-graph .sale{position: absolute;font-size:3.8vw;top:8vw;left:30.5vw;color: #fff;width:17.1vw;text-align:center;line-height:6vw; text-indent:0}
+.payment .discount-graph .cost{position: absolute;font-size:3.8vw;top:8vw;right:6.5vw;color: #fff;width:17.64705882353vw;text-align:center;line-height:6vw;text-indent:0}
+.payment .discount-graph p {display:block;width:100%;padding-top:42.424242424242%;background:url('//image.genie.co.kr/imageg/mobile/payment/discount_graph_r5.png') no-repeat 0 0;background-size:100% 500%;line-height:0;text-indent:-9999px}
+.payment .discount-graph .graph-1 {background-position:0 0%}
+.payment .discount-graph .graph-2 {background-position:0 25%}
+.payment .discount-graph .graph-3 {background-position:0 50%}
+.payment .discount-graph .graph-4 {background-position:0 75%}
+.payment .discount-graph .graph-5 {background-position:0 100%}
+
+.payment .discount-graph.cjone p {display:block;width:100%;padding-top:42.424242424242%;background:url('//image.genie.co.kr/imageg/mobile_web/payment/graph_cjone.gif') no-repeat 0 0;background-size:100% 600%;line-height:0;text-indent:-9999px}
+.payment .discount-graph.cjone .graph-1 {background-position:0 0}
+.payment .discount-graph.cjone .graph-2 {background-position:0 20%}
+.payment .discount-graph.cjone .graph-3 {background-position:0 40%}
+.payment .discount-graph.cjone .graph-4 {background-position:0 60%}
+.payment .discount-graph.cjone .graph-5 {background-position:0 80%}
+.payment .discount-graph.cjone .graph-6 {background-position:0 100%}
+.payment .discount-graph.cjonevip p {display:block;width:100%;padding-top:42.424242424242%;background:url('//image.genie.co.kr/imageg/mobile_web/payment/graph_cjone_vip.gif') no-repeat 0 0;background-size:100%;line-height:0;text-indent:-9999px;}
+.payment .discount-graph.guidance p{display:block;width:100%;padding-top:42.424242424242%;background:url('//image.genie.co.kr/imageg/mobile_web/payment/graph_guidance.gif') no-repeat 0 0;background-size:100%;line-height:0;text-indent:-9999px;}
+
+.payment .discount-graph .graph-ai {background:url('//image.genie.co.kr/imageg/mobile_web/payment/discount_graph_ai.png') no-repeat 0 0;background-size:100% 100%;background-position:0 0}
+.payment .discount-graph .graph-100 {background:url('//image.genie.co.kr/imageg/mobile_web/payment/discount_graph_100.png') no-repeat 0 0;background-size:100% 100%;background-position:0 0}
+.payment .discount-graph .graph-auto {background:url('//image.genie.co.kr/imageg/mobile_web/payment/discount_graph_lg.gif') no-repeat 0 0;background-size:100% 100%;background-position:0 0}
+.payment .discount-graph .graph-16-month {background:url('//image.genie.co.kr/imageg/mobile_web/payment/discount_graph_16.png') no-repeat 0 0;background-size:100% 100%;background-position:0 0}
+.payment .discount-graph .graph-18-month {background:url('//image.genie.co.kr/imageg/mobile_web/payment/discount_graph_18.png') no-repeat 0 0;background-size:100% 100%;background-position:0 0}
+.payment .discount-graph .graph-cgv {background:url('//image.genie.co.kr/imageg/mobile_web/payment/discount_graph_cgv.gif') no-repeat 0 0;background-size:100% 100%;background-position:0 0}
+.payment .discount-graph .graph-cgv49 {background:url('//image.genie.co.kr/imageg/mobile_web/payment/discount_graph_cgv49.png') no-repeat 0 0;background-size:100% 100%;background-position:0 0}
+.payment .discount-graph .graph-cgv59 {background:url('//image.genie.co.kr/imageg/mobile_web/payment/discount_graph_cgv59.png') no-repeat 0 0;background-size:100% 100%;background-position:0 0}
+.payment .discount-graph .graph-mzone {background:url('//image.genie.co.kr/imageg/mobile_web/payment/discount_graph_mzone.gif') no-repeat 0 0;background-size:100% 100%;background-position:0 0}
+.payment .list.full li {line-height:1.22;padding:1.095238095238em 0.857142857em 0.97619047619em}
+.payment h2 .btn-toggle {display:block;position:absolute;top:50%;right:0.6666666666em;margin-top:-0.3645833333em}
+.payment .list-select {padding:1.3em 0;margin-right:-1em}
+
+.list .hk_gift img{width:100%; margin-left:-1.142857142857em; padding-bottom:0.7857142857em}
+.payment .list-select .gift-bz {display:inline-block;width:5.3333333333em;height:4.523809523809524em;margin-right:0.6190476190476em;background:url('//image.genie.co.kr/imageg/mobile/payment/gift_new01.png') no-repeat 0 0;background-size:300% auto;line-height:0;text-indent:-9999px;vertical-align:middle}
+.payment .list-select .gift-bz.gift-2 {background-position:50% 0}
+.payment .list-select .gift-bz.gift-3 {background-position:100% 0}
+
+.payment .list-select .gift-pxp {display:inline-block;width:5.3333333333em;height:4.523809523809524em;margin-right:0.6190476190476em;background:url('//image.genie.co.kr/imageg/mobile/payment/gift_new03.png') no-repeat 0 0;background-size:400% auto;line-height:0;text-indent:-9999px;vertical-align:middle}
+.payment .list-select .gift-pxp.gift-2 {background-position:34% 0}
+.payment .list-select .gift-pxp.gift-3 {background-position:68% 0}
+.payment .list-select .gift-pxp.gift-4 {background-position:102% 0}
+
+.payment .list-select .gift-pt {display:inline-block;width:5em;height:5em;background:url('//image.genie.co.kr/imageg/mobile/payment/gift_new04.png') no-repeat 11% 0;background-size:200% 100%;line-height:0;text-indent:-9999px;vertical-align:middle}
+.payment .list-select .gift-pt.gift-2 {background-position:100% 0}
+
+.payment .list-select .gift-logitec {display:inline-block;width:5.38095238095238095em;height:5.38095238095238095em;margin-right:0.6190476190476em;background:url('//image.genie.co.kr/imageg/mobile/payment/gift_new05.png') no-repeat 0 0;background-size:200% 100%;line-height:0;text-indent:-9999px;vertical-align:middle}
+.payment .list-select .gift-logitec.gift-2 {background-position:100% 0}
+.payment label.type2:before{top:13%}
+
+.payment .list-select .gift-superga {display:inline-block;width:5.5em;height:2.380952380952380em;margin-right:0.6190476190476em;background:url('//image.genie.co.kr/imageg/mobile/payment/gift_new06.png') no-repeat 0 0;background-size:500% 200%;line-height:0;text-indent:-9999px;vertical-align:middle}
+.payment .list-select .gift-superga.gift-2 {background-position:25% 0}
+.payment .list-select .gift-superga.gift-3 {background-position:50% 0}
+.payment .list-select .gift-superga.gift-4 {background-position:75% 0}
+.payment .list-select .gift-superga.gift-5 {background-position:100% 0}
+.payment .list-select .gift-superga.gift-6 {background-position:0 100%}
+.payment .list-select .gift-superga + .radio + label {width:60%; letter-spacing:-0.5px; word-break: break-all;}
+.payment .list-select.supe li{padding-bottom: 2em;}
+
+.payment .list-select .gift-carr {display:inline-block;width:5.3333333333em;height:4.523809523809524em;margin-right:0.6190476190476em;background:url('//image.genie.co.kr/imageg/mobile/payment/gift_new07.png') no-repeat 0 0;background-size:300% auto;line-height:0;text-indent:-9999px;vertical-align:middle}
+.payment .list-select .gift-carr.gift-2 {background-position:50% 0}
+.payment .list-select .gift-carr.gift-3 {background-position:100% 0}
+
+.payment .list-select .gift-etc {display:inline-block;width:4.5238095238095238em;height:4.0476190476190476em;margin-right:0.6190476190476em;background:url('//image.genie.co.kr/imageg/mobile/payment/gift_etc.jpg') no-repeat 0 0;background-size:500% 200%;line-height:0;text-indent:-9999px;vertical-align:middle}
+.payment .list-select .gift-etc.gift-2 {background-position:25% 0}
+.payment .list-select .gift-etc.gift-3 {background-position:50% 0}
+.payment .list-select .gift-etc.gift-4 {background-position:75% 0}
+.payment .list-select .gift-etc.gift-5 {background-position:100% 0}
+.payment .list-select .gift-etc.gift-6 {background-position:0 100%}
+.payment .list-select .gift-etc.gift-7 {background-position:25% 100%}
+.payment .list-select .gift-etc.gift-8 {background-position:50% 100%}
+.payment .list-select .gift-etc.gift-9 {background-position:75% 100%}
+.payment .list-select .gift-etc.gift-10 {background-position:100% 100%}
+.payment .list-select .gift-etc + .radio + label {width:68.3%}
+.payment .list-select .gift-purenine {display:inline-block;width:4.5238095238095238em;height:4.5238095238095238em;margin-right:0.6190476190476em;background:url('//image.genie.co.kr/imageg/mobile/payment/gift-purenine_r2.jpg') no-repeat 0 0;background-size:300% 300%;line-height:0;text-indent:-9999px;vertical-align:middle}
+.payment .list-select .gift-purenine.gift-2 {background-position:50% 0}
+.payment .list-select .gift-purenine.gift-3 {background-position:100% 0}
+.payment .list-select .gift-purenine.gift-4 {background-position:0 50%}
+.payment .list-select .gift-purenine.gift-5 {background-position:50% 50%}
+.payment .list-select .gift-purenine.gift-6 {background-position:100% 50%}
+.payment .list-select .gift-purenine.gift-7 {background-position:0 100%}
+.payment .list-select .gift-purenine.gift-8 {background-position:50% 100%}
+.payment .list-select .gift-purenine + .radio + label {width:68.3%}
+.payment .re-msg {font-size:0.75rem;line-height:1.5em;padding:2.5555555556em 2.22222222222em;border-top:0.07142857142857em solid #eef1f4;border-bottom:0.07142857142857em solid #eef1f4;background-color:#fff;text-align:center}
+.payment .re-msg strong {font-size:1rem;color:#27282d}
+.payment .re-msg p {padding-top:0.4375em;color:#63717d;}
+
+/* 190213 스페셜이용권 */
+.product-year h2{padding:0; position:relative;}
+.product-year h2 a{position:absolute; left:7%; top:68%; width:32%; height:18%; text-indent:-9999em}
+.product-year h2 img{width:100%}
+.product-content{padding:0.729em; padding-bottom:0; overflow:hidden; border-bottom:0.042em solid #a6afb6; background:#ffffff; font-size:16px}
+@media screen and (min-width: 405px){
+	.product-content {font-size:18px;}
+}
+.product-year .product-list{overflow:hidden;position: relative;background:#fff;line-height:100%}
+.product-year .product-list ul {overflow:hidden}
+.product-year .product-list li {position:relative; border:0.07142857142857em solid #e8e9ea; border-radius:0.417em; margin-bottom:5.750em}
+.product-year .product-list .desc{background:#f4f5f7; padding:0.917em;border-radius:0.417em 0.417em 0 0; border-bottom:0.042em solid #e8e9ea;}
+.product-year .product-list .desc img{width:100%;}
+.product-year .product-list .desc em{position:absolute; left:0.917em; top:-0.08em; width:2.292em; height:3.333em; background:url(//image.genie.co.kr/imageg/mobile_web/payment/special_bnr.png) 0 0; background-size:2.292em 14.000em; text-indent:-9999em;}
+.product-year .product-list .desc em.hot{background-position:0 0}
+.product-year .product-list .desc em.best{background-position:0 -3.542em}
+.product-year .product-list .desc em.new{background-position:0 -7.083em}
+.product-year .product-list .desc em.recom{background-position:0 -10.646em}
+.product-year .product-list .gift_info{padding:1.250em 0.938em 0.4em}
+.product-year .product-list .gift_info:after{content:""; clear:both; display:block}
+.product-year .product-list .gift_info dt{color:#0096FF; font-size:0.917em; margin-bottom:0.5em; height:1.05em;overflow:hidden; width:100%}
+.product-year .product-list .gift_info dd{color:#27282d; width:60%; float:left; font-weight:bold; padding-top:0.15em; height:2em; line-height:1.7em; overflow:hidden;}
+.product-year .product-list .gift_info dd.price{font-size:1.250em; width:40%; text-align:right; line-height:1.4em}
+.product-year .product-list .gift_info dd.price em{font-size:0.700em; vertical-align:0.15em;padding-left:0.1em; font-weight:normal}
+.product-year .btn-purchase {display:block;position:absolute;left:50%;bottom:-3.667em;transform:translateX(-50%);width:11.667em; height:2.667em;font-size:1em;line-height:2.667em;background:#434354;text-align:center;color:#fff; border-radius:1.250em; font-weight:bold;}
+.product-year .btn-purchase.disable{background:#c9c9cd; color:#ffffff }
+.product-year .product-list .btn-detail {top:0;left:0;width:100%;height:100%}
+.product-year .product-list .btn-detail.g01 {width:50%;height:100%}
+.product-year .product-list .btn-detail.g02 {width:50%;height:100%; left:50%;}
+.product-year .caution{padding:0 3vw 4.44444444444vw 2.77777777778vw;text-align:left; background:#f7f9fc;}
+.product-year .caution  h2{font-size:3.88888888889vw;color:#27282d;font-weight:700;padding-left:1.1111111111vw;padding-top: 4.44444444444vw;}
+.product-year .caution ul li{font-size:3.33333333333vw;color:#63717d;line-height:5vw;padding:1.38888888889vw 0 1.38888888889vw 4vw;position:relative}
+.product-year .caution ul li:before{content: '';position: absolute;top:3.266667vw;left:1.66666666667vw;width:0.55555555556vw;height: 0.55555555556vw;font-size: 1rem;background: url(//image.genie.co.kr/imageg/mobile_web/common/icon_dot.png) no-repeat 0 0;background-size: 100% 100%;}
+.product-year .caution ul li .indent {position:relative;padding-left:1.0555555555em; padding-top:0.69444444444vw}
+.product-year .caution ul li .indent span{display:block;position:absolute;top:0.69444444444vw;left:0}
+/* 190320 사은품문의 */
+.popup .pop-contents.gift{height:30em}
+.popup .pop-contents.gift p{padding-bottom:0.952em; font-size:0.875em; line-height: 1.4em;}
+.popup .pop-contents.gift table{width:100%; }
+.popup .pop-contents.gift th, .popup .pop-contents.gift td{border:1px solid #e5e9ec; text-align:left;}
+.popup .pop-contents.gift th{font-size:0.792em; padding:0 0.658em; line-height:2.605em; color:#63717d}
+.popup .pop-contents.gift td{font-size:0.792em; padding:0.882em 0.735em; color:#27282d;    line-height: 1.5em;}
+.popup .pop-contents.gift .list li{margin-top:0.7em;}
+.popup .pop-contents.gift .list li:last-child{margin-top:0.3em}
+
+.payment .stit{font-size:0.750em; padding: 0.125em 1em 0.6em; margin-top:-0.7em; color:#63717d}
+.payment .write dt{height: 2.142857142857em;}
+.payment .write dd{padding:0.396em 1.142857142857em 0.396em 0.1em; color:#d7dbde}
+.payment .write dd input{-webkit-box-sizing: border-box;box-sizing: border-box}
+.payment .write dd span{display:inline-block;}
+.payment .write dd .m{width:34%; padding-right:1em; position:relative; }
+.payment .write dd .m:last-of-type{padding-right:0; width:32%;}
+.payment .write dd .m:after{content:""; position:absolute; right:0.3em; top:1em; background:#d7dbde; width:0.417em; height:0.125em}
+.payment .write dd .m:last-of-type:after{background:none}
+.payment .write dd .post{width:60%;padding-right:0.5em;}
+.payment .write dd .post:last-of-type{width:40%; padding-right:0;}
+.payment .write dd input::-webkit-input-placeholder{color:#e0e0e0}
+.payment .write dd input:-moz-placeholder { /* Firefox 18- */color: #e0e0e0;}
+.payment .write dd input::-moz-placeholder {  /* Firefox 19+ */color: #e0e0e0; }
+.payment .write dd .mt{margin:0.5em 0}
+.payment .info_txt{color:#63717d; font-size:0.750em; padding:1em 0;}
+.payment .info_txt li{position:relative; padding-left:1em}
+.payment .info_txt li:after{content:"-"; position:absolute; left:0; top:0;}
+.payment .chk_gift{padding:1em 1em 1em 0; border-top:0.07142857142857em solid #e5e9ec}
+.gift-option{padding:1.142857142857em; padding-bottom:0; margin-bottom:1.167em; }
+.gift-option-area{position:relative; width:100%;}
+
+/* selectbox */
+.gift-option-area{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.mk_area.on{min-height:22.15em; position:absolute; left:0; top:0; width:100%; z-index:10; background:#fff; border:0.07142857142857em solid #d7dbde;border-radius:0.190em}
+.select-area .input{border:0.07142857142857em solid #d7dbde; padding:0.667em 0.762em;position:relative;border-radius:0.190em}
+.select-area{cursor:pointer; width:100%;margin-bottom:1.142857142857em}
+.select-area .input:before{content:"";position:absolute;top:43%; right:1em;width:1em;height:1em; background: url('//image.genie.co.kr/imageg/mobile_web/common/btn_toggle.png') no-repeat 100% 0; background-size:3.571em 0.357em}
+.select-options{position:absolute;width:100%; border-radius:3px;z-index:100;top:0; display:none;}
+.select-options:before{content:"";position:absolute;top:1.2em; right:1em;width:1em;height:1em; background: url('//image.genie.co.kr/imageg/mobile_web/common/btn_toggle.png') no-repeat -0.15em 0; background-size:3.571em 0.357em; z-index: 101;}
+.select-options ul{list-style:none;padding:2.5em 0 0 0;margin:0; background: #ffffff;max-height:22em; overflow:auto;border-radius:0.190em}
+.select-options ul li{padding:0.667em 0.762em; color:#27282d;position:relative;overflow:hidden; border-bottom:0.07142857142857em solid #d7dbde; }
+.select-options ul li:first-child{position:absolute; width:100%; top:0; left:0;background:#ffffff;z-index:10}
+.select-options ul li:first-child span{color:#27282d !important;}
+.select-options ul li em, .select-area .input em{line-height:4.762em;height:4.762em;position:relative;; padding:0 1.5em 0 6.119em;display:block; width:100%; overflow:hidden; white-space: nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; -moz-text-overflow:ellipsis;}
+
+.select-options ul li.selected span{color:#05b6e6}
+.select-options ul li.soldout span{color: #d4d4d5 !important}
+.select-options.visible {display:block;}
+.select-options ul li img, .select-area .input img{width:4.762em; height:4.762em; vertical-align:middle; position:absolute; left:0.310em; top:0;}
+.select-area.disable .input{color:#d4d4d5}
+.select-area.disable .input:before{opacity: 0.2;}
+.select-area.detail li:first-child{padding:0.667em 0.762em;}
+.select-area.detail li{padding:1.190em 0.762em}
+
+.product-giga {color:#444}
+.product-giga .list-product {display:block;padding:1.4375em 1.125em 0.4375em;line-height:1.3;border-bottom:0.0625em solid #e8e9eb;background-color:#f8f9fb}
+.product-giga .list-product a {display:block}
+.product-giga .list-product dl {display:block;position:relative;width:100%;margin-bottom:1em;padding:0.72916666666em 1.109375em 0.70833333333em 1.109375em;border-radius:0.34375em;background-color:#fff;box-shadow:0.015625em 0.1875em 0.40625em #dadee3}
+.product-giga .list-product dt {display:block;font-size:1rem}
+.product-giga .list-product dd {display:block;font-size:0.75rem}
+.product-giga .list-product .title {display:block;padding:0.45238095238em 3em 0.16666666666em 0;vertical-align:middle}
+.product-giga .list-product .blt-desc {display:inline-block;overflow:hidden;height:1.8em;margin-top:0.3333333333em;padding:0 0.8em 0 0.8em;border-radius:0.9em;font-size:0.625rem;line-height:2em;background-color:#ff614e;color:#fff;vertical-align:top}
+.product-giga .list-product .price {display:inline-block;color:#ff614e;vertical-align:middle}
+.product-giga .list-product .orig-price {display:inline-block;margin-left:0.9166666666em;color:#707070}
+.product-giga .list-product .btn-payment {display:block;position:absolute;top:50%;right:1.8em;width:4.8em;height:2.4em;margin-top:-1.2em;border:0.1em solid #464646;border-radius:0.3em;font-size:0.625rem;line-height:2.4em;color:#464646;text-align:center}
+.product-giga .list-product .special{color:#fff}
+.product-giga .list-product .special{background:red;background:-webkit-linear-gradient(left, #ff8b52, #ff503b);background:-o-linear-gradient(right, #ff8b52, #ff503b);background:-moz-linear-gradient(right, #ff8b52, #ff503b);background:linear-gradient(to right, #ff8b52, #ff503b)}
+.product-giga .list-product .special:before {background:red;background:-webkit-linear-gradient(left, #ff8b52, #ff503b);background:-o-linear-gradient(right, #ff8b52, #ff503b);background:-moz-linear-gradient(right, #ff8b52, #ff503b);background:linear-gradient(to right, #ff8b52, #ff503b)}
+.product-giga .list-product .special .title{padding:0.45238095238em 0 0 0;font-size:1.25rem;line-height:1}
+.product-giga .list-product .special .blt-desc{background:#fff;color:#ff614e}
+.product-giga .list-product .special .info{display:inline-block;padding-bottom:0.375em;line-height:1}
+.product-giga .list-product .special .price{color:#fff}
+.product-giga .list-product .special .orig-price{color:#8d301f}
+.product-giga .list-product .special .btn-payment{color:#fff;border-color:#fff}
+
+.product-giga .notice {display:block;padding:1.5625em 1.5em;font-size:0.75rem;line-height:1.1666666666em;color:#b7b7b7}
+.product-giga .notice li {display:block;position:relative;padding:0.3055555555em 0 0.3055555555em 0.8333333333em;letter-spacing:-0.0416666666em}
+.product-giga .notice li:before {content:'*';display:block;position:absolute;top:0.5625em;left:0;color:#ff5c49}
+.product-giga .notice a {color:#b7b7b7}
+
+
+.product-giga .voucher-form {padding:1.515625em 1.125em 1.125em;border-bottom:0.0625em solid #e8e9eb;background-color:#f8f9fb;text-align:center}
+.product-giga h2 {display:block;font-size:0.9375rem;font-weight:bold;line-height:1.2}
+.product-giga .desc {display:block;padding:0.4423076923em 1em 1.403846153846em;font-size:0.8125em;line-height:1.3846153846}
+.product-giga .btn-basic {margin-top:0.875em}
+.product-giga .ipt {display:inline-block;width:100%;height:2.5em;font-size:1rem;line-height:1.5em;border:0.0625em solid #bfbfbf;border-radius:0.125em;padding:0 0.6041666666em;color:#29292c;-webkit-appearance:none}
+.product-giga .ipt-basic {display:inline-block;width:100%;height:3.076923076923em;font-size:0.8125rem;line-height:3em;border:0.076923076923em solid #ccc;border-radius:0.230769230769em;padding:0 0.846153846153em;background-color:#f8f9fb;color:#444;-webkit-appearance:none}
+.product-giga .btn {display:inline-block;width:100%;height:2.352941176470588em;font-size:1.0625rem;line-height:2.411764705882353em;background-color:#e4e4e4;color:#4b4b4b;text-align:center;border-radius:0.1176470588235294em;-webkit-appearance:none}
+.product-giga .btn:active {background-color:#cdcdcd}
+.product-giga .btn-basic {display:inline-block;width:100%;height:3.42857142857em;font-size:0.875rem;line-height:3.42857142857em;background-color:#e4e4e4;color:#fff;text-align:center;font-weight:bold;border-radius:0.32142857142857em;-webkit-appearance:none}
+.product-giga .btn-basic.btn-red {background:red;background:-webkit-linear-gradient(left, #fe9878, #fe452c);background:-o-linear-gradient(right, #fe9878, #fe452c);background:-moz-linear-gradient(right, #fe9878, #fe452c);background:linear-gradient(to right, #fe9878, #fe452c)}
+.product-giga .btn-basic.btn-red:before {background:red;background:-webkit-linear-gradient(left, #fe9878, #fe452c);background:-o-linear-gradient(right, #fe9878, #fe452c);background:-moz-linear-gradient(right, #fe9878, #fe452c);background:linear-gradient(to right, #fe9878, #fe452c)}
+
+/* 알뜰음악감상 */
+.product-measure{max-width:720px;margin:0 auto; font-family:'NotoSans'; }
+.webview .product-measure {padding:0}
+.product-measure .title {position:relative;width:100%;padding-top:183.3333%;font-size:0;line-height:0;background:url('//image.genie.co.kr/imageg/mobile_web/payment/econo_tit.png') no-repeat 0 0;background-size:100% auto}
+.product-measure .title li{width:30%; height:16%; position: absolute; display:block;}
+.product-measure .title li a{display:block;width:100%; height:100%;}
+.product-measure .title .normal{left:17%; bottom:4.6%; }
+.product-measure .title .point{left:53%; bottom:4.6%; }
+.product-measure .title .detail{left:64%; bottom:23%; }
+.product-measure .usage {position:relative;width:100%;padding-top:105.5555%;background:url('//image.genie.co.kr/imageg/mobile_web/payment/econo_amount.png') no-repeat 0 0;background-size:100% 100%}
+.product-measure .btn-inquiry {display:block;position:absolute;top:27%;left:21%;width:58%;height:11%;font-size:0;line-height:0;text-indent:-9999px}
+
+.product-measure .join {position:relative;width:100%;padding-top:230.5555555555556%;background:url('//image.genie.co.kr/imageg/mobile_web/payment/econo_join_181030.png') no-repeat 0 0;background-size:100% auto}
+.product-measure .join div{position:relative;}
+.product-measure .join div h4{position:absolute;left:0; top:-2em; text-indent:-9999em}
+.product-measure .join div button{position:absolute; left:30%; bottom:9%; text-indent:-9999em; width:40%; height:12%}
+.product-measure .join .normal{height:45%;position:absolute; left:0; top:0;width:100%;}
+.product-measure .join .point{height:55%; position:absolute; left:0; top:45%; width:100%; }
+.product-measure .join .point button{bottom:6%}
+.product-measure .join .kt_member{width:77%; bottom:22%; left:11.2%; display:block; position:absolute;font-size:140%;font-size:1rem}
+.product-measure .join .kt_member a{font-size:1rem;border:1px solid #6d6d73; border-radius:1.5em; width:5.833em; line-height:2.2em; height:2.200em; position:absolute; bottom:0;right:0px;color:#2f2f37;letter-spacing: -1px;text-align: center;}
+.product-measure .join .kt_member em{font-size:1.2rem;color:#ff5b62; font-weight:bold;position:absolute; bottom:0em;right:0px;}
+
+.product-measure .tb-measure{color:#2f2f37; position:absolute;top:42%;left:6%;width:88%;font-size:120%;line-height:1em;letter-spacing:-0.03em}
+@media screen and (min-width: 520px){
+.product-measure .tb-measure{font-size:140%}
+.product-measure .join .kt_member{font-size:160%}
+}
+.product-measure .tb-measure th {width:24%;height:3.6em;padding-right:3%;border-bottom:0.08333333333em solid #ccc;font-size:0.95rem }
+.product-measure .tb-measure thead th {text-align:right; }
+.product-measure .tb-measure tbody th {font-weight:normal;text-align:left}
+.product-measure .tb-measure th span {font-size:0.833333333333em; color:#8c8c8c}
+.product-measure .tb-measure td {height:3.6em;padding-right:3%;font-weight:bold;border-bottom:0.08333333333em solid #ccc;text-align:right;font-size:0.95rem}
+.product-measure .tb-measure .first {width:auto;padding-left:1.6%;text-align:left}
+.product-measure .tb-measure .red {color:#ff5b62;}
+.product-measure .desc {position:relative;width:100%;padding-top:62.2222%;font-size:0;line-height:0;background:url('//image.genie.co.kr/imageg/mobile_web/payment/econo_bnr.png') no-repeat 0 0;background-size:100% auto;text-indent:-9999px}
+.product-measure .desc .btn-month {display:block;position:absolute;top:48%;left:40%;width:43%;height:17%}
+.product-measure .notice {padding-bottom:1.6em}
+
+/* banner-shodoc */
+.banner-shodoc{padding-top:29.16666666667%;background:url('//image.genie.co.kr/imageg/mobile/payment/banner_shodoc.png') no-repeat 0 0;background-size:100% auto;font-size:0;line-height:0;text-indent:-9999px}
+
+/* popup */
+.popup .gift-graph {padding:1em 0;font-size:0.75rem;line-height:1.25em;text-align:center;overflow:hidden; color:#0eb6e6 !important;}
+.popup .gift-graph li {display:inline-block;position:relative;width:29.004329004329%;padding-top:29.004329004329%;margin-right:4.545454545454%}
+.popup .gift-graph li:before {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:0.16666666666em solid #0eb6e6;border-radius:50%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.popup .gift-graph li:after {content:'';display:block;position:absolute;top:0;left:100%;width:15.67164179104478%;height:100%;background:url('//image.genie.co.kr/imageg/mobile/popup/blt_arrow.png') no-repeat 50% 50%;background-size:61.9047619047619% auto}
+.popup .gift-graph li:last-child {margin-right:0}
+.popup .gift-graph li:last-child:after {display:none}
+.popup .gift-graph li span {position:absolute;top:4%;right:0;bottom:0;left:0;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;align-items:center;justify-content:center;-webkit-align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-webkit-box-align:center;-moz-box-pack:center;-moz-box-align:center;-ms-box-pack:center;-ms-box-align:center}
+.popup .padding-b {padding-bottom:1.1333333333em}
+.popup .padding-b .txt {padding-bottom:0.64444444444em}
+.popup .padding-b .btn-wrap {padding:0 2.5333333333em}
+.popup .padding-b .btn-wrap .btn-black{margin-bottom:1rem}
+.popup .msg-error {padding:1.0444444444em 0 1em;text-align:center}
+.popup .msg-error .sub-title {display:inline-block;font-size:1rem;padding:0 0 0.375em}
+.popup .msg-error .msg {font-size:0.875rem;line-height:1.42857142857em}
+.popup .list-num {padding:0.92857142857em 0 0 1.5em;font-size:0.875rem;list-style:decimal outside;border-top:0.0666666666em solid #e5e9ec}
+.popup .list-num li {padding:0.13095238095238em 0}
+.popup .list-num li .txt {display:block;font-size:0.75rem;line-height:1.3333333333em;padding:0.1388888888em 0;text-align:left}
+.popup .list.blt.padding-b {padding-bottom:1.2222222222em}
+
+/* 선물이용권 */
+.gift-payment {position:relative;width:100%;background-color:#e6faff}
+.gift-payment .complete h2 {display:block;max-width:640px;margin:0 auto;padding:0}
+.gift-payment .complete h2 span {display:block;width:100%;padding-top:25%;margin:0 auto 5%;font-size:1rem;background:url('//image.genie.co.kr/imageg/app/payment/title_receive_gift_complete.png') no-repeat 50% 100%;background-size:76.5625% auto;line-height:0;text-indent:-9999px}
+.gift-payment .complete .msg {position:relative;width:88.125%;margin:0 auto;font-size:1rem;border:0.1458333333em solid #48c1c9;background-color:#fff;padding:0 5%}
+.gift-payment .complete .icon-tag {position:absolute;top:-0.1458333333em;left:-0.1458333333em ;width:3.1666666666em;height:3.1666666666em;font-size:1rem;background:url('//image.genie.co.kr/imageg/app/payment/icon_send_message.png') no-repeat 0 0;background-size:100% auto;line-height:0;text-indent:-9999px}
+.gift-payment .complete h3 {display:block;font-size:0.9166666666rem;line-height:1.23076923076923em;text-align:center;padding:1.11538461538462em 0 0}
+.gift-payment .complete .desc {display:block;font-size:0.625rem;line-height:1.2222222222em;padding:0.6111111111em 0 0.7777777777em;text-align:center}
+.gift-payment .complete dl {display:block;width:100%;background-color:#f6f6f6;font-size:0.7083333333rem;line-height:1.15em;padding:0.2em 2.15em 0.7em}
+.gift-payment .complete dt {display:inline-block;background:url('//image.genie.co.kr/imageg/app/payment/dot_9d.png') no-repeat 0 0.9em;background-size:0.3em auto;padding:0.55em 0 0 0.65em}
+.gift-payment .complete dd {display:inline-block;padding:0.55em 0 0 0}
+.gift-payment .complete .url {width:100%;display:block;padding:0}
+.gift-payment .complete .url a {color:#0049ff;text-decoration:underline;word-break:break-all}
+.gift-payment .complete .notice {color:#a4a4a4;font-size:0.625rem;line-height:1.3333333333em;padding:0.8888888888em 0 0.6666666666em}
+.gift-payment .complete .notice li {background:url('//image.genie.co.kr/imageg/app/payment/dot_a4.png') no-repeat 0 0.4444444444em;background-size:0.3333333333em auto;padding:0 0 0 0.7222222222em}
+.gift-payment .complete .btns {display:block;max-width:640px;margin:0 auto}
+.gift-payment .complete .btn-phone {display:block;width:58.125%;padding-top:13.28125%;margin:3.125% auto 4.0625%;background:url('//image.genie.co.kr/imageg/app/payment/btn_send_gift.png') no-repeat 0 0;background-size:100% auto;font-size:0;line-height:0;text-indent:-9999px}
+.gift-payment .caution {width:100%;background-color:#cde1e7;color:#74868b;font-size:0.7083333333rem;line-height:1.4em;padding:0.9em 1.5em 0.55em 1.7em;text-align:left}
+.gift-payment .caution li {background:url('//image.genie.co.kr/imageg/app/payment/dot_a4.png') no-repeat 0 0.45em;background-size:0.3em auto;padding-left:0.7em}
+
+/* 해지신청 */
+.cancel {position:relative;width:100%;height:100%}
+.cancel h2 {border-bottom:0.07142857142857em solid #e5e9ec;background-color:#f7f9fc}
+.cancel .list-right li {margin:0 0 0 0.857142857em;padding:1.095238095238em 0.857142857em 0.97619047619em 0;border-bottom:0.07142857142857em solid #eef1f4}
+.cancel .list-right li:after {content:"";display:block;clear:both}
+.cancel .list-right li .re-product {position:relative;padding:0 0 0 2.5em}
+.cancel .list-right li .re-product dl:before {content:'';display:block;position:absolute;top:0.15em;left:0.625em;width:1.25em;height:1.25em;background:url('//image.genie.co.kr/imageg/mobile/payment/blt_re_product.png') no-repeat 0 0;background-size:100% auto}
+.cancel .list-right li .re-product dd{line-height:1.5}
+.cancel .list-right li .re-product .btn {width:50%;max-width:6.25em}
+.cancel .list-right li:last-child{margin:0;padding:1.095238095238em 0.857142857em 0.97619047619em;}
+.cancel .list-right dl {float:left;width:66%}
+.cancel .list-right dt {font-size:0.875rem;line-height:1.2}
+.cancel .list-right dd {padding-top:0.4444444444em;font-size:0.75rem;vertical-align:top}
+.cancel .list-right .btn {float:right;width:25%;max-width:6.25em}
+.cancel .list-right .btn.btn-txt{line-height:1.1rem; padding-top:0.2rem}
+.cancel .no-data {width:100%}
+.cancel .no-data .msg {padding:3em 0;border-bottom:0.07142857142857em solid #eef1f4;font-size:0.875rem;line-height:1.2;text-align:center;background:#fff}
+.cancel .list sup {line-height:0;vertical-align:super}
+
+/* 해지방어 */
+.popup .pop-defence .new_defence-img {position:relative;width:100%;padding-top:60.41666666666667%;font-size:0;line-height:0;text-indent:-9999px;background:url('//image.genie.co.kr/imageg/mobile_web/popup/new_defence_0405.png') no-repeat 0 0;background-size:100% 100%}
+.pop-defence .defence-img {position:relative;width:100%;padding-top:74.791666666667%;font-size:0;line-height:0;text-indent:-9999px;background:url('//image.genie.co.kr/imageg/mobile/popup/popup_defence.png') no-repeat 0 0;background-size:100% 100%}
+.pop-defence .product-img {position:relative;width:100%;padding-top:74.791666666667%;font-size:0;line-height:0;text-indent:-9999px;background:url('//image.genie.co.kr/imageg/mobile_web/payment/econo_popup.png') no-repeat 0 0;background-size:100% 100%}}
+.pop-defence table {width:100%;border:0.07142857142857em solid #e5e9ec;border-bottom:none;font-size:0.875rem;line-height:120%}
+.pop-defence table caption {display:none}
+
+.pop-defence .table-title {margin-bottom:0.1em;text-align:left}
+.pop-defence .margin-top {margin-top:0.625em}
+.pop-defence .def-ipt-box {margin:0.45em 0.9333333333em 0.3em 2em}
+.txt-btm {padding:1em 1em 0;text-align:center}
+.txt-line {padding-top:1.042em;border-top:0.07142857142857em solid #e5e9ec;color:#27282d}
+.txt-line .list {margin-top:0.15em}
+.popup .pop-defence .defence-img-16 {position:relative;width:100%;padding-top:56.25%;font-size:0;line-height:0;text-indent:-9999px;background:url('//image.genie.co.kr/imageg/mobile_web/payment/defence_month_16.png') no-repeat 0 0;background-size:100% 100%}
+.popup .pop-defence .defence-img-18 {position:relative;width:100%;padding-top:56.25%;font-size:0;line-height:0;text-indent:-9999px;background:url('//image.genie.co.kr/imageg/mobile_web/payment/defence_month_18.png') no-repeat 0 0;background-size:100% 100%}
+
+.popup .cash_txt dd{position: relative; padding-left: 1.1em;}
+.popup .cash_txt dd:after{position: absolute;left:0.4em; top:0; content:"-"}
+
+/* 해지방어 고도화 */
+.popup .defence .title {position:relative;width:100%;padding-top:46.041666666667%;font-size:0;line-height:0;text-indent:-9999px;background:url('//image.genie.co.kr/imageg/mobile/payment/defence_tit_new.png') no-repeat 0 0;background-size:200% 300%}
+.popup .defence .title.step-1 {background-position:0 0}
+.popup .defence .title.step-2 {background-position:0 50%}
+.popup .defence .title.step-3 {background-position:0 100%}
+.popup .defence .title.step-4 {background-position:100% 0}
+.popup .defence .title.step-5 {background-position:100% 50%}
+.popup .defence .title.step-6 {background-position:100% 100%}
+.popup .defence .title.step-7 {padding-top:52.60416666666667%;background:url('//image.genie.co.kr/imageg/mobile/payment/defence_tit_new2.png') no-repeat 0 0;background-size:100% 100%}
+.popup .defence .mystyle {padding:1em;text-align:center}
+.popup .defence .mystyle h4{text-align:left;margin:0 0 0.5em 0;line-height:1}
+.popup .defence .mystyle h4 .tit{padding:0 0 0.5em 0;margin:0;font-size:0.9375rem;font-weight:bold;line-height:1;background:none;color:#0eb6e6}
+.popup .defence .mystyle h4.mt{padding:1em 0 0 0}
+.popup .defence .mystyle .txt{width:100%;padding:0;margin:1em 0 0 0;font-size:0.625rem;line-height:0.875rem;color:#8b8b8b;letter-spacing:-0.01rem}
+.popup .defence .mystyle .list dd{white-space:normal;word-wrap:break-word}
+
+/* user guide */
+.guide {position:relative;height:100%;color:#fff;text-align:center}
+.guide .title {display:block;padding:0;font-size:2.5rem;line-height:1em}
+.guide .txt {display:block;padding-top:1.8235294117647em;font-size:1.0625rem;line-height:1.588235294117em}
+.guide .main {position:relative;width:100%;padding-top:188.703703703703%;background-color:#fff;color:#0eb6e6}
+.guide .main:after {content:'';display:block;position:absolute;bottom:-18.743866535819%;right:0;width:100%;padding-top:116.7592592592593%;background:url('//image.genie.co.kr/imageg/mobile/guide/phone.jpg') no-repeat 0 0;background-size:100% auto;z-index:19}
+.guide .main .contents {position:absolute;top:0;left:0;width:100%}
+.guide .main .title {font-size:1.8125rem;line-height:1.2413793103448em}
+.guide .main .txt {font-size:1rem;padding:2.7291666666em 0 0.3125em 0}
+.guide .blt-scroll {display:block;position:absolute;top:-35%;left:33.3333333333%;width:35.74074074074074%;height:18.302257115%;background:url('//image.genie.co.kr/imageg/mobile/guide/blt_scroll.png') no-repeat 0 0;background-size:100% auto;opacity:0;font-size:0;line-height:0;text-indent:-9999px;-webkit-animation:mainScroll 3.5s;animation:mainScroll 3.5s}
+@-webkit-keyframes mainScroll {
+	from {opacity:0}
+	20% {opacity:0;top:34.73994111874387%}
+	30% {opacity:1}
+  75% {opacity:1;top:34.73994111874387%}
+	85% {opacity:0}
+}
+@keyframes mainScroll {
+	from {opacity:0}
+	20% {opacity:0;top:34.73994111874387%}
+	30% {opacity:1}
+  75% {opacity:1;top:34.73994111874387%}
+	85% {opacity:0}
+}
+.guide .nav {position:absolute;top:25.956820412168%;left:9.35185185185185%;right:9.35185185185185%}
+.guide .nav a {display:block;width:46.58314350797%;height:2.75em;line-height:2.625em;margin:0 1.708428246% 0.375em;float:left;border:0.0625em solid #27282d;border-radius:1.3125em;color:#27282d}
+.guide .sub-main {position:relative;display:table;width:100%;height:100%}
+.guide .sub-main:before {content:'';display:block;position:absolute;bottom:0;left:0;width:100%;padding-top:4.4444444444%;background-color:#4092a9}
+.guide .sub-main.genie {background-color:#0eb6e6}
+.guide .sub-main.home {background-color:#93bacb}
+.guide .sub-main.home:before {background-color:#78a8be}
+.guide .sub-main.my {background-color:#655656}
+.guide .sub-main.my:before {background-color:#544444}
+.guide .sub-main.recommend {background-color:#97b9af}
+.guide .sub-main.recommend:before {background-color:#789f91}
+.guide .sub-main.sports {background-color:#9aacc5}
+.guide .sub-main.sports:before {background-color:#879cbe}
+.guide .sub-main.song {background-color:#c48a9b}
+.guide .sub-main.song:before {background-color:#be7b8f}
+.guide .sub-main.search {background-color:#9bbc8b}
+.guide .sub-main.search:before {background-color:#90b57e}
+.guide .sub-main .contents {display:table-cell;position:relative;vertical-align:middle;z-index:20}
+.guide .sub-main .btn-next-page {display:block;position:absolute;bottom:5.7291666666%;left:0;width:100%;padding-top:5.185185185185%;background:url('//image.genie.co.kr/imageg/mobile/guide/arrow_down.png') no-repeat 50% 50%;background-size:6.29629629629% auto;font-size:0;line-height:0;text-indent:-9999px}
+.guide .sub-main.my .title {padding-top:1.9333333333em}
+.guide .sub-main.my .title:before {content:'';display:block;position:absolute;top:0;left:50%;width:2.5416666666em;height:2.83334em;margin-left:-1.2708333333em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile/guide/blt_my.png') no-repeat 0 0;background-size:100% auto}
+.guide .sub-main.recommend .menu {padding:2.25em 0 0.2708333333em}
+.guide .sub-main.recommend .menu:after {content:'';display:block;clear:both}
+.guide .sub-main.recommend .menu span {display:inline-block}
+.guide .sub-main.recommend .menu .circle {width:5em;height:5em;padding-top:1.4047619047619em;font-size:0.875rem;line-height:1.2142857142857em;border:0.07142857142857em solid #fff;border-radius:50%}
+.guide .sub-main.recommend .menu .comma {width:0.383838383838em;font-size:2.0625rem;vertical-align:top;padding-top:0.8080808080808em}
+.guide .sub-main.recommend .txt {padding-top:0.94117647058823em}
+.guide .sub-main.sports .title {padding-top:4.2666666666em}
+.guide .sub-main.sports .title:before {content:'';display:block;position:absolute;top:0;left:50%;width:11.8333333333em;height:11.8333333333em;margin-left:-5.9166666666em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile/guide/blt_sports.png') no-repeat 0 0;background-size:100% auto}
+.guide .sub-main.sports .txt {padding-top:1.62745098039em}
+.guide .sub-main.song .title {padding-bottom:2.0666666666em}
+.guide .sub-main.song .title:before {content:'';display:block;position:absolute;bottom:-0.1458333333em;left:50%;width:14.6666666666em;height:3em;margin-left:-7.3333333333em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile/guide/blt_song.png') no-repeat 0 0;background-size:100% auto}
+.guide .sub {position:relative;width:100%;padding-top:166.6666666666%}
+.guide .sub.genie {background-color:#4092a9}
+.guide .sub.home {background-color:#78a8be}
+.guide .sub.my {background-color:#544444}
+.guide .sub.recommend {background-color:#789f91}
+.guide .sub.sports {background-color:#879cbe}
+.guide .sub.song {background-color:#be7b8f}
+.guide .sub.search {background-color:#90b57e}
+.guide .sub .swiper-container {position:absolute;top:8.8333333333%;left:0;width:100%;height:82.7777777777%}
+.guide .swiper-button-prev, .guide .swiper-button-next {display:block;top:62.81879194630872%;width:5.185185185185%;height:0;padding-top:7.2222222222%;margin-top:0;background:url('//image.genie.co.kr/imageg/mobile/guide/arrow.png') no-repeat 0 0;background-size:300% auto;z-index:30}
+.guide .swiper-button-prev {left:7.40740740740741%}
+.guide .swiper-button-next {right:7.40740740740741%;background-position:100% 0}
+.guide .swiper-pagination-bullets {bottom:3.8888888888%;left:0;height:0.4375em}
+.guide .swiper-pagination-bullet {width:0.4375em;height:0.4375em;margin:0 0.28125em;line-height:0;background:#fff;vertical-align:top}
+.guide .swiper-pagination-bullet-active {background:#fff}
+.guide .sub .contents {display:table;width:100%;height:31.61073825503356%}
+.guide .sub .contents div {display:table-cell;vertical-align:middle}
+.guide .sub h3 {display:block;font-size:1.375rem;line-height:0;padding-left:0;padding-right:0}
+.guide .sub p {display:block;padding-top:1.2857142857em;font-size:0.875rem;line-height:1.42857142857em}
+.guide .sub .desc {font-size:0.625rem;padding-top:0.6333333333em}
+.guide .sub .phone-wrap {position:absolute;top:31.61073825503356%;left:0;width:100%;height:68.389261745%;z-index:30}
+.guide .sub .phone-wrap:before {content:'';display:block;position:absolute;top:0;left:0;width:28.0555555555%;height:100%;background-color:#4092a9;z-index:20}
+.guide .sub .phone-wrap:after {content:'';display:block;position:absolute;top:0;right:0;width:28.0555555555%;height:100%;background-color:#4092a9;z-index:20}
+.guide .sub.home .phone-wrap:before, .guide .sub.home .phone-wrap:after {background-color:#78a8be}
+.guide .sub.my .phone-wrap:before, .guide .sub.my .phone-wrap:after {background-color:#544444}
+.guide .sub.recommend .phone-wrap:before, .guide .sub.recommend .phone-wrap:after {background-color:#789f91}
+.guide .sub.sports .phone-wrap:before, .guide .sub.sports .phone-wrap:after {background-color:#879cbe}
+.guide .sub.song .phone-wrap:before, .guide .sub.song .phone-wrap:after {background-color:#be7b8f}
+.guide .sub.search .phone-wrap:before, .guide .sub.search .phone-wrap:after {background-color:#90b57e}
+.guide .sub .phone {position:absolute;top:0;left:0;width:100%;height:100%;background:url('//image.genie.co.kr/imageg/mobile/guide/swiper_phone.png') no-repeat 50% 0;background-size:47.7777777777% auto;z-index:30}
+.guide .sub.home .phone.opacity {opacity:0.5}
+.guide .screen {position:absolute;top:37.5167785234899%;left:28.05555555555%;width:43.8888888888%;height:54.36241610738%}
+.guide .genie .screen {background:url('//image.genie.co.kr/imageg/mobile/guide/swiper_genie.jpg') no-repeat 0 0;background-size:300% auto}
+.guide .genie .scene-2 .screen {background-position:50% 0}
+.guide .genie .scene-3 .screen {background-position:100% 0}
+.guide .home .screen {background:url('//image.genie.co.kr/imageg/mobile/guide/swiper_home.jpg') no-repeat 0 0;background-size:300% auto;opacity:0.5}
+.guide .home .scene-2 .screen {background-position:50% 0}
+.guide .home .scene-3 .screen {background-position:100% 0}
+.guide .my .screen {background:url('//image.genie.co.kr/imageg/mobile/guide/swiper_my.jpg') no-repeat 0 0;background-size:200% auto}
+.guide .my .scene-2 .screen {background-position:100% 0}
+.guide .recommend .screen {background:url('//image.genie.co.kr/imageg/mobile/guide/swiper_recommend.jpg') no-repeat 0 0;background-size:200% auto}
+.guide .recommend .scene-2 .screen {background-position:100% 0}
+.guide .sports .screen {background:url('//image.genie.co.kr/imageg/mobile/guide/swiper_sports.jpg') no-repeat 0 0;background-size:200% auto}
+.guide .sports .scene-2 .screen {background-position:100% 0}
+.guide .song .screen {background:url('//image.genie.co.kr/imageg/mobile/guide/swiper_song.png') no-repeat 0 0;background-size:300% auto}
+.guide .song .scene-2 .screen {background-position:50% 0}
+.guide .song .scene-2 .anim {display:block;position:absolute;bottom:8.120805369%;left:28.0555555555%;width:43.888888888%;padding-top:0%;background:url('//image.genie.co.kr/imageg/mobile/guide/song_scene_2.png') no-repeat 0 0;background-size:100% auto;-webkit-transition:padding-top 0.5s ease 0.5s;transition:padding-top 0.5s ease 0.5s;z-index:19}
+.guide .song .scene-2.swiper-slide-active .anim {padding-top:45.09259259259%}
+.guide .song .scene-3 .screen {background-position:100% 0}
+.guide .search .screen {background:url('//image.genie.co.kr/imageg/mobile/guide/swiper_search.jpg') no-repeat 0 0;background-size:300% auto}
+.guide .search .scene-2 .screen {background-position:50% 0}
+.guide .search .scene-3 .screen {background-position:100% 0}
+.guide .category {position:fixed;display:none;top:0;left:0;width:100%;height:3.7857142857em;font-size:0.875rem;background:rgba(0,0,0,0.6);-webkit-transition:height 0.5s ease;transition:height 0.5s ease;z-index:40;overflow:hidden}
+.guide .category.active {display:block}
+.guide .category.expand {height:100%}
+.guide .category .btn-fold {display:block;position:relative;width:100%;height:3.7857142857em;background-color:#f4f5f6;color:#27282d;font-weight:bold}
+.guide .category .btn-fold:before {content:'';display:block;position:absolute;bottom:0.625em;left:50%;width:0.8125em;height:0.4375em;margin-left:-0.40625em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile/guide/btn_fold.png') no-repeat 0 0;background-size:300% auto}
+.guide .category.expand .btn-fold:before {background-position:100% 0}
+.guide .category .btn-fold span {display:block;position:absolute;top:0.97619047619em;left:0;width:100%}
+.guide .category ul {display:block;padding:0 9.25925925925925% 1.42857142857em;background-color:#fff;border-top:0.07142857142857em solid #e9eff4}
+.guide .category li {height:3.7857142857em;line-height:3.857142857em;border-bottom:0.07142857142857em solid #f4f4f4}
+.guide .category li:last-child {border-bottom:0}
+.guide .category a {display:block;width:100%;height:100%}
+.guide .category a.active {font-weight:bold}
+.guide .animation span {visibility:hidden;position:absolute;z-index:31;opacity:0;-webkit-transition:opacity 0.7s ease 0.3s;transition:opacity 0.7s ease 0.3s}
+.guide .animation .active {visibility:visible;opacity:1}
+.guide .genie .anim-1 {bottom:13.5570469798%;left:20.09259259259%;width:59.7222222222%;padding-top:9.0740740740740%;background:url('//image.genie.co.kr/imageg/mobile/guide/genie_scene_1.png') no-repeat 0 0;background-size:100% auto}
+.guide .genie .anim-2 {bottom:6.84563758389%;left:20%;width:59.8148148148148%;padding-top:10.64815%;background:url('//image.genie.co.kr/imageg/mobile/guide/genie_scene_2.png') no-repeat 0 0;background-size:100% auto}
+.guide .home .anim-1 {bottom:16.44295302013%;left:6.759259259259%;width:86.574074074074%;padding-top:57.407407407407%;background:url('//image.genie.co.kr/imageg/mobile/guide/home_scene_1.png') no-repeat 0 0;background-size:100% auto}
+.guide .home .anim-2 {bottom:20.872483221476%;left:32.2222222222%;width:27.59259259259%;padding-top:34.4444444444%;background:url('//image.genie.co.kr/imageg/mobile/guide/home_scene_2.png') no-repeat 0 0;background-size:100% auto}
+.guide .home .anim-0 {bottom:26.442953020%;left:32.2222222222%;width:58.33333333333%;padding-top:34.3518519%;background:url('//image.genie.co.kr/imageg/mobile/guide/home_scene_3.png') no-repeat 0 0;background-size:100% auto}
+.guide .song .anim-1 {bottom:40.87248322147%;left:60.5555555555%;width:17.7777777777%;padding-top:18.8888888888%;background:url('//image.genie.co.kr/imageg/mobile/guide/song_scene_1.png') no-repeat 0 0;background-size:100% auto}
+.guide .song .anim-0 {bottom:10.805369127516%;left:61.48148148148%;width:20.74074074074%;padding-top:21.85185185185%;background:url('//image.genie.co.kr/imageg/mobile/guide/song_scene_3.png') no-repeat 0 0;background-size:100% auto}
+.guide .search .anim-1 {bottom:44.56375838926%;left:13.98148148148%;width:32.4074074074074%;padding-top:34.44445%;background:url('//image.genie.co.kr/imageg/mobile/guide/search_scene_1.png') no-repeat 0 0;background-size:100% auto}
+.guide .search .anim-0 {bottom:31.275167785%;left:49.9074074074%;width:38.98148148148%;padding-top:41.0185185185185%;background:url('//image.genie.co.kr/imageg/mobile/guide/search_scene_3.png') no-repeat 0 0;background-size:100% auto}
+.guide .btn-top {display:block;position:fixed;bottom:0;right:4.4444444444%;width:12.2222222222%;padding-top:12.2222222222%;margin-bottom:-15%;background:url('//image.genie.co.kr/imageg/mobile/guide/btn_top.png') no-repeat 0 0;background-size:100% auto;font-size:0;line-height:0;text-indent:-9999px;z-index:32;-webkit-transition:opacity 0.5s ease 0.5s, margin 0.5s ease 0.5s;transition:opacity 0.5s ease 0.5s, margin 0.5s ease 0.5s}
+.guide .btn-top.active {opacity:1;margin-bottom:10%}
+
+/***** 휴면계정 *****/
+.dormancy {padding:0 1em 1em;font-size:1rem;text-align:center}
+.dormancy .title {display:block;padding:1.75em 0 2.3333333333em 0;font-size:1.25rem;line-height:1.4em}
+.dormancy .title-sub {display:block;padding:5.5em 0 1.296296296296296em;font-size:1.125rem;line-height:1.4444444444em}
+.dormancy .desc {display:block;font-size:0.75rem;line-height:1.416666666667em}
+.dormancy .info {margin:1.6666666667em 1.25em;padding:1.0416666667em 0;line-height:1.5;border-top:0.0625em solid #0eb6e6;border-bottom:0.0625em solid #0eb6e6;color:#0eb6e6}
+.dormancy .info dt{font-size:1.25rem}
+.dormancy .info dd{font-size:1.5rem}
+.dormancy .info-txt{line-height:1.5em}
+.dormancy .btn-wrap{padding:3.8541666667em 0 0}
+.dormancy.complete{padding:8.1458333333em 1em 7.25em}
+.dormancy.complete .title-sub{padding:0 0 0.296296296296em;line-height:1.4444444444em}
+.dormancy.complete .btn-wrap{padding-top:1em}
+.dormancy .btn-wrap.col-2 .btn {width:49.3902439%;float:left}
+.dormancy .btn-wrap.col-2 .btn:last-child {float:right}
+.dormancy .loading {display:block;width:4em;height:1em;margin:0 auto 1em;padding-top:4em;font-size:0.625rem;background:url('//image.genie.co.kr/imageg/mobile/common/loading.gif') no-repeat 50% 100%;background-size:100% auto;line-height:0;text-indent:-9999px}
+
+/*** 상품리스트 임시 css ***/
+.bd-product {line-height:1.5}
+.bd-product *, .def-btn, .def-layer.payment, .pass-wrap *, .form-list-2 *, .tb_col *, .def-layer.payment .bd *, .ctn_column *, .tb-info .ipt, .invite-list .ft, .form-list-6 li a, .form-list-1 .ipt.selfin, .form-list-3 a, .form-list-4 table td .ipt {-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}
+.bd-product h2, .bd-product h3, .bd-product h4 {font-weight:bold}
+.bd-product h3 {padding:0}
+.bd-product a {vertical-align:baseline}
+.bd-product del {vertical-align:top}
+.bd-product sup{vertical-align:super;line-height:0rem}
+.info-list-1, .wrap-bg-1, .form-list-1, .form-list-2, .exec-date, .tb_col, .txt-olleh, .exec-date_2, .txt-olleh_2, .chk_agree_2, .box-1, .box-2, .login_auth, .invite-list, .tb-info, .tb-measure, .form-list-5, .caution, .form-list-4 {line-height:1.5}
+.title-info-1, .title-info-2, .chk_agree_2 label {-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}
+.payment-notice-3, .txt-olleh_2 {color:#6d7278}
+.form-list-3 li label {padding:0;font-size:11px;position:initial;line-height:21px}
+.form-list-3 input.radio + label:before, .form-list-3 input.checkbox + label:before {top:auto}
+.top-banner-6 .btn {background:transparent none}
+.def-layer.payment {padding:0}
+.def-layer.payment h3 {padding:0;font-weight:bold}
+.secret-event h3, .year-payment h3 {font-size:0;line-height:0;text-indent:-9999px;padding:0;margin:0}
+.pass-wrap {height:55px}
+.title-form-1 {padding:0;line-height:1.5}
+.form-list-1 th, .payment-notice-2 h4, .form-list-2 th label, .tb_col th {font-weight:bold}
+.payment-notice-2 li a, .form-list-2 a, .chk_agree_2 a {vertical-align:initial}
+.form-list-2 .ipt {width:auto}
+.exec-date u {vertical-align:initial}
+.chk_agree .checkbox + label, .chk_agree_2 .checkbox + label {color:#6d7278;font-size:11px;line-height:1.5;padding:0}
+.chk_agree input.checkbox + label:before {top:auto;left:auto;position:initial}
+.txt-olleh_2 h3 {padding:0;font-size:12px;line-height:1.5}
+.list-1 .checkbox + label, .list-1 .radio + label {line-height:40px;padding:0}
+.list-1 .checkbox + label:before, .list-1 .radio + label:before {position:initial;top:auto;left:auto}
+.list-4 .checkbox + label, .list-4 .radio + label {position:initial;display:inline;padding:0;font-size:12px;line-height:1.5}
+.def-layer.payment .bd .agreement h4, .tb-info th {font-weight:bold}
+.c_txt-1 th label, .form-list-2 th, .form-list-5 th {font-weight:bold}
+.ctn_column .checkbox + label {position:initial;display:inline;line-height:30px;font-size:11px;color:#6d7278}
+.login_auth h2 {padding:0;font-weight:bold;line-height:1.5}
+.tb-info .radio + label, .form-list-1 .radio + label {font-size:12px;padding:0 10px 0 0;line-height:1.5}
+.tb-info .radio + label:before, .form-list-1 .radio + label:before {position:initial;top:auto;left:auto}
+.title-info-1 h3 {font-size:11px;padding:0;line-height:27px}
+.form-list-6 li label {font-size:10px;line-height:22px;position:initial}
+.form-list-1 .column-2 li .selfin {margin-left:0}
+.form-list-1 .column-2 li label {display:inline}
+
+.payment sup{vertical-align: super;line-height:0rem}
+.payment, .payment h2 {font-size:1rem}
+.payment input.radio, .payment input.checkbox, .pop-contents input.radio, .pop-contents input.checkbox {position:absolute}
+.payment input.radio + label, .payment input.checkbox + label, .pop-contents input.radio + label, .pop-contents input.checkbox + label {margin:0}
+
+.payment .btn-wrap {font-size:1rem}
+
+/* paging */
+.page-nav {margin:0 0 10px; min-height:1.875rem; text-align:center; position:relative;}
+.page-nav a {display:inline-block; vertical-align:middle; text-align:center;width:1.875rem;height:1.875rem;font-size:0.875rem;color:#acb7c7;line-height:1.875rem}
+.page-nav a.current {font-weight:bold; color:#0eb6e6;}
+.page-nav a span {font:0/0 a;}
+.page-nav a.first,
+.page-nav a.prev,
+.page-nav a.next,
+.page-nav a.end {font:0/0 a; background-image:url('//image.genie.co.kr/imageg/mobile_web/common/ico_pagenation.png'); background-repeat:no-repeat;background-size:7.5rem 1.875rem}
+.page-nav a.first {background-position:0 0}
+.page-nav a.prev {background-position:-1.875rem 0;margin-right:0.25rem}
+.page-nav a.next {background-position:-3.75rem 0;margin-left:0.25rem}
+.page-nav a.end {background-position:-5.625rem 0}
+
+/********************************/
+
+
+/***** animation *****/
+@-webkit-keyframes slideInLeft {
+  from {right:0.5em;opacity:0}
+  60% {opacity:1}
+	90%, 100% {right:-0.5em;opacity:0}
+}
+@keyframes slideInLeft {
+  from {right:0.5em;opacity:0}
+  60% {opacity:1}
+	90%, 100% {right:-0.5em;opacity:0}
+}
+@-webkit-keyframes slideInUp {
+  from {bottom:1em;opacity:0}
+  60% {opacity:1}
+	90%, 100% {bottom:0;opacity:0}
+}
+@keyframes slideInUp {
+  from {bottom:1em;opacity:0}
+  60% {opacity:1}
+	90%, 100% {bottom:0;opacity:0}
+}
+@-webkit-keyframes fade {
+  from {opacity:0}
+  15%, 85% {opacity:1}
+	99% {height:auto;opacity:0}
+	100% {height:0}
+}
+@keyframes fade {
+  from {opacity:0}
+  15%, 85% {opacity:1}
+	99% {height:auto;opacity:0}
+	100% {height:0}
+}
+
+/* for safari */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0), not all and (min-resolution:.001dpcm) {
+	@media {
+		.product-giga .list-product .title {padding-bottom:0.2619047619em}
+		.product-giga .list-product .blt-desc {margin-bottom:0.3333333333em}
+		.popup .defence .my-product .term {top:0.7em}
+  }
+}
+
+@media screen and (max-width: 359px){
+	.payment .re-msg {padding:2.5555555556em 1.38888888889em}
+	.payment .list-point .has-desc .li-wrap:after {content:'';display:block;clear:both}
+	.payment .list-point .has-desc .point-name {float:left}
+	.payment .list-point .has-desc .btn-charge {float:left;clear:both;padding-left:2em}
+	.payment .list-select .gift-logitec + .radio + label,
+	.payment .list-select .gift-pt + .radio + label,
+	.payment .list-select .gift-carr + .radio + label {width:54.5%; font-size:0.70rem}
+	.payment .list-select .gift-superga + .radio + label {width:54.5%}
+	.payment .list-select .gift-etc + .radio + label {width:60%}
+	.guide .nav a {height:2.5em;line-height:2.4375em;border-radius:1.1875em}
+	.magazine-view .artists ul {height:6.1em}
+	.pop-defence table.col-3 td .text-red.price {white-space:nowrap;padding-right:0.9em}
+	.popup .defence .my-product .goods-info {padding:1em 1em 0}
+	.popup .defence .list dt {width:7.5em;letter-spacing:-0.08em}
+	.popup .defence .list dd {margin-left:7.5em}
+	.popup .defence .usage table tbody th {padding:0.25em 0;text-align:center}
+	.popup .defence .mypattern li{padding:0.5em 0 0 0.5172413793103448em}
+	.popup .defence .mypattern li:nth-of-type(1){padding-left:0.5172413793103448em}
+	.popup .defence .mypattern li:nth-of-type(1){padding-left:0.5172413793103448em}
+	.popup .defence .mypattern .mytxt .tit{letter-spacing:-0.1em}
+	.popup .defence .mypattern .mytxt .num strong{font-size:1.2083333333rem}
+}
+
+/*지니뮤직 이용약관*/
+.ico_ag, .genie_login a:after, .an_login:after{background:url(//image.genie.co.kr/imageg/mobile_web/common/ico_agree.png) 0 0 no-repeat; background-size:69px; text-indent:-9999em; }
+.btn_close{position:absolute; right:10px; top:10px; width:30px; height:30px; background-position:8px 5px}
+.genie_agree{padding:60px 0 18px 0; background:#ffffff; color:#898989 }
+.genie_agree .tit{text-align:center; font-size:13px; line-height: 18px; padding-bottom:30px;}
+.genie_agree .tit strong{display:block; font-size:20px; color:#000000; padding-bottom:10px;}
+.genie_agree .tit .login{display:block; font-size:11px; padding-top:10px;}
+.genie_agree .tit .login a{color:#ff614e; font-weight:bold; text-decoration:underline;}
+
+.genie_agree .agree_chk{padding:0 18px;}
+.genie_agree .agree_chk dt{color:#444444; font-size:16px; border-bottom:1px solid #e8e9eb; line-height:55px; margin-bottom:8px;}
+.genie_agree .agree_chk dd{font-size:14px; line-height:38px; position:relative; }
+.genie_agree .agree_chk dd em{color:#ff614e; }
+.genie_agree .agree_chk dd a{position:absolute; right:10px; top:13px; width:20px; height:20px; background-position: 7px -28px;}
+.genie_agree .agree_chk input{width:21px; height:20px; background-position:-22px 0; margin:0 10px 0 5px; vertical-align: -5px;}
+.genie_agree .agree_chk input:checked{background-position:-48px 0}
+.genie_agree .agree_chk input[type="checkbox"] {-webkit-appearance:none;-moz-appearance:none;border-radius:0;}
+
+.genie_mail{padding:18px; background:#ffffff; color:#898989; margin-top:9px; border-top:1px solid #e8e9eb; font-size:13px;}
+.genie_mail .mail_txt{padding-bottom:15px;}
+.genie_mail .mail_txt strong{font-size:14px; display:block; padding-bottom: 10px; color:#444444; font-weight:normal;}
+.genie_mail .mail_txt strong em{color:#ff614e}
+.genie_mail input{border:1px solid #cccccc; border-radius:3px; width:100%; font-size:14px; line-height:40px; padding:0 10px;}
+.genie_mail input::-webkit-input-placeholder{color:#cececf}
+.genie_mail input:-moz-placeholder { /* Firefox 18- */color: #cececf;}
+.genie_mail input::-moz-placeholder {  /* Firefox 19+ */color: #cececf; }
+.genie_mail input:-ms-input-placeholder {color: #cececf; }
+.genie_mail .btnarea{margin-top:35px; }
+.genie_mail .btnarea:after{content:""; display:block; clear:both; }
+.genie_mail .btnarea li{float:left; width:50%;}
+.genie_mail .btnarea li:first-child{padding-right:3px}
+.genie_mail .btnarea li button{height:47px; width:100%; border-radius:4px; background:#a1a1a1; color:#ffffff; font-size:16px; font-weight:bold; }
+.genie_mail .btnarea li:last-child button{background: -moz-linear-gradient(left,  rgba(255,150,119,1) 0%, rgba(255,71,46,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(255,150,119,1) 0%,rgba(255,71,46,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(255,150,119,1) 0%,rgba(255,71,46,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */}
+
+/*기가지니_지니뮤직 로그인*/
+.login_area{background:#ffffff; }
+.giga_login{padding:0 18px;}
+.giga_login h1{text-indent:-9999em; background:url(//image.genie.co.kr/imageg/mobile_web/common/logo.png) center 58px no-repeat; background-size:103px 43px; width:100%; height:146px;}
+.giga_login h2{font-size:14px; color:#444444; padding:0; letter-spacing:-1px}
+.giga_login .genie_login a{width:100%; border:1px solid #cccccc; border-radius: 3px; width:100%; font-size:14px; line-height:36px; height:40px; overflow:hidden; word-break:break-all; padding:0 10px; display:block; position:relative; font-weight:bold; text-indent:25px}
+.giga_login .genie_login a:after{content:""; position:absolute; left:15px; top:15px; background-position:-46px -28px; width:11px; height:8px;}
+.giga_login .genie_login .txt{font-size:12px; color:#b7b7b7; display:block; padding:10px 0 35px}
+.giga_login .an_login{font-size:14px; font-weight:bold; color:#444444; letter-spacing:-1px; position:relative; padding-right:13px;}
+.giga_login .an_login:after{content:""; position:absolute; right:0; top:3px; background-position:-62px -28px; width:7px; height:11px;}
+
+/*마음껏 듣기*/
+.payment .use_send{background:#fff; padding-left:1.142857em; border-top: 0.07142857142857em solid #eef1f4; border-bottom: 0.07142857142857em solid #eef1f4;}
+.payment .use_send li{border-top:1px solid #eef1f4;position:relative; padding:0.8333333333em 4.7em 0.8333333333em 0}
+.payment .use_send li:first-child{border-top:none; }
+.payment .use_send li input:focus{border: 0.07142857em solid #000;}
+.payment .use_send li .txt{display:block; padding-top:0.8333333333em; font-size:12px; color:#8b8b8b; line-height:16px;}
+.payment .use_send li .txt em{color:#0eb6e6;}
+.payment .use_send li .btn {position:absolute;right:1.3333333333em;width:4.1666666666em;}
+
+.payment .gift_img{padding: 1.142857em; background:#ffffff; border-top: 0.07142857142857em solid #eef1f4; border-bottom: 0.07142857142857em solid #eef1f4; }
+.payment .gift_img ul{display:none;}
+.payment .gift_img img{width:100%;}
+
+/*알뜰음악감상*/
+.payment .box.econo_point{position:relative;}
+.payment .box.econo_point .sm{display:block; color:#8c8c8c; font-size:0.714em; line-height:1.4em; padding-top:0.5em}
+.payment .box.econo_point .have_point{text-align: right; font-size: 0.857em;position: absolute;-webkit-transform: translateY(-50%); transform: translateY(-50%);right:1.142857em;top:50%; color:#8c8c8c;}
+.payment .box.econo_point .have_point span{font-size:1.167em; color:#ff5b62}
+
+/*스페셜이용권 팝업*/
+.popup .hkt_tit{color:#282828;font-size:15px; text-align:center;padding:24px 0 10px; line-height:20px}
+.popup .hkt_tit strong{color:#0eb6e6; font-size:14px;}
+.popup .hkt_tit strong span{color:#282828;display:block;font-size:11px; margin-top:-2px}
+.popup .hkt_h4{color:#444444; font-size:12px}
+.popup .hkt_text{font-size:12px; padding-bottom:20px}
+.popup .hkt_text li{color:#a9a9a9; padding-left:12px; position: relative;font-size:12px; line-height: 1.6em; color:#999999}
+.popup .hkt_text li i{position: absolute;left:0; top:0; }
+.popup .hkt_text li a{color:#09b6e6}
+.popup .eng_info th, .popup .eng_info td{border:1px solid #dddddd; padding:10px 0; }
+.popup .eng_info{width:100%; font-size:13px; margin:0.9333333333em 0}
+.popup .eng_info th{background:#f5f3f3}
+.popup .eng_info th:first-child{text-align:left; text-indent:12px; }
+.popup .eng_info td{letter-spacing: -0.5px; line-height:16px; padding-left:12px;}
+@media screen and (max-width: 320px){
+.popup .hkt_tit{font-size:13px; line-height:16px;}
+.popup .hkt_tit strong{color:#0eb6e6; font-size:13px;}
+.popup .txt.hkt_p{line-height:18px}
+.popup .hkt_p{font-size:13px;}
+}
+
+/* 180621 유플러스 부가서비스*/
+.uplus_bg h1 span,
+.uplus_box .info_list li a:after
+{background:url(//image.genie.co.kr/imageg/mobile_web/buy/my_ico.png) no-repeat 0 0; background-size:250px; content:"";}
+
+.uplus_bg{position:relative; padding:1.875em 0.9375rem 0; font-family: 'NotoSans'; line-height: 1.25;background: #fafafa;}
+.uplus_bg:before, .uplus_bg:after{background: url(//image.genie.co.kr/imageg/mobile_web/buy/img_ptn.png) no-repeat 0 0; background-size:23.438em 18.500em; width:8.72em; height:18.500em;}
+.uplus_bg:before{content:""; position:absolute; left:0; top:0; background-position: left top;}
+.uplus_bg:after{content:""; position:absolute; right:0; top:0; background-position: right top;}
+.uplus_bg h1{font-size:1.5em; font-weight:700; padding-bottom:0.225em}
+.uplus_bg h1 span{background-position:-138px -75px; width:105px; height:29px; display:inline-block; text-indent:-9999em; margin-right:0.2em;}
+.uplus_bg h2{font-size:1em; line-height:1em}
+.uplus_bg .txt{font-size:0.750em; padding:0.938em 0; color:#666666;}
+.uplus_bg .txt sup{font-size:60%}
+.uplus_bg h1, .uplus_bg h2, .uplus_bg .txt{text-align: center; letter-spacing:-0.05em; }
+.uplus_bg h2 em{color:#ef33a3}
+.uplus_bg .txt em{color:#ef33a3}
+
+.uplus_bg .uplus_box{border-radius:0.250em; border:0.063em solid #e670c9; background:#ffffff;position:relative;z-index:1}
+.uplus_bg .uplus_box h3{background:#e670c9; font-size:1.250em; color:#fff; font-weight:700;letter-spacing:-0.05em; line-height:3em; z-index:10;text-indent:0.65em; padding:0}
+.uplus_box .info{padding:1.406em 0.750em; }
+.uplus_box .info dl{font-size:0.938em; position:relative;letter-spacing: -0.05em; padding-bottom:1em}
+.uplus_box .info dl dt{position:absolute; left:0; top:0; color:#e670c9;}
+.uplus_box .info dl dd{padding-left:5.2em}
+.uplus_box .info dl dd strong{font-weight: 700}
+.uplus_box .info dl dd em{font-size:0.688em}
+.uplus_box .info li{letter-spacing: -0.05em; font-size:0.750em; position:relative; padding-left:0.8em; color:#666666; line-height:1.45em;}
+.uplus_box .info li sup{font-size:60%}
+.uplus_box .info li:after{content:"+"; position:absolute; left:0; top:-0.1em; color:#e670c9; font-size:80%}
+.uplus_box .info_list{padding:0 0.750em;}
+.uplus_box .info_list li{border-top:0.063em solid #e6e6e6; color:#999999 !important}
+.uplus_box .info_list li .view{transition: 0.4s;}
+.uplus_box .info_list li a:after{position:absolute; right:0.463em; top:1.681em; background-position:-42px -3px; width:16px; height:9px; }
+.uplus_box .info_list li a.open:after{background-position: -23px -3px;}
+.uplus_box .info_list li a{position:relative;padding:1.406em 0; display:block; width:100%;font-size:0.875em;}
+.uplus_box .info_list li sup{line-height:0; vertical-align:super; font-size:0.750em}
+.uplus_box .info_list li a.open + .detail{display:block; margin-bottom:1.156em; }
+.uplus_box .info_list .detail{display:none}
+.uplus_box .info_list li .detail li{color:#666666; font-size:0.688em; padding:0 0 0 0.563em; line-height:1.363em; border:none; background: none; margin-bottom: 0.413em; position:relative;}
+.uplus_box .info_list li .detail li:after{content:"";width:3px; height:4px; position:absolute; left:0; top:0.3em; background: url(//image.genie.co.kr/imageg/mobile_web/buy/my_ico.png) no-repeat -103px -26px; background-size: 250px;}
+.uplus_box .info_list li .detail li ul{margin-top:0.3em}
+.uplus_box .info_list li .detail li li{color:#999999; padding-left:0.875em; font-size:100%; margin-bottom:0;}
+.uplus_box .info_list li .detail li li:after{content:"-"; position:absolute; left:0; top:0; background: none}
+
+.captcha-wrap{padding:0.9375rem}
+.captcha-wrap .notice{font-size:0.875rem;color:#627079;line-height:1.25rem}
+.captcha-wrap .title{padding:0;color:#2e3037;font-size:0.875rem;padding:1.5rem 0;line-height:1.25rem;font-weight:700}
+.captcha-wrap .title em{color:#7e868c;font-size:0.75rem;font-weight:400}
+.captcha-wrap .captcha-content img{width:9.375rem;height:2.8125rem;margin:0 auto;display:block}
+.captcha-wrap .captcha-content .btn-refresh{width:5.3125rem;height:1.75rem;display:block;font-size:0.625rem;background:#fff;border:solid 1px #b2babd;border-radius:0.875rem;margin:0.625rem auto 0.875rem auto}
+.captcha-wrap .info{padding:0.999999rem 0 0.666666rem 0}
+.captcha-wrap .info li{position:relative;font-size:0.75rem;color:#ff5b62;line-height:1rem;padding-left:0.604166rem}
+.captcha-wrap .info li:before{content:'·';position:absolute;top:0;left:0.145833rem;color:#ff5b62;font-size:20px}
+.captcha-wrap .wrap_ipt_captcha{position:relative}
+.captcha-wrap .wrap_ipt_captcha .time{position:absolute;bottom:0.9rem;right:0.4rem;font-size:0.875rem;color:#4fbbda}
+.captcha-wrap .ipt-line{height:2.5rem;border-radius:0;border-width:0 0 1px 0;border-color:#e6e6e6}
+.captcha-wrap .ipt-line::-webkit-input-placeholder{color:#b2babe}
+.captcha-wrap .ipt-line::-moz-placeholder{color:#b2babe}
+.captcha-wrap .ipt-line:-ms-input-placeholder{color:#b2babe}
+.floating-btn{position:fixed;bottom:0;left:0;right:0}
+.floating-btn .btn{width:100%;height:3rem;border-radius:0;font-size:0.875rem}
+
+/* 181024 이용권 업그레이드 */
+.product_upgrade{padding:0;max-width:720px;margin:0 auto; }
+.product_upgrade .title {position:relative;width:100%;padding-top:298.3333333333333%;font-size:0;line-height:0;background:url('//image.genie.co.kr/imageg/mobile_web/payment/thanks_img1_new.gif') no-repeat 0 0;background-size:100% auto}
+.product_upgrade .title button{width:80%; height:6%; position:absolute; left:50%; bottom:7%; transform:translateX(-50%);text-indent:-9999em}
+.product_upgrade .title a{width:50%; height:3.3%; position:absolute; left:50%; bottom:2%; transform:translateX(-50%);}
+.product_upgrade .notice{width:100%;padding-top:67.22222222222222%;font-size:0;line-height:0;background:url('//image.genie.co.kr/imageg/mobile_web/payment/thanks_img2_new.gif') no-repeat 0 0;background-size:100% auto;}
+
+/* 190118 엠넷해지자 대상 지니결제 유도 */
+.lucky_evt{padding:0;max-width:720px;margin:0 auto; }
+.lucky_evt section{font-size:0;line-height:0;width:100%;position:relative;}
+.lucky_evt .mnet_top{padding-top:99.44444444444444%;background:url('//image.genie.co.kr/imageg/mobile_web/payment/mnet_top.gif') no-repeat 0 0;background-size:100% auto}
+.lucky_evt .mnet_howto{padding-top:60.55555555555556%;background:url('//image.genie.co.kr/imageg/mobile_web/payment/mnet_howto.gif') no-repeat 0 0;background-size:100% auto}
+.lucky_evt .mnet_buy{padding-top:107.5%;background:url('//image.genie.co.kr/imageg/mobile_web/payment/mnet_kt.gif') no-repeat 0 0;background-size:100% auto}
+.lucky_evt .mnet_buy ul{position:absolute; left:6%; top:12%; width:88%; height:100%;}
+.lucky_evt .mnet_buy ul li{width:100%;height:18%; margin-bottom:2%}
+.lucky_evt .mnet_buy ul li a{display:block; height:100%; }
+.lucky_evt .mnet_buy.lg{padding-top:86.25%;background:url('//image.genie.co.kr/imageg/mobile_web/payment/mnet_lg.gif') no-repeat 0 0;background-size:100% auto}
+.lucky_evt .mnet_buy.lg ul{top:15%;}
+.lucky_evt .mnet_buy.lg li{height:22%; margin-bottom:2%}
+.lucky_evt .mnet_note{padding-top:122.9166666666667%;background:url('//image.genie.co.kr/imageg/mobile_web/payment/mnet_note.gif') no-repeat 0 0;background-size:100% auto}
+.lucky_evt .mnet_note a{width:30%; height:6%;position:absolute; left:35%; bottom:10%;}
+
+/* 190130 제3자동의 */
+.pop-contents .note{text-align:left; color:#63717d;padding-top:0.6em; display:block;}
+.pop-contents .box_dl {margin-top:4px}
+.pop-contents .box_dl h4{text-align:center; font-weight:normal; border-radius:5px 5px 0 0; border: 1px solid #e6e6e6; border-bottom:none; padding:0.5em 0; background:#f7f9fc}
+.pop-contents .box_dl dl {border:1px solid #e6e6e6; border-bottom:none;padding:0.5em; font-size:0.85em}
+.pop-contents .box_dl dl:after{content:"";display:block;clear:both}
+.pop-contents .box_dl dl dt {width:30%;display:inline-block;color:#333333; text-align:left;vertical-align:middle;line-height:1.4em}
+.pop-contents .box_dl dl dd {width:68%;display:inline-block;color:#63717d; line-height:1.4em;vertical-align:middle;}
+.pop-contents .box_dl dl.last {border-bottom:1px solid #e6e6e6;border-radius:0 0 5px 5px}
+.pop-contents .box_dl.agree dl{padding: 11px 20px;}
+.pop-contents .box_dl.agree dl dt{width:100%; color:#63717d; position:relative}
+.pop-contents .box_dl.agree dl dt:after{content:""; position:absolute; top:6px;left:-7px;width:2px;height:2px;border-radius:2px;background:#929292;}
+.pop-contents .box_dl.agree dl dd{width:100%; color:#27282d}
+.pop-contents.mtb-scroll{overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch; max-height:430px}
+.pop-contents.mtb-scroll::-webkit-scrollbar {width: 8px;height: 8px;border: 3px solid #fff}
+.pop-contents.mtb-scroll::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {display: block;height: 1px;background: #efefef}
+.pop-contents.mtb-scroll::-webkit-scrollbar-track {background: #efefef}
+.pop-contents.mtb-scroll::-webkit-scrollbar-thumb {height: 50px;width: 50px;background: rgba(0,0,0,.2)}
+@media (max-width: 320px) {
+	.pop-contents.mtb-scroll{height:350px}
+}
+
+/* 190507 결제실패 */
+.fail_txt{text-align:center; width:100%; padding:0 1em; position:fixed; left:0; top:45%;transform:translateY(-50%);}
+.fail_txt p{font-size:0.875em; line-height:1.5em}
+.failbtn{position:fixed; left:0; bottom:1em; width:100%; padding: 0 1em;}
+
+/*190708 해지방어*/
+@font-face {font-family: 'Spoqa Han Sans'; font-weight:700; src: local("Spoqa Han Sans Bold"), url("/commons/font/SpoqaHanSansBold.woff2") format("woff2"), url("/commons/font/SpoqaHanSansBold.woff") format("woff"), url("/commons/font/SpoqaHanSansBold.ttf") format("truetype"); }
+@font-face { font-family: 'Spoqa Han Sans'; font-weight: 400; src: local("Spoqa Han Sans Regular"), url("/commons/font/SpoqaHanSansRegular.woff2") format("woff2"), url("/commons/font/SpoqaHanSansRegular.woff") format("woff"), url("/commons/font/SpoqaHanSansRegular.ttf") format("truetype"); }
+
+.pop-defence h3{font-size:1.188em; padding:1.438rem 0 0.5rem 1.5rem;; font-weight:bold; color:#000}
+.pop-defence .pop-contents{max-height:26.905em; overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+.pop-defence .pop-contents::-webkit-scrollbar {width: 8px;height: 8px;border: 3px solid #fff}
+.pop-defence .pop-contents::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {display: block;height: 1px;background: #efefef}
+.pop-defence .pop-contents::-webkit-scrollbar-track {background: #efefef}
+.pop-defence .pop-contents::-webkit-scrollbar-thumb {height: 50px;width: 50px;background: rgba(0,0,0,.2)}
+.pop-defence .defence_txt{text-align:center; letter-spacing: -0.05rem;}
+.pop-defence .defence_txt strong{font-weight:normal; display:block; color:#2e3037}
+.pop-defence .defence_txt.d_img01{position:relative; padding-bottom:11.6em;}
+.pop-defence .defence_txt.d_img01:after{content:""; background:url('//image.genie.co.kr/imageg/mobile_web/payment/defence_img.png') no-repeat 0 6em; background-size:13.714em 17.024em; width:13.714em; height:17.024em; position:absolute; left:50%; bottom:0; transform:translateX(-50%);}
+.pop-defence .defence_txt.d_img02{position:relative; padding-bottom:6.024em;}
+.pop-defence .defence_txt.d_img02:after{content:""; background:url('//image.genie.co.kr/imageg/mobile_web/payment/defence_img.png') no-repeat 0 bottom; background-size:13.714em 17.024em; width:4.2em; height:5.5em; position:absolute; left:50%; bottom:0; transform:translateX(-50%);}
+
+/* MR해지방어 */
+.pop-defence .defence_txt.d_img03{position:relative; padding-bottom:11rem;}
+.pop-defence .defence_txt.d_img03:after{content:""; background:url('//image.genie.co.kr/imageg/mobile_web/payment/defence_gift.png') no-repeat 0 0; background-size:22.875rem 16.583rem; width:10.5rem; height:10.729rem; position:absolute; left:50%; bottom:0; transform:translateX(-50%);}
+.pop-defence .defence_txt.d_img04{position:relative; padding-bottom:11.250rem;}
+.pop-defence .defence_txt.d_img04:after{content:""; background:url('//image.genie.co.kr/imageg/mobile_web/payment/defence_gift.png') no-repeat -11.729rem 1.2rem; background-size:22.875rem 16.583rem; width:11.167rem; height:11.188rem; position:absolute; left:50%; bottom:0; transform:translateX(-50%);}
+.pop-defence .gift_choice{border-radius:0.4rem; border:1px solid #e6e6e6; padding:0.833rem 0.75rem; position:relative;margin: 1.143rem 0 0.5rem;}
+.pop-defence .gift_choice h5{color:#000; font-weight:700;margin-bottom: 1.250rem;}
+.pop-defence .gift_choice .txt{position:absolute; right:0.75rem; top:0.833rem; padding:0;}
+.pop-defence .gift_choice ul{text-align: center}
+.pop-defence .gift_choice ul li{display:inline-block; width:48%;}
+.pop-defence .gift_choice ul li div{width:6.354rem; height:5.833rem; margin:0 auto; background: url(//image.genie.co.kr/imageg/mobile_web/payment/defence_gift.png) no-repeat; background-size: 22.875rem 16.583rem;}
+.pop-defence .gift_choice ul li .sbucks{background-position:0 -11.375rem}
+.pop-defence .gift_choice ul li .elevn{background-position:-6.3rem -11.375rem}
+.pop-defence .gift_choice ul li span{display:block; padding-bottom:1.6rem;font-size:0.750rem; line-height:0.9rem; color:#2e3037}
+.pop-defence .gift_choice ul li .radio + label:before{bottom:0; top:auto; left:50%; transform:translateX(-50%);}
+.pop-defence .gift_choice ul li .radio + label{padding-left:0}
+
+.pop-defence .defence_stxt{text-align:center;padding:1.389em 0 0; font-size:0.857em}
+.pop-defence .myarea{border:0.048em solid #e6e6e6; padding:0 0.833em; border-radius:0.357em; margin-top:1.143rem}
+.pop-defence .myarea h4{color:#2e3037; text-align:left; line-height:2.786em}
+.pop-defence .mt{margin-top:0.595em}
+
+.pop-defence .defence_txt.secret_gift{position:relative; padding-bottom:9.833em;}
+.pop-defence .defence_txt.secret_gift:after{content:""; background:url('//image.genie.co.kr/imageg/web/payment/secret_gift.jpg') no-repeat 0 bottom; background-size:9.125em 12.750em; width:9.125em; height:7.792em; position:absolute; left:50%; bottom:1.2em; transform:translateX(-50%);}
+.pop-defence .defence_txt .gift_txt{display:block; font-size:0.750rem; line-height:1rem; padding-top:0.5rem}
+
+/* 장르 그래프 */
+.popup.pop-defence .graph-genre {width:100%; height: 0.286em;}
+.popup.pop-defence .graph-genre:after{content:"";display:block;clear:both}
+.popup.pop-defence .graph-genre li {float:left;width:100%;height:100%}
+.popup.pop-defence .graph-genre li.graph-bar-mid .gbar {border-left:0.13333333333em solid #fff;border-right:0.13333333333em solid #fff}
+.popup.pop-defence .graph-genre .gbar{display:block;width:100%;height:100%}
+.graph-genre .gbar.ballade, .genre-txt .gtxt.ballade span:after{background-color:#baba8e}
+.graph-genre .gbar.dance, .genre-txt .gtxt.dance span:after{background-color:#db52b4}
+.graph-genre .gbar.soul, .genre-txt .gtxt.soul span:after{background-color:#82694e}
+.graph-genre .gbar.rock, .genre-txt .gtxt.rock span:after {background-color:#b51f43}
+.graph-genre .gbar.pop, .genre-txt .gtxt.pop span:after {background-color:#31c7c6}
+.graph-genre .gbar.hiphop, .genre-txt .gtxt.hiphop span:after {background-color:#355060}
+.graph-genre .gbar.edm, .genre-txt .gtxt.edm span:after {background-color:#a542c6}
+.graph-genre .gbar.indi, .genre-txt .gtxt.indi span:after {background-color:#bcb23f}
+.graph-genre .gbar.blues, .genre-txt .gtxt.blues span:after {background-color:#10a8c1 }
+.graph-genre .gbar.trot, .genre-txt .gtxt.trot span:after {background-color:#ff76ab}
+.graph-genre .gbar.jpop, .genre-txt .gtxt.jpop span:after {background-color:#EF546B}
+.graph-genre .gbar.jazz, .genre-txt .gtxt.jazz span:after {background-color:#5f52ba}
+.graph-genre .gbar.classic, .genre-txt .gtxt.classic span:after {background-color:#565859}
+.graph-genre .gbar.world, .genre-txt .gtxt.world span:after {background-color:#20396b}
+.graph-genre .gbar.ccm, .genre-txt .gtxt.ccm span:after {background-color:#44c4e2}
+.graph-genre .gbar.newage, .genre-txt .gtxt.newage span:after {background-color:#f97b62}
+.graph-genre .gbar.children, .genre-txt .gtxt.children span:after {background-color:#f9c355}
+.graph-genre .gbar.ost, .genre-txt .gtxt.ost span:after {background-color:#538dd3}
+.graph-genre .gbar.china, .genre-txt .gtxt.china span:after {background-color:#d43b36}
+.graph-genre .gbar.prenata, .genre-txt .gtxt.prenata span:after {background-color:#eddcd2}
+.graph-genre .gbar.korean, .genre-txt .gtxt.korean span:after {background-color:#09537c}
+.graph-genre .gbar.etc, .genre-txt .gtxt.etc span:after {background-color:#aec1ce}
+.genre-txt {position:relative;display:table;width:100%;height:1em;margin:0.714em 0 1.071em 0;line-height:1}
+.genre-txt:after{content:"";display:block;clear:both}
+.genre-txt li{display:table-cell;white-space:nowrap; width:33.3%;}
+.genre-txt li.genre-txt-first{text-align:left}
+.genre-txt li.genre-txt-mid{width:33.4%}
+.genre-txt li.genre-txt-last {text-align:right;padding-left:0.444em}
+.genre-txt li.genre-txt-first .gtxt {text-align:left;color:#27282d}
+.genre-txt li.genre-txt-mid .gtxt {text-align:center;color:#8b8b8b}
+.genre-txt li.genre-txt-last .gtxt {text-align:right;color:#8b8b8b}
+.genre-txt .gtxt{display:block;width:100%;font-size:0.857em; }
+.genre-txt .gtxt span:after{content:""; position:absolute; left:0; top:0.5em; width:0.333em; height:0.333em}
+.genre-txt .gtxt span{color:#7e868c; padding-left:0.6em;position:relative;}
+.genre-txt .gtxt strong {padding:0.2em 0 0 0.6em;color:#2e3037;display:block; }
+/* 국가별 그래프 */
+.graph-country {position:relative;width:100%;height:0.286em}
+.graph-country:after{content:"";display:block;clear:both}
+.graph-country li {float:left;width:100%;height:100%}
+.graph-country li.country-bar-last .gbar {border-left:0.13333333333em solid #fff}
+.graph-country .gbar{display:block;width:100%;height:100%}
+.graph-country .gbar {display:block;width:100%;height:100%}
+.graph-country .gbar.internal, .country-txt .gtxt.internal span:after{background-color:#0eb6e6}
+.graph-country .gbar.outside, .country-txt .gtxt.outside span:after{background-color:#6883e0}
+.country-txt{position:relative;display:table;width:100%;height:1em;margin:0.714em 0 1.071em 0;line-height:1}
+.country-txt:after{content:"";display:block;clear:both}
+.country-txt li {float:left;width:50%}
+.country-txt li.country-txt-first {text-align:left}
+.country-txt li.country-txt-last {text-align:right}
+.country-txt li.country-txt-first .gtxt {color:##27282d}
+.country-txt li.country-txt-last .gtxt {color:#8b8b8b}
+.country-txt .gtxt {display:block;width:100%;font-size:0.857em; }
+.country-txt .gtxt strong{padding:0.2em 0 0 0.6em;color:#2e3037;display:block; }
+.country-txt .gtxt span{color:#7e868c; padding-left:0.6em;position:relative;}
+.country-txt .gtxt span:after{content:""; position:absolute; left:0; top:0.5em; width:0.333em; height:0.333em}
+
+.defence_tb{border: 0.048em solid #e6e6e6; border-radius: 0.357em; width:100%;margin-top:1.143rem;}
+.defence_tb table{width:100%}
+.defence_tb tr{border-bottom: 0.048em solid #e6e6e6;}
+.defence_tb tr:last-of-type{border-bottom:none}
+.defence_tb th{text-align:left; padding:0.714em; vertical-align:top;border-right: 0.048em solid #e6e6e6;}
+.defence_tb td{padding:0.714em}
+.defence_tb td.tit{color:#2e3037}
+.mini_tb{background:#f5f7fa; font-size:0.857em;width:100%; text-align:center;border-bottom: 0.048em solid #e6e6e6;}
+.mini_tb th{background:#434354; color:#ffffff; border-right:none; text-align:center;padding:0.5em}
+.mini_tb td{color:#2e3037;border-left: 0.048em solid #e6e6e6; padding:0.4em}
+.mini_tb td:first-child{border-left:none}
+.defence_tb .mini_txt{font-size:0.714em; padding-top:0.6em}
+
+/* 마이패턴 */
+.popup .mypattern{width:100%; padding-bottom:1em}
+.popup .mypattern:after{content:"";display:block;clear:both}
+.popup .mypattern li{float:left; text-align:Center; width:34%; height:4.286em; border-left: 0.048em solid #e6e6e6;padding-top:0.6em}
+.popup .mypattern li:first-child{width:32%;border-left:none}
+.popup .mypattern .mytxt .tit{font-size:0.857em;color:#7e868c;}
+.popup .mypattern .mytxt .tit strong{font-weight:normal; padding:0 0.07em; }
+.popup .mypattern .mytxt .num{font-size:1.238em;color:#2e3037;letter-spacing:-0.05rem}
+.popup .mypattern .mytxt .num strong{position:relative;top:0.05em;font-family:'Arial';font-style:italic; padding:0 0.07em 0 0.05em; vertical-align:0.08em}
+.popup .mypattern .mytxt .num strong em{font-weight:normal;}
+
+/* 추천상품 */
+.popup .my-product-list li{position:relative;width:100%;margin-bottom:0.8em;}
+.popup .my-product-list li label{height:8.048em; width:100%; position:relative; padding-left:0;border-radius:0.357em; color:#ffffff; overflow:hidden}
+.popup .my-product-list li label:after{content:"";  width: 0px;height: 0px; border-top:3.524em solid none; border-bottom:3.524em solid #ffffff; border-right:3.524em solid transparent;transform: rotate(45deg); border-left:3.524em solid transparent; right:-2.3em; top:-0.8em; position:absolute; z-index:9; }
+.popup .my-product-list li.goods-1 label{background:#a4cf4a;}
+.popup .my-product-list li.goods-1 label:after{border-color:#86bb2f;}
+.popup .my-product-list li.goods-2 label{background:#5dc1b0;}
+.popup .my-product-list li.goods-2 label:after{border-color:#3fa994;}
+.popup .my-product-list li.goods-3 label{background:#4489e8;}
+.popup .my-product-list li.goods-3 label:after{border-color:#3070e0;}
+.popup .my-product-list li.goods-4 label{background:#42b6e1;}
+.popup .my-product-list li.goods-4 label:after{border-color:#299cd4;}
+
+.popup .my-product-list input.radio + label:before{background:url('//image.genie.co.kr/imageg/mobile_web/payment/defence_new_form.png') 0 0; background-size:4.286em; width:2.286em; height:1.5em; top:0.571em;right:0.429em;left:auto; z-index:10;font-size:100%}
+.popup .my-product-list .radio:checked + label:before{background-position:0 -2.8em;}
+.popup .my-product-list li dl dt{position:relative; background:none; height:auto; padding:2.333em 0 0 1.042em; font-size:1.143em; letter-spacing:-1px}
+.popup .my-product-list li dl dt span{font-size:0.750em; position:absolute; left:1.5em; top:1.5em;color: #ffffff;}
+.popup .my-product-list li dl dd{font-size:0.857em; position:absolute; bottom:1.5em}
+.popup .my-product-list li dl dd strong{font-size:1.750em; font-family: arial; font-style:italic; padding:0 0.1em 0 0.2em; vertical-align:top}
+.popup .my-product-list li dl dd del{opacity: .5;vertical-align:top; padding-right:0.3em}
+.popup .my-product-list li dl dd.left{left:1.5em; }
+.popup .my-product-list li dl dd.right{right:1.5em;}
+
+.myarea .ptn_tip{color:#7e858b; position:relative; padding:0.5em 0 1em 2.810em}
+.myarea .ptn_tip dt{background: none; font-size:1.167em; position:absolute; left:0.2em; top:0.55em;}
+.myarea .ptn_tip dd{font-size:0.714em; line-height:1.45em; position:relative; padding-left:1.333em}
+.myarea .ptn_tip dd em{font-family: arial; font-weight:bold; position:absolute; left:0; top:0;}
+
+.popup.pop-defence .ipt-form{padding:0}
+.popup.pop-defence .ipt-form .lb-title{color:#2e3037; text-align:center; line-height: inherit; padding-bottom:0.5em}
+.popup.pop-defence .ipt-form .ipt-small-wrap{padding-bottom:0}
+
+/* 지니 가입유도 */
+.product_upgrade .guidance{position:relative;width:100%;padding-top:182.2222222222222%;font-size:0;line-height:0;background:url('//image.genie.co.kr/imageg/mobile_web/payment/img_guidance.png') no-repeat 0 0;background-size:100% auto}
+.product_upgrade .guidance button{width:55%; height:7.5%; position:absolute; left:50%; top:62%; transform:translateX(-50%);}
+
+/*스페셜이용권_전면레이어*/
+.special_popLayer{position:absolute; left:0%; top:0%; width:100%; height:100%; z-index:501}
+.special_popLayer .back{position:fixed;left:0;top:0;width:100%;height:100%;background:#000;-ms-filter: alpha(opacity=50); filter: alpha(opacity=50); opacity:0.3; -moz-opacity:0.3;}
+.special_layer{width:17.5rem; height:25.25rem; position:fixed; left:50%; top:50%; transform:translateX(-50%); margin:-12.3em auto 0;}
+.special_popLayer .popup{display:block; background:none; padding:0;}
+.special_layer img{width:100%;border-radius: 0.938rem 0.938rem 0 0;}
+.special_layer .btns {color:#27282d; background: #ffffff; position:absolute;left:0;right:0;bottom:0;width:100%;padding-top:3.375rem;display:block;overflow:hidden;z-index:999;border-radius: 0 0 0.938rem 0.938rem;}
+.special_layer .btns span{position:absolute;top:0.85rem;}
+.special_layer .btns .btn-close {display:block;position:absolute;top:0;right:0.8rem;font-size:0.938em; font-weight:700;line-height:3.375rem; height:3.375rem; margin:0; text-indent:0; color:#8a8a8d}
+.special_layer .chkbox {display:inline-block;position:absolute;left:-9999px;opacity:0}
+.special_layer .chkbox + label {display:inline-block;position:relative;font-size:0.938rem; color: #000000; padding-left:3.375rem}
+.special_layer .chkbox + label:before {content:'';display:block;position:absolute;top:0.55rem;left:1.563rem;width:1.25rem;height:1.25rem ;margin-top:-0.52em;background: url(//image.genie.co.kr/imageg/mobile/common/blt_chk_5.0.png) no-repeat 0 0; background-size: 300% 100%;}
+.special_layer .chkbox:checked + label:before {background-position:100% 0}
+.special_popLayer .pop-defence{top:50%; transform:translateY(-50%); padding: 0 1.250em;}
+
+/*2020년 02월 상품개편*/
+.payment .discount-graph .graph-6 {background: url('//image.genie.co.kr/imageg/mobile/payment/discount_graph_r6.png') no-repeat 0 0;background-size: contain;}
+.payment .discount-graph .graph-7 {background: url('//image.genie.co.kr/imageg/mobile/payment/discount_graph_r7.png') no-repeat 0 0;background-size: contain;}
+.payment .discount-graph .graph-shinhan {background: url('//image.genie.co.kr/imageg/mobile_web/payment/discount_graph_shinhan.png') no-repeat 0 0;background-size: contain;}
+
+/*IBK결제*/
+.payment .discount-graph .graph-ibk {background: url('//image.genie.co.kr/imageg/mobile_web/payment/discount_graph_ibk.png') no-repeat 0 0;background-size: contain;}
+.ibk img{width:100%}
+.ibk .ir{position:absolute; font-size:0; line-height:0; height:0;}
+.ibk_contents{position:relative; }
+.ibk_contents .buy{position:absolute; left:50%; -webkit-transform: translateX(-50%); transform: translateX(-50%);bottom:36.3%; width:55%; height:8%; font-size:0; }
+.ibk_contents .sns{position:absolute; left:50%; bottom:4.7%; width:59%; text-align: center; height:7%; -webkit-transform: translateX(-50%); transform: translate(-50%);}
+.ibk_contents .sns li{float:left; width:23%; height:100%; margin:0 1%;}
+.ibk_contents .sns li a{display:block; font-size:0; width:100%; height:100%}
+.ibk .ibk_note{background:#e4ecef; padding:1.458rem 0.938rem 2rem;font-family: 'Spoqa Han Sans';}
+.ibk .ibk_note h4{color:#666666; font-size:0.938rem; padding-bottom:0.7rem; font-weight:700; letter-spacing:-0.05rem;}
+.ibk .ibk_note li{font-size:0.688rem; color:#666666; line-height:1.2rem; padding-left:0.5rem; position:relative}
+.ibk .ibk_note li:after{content:""; position:absolute; left:0.1rem; top:0.5rem; width:0.146rem; height:0.146rem; background:#b6bdbf; border-radius:50%}
+
+/*데이터세이프*/
+.ir{height:0; line-height:0; font-size:0; position:absolute; }
+.data_safe{max-width:720px;margin:0 auto; }
+.data_safe .top{padding-top:169.027%; background: url(//image.genie.co.kr/imageg/mobile_web/payment/safe_top.png) no-repeat 0 0;background-size: 100% auto; position:relative;}
+.data_safe .top a{position:absolute; left:50%; bottom:0; width:82.638%; height:9.8%;transform: translate(-50%, 0); font-size:0;}
+.data_safe .detail{padding-top:80.416%; background: url(//image.genie.co.kr/imageg/mobile_web/payment/safe_intro_new.png) no-repeat 0 0;background-size: 100% auto; position:relative;}
+.data_safe .howto li{padding-top:104.305%; background: url(//image.genie.co.kr/imageg/mobile_web/payment/safe_step01.png) no-repeat 0 0; background-size: 100% auto; font-size:0; height:0}
+.data_safe .howto li:nth-child(2){padding-top:84.72%; background: url(//image.genie.co.kr/imageg/mobile_web/payment/safe_step02.png) no-repeat 0 0; background-size: 100% auto;}
+.data_safe .howto li:nth-child(3){padding-top:84.72%; background: url(//image.genie.co.kr/imageg/mobile_web/payment/safe_step03.png) no-repeat 0 0; background-size: 100% auto;}
+.data_safe .howto li:nth-child(4){padding-top:103.61%; background: url(//image.genie.co.kr/imageg/mobile_web/payment/safe_step04.png) no-repeat 0 0; background-size: 100% auto;}
+.data_safe .note{padding-top:92.916%; background: url(//image.genie.co.kr/imageg/mobile_web/payment/safe_note_new.gif) no-repeat 0 0; background-size: 100% auto; font-size:0; height:0; border-top:none}
+
+/*임직원상품 */
+.product_employees{max-width:720px;margin:0 auto; }
+.payment .discount-graph .graph-employees {background: url('//image.genie.co.kr/imageg/mobile_web/payment/graph_employees.gif') no-repeat 0 0;background-size: contain;}
+.product_employees img{width:100%}
+.product_employees .contents{position:relative;}
+.product_employees .contents a{position:absolute; left:10.2%; top:32.5%; width:80%; height:15%; text-indent:-9999em}
+.product_employees .caution{padding:0;}
+
+/* bc카드 */
+.payment .discount-graph .graph-bc{background: url('//image.genie.co.kr/imageg/mobile_web/payment/graph_bccard.gif') no-repeat 0 0;background-size: contain;}
+
+/* 모비케이 */
+.payment .discount-graph .graph-mk{background: url('//image.genie.co.kr/imageg/mobile_web/payment/graph_mk.gif') no-repeat 0 0;background-size: contain;}
+
+/* 스페셜이용권_배송문의 레이어팝업 */
+#year-popup{margin-left:-50% !important}
+
+/* 페이코 */
+.list li.payco em{display:inline-block; text-indent:-9999em; width:3.708rem; height:0.833rem; background: url('//image.genie.co.kr/imageg/web/payment/ico_payco.png') no-repeat 0 -2.688rem; background-size:3.542rem; vertical-align:-0.15rem}
+.list li.payco .txt_payco{color:#ff5b62; font-size:0.750rem; padding-left:0.4rem; vertical-align:0.05rem}
+.list.col-2 li.full{width:100%}
+
+/* 커넥티드카 */
+.payment .discount-graph .graph-hcar{background: url('//image.genie.co.kr/imageg/mobile_web/payment/graph_hcar.gif') no-repeat 0 0;background-size: contain;}
+
+/*씨티카드*/
+.payment .discount-graph .graph-halfyear{background: url(//image.genie.co.kr/imageg/mobile_web/payment/graph-halfyear.png) no-repeat 0 0; background-size: contain;}
+.citicard .citi_title{padding-top:122%;background: url('//image.genie.co.kr/imageg/mobile_web/payment/citi_title.png') no-repeat; background-size:100% auto}
+.citicard .citi_contents{position:relative; padding-top:158.6%;background: url('//image.genie.co.kr/imageg/mobile_web/payment/citi_content.png') no-repeat; background-size:100% auto }
+.citicard .citi_contents p{font-size:0; line-height:0; height:0}
+.citicard .citi_contents .buy{position:absolute; left:50%; transform:translateX(-50%); top:46.5%; width:90.6%; height:10%; }
+.citicard .citi_contents .sns{position:absolute; left:50%; bottom:6.1%; width:82.53%; height:10.8%;text-align: center; transform:translateX(-50%);}
+.citicard .citi_contents .sns li{float:left; width:20.5%; height:100%; margin-left:5.4%}
+.citicard .citi_contents .sns li:first-child{margin-left:0}
+.citicard .citi_contents .sns li a{display:block; font-size:0; width:100%; height:100%;}
+.citicard .citi_info{position:relative; padding-top:159.46%;background: url('//image.genie.co.kr/imageg/mobile_web/payment/citi_info.png') no-repeat; background-size:100% auto }
+.citicard .citi_info .info{font-family:'NotoSans';position:absolute; left:0; top:0; padding:22% 5% 0 6.8%; color:#fff; font-size:3.1vw}
+.citicard .citi_info .info li{position:relative;line-height:5vw; padding:0 0 1vw 3.7333vw;letter-spacing:-0.2vw; color:rgba(255, 255, 255, 0.6)}
+.citicard .citi_info .info li:after{content:"-";position:absolute; left:0.6vw; top:-0.3vw;}
+.citicard .citi_info .info li:nth-child( -n + 3 ){color:rgba(255, 255, 255, 1)}
+@media screen and (min-width: 768px){
+	.citicard .citi_info .info{padding-top:18%}
+	.citicard .citi_info .info li{font-size:2.3vw; line-height:4vw; }
+}
+
+/*차이카드*/
+.payment .discount-graph .graph-chai{background: url(//image.genie.co.kr/imageg/mobile_web/payment/graph-chai_n.png) no-repeat 0 0; background-size: contain;}
+.payment .discount-graph .graph-chai02{background: url(//image.genie.co.kr/imageg/mobile_web/payment/graph-chai02_n.png) no-repeat 0 0; background-size: contain;}
+.chai .chai_title{padding-top:143.8%;background: url('//image.genie.co.kr/imageg/mobile_web/payment/chai_title.png') no-repeat; background-size:100% auto}
+.chai .chai_contents{background:#141417}
+.chai_contents .howoto{position:relative; padding-top:168.8%;background: url('//image.genie.co.kr/imageg/mobile_web/payment/chai_howto_n.png') no-repeat; background-size:100% auto}
+.chai_contents .howoto ul{ font-size:0; line-height:0;}
+.chai_contents .howoto .btn_go{position:absolute; left:50%; top:36.2%; transform:translateX(-50%); width:40.972%; height:5.16%;}
+.chai_contents .choice_tab{width:86.2%; margin:0 auto; font-size:0; line-height:0;}
+.chai_contents .choice_tab ul:after{content:""; display:block; clear:both}
+.chai_contents .choice_tab li{position:relative;float:left; width:50%; padding-top:72.7%; }
+.chai_contents .choice_tab li a{position:absolute; left:0; top:0; width:100%; height:100%}
+.chai_contents .choice_tab li.n01{background: url('//image.genie.co.kr/imageg/mobile_web/payment/chai_tab01_n.png') 0 0 no-repeat; background-size:200% 100%;}
+.chai_contents .choice_tab li.n01.on{background-position:100% 100%}
+.chai_contents .choice_tab li.n02{background: url('//image.genie.co.kr/imageg/mobile_web/payment/chai_tab02_n.png') 100% 0 no-repeat; background-size:200% 100%;}
+.chai_contents .choice_tab li.n02.on{background-position:0 0}
+.btnbox{position:relative;width:100%; padding-top:17.916%;}
+.btn_area{position:fixed; left:0; top:90% !important; width:100%; height:10%; }
+.btn_area.mp a{background-position:0 0}
+.btn_area a {font-size:0; line-height:0; position:absolute;display:block;width:100%;background: url('//image.genie.co.kr/imageg/mobile_web/payment/chai_btn.png') 100% 100% no-repeat; background-size:100% 200%;height:100%}
+.btn_area.on {position: static; margin-top:-17.916%;}
+
+.chai_info{background:#edeff4; padding:25% 5.4% 6%;font-family: 'NotoSans';}
+.chai_info h4{color:#272727; font-size:3.8889vw; font-weight:700; padding-bottom:0.85rem}
+.chai_info li{position:relative;line-height:5vw; padding:0 0 1vw 3vw;letter-spacing:-0.2vw; font-size:3.0556vw; color:#9f9f9f}
+.chai_info li:after{content:"·";position:absolute; left:0.6vw;top:-0.3vw;}
+.chai_info li a{color:#9f9f9f}
+@media (orientation: landscape) {
+	.btn_area{width:96%; left:2%; height:34%; top:66% !important;}
+}
+
+/* 요금청구서 결제 팝업*/
+.pop-contents.pay-bill label{overflow:hidden;position:absolute;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px}
+.pop-contents.pay-bill input{color:#0096ff; font-size:0.833rem}
+.pop-contents.pay-bill input::placeholder{color: #bcbcbc;}
+.pop-contents.pay-bill li{margin-bottom:0.333rem}
+.pop-contents.pay-bill li .btn-box{padding-right:6rem; position:relative}
+.pop-contents.pay-bill li .btn-box button{position:absolute; right:0; top:0; width:5.667rem;}

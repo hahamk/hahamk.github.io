@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<script src="/mobile/js/jquery-1.9.1.min.js"></script>
+	<script src="/mobile/js/common.js"></script>
+	<link rel="stylesheet" href="/mobile/css/common.css">
+	<link rel="stylesheet" href="/mobile/css/sub.css" />
+	<link rel="stylesheet" href="/mobile/css/product.css" /><!--이용권,결제전용-->
+	<script src="js/common.js"></script>
+	<title>지니 &dash; 현재 페이지 제목</title>
+</head> 
+<body>
+
+<!-- ios용 타이틀 -->
+<header class="product_tit blind">
+	<h1>이용권 구매</h1>
+</header>
+
+<article class="pay-wrap">
+	<!-- 이용권 정보 -->
+	<section class="pay-area">
+		<h2>이용권 정보 - 그래프 보류, 디자인 진행중</h2>
+		<div class="pay-info">
+			<h3>스마트 음악감상</h3>
+			<span class="sub-tit">30일마다 자동결제</span>
+			<div class="graph-box">
+				<ul>
+					<li>
+						<span class="num num-blue">1~6회차</span>
+						<strong>기본료 100원</strong>
+						감상곡수X15원
+					</li>
+					<!-- <li class="dot"></li> -->
+					<li>
+						<span class="num">7회차부터</span>
+						<strong>월 7,400원</strong>
+						정상가
+					</li>
+					<li>
+						<span class="num num-blue">1~6회차</span>
+						<strong>기본료 100원</strong>
+						감상곡수X(10원+5P)
+					</li>
+				</ul>
+			</div>
+			<ul class="pay-txt">
+				<li>6회차까지는 할인가로 결제되며, 이후에는  정상가로 결제됩니다. (VAT 별도)</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- 음악감상 100회 -->
+	<section class="pay-area">
+		<p class="tit-type">음악감상 100회<i class="org">추가증정</i></p>
+	</section>
+
+	<!-- 휴대폰 인증 -->
+	<section class="pay-area">
+		<h2>휴대폰 인증</h2>
+		<div class="certify">
+			<p>KT멤버십 혜택을 받으시려면, 휴대폰 인증이 필요합니다.</p>
+			<button type="button" class="btn btn-blue">KT휴대폰 인증하기</button>
+		</div>
+		<div class="certify">
+			<p>휴대폰 인증이 완료되었습니다.<br />(010-****-9876)</p>
+		</div>
+		<dl class="have-point">
+			<dt>보유 포인트</dt>
+			<dd>109,900P</dd>
+			<dt>차감 포인트</dt>
+			<dd>-2,520P</dd>
+			<dt>잔여 포인트</dt>
+			<dd>107,380P</dd>
+		</dl>
+		<ul class="pay-txt">
+			<li>포인트가 부족하면 전액결제로 전환되며, 충전이 되어도 혜택이 자동 적용되지 않습니다.</li>
+		</ul>
+	</section>
+
+	<!-- 옵션 선택 -->
+	<section class="pay-area">
+		<h2>옵션 선택</h2>
+		<ul class="list-select">
+			<li>
+				<input type="radio" id="test1_0" name="name1" class="radio " value="">
+				<label for="test1_0"><img src="//image.genie.co.kr/imageg/mobile_web/payment/gift_option1.jpg" alt="">
+				<em>선택1</em><strong>구글 네스트 미니 (블랙)</strong></label>
+			</li>
+			<li>
+				<input type="radio" id="test1_1" name="name1" class="radio " value="">
+				<label for="test1_1"><img src="//image.genie.co.kr/imageg/mobile_web/payment/gift_option1.jpg" alt="">
+				<em>선택2</em><strong>구글 네스트 미니 (그레이) 최대 두줄까지 노출입니다.</strong></label>
+			</li>
+		</ul>
+	</section>
+
+	<!-- 사은품 선택 -->
+	<section class="pay-area">
+		<h2>옵션 선택</h2>
+		<div class="list-gift">
+			<!-- box01 -->
+			<div class="select-box type01">
+				<div class="box-area">
+					<div class="select">옵션을 선택해주세요</div>
+					<ul class="list">
+						<li>
+							<div class="gift-content">
+								<em>선택1</em>
+								<strong>상위 옵션명이 들어갑니다. 최대 두줄까지 들어갈거에요</strong>
+								<img src="//image.genie.co.kr/imageg/mobile_web/payment/gift_option1.jpg" alt="">
+							</div>
+						</li>
+						<li>
+							<div class="gift-content">
+								<em>선택2</em>
+								<strong>두번째 상품이에요</strong>
+								<img src="//image.genie.co.kr/imageg/mobile_web/payment/gift_option1.jpg" alt="">
+							</div>
+						</li>
+						<li>
+							<div class="gift-content">
+								<em>선택3</em>
+								<strong>세번째 상품이에요</strong>
+								<img src="//image.genie.co.kr/imageg/mobile_web/payment/gift_option1.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- box02 -->
+			<div class="select-box type02 is-disabled">
+				<div class="box-area">
+					<div class="select">상세 옵션을 선택해주세요</div>
+					<ul class="list">
+						<li>
+							<div class="gift-content">
+								<em>선택1</em>
+								<strong>첫번째 상품이에요</strong>
+							</div>
+						</li>
+						<li>
+							<div class="gift-content">
+								<em>선택2</em>
+								<strong>두번째 상품이에요</strong>
+							</div>
+						</li>
+						<li>
+							<div class="gift-content">
+								<em>선택3</em>
+								<strong>세번째 상품이에요</strong>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 배송지 입력 -->
+	<section class="pay-area">
+		<h2>배송지 입력</h2>
+		<fieldset>
+			<legend>배송지 정보 입력</legend>
+			<ul class="list-addr">
+				<li>
+					<label for="addr_name">이름</label>
+					<input type="text" class="ipt" id="addr_name" placeholder="이름" />
+				</li>
+				<li>
+					<label for="addr_mobile">휴대폰 번호 입력</label>
+					<input type="tel" class="ipt" id="addr_mobile" placeholder="-없이 휴대폰 번호 입력" />
+				</li>
+				<li>
+					<label for="addr_post">우편번호 찾기</label>
+					<div class="addr-find"><input type="text" class="ipt" id="addr_post" placeholder="우편번호" /><button type="button" class="btn btn-blue">주소찾기</button></div>
+				</li>
+				<li>
+					<label for="addr_basic">기본주소</label>
+					<input type="text" class="ipt" id="addr_basic" placeholder="기본주소" />
+				</li>
+				<li>
+					<label for="addr_detail">기본주소</label>
+					<input type="text" class="ipt" id="addr_detail" placeholder="상세주소 및 상세건물명" />
+				</li>
+			</ul>
+		</fieldset>
+	</section>
+
+	<!-- 제3자 제공 동의 -->
+	<section class="pay-area">
+		<h2>개인정보 제3자 제공 동의</h2>
+		<ul class="list-agree">
+			<li><input type="checkbox" id="chk-4" class="checkbox" value=""><label for="chk-4">개인정보 제3자 제공에 동의합니다.</label>
+				<p class="agreetxt">개인정보를 제공받는 자 : CMS<br />
+				개인정보 이용 목적 : 배송 및 A/S<br />
+				개인정보 제공 목적 : CMS (이름, 휴대폰 번호, 주소)<br />
+				개인정보 보유 및 이용 기간 : 배송 완료 후 3개월 이내<br /><br />
+				개인정보 제3자 제공 동의를 거부할 수 있으며, 동의 거부 시 해당 상품의 구매가 제한됩니다.</p>
+			</li>
+		</ul>
+	</section>
+
+	<!-- 개인 정보 위탁 처리 -->
+	<section class="pay-area">
+		<h2>개인 정보 위탁 처리</h2>
+		<ul class="list-agree">
+			<li><input type="checkbox" id="chk-5" class="checkbox" value=""><label for="chk-5">사은품 제공을 위해 위 정보를 관련 업체에 제공하는 것을 동의합니다.</label>
+				<p class="agreetxt">개인 정보를 제공받는 자 : (주)신세계아이앤씨<br />
+				개인 정보 이용 목적 : 배송 및 A/S<br />
+				개인 정보 제공 항목 : 이름, 휴대폰 번호, 주소</p>
+			</li>
+		</ul>
+	</section>
+
+	<!-- 포인트/상품권 -->
+	<section class="pay-area">
+		<div class="pay-list">
+			<p class="view">포인트/상품권<span class="point-txt">사용할 수 있는 혜택 확인</span></p>
+			<div class="detail">
+				<ul class="list-point">
+					<li>TV포인트<a href="#" class="charge">충전</a>
+						<button type="button" class="btn">조회</button>
+					</li>
+					<li>지니캐시<a href="#" class="charge">충전</a>
+						<div class="g-cash">
+							<input type="text" class="ipt" value="" />
+							<button type="button" class="btn btn-blue">적용</button>
+							<!-- 취소버튼 <button type="button" class="btn">취소</button> -->
+							<div class="mycash">
+								보유 포인트 300,000
+								<input type="checkbox" id="chk-6" class="checkbox" value=""><label for="chk-6">전액 사용</label>
+							</div>
+						</div>
+					</li>
+					<li>OK캐시백<button type="button" class="btn">취소</button></li>
+					<li>해피머니상품권<button type="button" class="btn">조회</button></li>
+					<li>문화상품권<button type="button" class="btn">조회</button></li>
+					<li>도서문화상품권<button type="button" class="btn">조회</button></li>
+				</ul>
+				<ul class="pay-txt">
+					<li>이용권부가세는 사용한 포인트에서 추가로 차감됩니다.<br />
+					예시) 5,000P 사용 시 실제 5,500P 차감</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- 결제수단 -->
+	<section class="pay-area">
+		<div class="pay-list">
+			<p class="view open">결제수단</p>
+			<div class="detail">
+				<ul class="list-pay">
+					<li><input type="radio" id="rdo-1" name="rdo_method" class="radio" value=""><label for="rdo-1">휴대폰 결제</label><span class="benefit">혜택내용이 들어갑니다.</span></li>
+					<li><input type="radio" id="rdo-2" name="rdo_method" class="radio" value=""><label for="rdo-2">신용/체크카드</label><span class="benefit">일이삼사오륙칠팔구십14자이내</span></li>
+					<li><input type="radio" id="rdo-3" name="rdo_method" class="radio" value=""><label for="rdo-3"><em class="payco">페이코</em></label><span class="benefit">포인트 적립 혜택</span></li>
+					<li><input type="radio" id="rdo-4" name="rdo_method" class="radio" value=""><label for="rdo-4"><em class="kpay">카카오페이</em></label></li>
+					<li><input type="radio" id="rdo-5" name="rdo_method" class="radio" value=""><label for="rdo-5"><em class="npay">네이버페이</em></label></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- 동의체크 -->
+	<section class="pay-area">
+		<ul class="list-agree">
+			<li><input type="checkbox" id="chk-1" class="checkbox" value=""><label for="chk-1"><span class="text-red">30일마다 자동결제되며, 할인기간 이후에는 정상 자동결제 되는 것에 동의 합니다.</span></label></li>
+			<li><input type="checkbox" id="chk-2" class="checkbox" value=""><label for="chk-2">상기 내용 및 유의사항을 확인하였습니다.</label></li>
+			<li><input type="checkbox" id="chk-3" class="checkbox" value=""><label for="chk-3">이용약관을 확인하였습니다.</label> <a href="#" class="text-underline">약관보기</a></li>
+		</ul>
+	</section>
+
+	<!-- 유의사항 -->
+	<section class="pay-area">
+		<h2>유의사항</h2>
+		<dl class="caution">
+			<dt>이용권</dt>
+			<dd>할인기간 동안만 해당 가격으로 적용되며, 이후 정상가로 결제됩니다.</dd>
+			<dd>음원 권리사의 요청에 따라 일부 이용권은 음악감상, 다운로드 서비스 이용이 제한될 수 있습니다.</dd>
+			<dt>이용권</dt>
+			<dd>구매와 동시에 선불로 과금되며, 부가세 10%는 별도 입니다.</dd>
+			<dd>결제 시 SMS 등을 통한 별도의 거래내역 통지는 생략됩니다.</dd>
+			<dd>구매하신 이용권의 결제내역조회, 변경, 해지는 [지니앱 > 내 정보] 또는 [지니 웹사이트 > 마이뮤직 > 이용권 내역]에서 가능합니다. </dd>
+			<dd>사용하지 않은 이용권은 결제 후 7일 이내 환불 가능합니다.</dd>
+			<dd>이용권 환불 신청은 지니 고객센터(1577-5337) 또는 [지니 앱 > 더보기 > 고객센터 > 1:1문의하기], [지니 웹사이트 > 하단 고객센터 > 상단 문의하기]에서 할 수 있습니다.</dd>
+			<dd>자동결제 이용권을 해지하신 경우, 해당 서비스 만료일까지 사용하실 수 있습니다. 자동결제를 해지하셔도 해당 이용권 만료일까지 사용이 가능합니다.</dd>
+			<dd>사용중인 이용권을 해지할 경우 이용일 수 및 이용 건수 등을 차감 후 환불합니다.</dd>
+		</dl>
+	</section>
+
+	<!-- 결제버튼 -->
+	<section class="pay-btn">
+		<span class="total">총 할인금액<em><strong>-2,700</strong>원</em></span>
+		<a href="#" class="btn">4,600원 결제 <em>(VAT 별도)</em></a>
+	</section>
+
+</article>
+
+<!-- UI확인용 개발시에 지워주세요! -->
+<div style="position:fixed;bottom:4rem;right:0;font-size:1rem;line-height:1.5em;background:rgba(0,0,0,0.3);z-index:999">
+	<button type="button" onclick="$('.pay-btn').removeClass('on').addClass('on');" style="padding:5px">결제버튼 활성</button><br />
+	<button type="button" onclick="$('.product_tit').removeClass('blind');" style="padding:5px">ios용 헤더</button>
+</div>
+
+</body>
+</html>

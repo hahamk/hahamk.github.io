@@ -1,0 +1,357 @@
+@charset 'utf-8';
+
+@import "base";
+
+.product_tit{
+    height:3rem; width:100%;
+        h1{position:relative; height:3rem; width:100%;line-height:3rem; font-size: 1.25rem; font-family:'NotoSans'; text-align:center;border-bottom:0.0625rem solid #e0e0e0; z-index:10; background:$color-w;}
+        &.fixed h1{position:fixed; box-shadow:0 0px 13px rgba(0,0,0,0.1);}
+        &.blind{display:none;}
+}
+
+.product_wrap{
+    width:$w100; font-family:'NotoSans'; font-weight:400; padding:1.042rem 0 1.042rem 1.042rem;
+    em{vertical-align: middle;}
+    sup{vertical-align: 0.32rem; line-height:0; font-size: 70%; padding: 0 0.2rem 0 0.1rem;}
+
+    .go_back{font-size:1.042rem; color:$color-gr; display:block; margin:-1rem 0 2.083rem; text-align:center; padding-right:1.042rem}
+    .go_back a{width:$w100;display:block;background:#f7f7f7; border-radius: 0.833rem; line-height:3.667rem; }
+}
+
+
+/* box */
+.product_box{padding-bottom:1.083rem; letter-spacing:-0.026rem;
+    .title{position:relative; margin-bottom:1.021rem;
+        h3{color:$color-bk; font-weight:$fs_b; font-size:1.188rem;
+            sup{line-height:0; vertical-align: 0.32rem; font-size:70%; padding-right:0.2rem;}
+            span{line-height:0;font-family:$ft_normal;padding:0 0.2rem}
+        }
+        .sub_tit{color:$color-r-gr; font-size:0.917rem; padding-top:0.396rem; display:block;; line-height:1.1rem;}
+        h5{color:$color-bk; font-weight:$fs_b; font-size:0.917rem;}
+        .more{position:absolute; right:1.042rem; bottom:0; color:$color-r-gr; font-size: 0.833rem; }
+    }
+
+    .title_sub{padding-top:0.7rem; margin-bottom:1.021rem; color:$color-bk; 
+        h4{font-size:1.042rem; display:inline-block;}
+        .sm_tit{font-size:0.833rem; color:$color-r-gr; padding-left:0.2rem;}
+    }
+}
+
+/* 이용권리스트 */
+.product_list{
+    width:$w100;margin:0 auto;display:flex;align-items: center;    flex-wrap: wrap;
+    li{
+        align-items: center;flex-basis: 50%; display:flex; margin-bottom:1.042rem; padding-right:1.042rem;
+        
+        .detail{width:$w100; height:9.271rem;box-shadow:0 0px 13px rgba(0,0,0,0.1); border-radius: 0.938rem;padding:0.938rem;
+            &.blue_br{position:relative;
+                &:before{content:""; border:0.208rem solid #0096ff; position:absolute; left:0; top:0; width:$w100; height:$w100;border-radius: 0.938rem;}
+            }
+        }
+
+        strong{font-weight:$fs_n; color:$color-gr;display:block; height:$w50;line-height:1.25; letter-spacing:-0.05rem;
+            .sub_tit{display:block; color:$color-r-gr; font-size:0.833rem; padding-top:0.1rem}
+            em{color:$color-r-gr; border:0.063rem solid $color-r-gr; border-radius:0.479rem; font-size:0.625em;line-height:0.98rem; height:0.979rem; padding:0 0.417rem; display:inline-block; letter-spacing:-0.06rem;}
+        }
+
+        .info{position:relative;color:$color-r-gr; height:$w50;display: flex;justify-content: flex-end; flex-direction: column; font-size:0.833rem; line-height:0.95rem;
+            &.color-red{color:$color-red;}
+            .discount{color:$color-red; font-size:0.75rem;padding-top:0.15rem; 
+                em{padding-right:0.25rem;}
+            }
+            .price{color:$color-bk;font-size:1.146rem; padding-top:0.3rem;display:block; font-weight:$fs_b;}
+            i{position:absolute; right:0;bottom:-0.05rem; width:2.813rem; line-height:1.55rem; height:1.396rem;border-radius:0.625rem; font-size:0.688rem; text-align:center; padding-left:0.01rem; color:$color-w;
+                &.mobile{background:#b0c9f8; }
+                &.all{background:#afd9b1; }
+                &.gift{background:#ffca7d; bottom:1.604rem}
+            }
+
+            &.special{
+                color:$color-red; padding-right:4.792rem;
+                .gift{position:absolute; right:0; bottom:0; width:4.167rem; height:4.167rem;
+                    img{width:100%; border-radius: 0.6rem;}
+                }
+            }
+        }
+        
+        &.on{
+            .detail{background:$color-blue;
+                &.blue_br:before{border:none}
+            }
+            strong, strong span, .info, .price{color:$color-w;}
+            strong em{color:$color-w; border-color:$color-w}
+            .discount{color:$color-yell;}
+            i{background:none !important;
+                &:before{content:""; position:absolute; left:0; top:0; width:$w100; height:$w100; border:0.083rem solid $color-w; border-radius:0.625rem}
+            }
+        }
+
+        //전체박스
+        &.full{
+            flex-basis:100%;
+        }
+        &.full_s{
+            flex-basis:100%;
+            .detail{height:7.292rem}
+        }
+    }
+
+    //추천이용권
+    &.recom{
+        .detail{position:relative;
+            &:before{content:""; border:0.208rem solid #0096ff; position:absolute; left:0; top:0; width:$w100; height:$w100;border-radius: 0.938rem;}
+        }
+        li.on .detail:before{border:none}
+        li.on .detail .sub_tit{color:$color-w}
+    }
+}
+
+/* 이용권 기능안내 table */
+.tb_info{position:relative; color:$color-r-gr; border:0.063rem solid #f3f3f3; border-radius:1.042rem; overflow:hidden;text-align:center; margin-right:1.042em;
+    &:before{content:""; position:absolute; left:0; top:0; width:$w100; height:2.563rem; background:#f3f3f3; z-index:-1}
+    caption{display: none;font-size: 0;line-height: 0;visibility:hidden;}
+    table{width:$w100;}
+    th{font-size:0.771rem; height:2.563rem;
+        &:first-child{text-align:left; padding-left:0.979rem}
+    }
+    .sub_title th{background:none; height:1.667rem; border:0.063rem solid #f3f3f3; font-size:0.625rem;
+        &:first-child, &:last-child{border:none;}
+    }
+    td{font-size:0.771rem; padding:0.6rem 0; border-left:0.063rem solid #f3f3f3; 
+        &:nth-child(6n+1){text-align:left;padding-left:0.979rem; border-left:none}
+    }
+    tr:last-child td{padding-bottom:1.5rem;}
+}
+
+/* 유의사항 */
+.caution{color:$color-r-gr; font-size:0.729rem; padding-right:1.042rem;
+    li{padding:0 0 0.5rem 0.375rem; position: relative; line-height:0.875rem;
+        &:before{content:""; position:absolute; left:0; top:0.3rem; width:0.188em; height:0.188em; border-radius: 50%; background:$color-r-gr;}
+    }
+}
+
+/*popup*/
+.popview{font-family:'NotoSans'; letter-spacing:-0.026rem; position:fixed;width:100%;padding:1.875rem;left:0; bottom:-10px;z-index: -1;opacity:0;transition:all 0.2s; box-shadow:0 0px 13px rgba(0,0,0,0.1); border-radius: 0.938rem; 
+    .close{position:absolute; right:1rem; top:1rem; width:1.2rem; height:1.2rem; font-size:0;
+        &:before, &:after{content:'';position:absolute; left:0; top:0.6rem; width:1.2rem; height:0.125rem; background:$color-bk; }
+        &:before{-webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); transform:rotate(45deg); }
+        &:after{-webkit-transform:rotate(-45deg); -moz-transform:rotate(-45deg); transform:rotate(-45deg); }
+    }
+    &.on{opacity:1;z-index:999;background:$color-w; bottom:0}
+    .title{font-size:1.188rem; color:$color-bk; font-weight:$fs_b; padding-bottom:1rem;
+        .sub_tit{font-size:1.042rem; padding-top:0.375rem}
+    }
+    .pop_content{height:5.5rem;
+        .pop_list{font-size:0.833rem; color:$color-r-gr; 
+            li{padding:0 0 0.417rem 0.417rem; line-height:1rem; position:relative;
+                &:before{content:"";position:absolute; left:0; top:0.3rem;width:0.208rem; height:0.208rem; background:$color-r-gr; border-radius: 50%;}
+            }
+        }
+        p{font-size:0.833rem; color:$color-r-gr; line-height: 1.15rem;
+            &.stop{color:$color-red; font-size:0.979rem; padding-bottom:0.625rem;}
+        }
+    }
+
+    .btm_btn{font-size:1.042rem;text-align:center; width:$w100; padding-top:1.7rem;
+        a{width:10.542rem; line-height:3.125rem; background:$color-blue; color:$color-w; display:inline-block; border-radius: 1.042rem;}
+
+        &.col-2{display:inline-block; 
+            a{width:8.792rem;
+                &:first-child{margin-right:0.95rem}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px){
+    html {font-size:14px;}
+    .product_list li strong em{letter-spacing: -0.1rem;}
+}
+
+/* 이용권 결제 */
+.pay-wrap{background: $bgcolor-gr;font-family:'NotoSans'; color:$color-r-gr; padding-bottom:3.889rem}
+.pay-area{background:$color-w; padding:0 1.111rem; margin-bottom:0.556rem;
+    //icon
+    i{@include pay-icon;
+        &.blue{background:#7ba5f3;}
+        &.org{background:#ffa726;}
+        &.pink{background:#f37e7b;}
+        &:first-of-type{margin-left:0.2rem}
+    }
+    h2{line-height:2.667rem; border-bottom:1px solid $color-bk;padding:0; @include pay-title}
+    
+    .pay-txt{padding:0.889rem 0 1.111rem;
+        li{@include caution;}
+    }
+
+    //btn,input
+    .btn{@include pay-btn; 
+        &.btn-blue{@include pay-btn-blue;}
+    }
+    input::placeholder{color:#bcbcbc;}
+
+
+    //이용권 정보
+    .pay-info{padding-top:1.111rem;
+        h3{@include pay-title; line-height:inherit; padding:0;}
+        .sub-tit{font-size:0.667rem; display:block; padding:0.4rem 0 1.111rem}
+        .graph-box{background: $bgcolor-r-gr; border-radius:0.556rem;height:6.556rem; display:flex;
+            ul{width:100%; display:flex; justify-content:space-around; align-items: center;
+                li{font-size:0.667rem; display:flex; align-items:center; flex-flow: column;
+                    .num{@include gp-box;
+                        &.num-blue{border-color:$color-genieb; color:$color-genieb}
+                    }
+                    strong{display:block;font-weight:$fs_b; color:$color-bk; font-size:0.833rem;  margin:0.778rem 0 0.38rem}
+                }
+                .dot{height:100%;width:4rem;border:none;}
+                .dot02{height:100%;width:2rem;border:none}
+            }
+        }
+    }
+    //추가증정
+    .tit-type{@include pay-title; height:2.667rem; padding-top:0.8rem}
+
+    //휴대폰 인증
+    .certify{text-align:center; font-size:0.722rem; padding:1.111rem 0 1.667rem; line-height:1rem;
+        button{font-size:0.833rem; width:auto; padding:0 1.056rem; margin-top:1rem}
+    }
+    .have-point{padding-top:0.556rem;
+        dt,dd{width:50%; float:left; @include basic-txt; line-height:2.667rem;}
+        dd{text-align:right}
+        &::after{@include clearboth;}
+    }
+
+    //옵션선택
+    .list-select{padding:0.778rem 0;
+        label{border:1px solid #eeeeef; height:5.556rem; width:100%; padding:1.222rem 1rem 0.556rem 5.278rem; margin-bottom:0.556rem; border-radius:0.556rem;overflow:hidden;line-height:1.1rem; 
+            &::before{background: none}
+            img{position:absolute; left:0.556rem; top:0.556rem; width:4.444rem; height:4.444rem;}
+            em{font-size:0.722rem; color:$color-r-gr;}
+            strong{@include basic-txt; display:block; overflow:hidden; height:2rem;}
+        }
+        .radio:checked + label{border-color:$color-genieb;}
+    }
+
+    .list-gift{padding:0.556rem 0}
+
+    .list-addr{padding-bottom:1.667rem;
+        li{padding-top:0.778rem;
+            .addr-find{position:relative; padding-right:4.778rem;
+                button{position:absolute; right:0; top:0; width:4.333rem; font-size:0.722rem;}
+            }
+        }
+        label{overflow:hidden;position:absolute;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px}
+    }
+
+    //결제수단, 포인트상품권
+    .pay-list{
+        p{@include pay-title; height:2.667rem; padding-top:0.8rem; display:block;position:relative;
+            .point-txt{position:absolute; right:2.5rem; top:0.95rem; font-size:0.722rem; color:$color-r-gr; font-weight:$fs_n;}
+            &.open{border-bottom:1px solid $color-bk; }
+            &::before{content:""; position:absolute; right:0; top:0.45rem; width:1.667rem; height:1.667rem; background: url($url-images+"ico_pay_bullet.png") no-repeat 0 0; background-size: 200% 100%;}
+            &.open::before{background-position: 100% 100%;}
+            &.open + .detail{display:block;}
+        }
+        .detail{display:none; @include basic-txt;
+            .list-pay{padding:0.833rem 0;
+                li{line-height:2.667rem; position:relative;
+                    .benefit{position:absolute; right:0; top:0.45rem; background:$bgcolor-r-gr;font-size:0.667rem;color:$color-r-gr; line-height:1.667rem; text-align:right; padding:0 0.444rem; border-radius:0.389rem;}
+                    em{background: url($url-images+"ico_pay_method.png") no-repeat 0 0; background-size: 100% 400%; height:1.25rem;display:inline-block;width:3.5rem;text-indent:-9999em;
+                        &.kpay{background-position: 0 30%;}
+                        &.npay{background-position: 0 65%;}
+                    }
+                }
+            }
+
+            .list-point{padding-bottom:0.5rem;
+                li{padding:0.611rem 0; line-height:2.444rem;position:relative; border-bottom:1px solid #f5f5f5;
+                    button{position:absolute; right:0; top:0.611rem; width:3rem; background:#fafafa; color:#000 !important;
+                        &.btn-blue{background:$color-genieb !important; color:#ffffff !important}
+                    }
+                    .charge{font-size:0.778rem; color:$color-genieb; padding-left:1.8rem; display:inline-block;font-weight:$fs_b;position:relative;
+                        &::before{content:"";position:absolute;left:0.4rem;top:0.6rem; background: url($url-images+"ico_point.png") no-repeat 0 0; background-size: 100%;width:1.278rem;height:1.111rem}
+                    }
+                    .g-cash{padding:0 3.556rem 0 0; position:relative;
+                        input{text-align:right; font-weight: $fs_b; color:$color-genieb;}
+                        .btn{position:absolute; right:0; top:0;}
+                        .mycash{color:$color-r-gr; position:relative;padding-top:0.556rem;
+                            label{position:absolute; right:-3.35rem; top:1rem; color:$color-bk; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //동의체크
+    .list-agree{padding:0.833rem 0;
+        li{@include basic-txt; margin:0.722rem 0;
+            .agreetxt{font-size:0.667rem; color:$color-r-gr; line-height:1rem; padding:0.5rem 1rem 0 1.85rem}
+        }
+    }
+
+    //유의사항
+    .caution{padding-bottom:1.667rem;
+        dt{font-size:0.722rem;font-weight:$fs_b; padding:1.111rem 0 0.8rem}
+        dd{@include caution;}
+    }    
+}
+
+/*결제버튼*/
+.pay-btn{height:3.889rem; background:$color-w; position:fixed; width:$w100; left:0; bottom:0; padding: 0.444rem 0.444rem 0.444rem 7.444rem; border-top:1px solid #f4f4f4;
+    .total{position:absolute; left:0; top:0.7rem; font-size:0.778rem; color:$color-bk; width:7.444rem; text-align:center; line-height:1.3rem;
+        em{display:block; color:#bcbcbc}
+    }
+    .btn{height:$w100; line-height:3rem; border-radius:0; font-size:0.944rem; color:#bcbcbc; font-weight:$fs_b;
+        em{font-size:0.667rem; font-weight:$fs_n}
+    }
+    &.on{
+        .total{
+            em{color:$color-genieb;}
+        }
+        .btn{background:$color-genieb; color:$color-w;}
+    }
+}
+
+/*selectbox*/
+.select-box{padding-bottom:0.556rem;
+    .box-area{display:inline-block; position:relative; width:$w100;
+        .select{position:relative; border:1px solid #eeeeef; padding:0.833rem 1.111rem; border-radius: 0.556rem; @include basic-txt;
+            &::before{content:''; width:100%; height:100%;position:absolute; top:0; right:0; z-index:1000; }
+            &::after{content:""; position:absolute; right:0.833rem; top:50%; transform:translateY(-50%);background: url($url-images+"ico_pay_bullet02.png") no-repeat; width:0.778rem; height:0.778rem; background-size:200% 100%;}
+            .gift-content{
+                img{right:1rem}
+            }
+        }
+        .list{display:none; overflow-y:auto;border:1px solid #eeeeef;border-top:none; padding:0; border-radius: 0 0 0.556rem 0.556rem;@include basic-txt;
+            width:100%; max-height:200px; background:$color-w;
+            li{padding:0.833rem 1.111rem; width:$w100;border-top:1px solid #eeeeef
+            }
+        }
+        .gift-content{padding:0.2rem 5rem 0 0; position:relative; height:3.778rem;line-height:1.1rem; 
+            em{color:$color-r-gr; font-size:0.722rem}
+            strong{display:block; height:2.2rem; overflow:hidden;}
+            img{position:absolute; right:0; top:0; width:3.778rem; height:3.778rem;}
+        }
+    }
+    &.on{
+        .box-area{
+            .select{border-radius: 0.556rem 0.556rem 0 0; border-bottom:none; background:$bgcolor-r-gr;
+                &::before{background-position: 100% 100%;}
+            }
+        }
+    }
+    &.on-blue{
+        .box-area{
+            .select{
+                border-color:$color-genieb;
+            }
+        }
+    }
+    
+    &.is-disabled{pointer-events: none;
+        .box-area{
+            .select{background-color: #fafafa; color:#bcbcbc; border:none;}
+        }
+    }
+}
