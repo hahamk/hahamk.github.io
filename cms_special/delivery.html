@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>스페셜이용권 CMS</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/datepicker.min.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/Admin.css">
+  <link rel="stylesheet" href="css/skin-purple-light.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+
+<body class="hold-transition skin-purple-light sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <span><i class="fa fa-fw fa-smile-o"></i>김정아</span>
+        &#91;6:마케팅&#93; 님으로 로그인 하셨습니다. &#40;10.201.3.148&#41;
+        <button type="submit" class="btn btn-default">로그아웃</button>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <!-- Optionally, you can add icons to the links -->
+        <li class="header">MAIN NAVIGATION</li>
+        <li><a href="#"><i class="fa fa-fw fa-check"></i> <span>사이트 관리</span></a></li>
+        <li><a href="#"><i class="fa fa-fw fa-check"></i> <span>컨텐츠 관리</span></a></li>
+        <li><a href="#"><i class="fa fa-fw fa-check"></i> <span>고객센터관리</span></a></li>
+        <li class="treeview active">
+          <a href="#"><i class="fa fa-fw fa-check"></i>
+            <span>이벤트 관리</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#">스페셜 이용권
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#">이용권 관리</a></li>
+                <li><a href="#">사은품 등록</a></li>
+                <li><a href="#">유의사항 관리</a></li>
+                <li><a href="#">배송 정보 조회</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-fw fa-check"></i>
+            <span>1depth</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#">2depth
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#">3depth</a></li>
+                <li><a href="#">3depth</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">2depth</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1><small>이벤트 관리 <i class="fa fa-fw fa-chevron-right"></i> 스페셜 이용권 <i class="fa fa-fw fa-chevron-right"></i></small> 배송 정보 조회</h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- 검색 -->
+          <div class="box">
+            <div class="box-body table-responsive no-padding">
+              <div class="searcharea">
+                <div class="form-group">
+                  <span class="date">검색</span>
+                  <select class="form-control">
+                    <option selected="selected">전체</option>
+                    <option>사은품명</option>
+                    <option>상품 번호</option>
+                    <option>프로모션 ID</option>
+                  </select>
+                </div>
+                <div class="input-group input-group-sm">
+                  <input type="text" name="table_search" class="form-control pull-right" placeholder="검색어 입력">
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="searcharea">
+                <div class="form-group" style="width:7%">
+                  <span class="date">기간</span>
+                </div>
+
+                <div class="input-group cal">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="datepicker">
+                  <span class="sp">~</span>
+                </div>
+
+                <div class="input-group cal">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="datepicker2">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!--// 검색 -->
+
+          <!-- list -->
+          <div class="box">
+            <div class="box-body table-responsive no-padding">
+              <table class="table table-hover">
+                <colgroup>
+                  <col width="10%" />
+                  <col width="12%" />
+                  <col width="12%" />
+                  <col width="10%" />
+                  <col width="12%" />
+                  <col width="10%" />
+                  <col width="17%" />
+                  <col width="*" />
+                </colgroup>
+                <tr>
+                  <th>No</th>
+                  <th>회원 UNO</th>
+                  <th>아이디</th>
+                  <th>이름</th>
+                  <th>휴대폰번호</th>
+                  <th>우편번호</th>
+                  <th>주소</th>
+                  <th>사은품명</th>
+                </tr>
+                <tr>
+                  <td colspan="8">검색된 항목이 없습니다.</td>
+                </tr>
+                <tr>
+                  <td>50</td>
+                  <td>302323230<br /><button type="submit" class="btn btn-default btn-sm">마스킹 제거</button></td>
+                  <td>hahaham***<br /><button type="submit" class="btn btn-default btn-sm">마스킹 제거</button></td>
+                  <td>최민*<br /><button type="submit" class="btn btn-default btn-sm">마스킹 제거</button></td>
+                  <td>01090***020<br /><button type="submit" class="btn btn-default btn-sm">마스킹 제거</button></td>
+                  <td>02***<br /><button type="submit" class="btn btn-default btn-sm">마스킹 제거</button></td>
+                  <td>경기도 부천시 ****<br /><button type="submit" class="btn btn-default btn-sm">마스킹 제거</button></td>
+                  <td>옵션명 상세옵션</td>
+                </tr>
+                <tr>
+                  <td>50</td>
+                  <td>302323230<br /><button type="submit" class="btn btn-default btn-sm">마스킹 제거</button></td>
+                  <td>hahaham***<br /><button type="submit" class="btn btn-default btn-sm">마스킹 제거</button></td>
+                  <td>김정*<br /><button type="submit" class="btn btn-default btn-sm">마스킹 제거</button></td>
+                  <td>01090***020<br /><button type="submit" class="btn btn-default btn-sm">마스킹 제거</button></td>
+                  <td>02***<br /><button type="submit" class="btn btn-default btn-sm">마스킹 제거</button></td>
+                  <td>경기도 화성시 ****<br /><button type="submit" class="btn btn-default btn-sm">마스킹 제거</button></td>
+                  <td>옵션명 상세옵션</td>
+                </tr>
+              </table>
+            </div>
+            <!-- /.box-body -->
+
+            <div class="box-footer clearfix" style="text-align: center;">
+              <ul class="pagination pagination-sm no-margin">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">Next</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--// list -->
+        </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/adminlte.min.js"></script>
+<script src="js/demo.js"></script>
+<script src="js/icheck.min.js"></script>
+
+<script>
+  $(function () {
+    //Date picker
+    $('#datepicker, #datepicker2').datepicker({
+      autoclose: true, format: "yyyy/mm/dd"
+    })
+  })
+</script>
+</body>
+</html>

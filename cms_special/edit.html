@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>스페셜이용권 CMS</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/datepicker.min.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/Admin.css">
+  <link rel="stylesheet" href="css/skin-purple-light.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+
+<body class="hold-transition skin-purple-light sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <span><i class="fa fa-fw fa-smile-o"></i>김정아</span>
+        &#91;6:마케팅&#93; 님으로 로그인 하셨습니다. &#40;10.201.3.148&#41;
+        <button type="submit" class="btn btn-default">로그아웃</button>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <!-- Optionally, you can add icons to the links -->
+        <li class="header">MAIN NAVIGATION</li>
+        <li><a href="#"><i class="fa fa-fw fa-check"></i> <span>사이트 관리</span></a></li>
+        <li><a href="#"><i class="fa fa-fw fa-check"></i> <span>컨텐츠 관리</span></a></li>
+        <li><a href="#"><i class="fa fa-fw fa-check"></i> <span>고객센터관리</span></a></li>
+        <li class="treeview active">
+          <a href="#"><i class="fa fa-fw fa-check"></i>
+            <span>이벤트 관리</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#">스페셜 이용권
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#">이용권 관리</a></li>
+                <li><a href="#">사은품 등록</a></li>
+                <li><a href="#">유의사항 관리</a></li>
+                <li><a href="#">배송 정보 조회</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-fw fa-check"></i>
+            <span>1depth</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#">2depth
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#">3depth</a></li>
+                <li><a href="#">3depth</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">2depth</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1><small>이벤트 관리 <i class="fa fa-fw fa-chevron-right"></i> 스페셜 이용권 <i class="fa fa-fw fa-chevron-right"></i></small> 이용권 관리 등록/수정</h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <table class="table l_t table-hover">
+              <colgroup>
+                <col width="12%" />
+                <col width="*" />
+              </colgroup>
+              <tr>
+                <th>음악 이용권*</th>
+                <td colspan="3">
+                  <div class="row">
+                    <div class="col-xs-5"><input type="text" class="form-control" placeholder="상품 번호 입력"></div>
+                    <div class="col-xs-5"><input type="text" class="form-control" placeholder="프로모션 ID 입력"></div>
+                    <button type="submit" class="btn btn-default">확인</button>
+                  </div>
+                  <div class="threebox">
+                    <input type="text" class="form-control" placeholder="복합 상품명" disabled>
+                    <input type="text" class="form-control" placeholder="제공 개월" disabled="">
+                    <input type="text" class="form-control" placeholder="이용권 속성" disabled="">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>사은품 형태*</th>
+                <td colspan="3">
+                  <div class="threebox">
+                    <label><input type="radio" name="r1" class="minimal" checked=""> 제품</label> <label><input type="radio" name="r1" class="minimal"> 모바일 쿠폰</label>
+                    <input type="text" class="form-control" placeholder="팝업 문구 입력" style="margin-top:0">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>대표 이미지*</th>
+                <td colspan="3">
+                  <div class="row">
+                    <div class="col-xs-3">
+                      유선 400*200<input type="file" id="exampleInputFile">
+                      <p class="photo"><img src="//image.genie.co.kr/imageg/web/payment/blank_pc.gif" /></p>
+                    </div>
+                    <div class="col-xs-3">
+                      무선 912*456<input type="file" id="exampleInputFile">
+                      <p class="photo"><img src="//image.genie.co.kr/imageg/web/payment/blank_m.gif" /></p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>사은품 ID*</th>
+                <td colspan="3">
+                  <div class="row">
+                    <div class="col-xs-2"><input type="text" class="form-control" placeholder="사은품 ID 입력"></div>
+                    <button type="submit" class="btn btn-default">확인</button>
+                  </div>
+                  <!-- 사은품옵션 -->
+                  <div class="gift_opt">
+                    <table>
+                      <colgroup>
+                        <col width="8%" />
+                        <col width="30%" />
+                        <col width="*" />
+                      </colgroup>
+                      <tr>
+                        <th colspan="3">누포스 음향기기</th>
+                      </tr>
+                      <tr>
+                        <td><img src="//image.genie.co.kr/imageg/web/payment/blank_gift.gif" /></td>
+                        <td><input type="text" class="form-control" placeholder="MARLEY 음향기기" disabled></td>
+                        <td><input type="text" class="form-control num" placeholder="수량" disabled></td>
+                      </tr>
+                      <tr>
+                        <td><img src="//image.genie.co.kr/imageg/web/payment/upload/pdt-1810-01-0.jpg" /></td>
+                        <td><input type="text" class="form-control" placeholder="MARLEY 음향기기" disabled></td>
+                        <td><input type="text" class="form-control num" placeholder="수량" disabled></td>
+                      </tr>
+                      <tr>
+                        <td><img src="//image.genie.co.kr/imageg/web/payment/upload/pdt-1810-02-9.jpg" /></td>
+                        <td><input type="text" class="form-control" placeholder="MARLEY 음향기기" disabled></td>
+                        <td><input type="text" class="form-control num" placeholder="수량" disabled></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!--/ 사은품옵션 -->
+                </td>
+              </tr>
+              <tr>
+                <th>배너</th>
+                <td colspan="3">
+                  <select class="form-control" style="width:100px">
+                    <option selected="selected">없음</option>
+                    <option>NEW</option>
+                    <option>HOT</option>
+                    <option>BEST</option>
+                    <option>추천</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>노출 여부*</th>
+                <td colspan="3">
+                  <label><input type="radio" name="r3" class="minimal" checked=""> 노출</label>
+                  <label><input type="radio" name="r3" class="minimal"> 비노출</label>
+                </td>
+              </tr>
+              <tr>
+                <th>노출 기간*</th>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        <div class="input-group">
+                          <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                          </div>
+                          <input type="text" class="form-control pull-right" id="datepicker">
+                        </div>
+                      </td>
+                      <td> ~ </td>
+                      <td>
+                        <div class="input-group">
+                          <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                          </div>
+                          <input type="text" class="form-control pull-right" id="datepicker2">
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <th>판매 기간*</th>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        <div class="input-group">
+                          <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                          </div>
+                          <input type="text" class="form-control pull-right" id="datepicker">
+                        </div>
+                      </td>
+                      <td> ~ </td>
+                      <td>
+                        <div class="input-group">
+                          <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                          </div>
+                          <input type="text" class="form-control pull-right" id="datepicker2">
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <label><input type="checkbox" class="minimal"> 노출 기간과 동일</label>
+                </td>
+              </tr>
+              <tr>
+                <th>배송 정보 입력 항목*</th>
+                <td>
+                  <label><input type="checkbox" class="minimal" checked> 이름</label>
+                  <label><input type="checkbox" class="minimal"> 휴대폰 번호</label>
+                  <label><input type="checkbox" class="minimal"> 주소</label>
+                </td>
+                <th>정보 제공 업체*</th>
+                <td><div class="threebox"><input type="text" class="form-control" placeholder="입력" style="margin-top:0"></div></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn bg-purple btn-lg">저장</button> <button type="submit" class="btn btn-default btn-lg">취소</button>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/adminlte.min.js"></script>
+<script src="js/demo.js"></script>
+<script src="js/icheck.min.js"></script>
+
+<script>
+  $(function () {
+    //Date picker
+    $('#datepicker, #datepicker2').datepicker({
+      autoclose: true, format: "yyyy/mm/dd"
+    })
+
+    //iCheck for checkbox and radio inputs
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+      checkboxClass: 'icheckbox_minimal-grey',
+      radioClass   : 'iradio_minimal-grey'
+    })
+  })
+</script>
+</body>
+</html>
