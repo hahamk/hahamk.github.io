@@ -1,0 +1,517 @@
+@charset 'utf-8';
+
+* {margin:0;padding:0;font-size:100%;font:inherit;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;vertical-align:middle;outline-color:transparent !important}
+body {position:relative;min-width:320px;/*max-width:1080px;*/margin:0 auto;font-family:'DroidSansFallback','APPLE SD Gothic Neo','dotum',sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;line-height:1;color:#27282d;background-color:#f7f9fc}
+body.fixed {position:fixed;left:0;width:100%;overflow:hidden}
+html {height:100%}
+body {min-height:100%}
+body.not-min {min-height:0}
+ol, ul {list-style:none}
+table {border-collapse:collapse;border-spacing:0}
+table, th, td {vertical-align:middle}
+a {-webkit-tap-highlight-color:transparent;text-decoration:none;color:#27282d}
+input, button {border:0;background-color:transparent}
+button::-moz-focus-inner {padding:0;border:0}
+strong, span, em, u {vertical-align:baseline}
+img {vertical-align:top}
+small, .text-small {font-size:0.625rem}
+fieldset {display:block;border:0}
+legend {overflow:hidden;position:absolute;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px}
+caption {font-size:0;line-height:0;visibility:hidden}
+:before, :after {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+
+/***** common *****/
+/* component */
+.ipt {display:inline-block;width:100%;height:2.142857142857em;font-size:0.875rem;/*line-height:2.142857142857em;*/border:0.07142857em solid #d7dbde;border-radius:0.142857142857em;background-color:#fff;padding:0 0.523809523809em;-webkit-appearance:none;}
+.ipt.ipt-medium {height:2.25rem}
+.ipt.ipt-large {height:2.6470588235294em;border-width:0.05882352941176em;border-radius:0.117647058823529em;font-size:1.0625rem;line-height:2.75em}
+.textarea {display:inline-block;width:100%;height:4em;font-size:0.875rem;line-height:1.42857142857em;border:0.07142857em solid #d7dbde;border-radius:0.142857142857em;padding:0.3333333333em 0.523809523809em;-webkit-appearance:none}
+.textarea.textarea-large {height:12.857142857em}
+.selectbox {display:inline-block;width:100%;height:2.142857142857em;font-size:0.875rem;line-height:2.142857142857em;border:0.07142857em solid #d7dbde;border-radius:0.142857142857em;padding:0 0.523809523809em;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_selectbox.png') no-repeat 95% 50%;background-size:auto 0.357142857142857em;-webkit-appearance:none}
+.radio {display:inline-block;position:absolute;left:-9999px;opacity:0}
+.radio + label {display:inline-block;position:relative;font-size:0.875rem;line-height:1.42857142857em;padding-left:2.07142857142857em}
+.radio + label:before {content:'';display:block;position:absolute;top:0;left:0;width:1.25em;height:1.25em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_radio.png') no-repeat 0 0;background-size:300% 100%}
+.radio:checked + label:before {background-position:100% 0}
+.checkbox {display:inline-block;position:absolute;left:-9999px;opacity:0}
+.checkbox + label {display:inline-block;position:relative;font-size:0.875rem;line-height:1.42857142857em;padding-left:2.07142857142857em;vertical-align:top}
+.checkbox + label:before {content:'';display:block;position:absolute;top:0;left:0;width:1.125em;height:1.125em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_checkbox.png') no-repeat 0 0;background-size:300% 100%}
+.checkbox:checked + label:before {background-position:100% 0}
+.checkbox.checkbox-text-small + label {font-size:0.75rem;line-height:1.5em;padding-left:2.1111111111em}
+.btn {display:inline-block;width:100%;height:2.5em;font-size:0.75rem;line-height:2.5833333333em;background-color:#acb7c7;color:#fff;text-align:center;border-radius:0.167em;-webkit-appearance:none}
+.btn.btn-medium {height:2.8125rem;font-size:1.0625rem;line-height:2.8125rem;border-radius:0.142857142857em}
+.btn.btn-large {height:3.125em;font-size:1rem;line-height:3.1875em;border-radius:0.125em}
+.btn.btn-blue {background-color:#0eb6e6}
+.btn.btn-black {background-color:#27282d}
+.btn.btn-white {border:0.0833333333em solid #000;background-color:#fff;color:#000}
+.btn-radius {display:inline-block;height:2.5em;padding:0 1.0833333333em;border:0.0833333333em solid #0eb6e6;border-radius:1.25em;font-size:0.75rem;line-height:2.5833333333em;color:#0eb6e6}
+.btn-radius-arrow {display:inline-block;overflow:hidden;position:relative;height:2.4615384615384em;padding:0 2.179487179487179em 0 1.102564102564em;border:0.076923076923em solid #0eb6e6;border-radius:1.230769230769em;font-size:0.8125rem;line-height:2.3846153846em;color:#0eb6e6}
+.btn-radius-arrow:before {content:'';display:block;position:absolute;top:50%;right:1em;width:1em;height:1em;margin-top:-0.5em;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_arrow_blue.png') no-repeat 100% 25%;background-size:51.28205128205% auto}
+.btn-toggle {display:inline-block;width:1.0416666666em;height:0.7291666666em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/btn_toggle.png') no-repeat 0 50%;background-size:3em auto;line-height:0;text-indent:-9999px}
+.btn-toggle.active {background-position:100% 50%}
+
+/* layout */
+.col-2:after, .clearfix:after {content:'';display:block;clear:both}
+
+/* font */
+.text-white {color:#fff !important}
+.text-blue {color:#0eb6e6 !important}
+.text-red {color:#ff5b62 !important}
+.text-gray {color:#909799 !important}
+.text-palegray {color:#c2c2c2 !important}
+.text-darkgray {color:#63717d !important}
+.text-lightgray {color:#929ca3 !important}
+.text-black {color:#27282d !important}
+.text-bold, strong {font-weight:bold}
+.text-underline {text-decoration:underline !important}
+.text-center {text-align:center}
+
+/* bg */
+.bg-white {background-color:#fff !important}
+.bg-gray {background-color:#f7f9fc !important}
+.bg-black {background-color:#000 !important}
+
+/* etc */
+.show {display:block !important}
+.hidden {display:none !important}
+.hide {display:block;overflow:hidden;height:0;margin:0;padding:0;line-height:0;text-indent:-99999px}
+.blind {display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+.ellipsis {white-space:nowrap;width:100%;overflow:hidden;text-overflow:ellipsis}
+.dim {content:'';display:block;position:absolute;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,0.5);z-index:1}
+
+/* list */
+.list {font-size:0.875rem;line-height:1.42857142857em;padding-left:1.142857142857em;border-top:0.07142857142857em solid #e5e9ec;border-bottom:0.07142857142857em solid #e5e9ec}
+.list.full {padding-left:0}
+.list.full.pd-left {padding-left:1.142857142857em;padding-right:1.142857142857em}
+.list dt {clear:both;width:7.61904761904em;float:left;padding:0.88095238em 0 0.7857142857em;color:#63717d;border-top:0.07142857142857em solid #eef1f4}
+.list dd {margin-left:7.6em;padding:0.88095238em 1.142857142857em 0.7857142857em 0;border-top:0.07142857142857em solid #eef1f4}
+.list dl:first-of-type dt:first-of-type, .list dl:first-of-type dd:first-of-type {border:0}
+.list li {position:relative}
+.list.col-2 {padding:0 1.142857em}
+.list.col-2 li {width:50%;float:left;padding:0.6547619em 0}
+.list.col-2 li.full {width:100%}
+.list.full li {padding:1.095238095238em 0.857142857em 0.97619047619em;/*line-height:1.22;*/border-bottom:0.07142857142857em solid #eef1f4}
+.list.full.line_hide{padding-bottom:0.333333rem}
+.list.full.line_hide li{border-bottom:0}
+.list.full.line_hide li label{display:block;padding:0.5rem 0 0.791666rem 0}
+.list.full li em.required{color:#ff5b62}
+.list.full.pd-left li {padding:0.625rem 0}
+.list.full li:last-child {border:0}
+.list.full + .text-gray{padding:1rem;font-size: 0.75rem;line-height: 1.125rem;color:rgb(99, 113, 125)!important;word-break:keep-all}
+
+.list.blt {padding:0.3333333333em 1.2em 0;border:0;font-size:0.75rem;line-height:1.3333333333em}
+.list.blt li {padding:0.3055555555em 0 0.3055555555em 0.8333333333em;word-break:keep-all}
+.list.blt li:before {content:'';display:block;position:absolute;top:0.5625em;left:0.1458333333em;width:0.125em;height:0.125em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/icon_dot.png') no-repeat 0 0;background-size:100% 100%}
+.list.dash {padding:1em 1.2em;border-top-width:0.0833333333em;border-bottom-width:0.0833333333em;font-size:0.75rem;line-height:1.5em}
+.list.dash li {padding:0.1666666666em 0 0.1666666666em 0.7333333333em;word-break:keep-all}
+.list.dash li:before {content:'';display:block;position:absolute;top:0.6458333333em;left:0;width:0.25em;height:0.0625em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/icon_dash.png') no-repeat 0 0;background-size:100% 100%}
+.list.arrow li:before {content:'';display:block;position:absolute;top:50%;right:0.8333333333em;width:0.4584em;height:0.85417em;margin-top:-0.427035em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_arrow.png') no-repeat 0 0;background-size:100% auto}
+.list.blt li a, .list.dash li a, .list.arrow li a {vertical-align:baseline}
+.list.blt li li:before{background:#63717d; width:3px; height:1px; top: 0.7em;}
+.box {font-size:0.875rem;line-height:1.42857142857em;padding:0.8333333333em 0 0.8333333333em 1.142857em;border-top:0.07142857142857em solid #eef1f4;border-bottom:0.07142857142857em solid #eef1f4;background-color:#fff}
+
+/* music list */
+.list-control {overflow:hidden;height:2.5em;border-bottom:0.0625em solid #a6afb6;background-color:#fff}
+.list-control a {display:inline-block !important;overflow:hidden;position:relative;height:2.7857142857em;margin-left:1.357142857em;padding:0 0.547619047619em 0 1.357142857em;font-size:0.875rem;line-height:2.97619047619em}
+.list-control a:before {content:'';display:block;position:absolute;top:0;left:0;width:1em;height:100%;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_listen.png') no-repeat 0 50%;background-size:300% auto}
+.list-control .btn-listen-add {margin-left:0}
+.list-control .btn-listen-add:before {background-position:100% 50%}
+
+.list-music {border-top:0.0625em solid #eef1f4;background-color:#fff}
+.list-music li {position:relative;height:3.75em;padding:0 3.5em 0 0;border-bottom:0.0625em solid #eef1f4;line-height:1.49}
+.list-music a {display:block;position:relative;width:100%;height:100%;z-index:10}
+.list-music .thumbnail {overflow:hidden;position:absolute;top:50%;left:0.5em;width:3em;height:3em;margin-top:-1.5em}
+.list-music .thumbnail:before {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:0.0625rem solid rgba(0,0,0,0.1)}
+.list-music .thumbnail img {display:block;width:100%}
+.list-music.normal .num {position:absolute;top:0;left:0;width:2.875em;line-height:3.75em;text-align:center}
+.list-music .info {padding:0.6458333333em 0 0 4.2083333333em}
+.list-music.normal .info {padding-left:2.875em}
+.list-music .disabled .info {opacity:0.5}
+.list-music .track {display:block;font-size:0.875rem}
+.list-music .artist {display:block;padding-top:0.08333333333em;font-size:0.75rem}
+.list-music .blt-playing {display:none;width:0.92857142857em;margin:0.3095238095238em 0.38095238095238em 0 0.142857142857em;vertical-align:top}
+.list-music .blt-playing.active {display:inline-block}
+.list-music .blt-title {display:inline-block;overflow:hidden;height:1.3em;padding:0 0.2333333333em 0;margin:0.4em 0.4em 0 0;border-radius:0.1em;font-size:0.625rem;line-height:1.4em;background-color:#0eb6e6;color:#fff;vertical-align:top}
+.list-music .blt-19 {display:inline-block;overflow:hidden;width:1.6em;height:1.6em;margin:0.2em 0.4em 0 0;font-size:0.625rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_19.png') no-repeat 0 0;background-size:100% 100%;line-height:0;text-indent:-9999px;vertical-align:top}
+.list-music .controls {position:absolute;top:0;right:0.25em;width:3em;height:100%}
+.list-music .disabled .controls {opacity:0.5}
+.list-music .controls button {display:block;position:relative;width:100%;height:100%}
+.list-music .controls button:before {content:'';display:block;position:absolute;top:50%;left:50%;width:1.5em;height:1.5em;margin:-0.75em 0 0 -0.75em;background:url('//image.genie.co.kr/imageg/mobile_web/common/btn_play.png') no-repeat 0 0;background-size:300% 100%}
+.list-music .controls .btn-pause:before {background-position:100% 0}
+.list-album {border-top:0.0625em solid #eef1f4}
+.list-album li {position:relative;height:4.75em;border-bottom:0.0625em solid #eef1f4;line-height:1.27}
+.list-album a {display:block;width:100%;height:100%;padding:0 2.875em 0 4.2083333333em;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_arrow.png') no-repeat 96.296% 50%;background-size:0.4583333333em auto}
+.list-album .thumbnail {overflow:hidden;position:absolute;top:50%;left:0.5em;width:3em;height:3em;margin-top:-1.5em}
+.list-album .thumbnail:before {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:0.0625rem solid rgba(0,0,0,0.1)}
+.list-album .thumbnail img {display:block;width:100%}
+.list-album .info {padding-top:0.8541666666em}
+.list-album .album-title {display:block;padding-bottom:0.142857142857em;font-size:0.875rem}
+.list-album .artist, .list-album .date {display:block;font-size:0.75rem}
+
+/* reply */
+.reply .profile {overflow:hidden;position:absolute;width:2.125em;height:2.125em;margin-right:1.829268%;border-radius:50%}
+.reply .profile:before {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:0.0625em solid rgba(0,0,0,0.1);border-radius:50%}
+.reply .profile img {display:block;width:100%;border-radius:50%}
+.reply .comment {position:relative;text-align:left}
+.reply .btn-submit {display:block;position:absolute;top:0;bottom:0;right:0;width:3.1875em;line-height:0;text-indent:-9999px;z-index:10}
+.reply .btn-submit:before {content:'';display:block;position:absolute;top:50%;left:1.0416666666em;width:1.125em;height:1.125em;margin-top:-0.5625em;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_reply.png') no-repeat 0 0;background-size:5em auto}
+.reply .btn-more {display:block;width:100%}
+.reply .btn-more span {display:inline-block;position:relative;height:3.3055555555em;padding:0 3.36111111111em 0 2em;font-size:0.75rem;line-height:3.30555555555em}
+.reply .btn-more span:before {content:'';display:block;position:absolute;top:50%;right:1.5em;width:0.6875em;height:0.375em;margin-top:-0.2291666666em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_reply.png') no-repeat 0 -3.83333333333em;background-size:5em auto}
+.reply .input-comment {padding:1.0625em 1em 1em;background-color:#f7f9fc;border-bottom:0.0625em solid #eef1f4}
+.reply .input-comment .user {position:relative;height:2.125em;margin-bottom:0.6875em;padding-left:2.5em}
+.reply .input-comment .profile {top:0;left:0}
+.reply .user a {display:block;overflow:hidden;float:left;position:relative;width:48.26%;height:3.09090909090909em;margin-left:1.52439%;padding:0 4.5731707317% 0 10.365853658536%;border-radius:1.54545454545454em;font-size:0.6875rem;line-height:3.181818181818em;text-align:center}
+.reply .user .info {display:block}
+.reply .user a:before {content:'';display:block;position:absolute;top:0.6444444444em;left:7.43405275779%;width:0.9375em;height:0.9375em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_reply.png') no-repeat 0 -1.4375em;background-size:5em auto}
+.reply .user a.disconnect {opacity:0.5}
+.reply .user .btn-fb {background-color:#365097}
+.reply .user .btn-twitter {background-color:#3999e1}
+.reply .user .btn-twitter:before {background-position:-1.1875em -1.4375em}
+.reply .textarea {overflow:hidden;height:2.857142857142857em;min-height:2.857142857142857em;padding:0.6666666666em 3.642857142857em 0.6666666666em 0.8095238095238em;resize:none}
+.reply .btns {padding-bottom:0.3958333333em}
+.reply .btns button {display:inline-block;position:relative;line-height:2}
+.reply .btns button:before {content:'';display:block;position:absolute;top:50%;left:0;width:1em;height:0.9375em;font-size:1rem;margin-top:-0.45em;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_reply.png') no-repeat 0 -2.6875em;background-size:5em auto}
+.reply .btns .btn-like {padding:0 1em 0 1.375em}
+.reply .btns .btn-like.active:before {background-position:-1.1875em -2.6875em}
+.reply .btns .btn-reply {margin-left:1.4583333333em;padding:0 1em 0 1.375em}
+.reply .btns .btn-reply:before {background-position:-2.375em -2.6875em}
+.reply .btns .btn-report {display:block;position:absolute;top:0;right:0;width:3em;height:3em}
+.reply .btns .btn-report:before {left:1em;margin-top:-0.58333333333em;background-position:-3.625em -2.6875em}
+.reply .btns .btn-del {display:block;position:absolute;top:0;right:0;width:3em;height:3em}
+.reply .btns .btn-del:before {left:1em;width:1em;height:1em;margin-top:-0.5em;background-position:-2.625em 0}
+.reply .list-comment li {display:block;position:relative;padding:0.875em 1em 0 3.75em;border-bottom:0.0625em solid #e5e9ec}
+.reply .list-comment .profile {top:1em;left:1em}
+.reply .list-comment .info {line-height:1.27}
+.reply .list-comment .user {display:inline-block;vertical-align:top}
+.reply .list-comment .icon {display:inline-block;width:1em;height:1em;margin:0.125em 0 0 0.0416666666em;font-size:1rem;line-height:0;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_reply.png') no-repeat -2.375em -1.4375em;background-size:5em auto;text-indent:-9999px;vertical-align:top}
+.reply .list-comment .icon.blt-fb {background-position:-3.625em -1.4375em}
+.reply .list-comment .date {display:block;padding-top:0.05555555555em;font-size:0.75rem}
+.reply .list-comment .txt, .popup .reply .list-comment .txt {display:block;padding:0.6666666666em 0 0.311111111111em;font-size:0.9375rem;line-height:1.466666666666em;text-align:left;word-break:break-all}
+.reply .list-comment .no-data {display:block;padding:5em 0;font-size:0.9375rem;line-height:1.4666666666em;text-align:center}
+.reply .list-reply {display:none;margin:0 -1em 0 -3.75em;padding:0 1em 0 3.5em;border-top:0.0625em solid #e5e9ec;background-color:#f7f9fc}
+.reply .list-reply.active {display:block}
+.reply .list-reply li {padding:0.6875em 0 0 0.3125em}
+.reply .list-reply li:before, .reply .input-reply .comment:before {content:'';display:block;position:absolute;top:1.22916666666em;left:-1.9166666666em;width:1em;height:1.1875em;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_reply.png') no-repeat -1.375em 0;background-size:5em auto}
+.reply .input-reply .comment:before {top:0.7291666666em}
+.reply .list-reply .profile {top:0.875em;left:0.125em;width:1.875em;height:1.875em}
+.reply .list-reply .info {padding-left:2.25em}
+.reply .list-reply .user {display:inline-block;font-size:0.9375rem}
+.reply .list-reply .icon {margin-top:0.08333333333em}
+.reply .list-reply .date {padding-top:0}
+.reply .list-reply .txt {padding:0.6923076923em 0 0.4102564102564em;font-size:0.8125rem;line-height:1.3846153846em}
+.reply .list-reply .btns {padding-bottom:0.5625em}
+.reply .list-reply .btn-like {padding-left:1.743589743589em;font-size:0.8125rem;line-height:2.230769230769em}
+.reply .list-reply .btn-report, .reply .list-reply .btn-del {right:-1em}
+.reply .input-reply .comment {position:relative;margin-top:1em}
+.reply .input-reply .btn-fold {display:block;width:100%}
+.reply .input-reply .btn-fold span {display:inline-block;position:relative;height:3.3055555555em;padding:0 3.36111111111em 0 2em;font-size:0.75rem;line-height:3.30555555555em}
+.reply .input-reply .btn-fold span:before {content:'';display:block;position:absolute;top:50%;right:1.5em;width:0.66667em;height:0.375em;margin-top:-0.2291666666em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_reply.png') no-repeat -1.1875em -3.83333333333em;background-size:5em auto}
+
+/* share */
+.share {padding:3em 0 1em}
+.webview .share {padding-top:0}
+.share .title {padding:1.41666666666em 1em 1.3541666666em;line-height:1.1;background-color:#22333d}
+.popup .share .title .txt {display:block;padding:0;font-size:0.9375rem;line-height:1.1;text-align:left}
+.share .title .category {display:inline-block;font-size:0.75rem}
+.share .title .date {display:inline-block;position:relative;padding-left:1.0555555555em;font-size:0.75rem}
+.share .title .date:before {content:'|';display:block;position:absolute;top:0;left:0.388888888888em}
+.share .input-txt {padding:0.8125em 0.9375em 0.7708333333em}
+.share .list-sns {max-width:1080px;margin:0 auto;padding:0 8.3333333333%;text-align:center}
+.share .list-sns li {display:block;float:left;width:20%;padding:0 1.3333333333%}
+.share .list-sns a {display:block;position:relative;width:100%;padding:106.102564% 0 0.4333333333em;font-size:0.625rem;line-height:1.3}
+.share .list-sns a:before {content:'';display:block;position:absolute;top:0;left:0;width:100%;padding-top:100%;background:url('//image.genie.co.kr/imageg/mobile_web/common/btn_sns.png') no-repeat 0 0;background-size:100% 600%}
+.share .list-sns .btn-kakao:before {background-position:0 20%}
+.share .list-sns .btn-twitter:before {background-position:0 40%}
+.share .list-sns .btn-sms:before {background-position:0 60%}
+.share .list-sns .btn-copy:before {background-position:0 80%}
+.share .copy-url {position:absolute;top:0;left:-9999px}
+.share .copy-url.active {position:relative;top:auto;left:auto;padding:0 0.9375em}
+.share .copy-url.active .ipt {height:3.0238095238095em;margin-top:0.933333333333em}
+.share .copy-url .desc {display:block;padding:0.88888888888em 0 0 0.27777777777em;font-size:0.75rem;line-height:1.5555555555em}
+
+/* agreement */
+.agreement {padding-bottom:1em}
+.agreement .agree_area {padding:0 1.25em;font-size:0.75rem;line-height:1.41666666666em}
+.agreement .agree_area h1, .agreement .agree_area h2, .agreement .agree_area h3 {display:block;padding:1.38888888888em 0 0 0;font-size:0.75rem;line-height:1.41666666666em}
+.agreement .agree_area ol ol, .agreement .agree_area ul ul {padding-left:1em}
+.agreement .agree_area table {margin:0.5em 0 0 0;padding:0;font-size:0.625rem;border-spacing:0;border-collapse:collapse;border:1px solid #8c8c8c}
+.agreement .agree_area th {border:1px solid #8c8c8c;font-weight:bold;text-align:center}
+.agreement .agree_area td {padding:0 0.25em;border:1px solid #8c8c8c}
+.agreement .agree_area tr:first-of-type th, .agreement .agree_area tr:first-of-type td {border-top:0 none; box-shadow:0 0 0 0 transparent inset}
+.agreement .agree_area .date {display:block;text-align:right}
+.agree-information {padding:3em 0 1.25em;font-size:1rem}
+
+.agreement .index{display:none}
+.agreement .section{font-size:0.75rem;line-height:1.41666666666em}
+.agreement .section h4 {display:block;padding:1.38888888888em 0 0 0;font-size:0.75rem;line-height:1.41666666666em}
+.agreement .section ol ol{padding-left:1em}
+.agreement .section table {margin:0.5em 0 0 0;padding:0;font-size:0.625rem;border-spacing:0;border-collapse:collapse;border:1px solid #8c8c8c;width:100%}
+.agreement .section th {border:1px solid #8c8c8c;font-weight:bold;text-align:center;background:#e2e2e2;color:#848484}
+.agreement .section td {padding:0 0.25em;border:1px solid #8c8c8c}
+.agreement .section tr:first-of-type th, .agreement .section tr:first-of-type td {border-top:0 none; box-shadow:0 0 0 0 transparent inset}
+
+.webview .agree-information {padding-top:0}
+.agree-information .title-wrap {padding:0 0 0.9791666666em;border-bottom:0.0625em solid #d7dbde}
+.agree-information .sub-title {position:relative;line-height:1.5em;padding:0.7291666666em 1em 0.2916666666em}
+.agree-information .list.blt {font-size:0.75em}
+.agree-information .list.blt li {padding-top:0;padding-bottom:0}
+.agree-information .list.blt li:before {top:0.3958333333em}
+.agree-information .desc {display:block;padding:1.111111111em 0 1em;font-size:0.75em;line-height:1.4166666666}
+.agree-information .info-wrap {padding:0 1em}
+.agree-information .info .title {display:block;height:2.8333333333em;padding:0;border:0.0625em solid #d7dbde;border-radius:0.2916666666em 0.2916666666em 0 0;font-size:1em;line-height:2.6458333333em;background-color:#f7f9fc;text-align:center}
+.agree-information .info dl {border-right:0.0625em solid #d7dbde;border-bottom:0.0625em solid #d7dbde;border-left:0.0625em solid #d7dbde;border-radius:0 0 0.2916666666em 0.2916666666em;line-height:1.42857142857}
+.agree-information .info dl:first-of-type dt:first-of-type, .agree-information .info dl:first-of-type dd:first-of-type {border:0}
+.agree-information .info dl:after {content:'';display:block;clear:both}
+.agree-information .info dt {clear:both;width:4.8333333333em;float:left;padding:0.7619047619em 0 0.8333333333em 1.0238095238095em;border-top:0.07142857142857em solid #d7dbde;font-size:0.875em}
+.agree-information .info dd {min-height:3.095238095238em;margin-left:4.8333333333em;padding:0.7619047619em 1.42857142857em 0.8333333333em 0;border-top:0.07142857142857em solid #d7dbde;font-size:0.875em;color:#63717d}
+.agree-information .info .list.blt {margin:0.777777778em 0 1.2222222222em;padding-left:0.3055555555em}
+.agree-information .btn-wrap {padding-top:2.5em}
+.popup .agree-information {padding:0;font-size:0.875rem}
+.popup .agree-information .sub-title {padding:0.595238095238em 1em 0}
+.popup .agree-information .list.blt {padding:0 1.2em}
+.popup .agree-information .list.blt li:before {top:0.2708333333em}
+.popup .agree-information .desc {padding:1.19354838709em 0 0.64516129032258em}
+.popup .agree-information .info .title {height:2.6190476190476em;line-height:2.5em}
+.popup .agree-information .info .list.blt {margin:0.8064516129em 0 1.516129032258em 0.258064516129em;padding:0}
+.popup .agree-information .title-wrap, .popup .agree-information .info .title, .popup .agree-information .info dl {border-width:0.07142857142857em}
+.popup .agree-information .info dt, .popup .agree-information .info dd {padding-top:0.8333333333em;border-width:0.08333333333em}
+.popup .agree-information .info dd {min-height:3.25em}
+
+
+/* header */
+.header {position:relative;width:100%;border-bottom:0.0625em solid #a6afb6;background-color:#fff;z-index:10}
+.header.transparent {border:0;background:transparent}
+.header.fixed {position:fixed;top:0;left:0;width:100%;z-index:500}
+.header.mask.fixed {background:rgba(0,0,0,0.8)}
+.header.has-nav {height:5.625em;z-index:500}
+.header .gnb {position:relative;height:3em}
+.header .logo {display:block;width:4.3125em;height:2.875em;margin-left:0.7708333333em;line-height:0;background:url('//image.genie.co.kr/imageg/mobile_web/common/logo.png') no-repeat 0 50%;background-size:100% auto;text-indent:-9999px}
+.header .logo a {display:block;width:100%;height:100%}
+.header .home {display:block;width:3.625em;height:100%;line-height:0;background:url('//image.genie.co.kr/imageg/mobile_web/common/btn_gnb.png') no-repeat 50% 0;background-size:2em auto;text-indent:-9999px}
+.header.transparent .home {background-position:50% 75%}
+.header .home a {display:block;width:100%;height:100%}
+.header .back {display:block;width:3.625em;height:100%;line-height:0;background:url('//image.genie.co.kr/imageg/mobile_web/common/btn_gnb.png') no-repeat 50% 25%;background-size:2em auto;text-indent:-9999px}
+.header.transparent .back {background-position:50% 100%}
+.header .back a {display:block;width:100%;height:100%}
+.header .close {display:block;width:3.625em;height:100%;line-height:0;background:url('//image.genie.co.kr/imageg/mobile_web/common/btn_gnb.png') no-repeat 50% 50%;background-size:2em auto;text-indent:-9999px}
+.header .close a {display:block;width:100%;height:100%}
+.header .list-gnb .menu {display:block;position:absolute;top:0.25em;width:2.5em;height:2.5em;line-height:0;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_gnb.png') no-repeat 0 0;background-size:300% auto;text-indent:-9999px}
+.header .list-gnb .btn-app {right:6.6875em}
+.header .list-gnb .btn-payment {right:3.625em;background-position:50% 0}
+.header .list-gnb .btn-profile {overflow:hidden;right:0.5625em;border-radius:50%;background-position:100% 0}
+.header .list-gnb .btn-profile.st-login:before {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:0.0625em solid rgba(204,204,204,0.1);border-radius:50%;z-index:10}
+.header .list-gnb .profile {display:block;width:100%;height:100%;border-radius:50%}
+.header .list-gnb .info {position:absolute;top:-100%;left:0;right:0;height:3em;padding:0.5em 0 0 0.6875em;background-color:#fff;opacity:0;-webkit-transition:opacity 0.1s, top 0.01s linear 0.12s;transition::opacity 0.1s, top 0.01s linear 0.12s}
+.header .list-gnb .info.active {top:0;opacity:1;-webkit-transition:opacity 0.2s;transition:opacity 0.2s}
+.header .list-gnb .user {display:inline-block;margin-right:0.3333333333em;font-size:0.875rem}
+.header .list-gnb .btn-close {display:block;position:absolute;top:0.25em;right:0.5625em;width:2.5em;height:2.5em;line-height:0;background:url('//image.genie.co.kr/imageg/mobile_web/common/btn_close.png') no-repeat 0 0;background-size:100% auto;text-indent:-99999px}
+.header .gnb .title {display:block;position:absolute;top:0.05em;left:2.9em;right:2.8em;width:auto;padding:0;font-size:1.25rem;line-height:2.45em;font-weight:600}}
+.nav {position:relative;width:100%;background-color:#fff;z-index:500}
+.nav.fixed {position:fixed;top:0;left:0;border-bottom:0.0625em solid #a6afb6}
+.nav li {display:block;float:left;position:relative;width:25%;height:2.92857142857em;font-size:0.875rem;line-height:3em;text-align:center}
+.nav.col-2 li {width:50%}
+.nav .active:before {content:'';display:block;position:absolute;bottom:-0.07142857142857em;left:0;width:100%;height:0.142857142857em;background-color:#0eb6e6}
+.nav a {display:block;width:100%;height:100%}
+.nav .active a {color:#0eb6e6}
+
+.footer {overflow:hidden;position:absolute;bottom:0;left:0;width:100%;height:13.0625em;background-color:#fff;text-align:center}
+.footer .btn-top {display:inline-block;overflow:hidden;height:2.80555em;padding-left:1.4722222222em;font-size:0.75rem;line-height:2.88888888888em;background:url('//image.genie.co.kr/imageg/mobile_web/common/blt_top.png') no-repeat 0 50%;background-size:0.97223em auto}
+.footer .btn-app {display:inline-block;height:2.46153846153846em;padding:0 1.02564102564em 0 1.205128205128em;margin:1.6666666666em 0 0;border:0.076923076923em solid #929ca3;border-radius:1.230769230969em;font-size:0.8125rem;line-height:2.38461538461538em}
+.footer .menu {display:block;padding:0.5833333333em 0 0;font-size:0.75rem}
+.footer .menu li {display:inline-block;position:relative;line-height:1.5em}
+.footer .menu a {display:block;padding:0.5em 1.083333333333em;line-height:1.5em}
+.footer .menu li:first-child:before {content:'';display:block;position:absolute;top:50%;right:-0.2222222222em;width:1px;height:1em;margin-top:-0.5em;background-color:#c2c2c2}
+.footer .info {font-size:0.625rem;line-height:1.5em}
+.footer .info dt, .footer .info dd {display:inline-block;position:relative}
+.footer .info dd:first-of-type {padding-right:0.8333333333em}
+.footer .info dd:first-of-type:before {content:'|';display:block;position:absolute;top:0;right:0.1em}
+.footer .copyright {display:block;padding:0.9666666666em 0 1.5em;vertical-align:top}
+
+/* popup */
+.popup {display:none;position:fixed;top:0;left:0;width:100%;font-size:1rem;overflow:hidden;background:rgba(0,0,0,0.4);z-index:1000}
+.popup sup{line-height:0;vertical-align:super}
+.popup.full, .popup.full .pop-wrap, .popup.full .pop-contents {width:100%;height:100%;border-radius:0}
+.popup.landing-app {background:rgba(0,0,0,0.8)}
+.popup .pop-wrap {overflow-x:hidden;overflow-y:auto;width:77.777777777777%;margin:0 auto;max-height:100%;border-radius:0.125em;-webkit-overflow-scrolling:touch;z-index:10}
+.popup.pop-large .pop-wrap {width:88.8888888888%}
+.popup.full .pop-wrap {overflow-y:hidden}
+.popup .pop-hd {font-size:1.0625rem;line-height:2.8235294117em;color:#fff;background-color:#0eb6e6;text-align:center}
+.popup .pop-contents {position:relative;font-size:0.9375rem;line-height:1.4666666666em;background-color:#fff;max-height:100%;overflow:auto}
+.popup .pop-contents.narrow {padding:0 0.9333333333em}
+.popup .pop-contents.no-ft {padding-bottom:0.8444444444em;border-radius:0 0 0.1333333333em 0.1333333333em}
+.popup .pop-contents .txt {padding:1em;text-align:center}
+.popup .pop-contents .bigtxt{font-size:1.5rem}
+.popup .pop-contents .btn-wrap{padding:1.083333333333em 0}
+.popup .pop-contents .text-small {font-size:0.875rem}
+.popup .pop-contents .text-small a {vertical-align:baseline}
+.popup .pop-contents .line {padding:1em;border-top:0.07142857142857em solid #e5e9ec;color:#27282d}
+.popup .pop-contents .line .list {margin-top:0.15em}
+.popup h3 {font-size:0.9375rem;padding:0}
+.popup h3.title {padding:0.9333333333em 0 0.68888888888em 0.6em}
+.popup .list {margin-top:0.5555555555em;padding:0}
+.popup .list li {padding-top:0.1666666666em;padding-bottom:0.1666666666em}
+.popup h3.title + .list-border {border-top:0.07142857142857em solid #e5e9ec}
+.popup .list-border li {padding:0.595238095238095em 1.142857142857em 0.8095238095238em 1.142857142857em;border-top:0.07142857142857em solid #e5e9ec}
+.popup .list-border li:first-child {border-top:0}
+.popup .list-note {font-size:0.625rem;line-height:1.4em;word-break:keep-all;padding-top:0.5238095238em}
+.popup .list-note li {position:relative;padding:0.2em 0 0.2em 1.1em}
+.popup .list-note li:before {content:'※';display:block;position:absolute;top:0.2em;left:0;font-size:0.625rem}
+.popup .box-agree {padding:0.6888888888em 0 1.6em !important}
+.popup .ipt-form {padding:1em 2.5333333333em 0.53333333333em}
+.popup .ipt-form.large {padding:0.5333333333em 0 0 0}
+.popup .ipt-form .lb-title {display:block;line-height:2.3333333333em}
+.popup .ipt-form .ipt {margin:0.2142857142857em 0}
+.popup .ipt-form.large .ipt {margin:0}
+.popup .ipt-form .ipt-small-wrap {overflow:hidden;padding-bottom:0.6666666666em}
+.popup .ipt-form .ipt-small-wrap .ipt {display:block;width:21.91%;float:left;text-align:center;font-weight:bold}
+.popup .ipt-form .ipt-small-wrap.col-3 .ipt {width:30.2%}
+.popup .ipt-form .ipt-small-wrap .bar {display:block;width:4.1%;height:2.142857142857em;font-size:0.875rem;float:left;background:url('//image.genie.co.kr/imageg/mobile_web/common/icon_bar.png') no-repeat 50% 50%;background-size:0.42857142857em auto;line-height:0;text-indent:-9999px}
+.popup .ipt-form .ipt-small-wrap.col-3 .bar {width:4.7%}
+.popup .ipt-form .ipt-small-wrap.col-2 .ipt {width:45%}
+.popup .ipt-form .ipt-small-wrap.col-2 .at{display:block;width:10%;height:2.142857142857em;font-size:0.875rem;line-height:2.142857142857em;float:left;text-align:center}
+.popup .ipt-form .ipt-small-wrap.col-2 .selectbox{width:45%;color:#dfe0e0}
+.popup .ipt-form .btn-wrap {padding:0.7142857142857em 0}
+.popup .ipt-form .desc {display:inline-block;padding:0.7333333333em 0 0.233333333em;line-height:1.4em;word-break:keep-all}
+.popup .loading {display:block;font-size:0.625rem;width:4em;height:1em;margin:0 auto 1em;background:url('//image.genie.co.kr/imageg/mobile_web/common/loading.gif') no-repeat 50% 100%;background-size:100% auto;line-height:0;text-indent:-9999px;padding-top:4em}
+.popup .pop-landing {width:79.642857142857%;padding:1em 0 0.25em;margin:0 auto}
+.popup .pop-landing .btn-app {display:block;overflow:hidden;position:relative;width:100%;height:2.5em;padding-left:1.3148148148148em;border-radius:1.22222222222em;font-size:1.125rem;letter-spacing:-1px;line-height:2.648148148148em;background-color:#09b6e6;color:#fff}
+.popup .pop-landing .btn-app:before {content:'';display:block;position:absolute;top:0.1875em;left:0.1875em;width:2.4375em;height:2.4375em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/logo_round.png') no-repeat 0 0;background-size:100% 100%}
+.popup .pop-landing .btn-later {display:inline-block;margin:2.095238095238em auto 0;padding:0.5em 1em;font-size:0.875rem;line-height:1.5em;text-decoration:underline}
+.popup .pop-ft {border-top:0.0625em solid #a6afb6;text-align:center;background-color:#eef1f4;;z-index:20}
+.popup .btn-pop {display:inline-block;width:100%;font-size:1rem;line-height:2.6875em;background-color:#eef1f4}
+.popup .pop-ft.col-2 .btn-pop:first-child {width:50.3125%;float:left;border-right:0.0625em solid #95a1ab}
+.popup .pop-ft.col-2 .btn-pop:last-child {width:49.6875%;float:left}
+.popup .btn-close {display:block;font-size:1rem;width:2.5em;height:2.5em;margin:1.25em auto 0;background:url('//image.genie.co.kr/imageg/mobile_web/popup/btn_close.png') no-repeat 50% 50%;background-size:100% auto;line-height:0;text-indent:-9999px}
+.popup .header {position:absolute;top:0;left:0;font-size:1rem}
+.popup .scroll-wrap {overflow-x:hidden;overflow-y:auto;position:absolute;top:0;bottom:0;width:100%;padding-top:3em;font-size:1rem;-webkit-overflow-scrolling:touch}
+
+.popup .popup-info{width:100%;box-sizing:border-box;text-align:left;padding:0 0.7rem 0 1.2rem}
+.popup .popup-info ul{padding-left:0;padding-top:7px;word-break:keep-all}
+.popup .popup-info ul li{position:relative;padding-left:0.6rem;padding-bottom:0.3rem;text-align:left;font-size:0.8rem}
+.popup .popup-info ul li:before{content:'';display:block;position:absolute;top:0.5rem;left:0;width:3px;height:3px;background:#000;border-radius:50%}
+
+.toast-popup {display:none;position:fixed;bottom:0;left:0;width:100%;padding:1.1458333333em 0 1.0625em;font-size:1rem;overflow:hidden;background-color:#27282d;z-index:1000}
+.toast-popup .pop-contents {padding:0 4.0833333333em 0 1.6666666666em;font-size:0.75rem;line-height:1.3333333333}
+.toast-popup .pop-contents .text-center {padding:0 0.76923076923em 0 3.25em;word-break:keep-all}
+.toast-popup .btn-pop {display:inline-block;overflow:hidden;height:2.46153846153846em;margin:0 0.051282051282em;padding:0 1.3076923076923em 0 1.4358974358974em;border:0.076923076923em solid #acb7c7;border-radius:1.230769230769em;font-size:0.8125rem;line-height:2.410256410256em;color:#acb7c7}
+.toast-popup .pop-ft {padding:0.5833333333em 0 0.2083333333em}
+.toast-popup .btn-pop.btn-blue {border-color:#0eb6e6;color:#0eb6e6}
+.toast-popup .btn-close {display:block;position:absolute;top:0.25em;right:0.3125em;font-size:1rem;width:2.75em;height:2.75em;background:url('//image.genie.co.kr/imageg/mobile_web/popup/btn_toast_close.png') no-repeat 50% 50%;background-size:31.818181818181818181% auto;line-height:0;text-indent:-9999px}
+
+/* set font size */
+html {font-size:16px}
+@media screen and (min-width: 405px){
+	html {font-size:18px}
+}
+/*
+@media screen and (min-width: 1080px){
+	html {font-size:48px}
+}*/
+/* for safari */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0), not all and (min-resolution:.001dpcm) {
+	@media {
+		.btn {line-height:2.6667em}
+		.btn.btn-large {line-height:3.3125em}
+		.btn-radius-arrow {padding-top:0.051282051258em}
+		.list-control .btn-listen {line-height:3.047619047619em}
+		.list-album .info {padding-top:0.91666666666em}
+		.list-music .blt-title {margin-top:0.2666666666em;line-height:1.5em}
+		.list-music .blt-19 {margin-top:0.1em}
+		.header .gnb .title {top:0.1333333333333em}
+		.reply .user a {padding-top:0.090909090909em}
+		.reply .list-comment .icon {margin-top:0.08333333333em}
+		.reply .list-comment .txt {padding-top:0.8em}
+		.reply .btns button:before {margin-top:-0.52083333333em}
+		.reply .list-reply li {padding-top:0.7708333333em}
+		.reply .btn-more span:before {margin-top:-0.22916666666em}
+		.agree-information .info .title {line-height:2.8333333333em}
+		.agree-information .info dt {padding:0.8333333333em 0 0.7619047619em 1em}
+		.agree-information .info dd {padding:0.8333333333em 1.42857142857em 0.7619047619em 0}
+		.agree-information .list.blt li:before {top:0.3333333333em}
+		.popup .agree-information .info .title {line-height:2.6190476190476em}
+		.toast-popup {padding-top:1.2291666666em}
+		.toast-popup .btn-pop {padding-top:0.051282051282em}
+		.popup .pop-landing .btn-app {line-height:2.6666666667em}
+  }
+}
+/*함께듣기 추가 20171031*/
+.list .double-line-dt {
+	padding: 2.1952em 0 0.7857142857em;
+}
+
+/*20171219*/
+.add_ly .box-agree{padding:0.6888888888em 0 0.6em !important; background:#fcfcfe; border-top:1px solid #eef1f4; text-align:center; }
+
+/*20171221*/
+.payment .list.presa .use_info li{padding-left:0.8em}
+.payment .list.presa .use_info li:before{content: ''; width:4px; height:1px; background:#8c8c8c; top:9px;}
+.payment .uplus_btn{width:70%; font-size: 0.95rem; margin-top:15px; letter-spacing: -0.1em;}
+.list dt.line_t{padding-top:1.6em}
+.payment .gift_img{padding: 1.142857em; background:#ffffff; border-top: 0.07142857142857em solid #eef1f4; border-bottom: 0.07142857142857em solid #eef1f4; }
+.payment .gift_img ul{display:none;}
+.payment .gift_img img{width:100%;}
+
+.payment .use_send{background:#fff; padding-left:1.142857em; border-top: 0.07142857142857em solid #eef1f4; border-bottom: 0.07142857142857em solid #eef1f4;}
+.payment .use_send li{border-top:1px solid #eef1f4;position:relative; padding:0.8333333333em 4.7em 0.8333333333em 0}
+.payment .use_send li:first-child{border-top:none; }
+.payment .use_send li input:focus{border: 0.07142857em solid #000;}
+.payment .use_send li .txt{display:block; padding-top:0.8333333333em; font-size:12px; color:#8b8b8b; line-height:16px;}
+.payment .use_send li .txt em{color:#0eb6e6;}
+.payment .use_send li .btn {position:absolute;right:1.3333333333em;width:4.1666666666em;}
+
+/*2017.12.27 지니샵*/
+.shop_bnr img{width:100%; padding-top:15px;}
+
+/*2017.02.09 스페셜이용권 팝업*/
+.popup .hkt_tit{color:#282828;font-size:15px; text-align:center;padding:24px 0 10px; line-height:20px}
+.popup .hkt_tit strong{color:#0eb6e6; font-size:14px;}
+.popup .hkt_tit strong span{color:#282828;display:block;font-size:11px; margin-top:-2px}
+.popup .hkt_h4{color:#444444; font-size:12px}
+.popup .hkt_text{font-size:12px; padding-bottom:20px}
+.popup .hkt_text li{color:#a9a9a9; padding-left:12px; position: relative;font-size:12px; line-height: 1.6em; color:#999999}
+.popup .hkt_text li i{position: absolute;left:0; top:0; }
+.popup .hkt_text li a{color:#09b6e6}
+.popup .eng_info th, .popup .eng_info td{border:1px solid #dddddd; padding:10px 0; }
+.popup .eng_info{width:100%; font-size:13px; margin:0.9333333333em 0}
+.popup .eng_info th{background:#f5f3f3}
+.popup .eng_info th:first-child{text-align:left; text-indent:12px; }
+.popup .eng_info td{letter-spacing: -0.5px; line-height:16px; padding-left:12px;}
+@media screen and (max-width: 320px){
+.popup .hkt_tit{font-size:13px; line-height:16px;}
+.popup .hkt_tit strong{color:#0eb6e6; font-size:13px;}
+.popup .txt.hkt_p{line-height:18px}
+.popup .hkt_p{font-size:13px;}
+}
+.popup .cash_txt{padding:1em; font-size: 0.75rem; line-height:1.6em}
+.popup .cash_txt dd{position: relative; padding-left: 1.1em;}
+.popup .cash_txt dd:after{position: absolute;left:0.4em; top:0; content:"-"}
+
+
+/*180423 지니홈 멀티음악감상*/
+.popup.multi .pop-wrap{width:100%; text-align:center;letter-spacing:-0.021em}
+.popup.multi .pop-wrap h3{color:#0eb6e6; font-size:1.542em; padding:0.3em 0;}
+.popup.multi .pop-wrap .pop-contents{padding:0 1.042em}
+.popup.multi .pop-wrap .tit{background:#0eb6e6; color:#ffffff; font-size:0.833em; line-height:1.863em; height:1.763em;display:inline-block; border-radius: 0.925em; padding:0 1.042em; margin-top:1.875em}
+.popup.multi .pop-wrap p{font-size:0.917em; line-height:1.4em; padding-bottom:0.771em}
+.popup.multi .pop-wrap dl{text-align:left; border-top:0.063em solid #e5e9ec; padding:0.938em 0 0 0.417em; margin-top:1.2em}
+.popup.multi .pop-wrap dt{color:#27282d; padding-bottom:0.4em}
+.popup.multi .pop-wrap dd{font-size:0.875em; color:#63717d; line-height:1.18em; padding:0.554em 0 0 0.708em; position:relative}
+.popup.multi .pop-wrap dd:after{content:'';display:block;position:absolute;top:0.75em;left:0.1458333333em;width:0.125em;height:0.125em;font-size:1rem;background:url('//image.genie.co.kr/imageg/mobile_web/common/icon_dot.png') no-repeat 0 0;background-size:100% 100%}
+.popup.multi .pop-wrap .btn_ok{width:100%; background:#11b6e6; color:#ffffff;line-height:3.125em; border-radius:0.208em; margin:1.125em 0 0.625em}
+.popup.multi .checkbox.checkbox-text-small + label{font-size:100%; padding-left:1.7em}
+@media screen and (max-width: 320px){
+.popup.multi .pop-wrap .pop-contents{padding: 0 0.8em;}
+.popup.multi .pop-wrap h3{font-size:1.292em}
+.popup.multi .pop-wrap p{font-size:0.792em; letter-spacing: -0.021em}
+.popup.multi .pop-wrap dd{font-size:0.765em;}
+}
+
+/* 180502 이용권 */
+.buy_list{text-align: center; padding:1.833em 0}
+.buy_list li{font-size:0.867em; line-height: 1.2em; }
+.buy_list li .dot{color:#8c8c8c; }
+.buy_list li:first-child{margin-bottom:1.5em}
+.buy_list li span{color:#0eb6e5;}
+
+/* 180502 이용권 */
+.info_dm .pop-wrap{width:19em}

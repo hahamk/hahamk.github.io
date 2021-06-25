@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>Touch My Music - 지니</title>
+	<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,target-densitydpi=medium-dpi">
+	<meta name="author" content="GENIE SERVICE UX TEAM">
+	<meta name="description" content="KT 디지털 음악 어플리케이션 사이트">
+	<meta name="keywords" content="지니,GENIE,지니팩,지니뮤직,지니 플레이어,올레 뮤직,올레,KT,KT MUSIC,LG,LGU+,음악 사이트">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/ScrollTrigger.min.js"></script>
+	<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body class="mw"><!-- APP으로 접근 시 mw 클래스 제거 -->
+
+<div class="genius">
+
+	<div class="tab">
+		 <ul class="tabarea">
+			<li class="on" data-tab="tab1">지니어스 소개</li>
+			<li data-tab="tab2">사용 가이드</li>
+		</ul>
+    <div class="update">
+			이렇게 좋은 신규버전 설치가 아직이신가요? 지금 바로 마켓에서 앱 업데이트를 해보세요! <a href="#">업데이트 하기</a>
+		</div>
+	</div>
+
+	<!-- TITTLE -->
+	<section class="title">
+		<h1>음성 명령에서 사운드 검색까지</h1>
+		<h2>만나서 반가워요 감성 AI, 지니어스</h2>
+	</section>
+	<!-- // TITTLE -->
+
+	<!-- 지니어스소개 -->
+	<div class="con_area on" id="tab1">
+		<!-- 지니보이스 -->
+		<section class="voice">
+			<h3>지니보이스의 진화<br />지니어스한 음악 AI</h3>
+			<h4>국내 최초 음악 AI 지니보이스 기술과<br />SoundHound의 사운드 서치 엔진이 더해진<br /><em>지니의 진화된 AI 서비스</em>입니다.</h4>
+      <div class="contents">
+        <span class="img1" data-scroll="toggle(.fadeIn, .fadeOut)"></span>
+        <span class="img2" data-scroll="toggle(.fadeIn2, .fadeOut)"></span>
+        <span class="img3" data-scroll="toggle(.fadeIn3, .fadeOut)"></span>
+      </div>
+		</section>
+
+		<!--사운드 검색 -->
+		<section class="sound">
+      <h3>세계 최고의 기술 탑재<br />우수한 사운드 검색</h3>
+			<h4>전세계 최고의 SoundHound 기술 탑재로<br />뛰어난 <em class="org">사운드 검색</em> 기능을 자랑합니다.<br />지니에서 찾고, 지니에서 바로 감상해 보세요.</h4>
+			<div class="contents">
+				<span class="img1" data-scroll="toggle(.fromLeftIn, .fromLeftOut)"></span>
+				<span class="img2" data-scroll="toggle(.fromLeftIn2, .fromLeftOut)"></span>
+				<span class="img3" data-scroll="toggle(.fadeIn3, .fadeOut)"></span>
+				<span class="img4" data-scroll="toggle(.fadeIn4, .fadeOut)"></span>
+			</div>
+		</section>
+
+		<!-- 지니어스 -->
+		<section class="us">
+      <h3>대화하는 음악 친구<span>genie+us</span></h3>
+			<h4>틀어주고 끝나는 일방향 서비스가 아닌,<br />소통이 쉬운 <em>대화형 기술</em>을 적용하였습니다.<br />스스로 학습하고 발전하는 저는 <em>지니어스</em>입니다!</h4>
+      <div class="contents">
+				<span class="bg"></span>
+        <span class="img1" data-scroll="toggle(.fromBottomIn, .fromBottomOut)"></span>
+				<span class="img2" data-scroll="toggle(.fromBottomIn2, .fromBottomOut)"></span>
+        <span class="img3" data-scroll="toggle(.fromRightIn, .fromRightOut)"></span>
+			</div>
+		</section>
+    <span class="btmarea"></span>
+	</div>
+
+
+
+	<!-- 사용가이드 -->
+	<div class="con_area" id="tab2">
+
+		<!-- 첫번째 -->
+		<section class="use_guide g1">
+			<h3>귓가에 맴도는<br />음악이 궁금할 땐,</h3>
+			<div class="swiper-container swiper-voice1">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
+            <h4>저를 오른쪽으로 밀어서<br /><em>사운드 검색</em>으로 찾아 보세요!</h4>
+            <div class="phone">
+              <span class="tit">사운드 검색을 선택하고 노래를 들려 주세요</span>
+              <div id="woori"></div>
+              <span class="ico_search">사운드 검색</span>
+              <span class="navi"></span>
+              <span class="btm"></span>
+            </div>
+					</li>
+          <li class="swiper-slide">
+            <h4>지금 흐르는 음악을 들려주시면,<br />그 곡이 뭔지 알려드릴게요.</h4>
+            <div class="phone">
+              <span class="tit">사운드 검색을 선택하고 노래를 들려 주세요</span>
+              <div id="waveSound"></div>
+              <div class="sound_box">듣고 있어요</div>
+              <span class="btm"></span>
+            </div>
+					</li>
+          <li class="swiper-slide">
+            <h4>들은 부분만 콕 짚어 미리듣기까지!<br />지니어스 참 똑똑하죠?</h4>
+            <div class="phone">
+              <div class="hd">
+                <span class="sound_serch img01"></span>
+                <span class="sound_serch img02"></span>
+                <span class="sound_serch img03"></span>
+                <span class="sound_serch img04"></span>
+              </div>
+            </div>
+					</li>
+				</ul>
+			</div>
+			<div class="swiper-pagination"></div>
+		</section>
+
+		<!-- 두번째	 -->
+		<section class="use_guide g2">
+			<h3>말 한마디로<br />음악을 틀고 싶다면</h3>
+			<div class="swiper-container swiper-voice2">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
+            <h4>저를 왼쪽으로 밀어서<br /><em>음성 명령</em>으로 찾아 보세요!</h4>
+            <div class="phone">
+              <span class="tit02">사운드 검색을 선택하고 노래를 들려 주세요</span>
+              <div id="woori2"></div>
+              <span class="ico_voice">음성명령</span>
+              <span class="navi"></span>
+              <span class="btm"></span>
+            </div>
+					</li>
+					<li class="swiper-slide">
+            <h4>잔잔한 노래에서 클럽 음악까지.<br />지금 이 순간 당신에게 필요한 음악을 찾아드려요.</h4>
+            <div class="phone">
+              <span class="tit02">사운드 검색을 선택하고 노래를 들려 주세요</span>
+              <div id="waveVoice"></div>
+              <div class="voice_box">드라이브 하기 좋은 노래 들려줘</div>
+              <span class="btm"></span>
+            </div>
+					</li>
+					<li class="swiper-slide">
+            <h4>하루하루 더 많은 말을 배우며<br />진화하고 있어요!</h4>
+            <div class="phone">
+              <div class="hd">
+                <span class="voice_serch img01"></span>
+                <span class="voice_serch img02"></span>
+                <span class="voice_serch img03"></span>
+                <span class="voice_serch img04"></span>
+                <span class="voice_serch img05"></span>
+                <span class="voice_serch img06"></span>
+              </div>
+            </div>
+					</li>
+				</ul>
+			</div>
+			<div class="swiper-pagination"></div>
+		</section>
+
+		<!-- 세번째	 -->
+		<section class="use_guide g3">
+			<h3>지난 대화도, 검색 기록도,<br />다시 볼 수 있어요.</h3>
+			<div class="swiper-container swiper-voice3">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
+            <h4>지난 대화는 <em>지니어스 기록</em>에서 확인할 수 있어요.<br />최대 15일까지 저장되니 좋은 곡은 미리 담아보세요.</h4>
+            <div class="phone">
+              <span class="ico_history">사운드 검색</span>
+              <div class="hd">
+                <span class="history_search"></span>
+              </div>
+              <span class="navi"></span>
+              <span class="btm"></span>
+            </div>
+					</li>
+					<li class="swiper-slide">
+            <h4>말하기 곤란할 때는<br />키패드로 언제든지 대화할 수 있어요. </h4>
+            <div class="phone">
+              <div class="hd history_bg">
+                <span class="ory_bg"></span>
+              </div>
+            </div>
+					</li>
+				</ul>
+			</div>
+			<div class="swiper-pagination"></div>
+		</section>
+	</div>
+
+  <!-- sns -->
+  <section class="sns">
+    <h2 class="hide">감성을 담은 AI, 지니어스를  공유해 보세요.</h2>
+    <ul>
+      <li>페이스북</li>
+      <li>카카오톡</li>
+      <li>카카오스토리</li>
+    </ul>
+  </section>
+</div>
+
+<script type="text/javascript">
+	window.counter = function() {
+		// this refers to the html element with the data-scroll-showCallback tag
+		var span = this.querySelector('span');
+		var current = parseInt(span.textContent);
+
+		span.textContent = current + 1;
+	};
+	document.addEventListener('DOMContentLoaded', function(){
+	  var trigger = new ScrollTrigger({
+		  addHeight: true
+	  });
+	});
+
+  //주차별 fixed
+  var jbOffset = $( '.tab, .con_area' ).offset();
+    $( window ).scroll( function() {
+      if ( $( document ).scrollTop() > jbOffset.top ) {
+        $( '.tab' ).addClass( 'f-nav' );
+      }
+      else {
+        $( '.tab' ).removeClass( 'f-nav' );
+    }
+  });
+
+  $(function() {
+    $('ul.tabarea li').click(function() {
+      var activeTab = $(this).attr('data-tab');
+      $('ul.tabarea li').removeClass('on');
+      $('.con_area').removeClass('on');
+      $(this).addClass('on');
+      $('#' + activeTab).addClass('on');
+    })
+  });
+
+  $(function() {
+  	/* swiper */
+  	var swiper1 = new Swiper('.swiper-voice1', {
+  		pagination: '.g1 .swiper-pagination',
+  		paginationClickable: true
+  	});
+
+  	var swiper2 = new Swiper('.swiper-voice2', {
+  		pagination: '.g2 .swiper-pagination',
+  		paginationClickable: true,
+  		speed: 400
+  	});
+
+  	var swiper3 = new Swiper('.swiper-voice3', {
+  		pagination: '.g3 .swiper-pagination',
+  		paginationClickable: true,
+  		onTransitionStart: function(s) {
+  		}
+  	});
+    $(".cont_area:last").hide();
+  });
+</script>
+
+<script src="js/bodymovin.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

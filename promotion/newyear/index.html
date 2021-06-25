@@ -1,0 +1,636 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="Referrer" content="origin">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<link rel="shortcut icon" type="image/x-icon" href="//image.genie.co.kr/imageg/web/favicon.ico">
+<title>올해 가장 기대되는 쥐띠 아티스트를 뽑아라!</title>
+<meta name="keywords" content="지니뮤직, 음악, 스마트 다운로드, 알뜰 음악감상, genie shop">
+<meta name="description" content="올해 기대되는 쥐띠 아티스트 추천받고, 추천받은 상위 8명 중 최종 1위 선발">
+<meta property="og:description" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="지니뮤직">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/jquery.scrollbar.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
+<script src="js/common.js"></script>
+<div class="wrap">
+
+<div class="gnb-area">
+  <div class="gnb">
+    <a href="http://www.genie.co.kr/" target="_blank" title="지니홈 바로가기 새창열기" class="home">지니홈 바로가기</a>
+    <ul>
+      <li><a href="http://www.genie.co.kr/member/signUp" target="_blank" title="회원가입 새창열기">회원가입</a></li>
+      <li><a href="#">로그인</a></li>
+      <li class="share"><span>공유하기</span><a href="#" class="twitter" title="트위터 공유하기">트위터</a><a href="#" class="facebook" title="페이스북 공유하기">페이스북</a></li>
+    </ul>
+  </div>
+</div>
+
+<section class="mainvisual">
+  <span class="sun"></span>
+  <span class="light s01"></span>
+  <span class="light s02"></span>
+  <span class="light s03"></span>
+
+  <div class="mouse motion">
+    <span class="ear"></span>
+    <span class="wink"></span>
+  </div>
+
+  <h1 class="blind">2020 경자년 올해 가장 기대되는 쥐띠 아티스트를 뽑아라!</h1>
+  <p class="blind">경자년을 맞아 쥐띠 아티스트 중 올해 가장 기대되는 아티스트는 누구? 후보 추천과 투표를 한 고객 중 추첨을 통해 푸짐한 혜택을 드립니다.</p>
+</section>
+
+<section class="gift">
+  <dl>
+    <dt>최종투표 1등 아티스트 혜택</dt>
+    <dd>아티스트 이름으로 기부</dd>
+    <dd>지니 메인 배너 & 스페셜 페이지 구성</dd>
+    <dt>후보 추천과 투표를 한 지니뮤직 회원</dt>
+    <dd>에어팟 프로 3명</dd>
+    <dd>스타벅스 아메리카노 100명</dd>
+    <dd>앱코 블루투스 사운드바 ASL01 10명</dd>
+  </dl>
+</section>
+<section class="choice">
+
+  <div class="wrap_tabs">
+    <div class="tabarea">
+      <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+        <li><a href="#wrap_recommend">후보 추천</a></li>
+        <li class="active"><a href="#vote">최종 투표</a></li>
+      </ul>
+    </div>
+
+    <section id="first-tab-group" class="tabgroup">
+
+      <!-- 후보 추천-->
+      <div id="wrap_recommend">
+
+        <div id="recommend">
+          <div class="content">
+            <h3 class="tit01">내가 추천하는 올해 가장 기대되는 쥐띠 아티스트는?</h3>
+            <div class="regist_artist">
+              <!-- 후보추천 유의사항 -->
+              <span class="quest" onclick="openLayer('q_layer');return false">?</span>
+              <div id="q_layer" class="quest-layer">
+                <h4>후보 추천 유의 사항</h4>
+                <a class="close" onclick="closeLayer('q_layer');return false">창닫기</a>
+                <ol>
+                  <li><span>①</span>쥐띠가 아닌 아티스트는 자동 후보에서 제외
+                  <br />- 쥐띠는 1996년생, 1984년생, 1972년생 등에 태어난 경우에 한함</li>
+                  <li><span>②</span>아티스트는 본명이 아닌 활동명으로 검색 후 적어주세요
+                  <br />- 예시) 본명은 ‘홍길동’ , 활동명은 ‘로드명’일 경우 ‘로드동’으로 조회</li>
+                  <li><span>③</span>그룹 활동을 하는 멤버의 이름을 검색했을 때 조회되지 않는 경우 ‘그룹명(한칸 띄어쓰기)아티스트명’으로 작성 뒤 조회해보세요.
+                  <br />- 예시) 뉴이스트 민현</li>
+                </ol>
+                <a class="today_close" onclick="closeLayer('q_layer');return false">오늘 하루 안보기</a>
+              </div>
+              <!--// 후보추천 유의사항 -->
+
+              <input type="text" id="search"
+              placeholder="아티스트 이름을 써주세요." title="아티스트 이름 입력"><button type="button" id="deleteInput">가수 삭제</button><button type="button" id="regist" disabled>조회</button>
+              <div class="auto_complete" style="display:none">
+                <div class="scrollbar-inner">
+                  <ul>
+                    <% for i=10 to 1 step -1 %>
+                    <li>
+                      <a href="#">
+                        <div class="cover"><img src="http://image.genie.co.kr/imageg/web/promo_2019/0130/@thumb.png" alt=""></div>
+                        <div class="artist">
+                          <strong>로꼬 & 화사 (마마무)</strong>
+                          <span>한국 / 혼성 / 프로젝트</span>
+                        </div>
+                      </a>
+                    </li>
+                    <% next %>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="information">
+              <ul>
+                <li>
+                  <strong>추천 기간 : </strong>
+                  <span>2020년 1월 28일~2020년 2월 6일</span>
+                </li>
+                <li>
+                  <strong>추천 방법 : </strong>
+                  <span> 검색 창에 아티스트 이름 입력하고 [조회] <em>→ 아티스트 선택 후 [등록]</em></span>
+                </li>
+                <li>
+                  <strong>추천 횟수 : </strong>
+                  <span>매일 추천 가능하며 유료 회원은 1일 10회, <em>무료 회원은 1일 5회까지 추천</em></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <section class="recommend_list">
+          <div class="content">
+            <h3 class="tit02">지니 회원이 추천한 쥐띠 아티스트</h3>
+            <span class="sort">정렬 기준 : 최근 작성</span>
+            <div class="wrap_list">
+              <ul>
+                <% for i=10 to 1 step -1 %>
+                <li>
+                  <div class="cover"><img src="https://image.genie.co.kr/imageg/web/promo_2019/0130/@thumb.png" alt=""></div>
+                  <div class="artist">
+                    <span class="id">nickname***</span>
+                    <span class="date">2016-04-29 오후 3:17:25</span>
+                    <strong>지민</strong>
+                  </div>
+                </li>
+                <% next %>
+              </ul>
+            </div>
+            <div class="page-more m">
+              <a href="#">더보기</a>
+            </div>
+            <div class="page-nav">
+              <a href="#" class="first"><span>가장 최근 페이지</span></a>
+              <a href="#" class="prev"><span>최근 페이지로 이동</span></a>
+              <a href="#" class="current">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <a href="#">7</a>
+              <a href="#">8</a>
+              <a href="#">9</a>
+              <a href="#">10</a>
+              <a href="#" class="next"><span>오래전 페이지로 이동</span></a>
+              <a href="#" class="end"><span>가장 오래 전 페이지</span></a>
+            </div>
+          </div>
+        </section>
+
+        <section class="bnr_area">
+          <div class="content">
+            <div class="plus_evt">
+              <h4 class="blind">PLUS EVENT</h4>
+              <p class="blind">내가 사랑하는 아티스트가 후보가 될 수 있도록 소문내주세요! 추첨을 통해 3명에게 BBQ 황금올리브치킨 반반+콜라 1.25L을 드립니다.</p>
+              <dl class="howto">
+                <dt>* 소문내는 방법</dt>
+                <dd>① 후보를 추천하고 프로모션 페이지를 캡쳐</dd>
+                <dd>② <span>#아티스트 이름#2020genie#genie</span><br />
+                  해시태그와 함께 SNS 업로드하면 완료<br />
+                  예시) #민현#2020genie#genie</dd>
+              </dl>
+              <ul class="sns">
+                <li class="fb"><a href="#">페이스북</a></li>
+                <li class="tw"><a href="#">트위터</a></li>
+                <li class="kstroy"><a href="#">카카오스토리</a></li>
+                <li class="ktalk"><a href="#">카카오톡</a></li>
+              </ul>
+            </div>
+
+            <div class="review">
+              <a href="javascript:///">19년 지니뮤직이 선정한 가장 기대되는 돼지띠 아티스트 ‘뉴이스트 민현’</a>
+            </div>
+
+            <div class="buy">
+              부담없이 100원으로 시작하세요 스마트 음악감상 1개월 월 100원
+              <a href="javascript:///">지니뮤직 이용권 구매하기</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="caution">
+          <div class="content">
+            <h4>꼭 확인하세요!</h4>
+            <ul>
+              <li>최종 투표는 2월 7일 15시에 오픈합니다.</li>
+              <li>후보 추천 기간은 1월 28일 ~ 2월 6일이며 당첨자는 2월 25일 공지사항을 통해 확인하실 수 있습니다.</li>
+              <li>후보 추천 정책은 아래와 같습니다.
+                <span class="sub">- 유료 회원은 1일 10회, 무료 회원은 1일 5회 참여 가능하며, 매일 00시 00분을 기준으로 추천 기회가 제공됩니다.<br />
+                - ‘무료 상품’,’횟수별 음악감상 상품’,’개별곡 구매’,’알뜰 음악감상’의 경우 유료 회원에서 제외됩니다.<br />
+                - 본인 인증을 받은 아이디로만 추천 가능합니다.<br />
+                - 보유하신 아이디가 여러 개인 경우에도 1일 1개의 아이디로만 참여 가능합니다.<br />
+                - 불법으로 생성된 계정으로 이벤트에 참여하신 경우 추후 불이익을 받을 수 있습니다.
+              </span>
+              </li>
+              <li>아티스트 혜택 중 기부금 관련 투표 1등 아티스트가 아티스트 명의로 기부를 동의하지 않을 경우 지니뮤직 명의로 기부가 진행됩니다.</li>
+              <li>에어팟 경품에 당첨된 경우 당첨된 고객은 제세공과금 납부 및 개인 정보를 당사에 전달 한 후 경품 수취가 가능합니다.</li>
+              <li>스타벅스 아메리카노, BBQ 황금 올리브치킨반반+콜라 1.25L 경품에 당첨된 경우 회원정보에 등록되어 있는 연락처를 통해 모바일 기프티쇼로 발송됩니다.</li>
+              <li>연락처 오기재에 대한 책임은 당사가 지지 않습니다.</li>
+              <li>해당 이벤트 및 경품은 사전 고지 없이 종료 또는 변경될 수 있습니다.</li>
+              <li>SNS 연동 계정의 회원가입 및 로그인 시 휴대폰 인증을 통해 이벤트 참여가 가능합니다.</li>
+              <li>경품 배송을 위해 당첨자의 개인 정보를 다음과 같이 제공합니다.
+                <span class="sub">- 개인정보를 제공받는 자 : 주식회사 엠하우스<br />
+                - 개인정보를 제공 받는 자의 개인 정보 이용 목적 : 이벤트 당첨자 경품 전달<br />
+                - 개인정보를 제공 받는 자의 개인 정보 보유 및 이용 기간 : 경품 배송 종료시까지</span>
+              </li>
+              <li>경품 수령 거부 또는 2회 이상 연락(전화, SMS) 불가 시 당첨 취소됩니다.</li>
+              <li>이벤트  관련 문의는 고객센터 1577-5337 또는 <a href="#" target="_blank" title="문의하기">[고객센터 문의하기]</a>를 통해 문의해주세요.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--// 후보 추천-->
+
+      <!-- 투표하기 -->
+      <div id="vote">
+        <section class="vote_area">
+          <div class="content">
+            <h3 class="tit01">올해 가장 기대되는 쥐띠 아티스트에게 지금 바로 투표해주세요!</h3>
+            <ul class="information">
+              <li>
+                <strong>투표 기간 : </strong>
+                <span>2020년 2월 7일 ~ 2020년 2월 18일 15시</span>
+              </li>
+              <li>
+                <strong>투표 방법 : </strong>
+                <span>유료는 1일 5회, 무료는 1일 1회까지 투표 가능</span>
+              </li>
+            </ul>
+            <p class="d-day"><span>투표 마감까지 <em>00일 00:00:00</em></span></p>
+
+            <!-- 아티스트 후보 목록 -->
+            <ul class="vote_list">
+              <li>
+                <em class="rank top">1</em>
+          			<div class="thum">
+                  <a href="#"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/587/299/80587299_1574671175120_11_600x600.JPG" alt="" /></a>
+                </div>
+                <div class="detail">
+                  <strong>강다니엘</strong>
+                  <em class="per">80%</em>
+                  <p class="graph"><span style="width:80%">80%</span></p>
+                  <a href="javascript:///" class="go_vote">투표<em>하기</em></a>
+                </div>
+                <div class="vs">VS</div>
+          		</li>
+          		<li>
+                <em class="rank top">2</em>
+          			<div class="thum">
+                  <a href="#"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/441/325/80441325_1577067686310_13_600x600.JPG" alt="" /></a>
+                </div>
+                <div class="detail">
+            			<strong>조이(JOY)</strong>
+                  <em class="per">60%</em>
+                  <p class="graph"><span style="width:60%">60%</span></p>
+            			<a href="javascript:///" class="go_vote">투표<em>하기</em></a>
+                </div>
+          		</li>
+              <li>
+                <em class="rank">3</em>
+          			<div class="thum">
+                  <a href="#"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/519/786/80519786_1575343313587_13_600x600.JPG" alt="" /></a>
+                </div>
+                <div class="detail">
+            			<strong>아티스트명이 얼마나 길어요</strong>
+                  <em class="per">55%</em>
+            			<p class="graph"><span style="width:55%">55%</span></p>
+            			<a href="javascript:///" class="go_vote">투표<em>하기</em></a>
+                </div>
+          		</li>
+              <li>
+                <em class="rank">4</em>
+          			<div class="thum">
+                  <a href="#"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/587/304/80587304_1578561530466_8_600x600.JPG" alt="" /></a>
+                </div>
+                <div class="detail">
+            			<strong>옹성우</strong>
+                  <em class="per">55%</em>
+            			<p class="graph"><span style="width:55%">55%</span></p>
+            			<a href="javascript:///" class="go_vote">투표<em>하기</em></a>
+                </div>
+          		</li>
+              <li>
+                <em class="rank">5</em>
+          			<div class="thum">
+                  <a href="#"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/468/933/80468933_1568960936622_18_600x600.JPG" alt="" /></a>
+                </div>
+                <div class="detail">
+            			<strong>나연</strong>
+                  <em class="per">55%</em>
+            			<p class="graph"><span style="width:55%">55%</span></p>
+            			<a href="javascript:///" class="go_vote">투표<em>하기</em></a>
+                </div>
+          		</li>
+              <li>
+                <em class="rank">6</em>
+          			<div class="thum">
+                  <a href="#"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/441/091/80441091_1574411035846_6_600x600.JPG" alt="" /></a>
+                </div>
+                <div class="detail">
+            			<strong>찬미(AOA)</strong>
+                  <em class="per">55%</em>
+            			<p class="graph"><span style="width:55%">55%</span></p>
+            			<a href="javascript:///" class="go_vote">투표<em>하기</em></a>
+                </div>
+          		</li>
+              <li>
+                <em class="rank">7</em>
+          			<div class="thum">
+                  <a href="#"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/291/985/80291985_1578901250305_16_600x600.JPG" alt="" /></a>
+                </div>
+                <div class="detail">
+            			<strong>이름이 몇글자</strong>
+                  <em class="per">55%</em>
+            			<p class="graph"><span style="width:55%">55%</span></p>
+            			<a href="javascript:///" class="go_vote">투표<em>하기</em></a>
+                </div>
+          		</li>
+              <li>
+                <em class="rank">8</em>
+          			<div class="thum">
+                  <a href="#"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/468/933/80468933_1568960936622_18_600x600.JPG" alt="" /></a>
+                </div>
+                <div class="detail">
+            			<strong>나연</strong>
+                  <em class="per">55%</em>
+            			<p class="graph"><span style="width:55%">55%</span></p>
+            			<a href="javascript:///" class="go_vote">투표<em>하기</em></a>
+                </div>
+          		</li>
+            </ul>
+            <!--// 아티스트 후보 목록 -->
+          </div>
+
+          <div class="content info">
+            <!-- 내가 투표한 횟수는 -->
+            <div class="my_zone">
+              <h3 class="tit02">올해 가장 기대되는 쥐띠 아티스트에게 지금 바로 투표해주세요!</h3>
+              <ul>
+                <li><span>오늘은</span>총<em>05</em>회 투표</li>
+                <li><span>오늘까지</span>총<em>19</em>회 투표</li>
+              </ul>
+            </div>
+            <!--// 내가 투표한 횟수는 -->
+          </div>
+        </section>
+
+        <section class="bnr_area">
+          <div class="content">
+            <div class="plus_evt">
+              <h4 class="blind">PLUS EVENT</h4>
+              <p class="blind">내가 추천한 아티스트가 1등 할 수 있도록 소문내주세요! 추첨을 통해 3명에게 치즈킹 치즈크러스트L + 펩시 1.5L를 드립니다.</p>
+              <dl class="howto">
+                <dt>* 소문내는 방법</dt>
+                <dd>① 최종 투표하고 프로모션 페이지를 캡쳐</dd>
+                <dd>② <span>#아티스트 이름#2020genie#genie</span><br />
+                  해시태그와 함께 SNS 업로드하면 완료<br />
+                  예시) #민현#2020genie#genie</dd>
+              </dl>
+              <ul class="sns">
+                <li class="fb"><a href="#">페이스북</a></li>
+                <li class="tw"><a href="#">트위터</a></li>
+                <li class="kstroy"><a href="#">카카오스토리</a></li>
+                <li class="ktalk"><a href="#">카카오톡</a></li>
+              </ul>
+            </div>
+
+            <div class="review">
+              <a href="javascript:///">19년 지니뮤직이 선정한 가장 기대되는 돼지띠 아티스트 ‘뉴이스트 민현’</a>
+            </div>
+
+            <div class="buy">
+              부담없이 100원으로 시작하세요 스마트 음악감상 1개월 월 100원
+              <a href="javascript:///">지니뮤직 이용권 구매하기</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="caution">
+          <div class="content">
+            <h4>꼭 확인하세요!</h4>
+            <ul>
+              <li>투표 이벤트 기간은 2월 7일 ~ 2월 18일이며 당첨자는 2월 25일 공지사항을 통해 확인하실 수 있습니다.</li>
+              <li>최종 투표는 지난 [후보 추천 이벤트]에서 추천된 아티스트 중 상위 8명을 대상으로 진행합니다.</li>
+              <li>투표 정책은 아래와 같습니다.
+                <span class="sub">- 아티스트 득표수는 실시간으로 집계/반영됩니다.<br />
+                - 투표는 유료 회원은 1일 5회, 무료 회원은 1일 1회 참여 가능하며, 매일 00시 00분을 기준으로 투표 기회가 제공됩니다.<br />
+                - ‘무료 상품’, ‘횟수별 음악감상 상품’, ‘개별곡 구매’, ‘알뜰 음악감상’의 경우 유료 회원에서 제외됩니다.<br />
+                - 중복 투표 방지를 위해 본인 인증을 받은 아이디로만 투표 가능합니다.<br />
+                - 보유하신 아이디가 여러 개인 경우에도 1일 1개의 아이디로만 참여 가능합니다.<br />
+                - 투표 취소는 불가하오니 신중한 투표 부탁 드립니다.<br />
+                - 불법으로 생성된 계정으로 이벤트에 참여하신 경우 추후 불이익을 받을 수 있습니다.
+              </span>
+              </li>
+              <li>아티스트 혜택 중 기부금 관련, 투표 1등 아티스트가 아티스트 명의의 기부를 동의하지 않을 경우 지니뮤직 명의로 기부가 진행됩니다.</li>
+              <li>경품의 사양 및 색상은 사정에 따라 변경될 수 있으며, 회원탈퇴 시 경품 당첨 대상에서 제외됩니다.</li>
+              <li>에어팟 경품에 당첨된 경우 당첨된 고객은 제세공과금 납부 및 개인 정보를 당사에 전달 한 후 경품 수취가 가능합니다.</li>
+              <li>스타벅스 아메리카노, 치즈킹 치즈크러스트L + 펩시1.25L 경품에 당첨된 경우 회원정보에 등록되어 있는 연락처를 통해 모바일 기프티쇼로 발송 됩니다.</li>
+              <li>연락처 오기재에 대한 책임은 당사가 지지 않습니다.</li>
+              <li>해당 이벤트 및 경품은 사전 고지 없이 종료 또는 변경될 수 있습니다.</li>
+              <li>SNS 연동 계정의 회원가입 및 로그인 시 휴대폰 인증을 통해 이벤트 참여가 가능합니다.</li>
+              <li>경품 배송을 위해 당첨자의 개인 정보를 다음과 같이 제공합니다.
+                <span class="sub">- 개인정보를 제공받는 자 : 주식회사 엠하우스<br />
+                - 개인정보를 제공 받는 자의 개인 정보 이용 목적 : 이벤트 당첨자 경품 전달<br />
+                - 개인정보를 제공 받는 자의 개인 정보 보유 및 이용 기간 : 경품 배송 종료시까지
+              </span>
+              </li>
+              <li>경품 수령 거부 또는 2회 이상 연락(전화, SMS) 불가 시 당첨 취소됩니다.</li>
+              <li>이벤트  관련 문의는 고객센터 1577-5337 또는 <a href="#" target="_blank" title="문의하기">[고객센터 문의하기]</a>를 통해 문의해주세요.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--// 투표하기-->
+
+    </section>
+  </div>
+</section>
+
+</div>
+
+<!--[D] 이벤트 기간종료 -->
+<div id="layer-popup01" class="popup">
+    <div class="popup-header">
+        <h3>안내</h3>
+        <button class="layer-close" title="닫기">닫기</button>
+    </div>
+    <div class="popup-content">
+        <strong>이벤트 기간이 종료되었습니다.</strong>
+        <p>지니뮤직의 다양한 이벤트에 참여해보세요</p>
+    </div>
+    <div class="popup-footer">
+        <button type="button" title="확인" class="layer-close"><span>확인</span></button>
+    </div>
+</div>
+
+<!--[D] 추천&투표 횟수 알림 -->
+<div id="layer-popup02" class="popup">
+    <div class="popup-header">
+        <h3>안내</h3>
+        <button class="layer-close" title="닫기">닫기</button>
+    </div>
+    <div class="popup-content">
+        <strong>유료 회원 추천 완료</strong>
+        <p>1일 총 10회 중 <em>2</em>회 추천했습니다.<br />감사합니다.</p>
+    </div>
+    <div class="popup-footer">
+        <button type="button" title="확인" class="layer-close"><span>확인</span></button>
+    </div>
+</div>
+
+<!--[D] 추천&투표 제한 알림 - 유료 -->
+<div id="layer-popup03" class="popup">
+    <div class="popup-header">
+        <h3>안내</h3>
+        <button class="layer-close" title="닫기">닫기</button>
+    </div>
+    <div class="popup-content">
+        <strong>유료 회원 추천 완료</strong>
+        <p>이미 10회 추천을 완료했습니다.<br />내일 또 추천해주세요 </p>
+    </div>
+    <div class="popup-footer">
+        <button type="button" title="확인" class="layer-close"><span>확인</span></button>
+    </div>
+</div>
+
+<!--[D] 추천&투표 제한 알림 - 무료 -->
+<div id="layer-popup04" class="popup">
+    <div class="popup-header">
+        <h3>안내</h3>
+        <button class="layer-close" title="닫기">닫기</button>
+    </div>
+    <div class="popup-content">
+        <strong>무료 회원 추천 완료</strong>
+        <p>이미 1회 추천 완료했습니다.<br />상품을 구매하면 10회 추천 가능해요! </p>
+    </div>
+    <div class="popup-footer col-2">
+        <button type="button" title="확인" class="layer-close"><span>상품구매</span></button>
+        <button type="button" title="확인" class="layer-close"><span>확인</span></button>
+    </div>
+</div>
+
+<!--[D] 이벤트 응모안내 -->
+<div id="layer-popup05" class="popup">
+    <div class="popup-header">
+        <h3>안내</h3>
+        <button class="layer-close" title="닫기">닫기</button>
+    </div>
+    <div class="popup-content agree">
+        <strong>이벤트 응모를 위해 안내 사항을 확인해주세요.</strong>
+        <ul>
+					<li>당첨안내 및 경품배송을 위해 주소와 연락처 등 회원정보가 정확한지 꼭 확인해주세요.</li>
+					<li>회원정보 미기재 시 당첨에서 제외되며, 오입력으로 인한 경품 반송 시 재발송은 어려운 점 참고 부탁 드립니다.</li>
+					<li>이벤트 경품은 기획사 사정에 의해 변경 및 배송 지연 될 수 있습니다.</li>
+					<li>회원정보 수정이 필요하신 분들께서는, 반드시 이벤트 진행 기간 중에 <span>[내정보&gt;회원정보 수정]</span>에서 수정해주세요.</li>
+				</ul>
+    </div>
+    <div class="popup-footer">
+        <button type="button" title="확인" class="layer-close"><span>확인</span></button>
+    </div>
+</div>
+
+<!--[D] 2차 투표 횟수 알림 - 유료-->
+<div id="layer-popup06" class="popup">
+    <div class="popup-header">
+      <h3>안내</h3>
+      <button class="layer-close" title="닫기">닫기</button>
+    </div>
+    <div class="popup-content">
+      <strong>유료 회원 투표 완료</strong>
+      <p>1일 총 5회 중 <em>2</em>회 투표했습니다.<br />감사합니다.</p>
+    </div>
+    <div class="popup-footer">
+      <button type="button" title="확인" class="layer-close"><span>확인</span></button>
+    </div>
+</div>
+
+<!--[D] 2차 투표 제한 알림 - 유료-->
+<div id="layer-popup07" class="popup">
+    <div class="popup-header">
+      <h3>안내</h3>
+      <button class="layer-close" title="닫기">닫기</button>
+    </div>
+    <div class="popup-content">
+      <strong>유료 회원 투표 완료</strong>
+      <p>이미 5회 투표 완료했습니다.<br />내일 또 투표해주세요.</p>
+    </div>
+    <div class="popup-footer">
+      <button type="button" title="확인" class="layer-close"><span>확인</span></button>
+    </div>
+</div>
+
+<!--[D] 2차 투표 횟수 알림 - 무료-->
+<div id="layer-popup08" class="popup">
+    <div class="popup-header">
+      <h3>안내</h3>
+      <button class="layer-close" title="닫기">닫기</button>
+    </div>
+    <div class="popup-content">
+      <strong>무료 회원 투표 완료</strong>
+      <p>1일 총 1회 중 <em>1</em>회 투표했습니다.<br />감사합니다.</p>
+    </div>
+    <div class="popup-footer">
+      <button type="button" title="확인" class="layer-close"><span>확인</span></button>
+    </div>
+</div>
+
+<!--[D] 2차 투표 제한 알림 - 무료-->
+<div id="layer-popup09" class="popup">
+    <div class="popup-header">
+      <h3>안내</h3>
+      <button class="layer-close" title="닫기">닫기</button>
+    </div>
+    <div class="popup-content">
+      <strong>무료 회원 투표 완료</strong>
+      <p>이미 1회 투표 완료했습니다.<br />상품을 구매하면 5회 투표 가능해요!</p>
+    </div>
+    <div class="popup-footer col-2">
+      <button type="button" title="확인" class="layer-close"><span>상품구매</span></button>
+      <button type="button" title="확인" class="layer-close"><span>확인</span></button>
+    </div>
+</div>
+
+<!-- 본인인증 -->
+<div id="layer-popup10" class="popup">
+    <div class="popup-header">
+        <h3>안내</h3>
+        <button class="layer-close" title="닫기">닫기</button>
+    </div>
+    <div class="popup-content">
+        <strong>본인인증 완료 후 투표 가능합니다.</strong>
+    </div>
+    <div class="popup-footer">
+        <button type="button" title="확인" class="layer-close"><span>확인</span></button>
+    </div>
+</div>
+
+<!-- 중복투표 -->
+<div id="layer-popup11" class="popup">
+    <div class="popup-header">
+      <h3>안내</h3>
+      <button class="layer-close" title="닫기">닫기</button>
+    </div>
+    <div class="popup-content">
+      <strong>abc*** 아이디로 후보추천에 참여하셨습니다.</strong>
+      <p>투표는 본인 인증을 완료한 ID 중<br />하루 한개의 아이디로만 응모 가능합니다.</p>
+    </div>
+    <div class="popup-footer col-2">
+      <button type="button" title="확인" class="layer-close"><span>상품구매</span></button>
+      <button type="button" title="확인" class="layer-close"><span>확인</span></button>
+    </div>
+</div>
+
+<!--[D] layer popup 개발후 지워주세요 -->
+<div style="position:fixed;top:2%;left:2%;background:#000;padding:10px 30px;font-size:16px;line-height:30px;z-index:98;font-family:'Malgun Gothic', '맑은고딕';opacity:0.8;">
+  <a href="#" style="color:#fff;" onclick="FG_layerPopup_etc.show($('#layer-popup01')); return false;">기간종료</a><br />
+	<a href="#" style="color:#fff;" onclick="FG_layerPopup_etc.show($('#layer-popup02')); return false;">횟수알림</a><br />
+	<a href="#" style="color:#fff;" onclick="FG_layerPopup_etc.show($('#layer-popup03')); return false;">제한알림-유료</a><br />
+	<a href="#" style="color:#fff;" onclick="FG_layerPopup_etc.show($('#layer-popup04')); return false;">제한알림-무료</a><br />
+	<a href="#" style="color:#fff;" onclick="FG_layerPopup_etc.show($('#layer-popup05')); return false;">이벤트 응모안내</a><br />
+
+  <a href="#" style="color:#fff;" onclick="FG_layerPopup_etc.show($('#layer-popup06')); return false;">2차 횟수알림</a><br />
+	<a href="#" style="color:#fff;" onclick="FG_layerPopup_etc.show($('#layer-popup07')); return false;">2차 제한알림-유료</a><br />
+	<a href="#" style="color:#fff;" onclick="FG_layerPopup_etc.show($('#layer-popup08')); return false;">2차 제한알림-무료</a><br />
+	<a href="#" style="color:#fff;" onclick="FG_layerPopup_etc.show($('#layer-popup09')); return false;">2차 이벤트 응모안내</a><br />
+
+  <a href="#" style="color:#fff;" onclick="FG_layerPopup_etc.show($('#layer-popup10')); return false;">본인인증</a><br />
+  <a href="#" style="color:#fff;" onclick="FG_layerPopup_etc.show($('#layer-popup11')); return false;">중복투표</a><br />
+</div>
+
+</body>
+</html>

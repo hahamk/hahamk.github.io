@@ -28,7 +28,7 @@ input[type="checkbox"] + label,
 input[type="radio"] + label {display:inline-block; position:relative; padding-left:22px; height:14px; line-height:14px; vertical-align:middle; font-size:12px; text-align:left}
 .windows7 input[type="checkbox"] + label,
 .windows7 input[type="radio"] + label {line-height:12px}
-input[type="checkbox"] + label:after {content:""; position:absolute; left:0; top:0; width:12px; height:12px; border:1px solid #d9d9d9; background:#fff url(/images/common/ico-checkbox_5.0.png) 100px 2px no-repeat}
+input[type="checkbox"] + label:after {content:""; position:absolute; left:0; top:0; width:12px; height:12px; border:1px solid #d9d9d9; background:#fff url(https://hahahamk.cafe24.com/pcplayer/images/common/ico-checkbox_5.0.png) 100px 2px no-repeat}
 input[type="checkbox"]:checked + label:after {border-color:#0096ff; background-position:1px 2px}
 input[type="checkbox"]:focus + label:after {border-color:#0096ff}
 input[type="radio"] + label:before {content:""; position:absolute; left:0; top:0; width:12px; height:12px; border:1px solid #d9d9d9; border-radius:100%; background:#fff}
@@ -67,5 +67,5 @@ textarea:-ms-input-placeholder {color:#8c8c8c}
 
 
 /*맥용 플레이어*/
-.mac input[type="checkbox"] + label:after {background:#fff url(/images/common/2x/ico-checkbox_5.0.png) 100px 2px no-repeat; background-size: 10px 8px; top:-1px}
+.mac input[type="checkbox"] + label:after {background:#fff url(https://hahahamk.cafe24.com/pcplayer/images/common/2x/ico-checkbox_5.0.png) 100px 2px no-repeat; background-size: 10px 8px; top:-1px}
 .mac input[type="checkbox"]:checked + label:after {background-position:1px 2px}

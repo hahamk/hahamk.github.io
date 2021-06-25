@@ -1,0 +1,1085 @@
+@charset "UTF-8";
+@font-face { 
+  font-family: 'GmarketSansM';
+  font-weight: normal; 
+  font-style: normal;
+  src: url('../font/GmarketSansMedium.woff2') format('woff2'), 
+       url('../font/GmarketSansMedium.woff') format('woff'),
+       url('../font/GmarketSansMedium.otf') format('opentype');
+}
+@font-face { 
+  font-family: 'GmarketSansB';
+  font-weight: normal; 
+  font-style: normal;
+  src: url('../font/GmarketSansBold.woff2') format('woff2'), 
+       url('../font/GmarketSansBold.woff') format('woff'),
+       url('../font/GmarketSansBold.otf') format('opentype');
+}
+@font-face { 
+  font-family: 'Black Han Sans'; 
+  font-weight: 400; 
+  src: local("BlackHanSans-Regular"), 
+  url("../font/BlackHanSans-Regular.woff") format("woff"), 
+  url("../font/BlackHanSans-Regular.ttf") format("truetype")
+}
+@font-face { font-family: 'SpoqaHanSansL'; font-weight:300; font-style: normal; src: url(/Commons/font/SpoqaHanSansLight.eot); src: url(/Commons/font/SpoqaHanSansLight.eot?#iefix) format("embedded-opentype"), url(/Commons/font/SpoqaHanSansLight.woff2) format("woff2"), url(/Commons/font/SpoqaHanSansLight.woff) format("woff"); }
+@font-face { font-family: 'SpoqaHanSansM'; font-weight:400; font-style: normal; src: url(/Commons/font/SpoqaHanSansRegular.eot); src: url(/Commons/font/SpoqaHanSansRegular.eot?#iefix) format("embedded-opentype"), url(/Commons/font/SpoqaHanSansRegular.woff2) format("woff2"), url(/Commons/font/SpoqaHanSansRegular.woff) format("woff"); }
+@font-face { font-family: 'SpoqaHanSansB'; font-weight:700; font-style: normal; src: url(/Commons/font/SpoqaHanSansBold.eot); src: url(/Commons/font/SpoqaHanSansBold.eot?#iefix) format("embedded-opentype"), url(/Commons/font/SpoqaHanSansBold.woff2) format("woff2"), url(/Commons/font/SpoqaHanSansBold.woff) format("woff"), url(/Commons/font/SpoqaHanSansBold.ttf) format("truetype"); }
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, input, select, textarea, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{padding:0;margin:0;vertical-align:middle;box-sizing:border-box}
+header, footer, section, article, menu, nav, aside{display:block}
+html{font-size:16px;letter-spacing:-.035em;-webkit-overflow-scrolling:touch}
+html, body{width:100%;-webkit-text-size-adjust:none;overflow:auto;font-family:'SpoqaHanSansM', HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif;}
+body{width:100%;min-width:1160px;height:100%; overflow:hidden; position:relative;min-width:320px;-webkit-text-size-adjust:none;justify-content:center;align-items:flex-start;word-break:keep-all; background:#f0f9ff}
+ul, ol{list-style-type:none}
+li{word-break:break-all;}
+table{border-collapse:collapse;border-spacing:0}
+img, fieldset{border:0;outline:none}
+label{cursor:pointer}
+a{text-decoration:none; color:#000}
+i, em, address{font-style:normal}
+button{padding:0;border:none;background:none;font-size:inherit; letter-spacing:-.035em;cursor:pointer; outline:none}
+caption, legend{visibility:hidden;width:0;height:0;font-size:0;}
+iframe, object, video, embed{position:relative;top:0;left:0;max-width:100%}
+.blind, .hidden{position:absolute;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px;overflow:hidden}
+select::-ms-expand{display:none}
+input::-ms-clear{display:none}
+h1,h2,h3,h4,h5,h6{font-weight:normal; font-size:100%; line-height:100%}
+br{ font-family:dotum;}
+@media screen and (max-width: 1071px) { html { font-size: 26px; }
+  body { min-width: 320px;}
+}
+@media screen and (max-width: 640px) { html { font-size: 22px; } }
+@media screen and (max-width: 530px) { html { font-size: 16px; } }
+@media screen and (max-width: 340px) { html { font-size: 14px; } }
+
+/* 상단 공통 gnb */
+.content{position:relative;margin:0 auto;box-sizing:border-box;letter-spacing:-.025em; width:900px;}
+.gnb-area{width:100%;height:40px;z-index:30;background-color: rgb(0, 0, 0, 0.2); font-family:dotum, '돋움', arial, verdana, hevetica, geneva, sans-serif; position:absolute; left:0; top:0; border-bottom:1px solid rgb(255, 255, 255, 0.2);}
+.gnb-area .gnb{position:relative;width:960px;height:40px;margin:0 auto;color:#fff;font-size:11px}
+.gnb-area a{color:#fff; }
+.gnb-area a.home{position:absolute;top:0;left:0;display:block; line-height:40px; color:#fff;}
+.gnb-area ul{position:absolute;top:0;right:0;height:40px;line-height:40px}
+.gnb-area ul li{float:left;padding:0 9px;position:relative}
+.gnb-area ul li:first-child:after{border:none}
+.gnb-area ul li:after{content:"";position:absolute; left:0; top:16px; height:10px; border-left:1px solid #ffffff}
+.gnb-area ul li.share{padding:0 0 0 9px;background:none}
+.gnb-area ul li.share a{display:inline-block; line-height:40px; background:url(http://image.genie.co.kr/imageg/web/promo_2019/0813/social.png) no-repeat 5px 10px;padding:0;text-indent:-9999em;width:25px;}
+.gnb-area ul li.share a.facebook{background-position:-34px 10px}
+@media screen and (max-width: 1071px) {
+  .wrap{margin:0 auto; min-width:320px; max-width:1080px;overflow:hidden;}
+  .gnb-area{height:2.688rem; background:none}
+  .gnb-area .gnb{height:2.688rem; font-size:100%; width:100%}
+  .gnb-area a.home {display:block;width:3.625em;height:100%;line-height:0;text-indent:-9999px; left:0; top:0;}
+  .home:after{content:"";width:1.667rem; height:1.667rem;background: url('http://image.genie.co.kr/imageg/mobile_web/common/icon_gnb_home.png') no-repeat 100% 0;position:absolute; left:1rem; top:0.48rem;background-size: 200% 100%; z-index: -1;}
+  .gnb-area ul{top:0.55rem;height:1.667rem;line-height:1.667rem;}
+  .gnb-area ul li{padding: 0 1.313em;}
+  .gnb-area ul li:after{top:0.4rem; height:0.8rem}
+  .gnb-area ul li.share{display:none;}
+  .common_box{background:none; }
+  .common_box:after{content:""; clear:both; display:block;}
+}
+
+
+/*main*/
+.wrap{margin:0 auto; min-width:1080px; }
+.main{background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/bg_blue_ptn.png)}
+.main .content h1 a{display:block; position:absolute; left:50%; top:180px; text-align:center; width:650px; height:620px; font-size:0;transform:translateX(-50%); -webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);}
+.main_visual{width:100%; height:768px; background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/bg_mainvisual.jpg) center top no-repeat}
+.main_visual .snow{background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/ico_snow.png) no-repeat 0 0; position:absolute;}
+
+.main_visual .snow.b01.animated{background-position:0 0; left:-250px; top:50px; -webkit-animation: falling3 3s 0s; width:400px; height:400px;}
+@-webkit-keyframes falling3 {
+  0% {top:0; opacity:0;
+      -webkit-transform:
+          translate3d(-100px,0px,0)}
+  80% {
+      -webkit-transform:
+          translate3d(0px,5px,0);
+      opacity: 1;
+  }
+}
+.main_visual .snow.b02.animated{width:400px; height:400px;background-position:-410px 0; right:-220px; top:480px; -webkit-animation: falling4 3s 0s;}
+@-webkit-keyframes falling4 {
+  0% {top:0; opacity:0;
+      -webkit-transform:
+          translate3d(200px,200px,0)}
+  30% {top:0; opacity:0;
+    -webkit-transform:
+        translate3d(200px,200px,0)}
+  100% {
+      -webkit-transform:
+          translate3d(0px,0px,0);
+      opacity: 1;
+  }
+}
+
+.main_visual .snow.s01{background-position:-30px -450px; width:260px; height:260px; position:absolute; left:0; top:490px; -webkit-animation: falling 3s 0s; }
+@-webkit-keyframes falling {
+  0% {top:0;
+      -webkit-transform:
+          translate3d(300px,0px,0)}
+  80% {
+      -webkit-transform:
+          translate3d(0px,15px,0);
+      opacity: 1;
+  }
+}
+.main_visual .snow.s02{background-position:-307px -450px; width:260px; height:260px; position:absolute; right:-300px; top:200px; transform:translateX(-50%); -webkit-animation: falling2 3s 0s; }
+@-webkit-keyframes falling2 {
+  0% {top:0; opacity:0;
+      -webkit-transform:
+      translate3d(0px,0,0)}
+  80% {
+      -webkit-transform:
+      translate3d(-130px,0px,0);
+      opacity:1;
+  }
+}
+.main_visual .snow.s01.animated{animation:blink 2s ease-in-out infinite alternate}
+@keyframes blink{20% {opacity:1;} 50%{opacity:.2}}
+.main_visual .snow.s02.animated{animation:blink2 3s ease-in-out infinite alternate}
+@keyframes blink2{70% {opacity:0;} 100%{opacity:1}}
+
+.main_contents{background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/bg_main_deco.png) center top no-repeat; padding-bottom:165px;}
+.main_contents .content h2{font-size:55px; font-family: 'Black Han Sans'; letter-spacing:5px; padding:70px 0 80px; text-align:Center; color:#fff;}
+.main_contents .content h2 span{vertical-align: baseline;}
+.pink{color:#b9ffff}
+.sky{color:#e5b4ff}
+
+.event_award{background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/bg_main_award.jpg) center top no-repeat; height:1210px;}
+.main_detail{text-align:center; font-family: 'GmarketSansM'; font-size:22px;}
+.main_detail strong{font-family: 'Black Han Sans'; font-size:36px; display:block; height:108px; font-weight:normal; line-height:160px}
+.main_detail a{display:inline-block; width:223px; height:59px; margin-top:22px; font-size:0; }
+.main_detail span{font-family: 'SpoqaHanSansB'; display:block;}
+.event_award li:first-child{height:330px}
+.event_report{background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/bg_main_report.png) center top no-repeat; height:635px}
+.event_report li:first-child{height:335px}
+
+@media screen and (max-width: 1071px) {
+  .wrap{min-width:22.500rem;margin:0 auto;}
+  .content{width:100%}
+  .main{background-size:2.656rem} 
+  .main .content h1 a{left:50%; top:5rem; width:15rem; height:15.2rem;}
+  .main_visual{height:23.594rem;background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/m/bg_mainvisual.jpg) center top no-repeat; background-size:28.125rem 23.594rem;}
+  .main_visual .snow{background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/m/ico_snow.png) no-repeat 0 0; background-size:15.625rem}
+  .main_visual .snow.b01.animated{left:-1.8em; top:4rem; width:7.688rem; height:7.688rem}
+  .main_visual .snow.b02.animated{background-position:-7.688rem 0; right:-1.8em; top:16rem; width:7.688rem; height:7.688rem}
+  .main_visual .snow.s01{background-position:0 -9.688rem; width:6.469rem; height:5.938rem; top:22rem; left:70%}
+  .main_visual .snow.s02{background-position:0 -9.688rem; width:6.469rem; height:5.938rem; top:12rem; left:20px;}
+  @-webkit-keyframes falling2 {
+    0% {top:0; opacity:0;
+        -webkit-transform:
+        translate3d(0px,0,0)}
+    70% {
+        -webkit-transform:
+        translate3d(-5.5rem,-1rem,0);
+        opacity:1;
+    }
+  }
+
+  .main_contents{background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/m/bg_main_deco.png) center top no-repeat; background-size:31.063rem 64.219rem; padding-bottom:4rem}
+  .main_contents .content h2{font-size:1.563rem; line-height:1.563rem;padding: 2rem 0;}
+  .main_contents .content ul{margin:0 auto; width:20rem}
+  .main_contents .content ul li{line-height:1rem}
+  .main_detail strong{height:3.2rem; font-size:1.25rem; line-height:4.7rem}
+  .main_detail span{padding:0.3rem 0 0.15rem;}
+  .main_detail a{width:7.2rem; height:2rem; margin-top:0.5rem}
+  .main_detail{font-size:0.75rem}
+  .event_award{background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/m/bg_main_award.jpg) center top no-repeat;background-size:20.844rem 29.156rem; height:31.5rem}
+  .event_award li:first-child{height:9.219rem}
+  .event_report{background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/m/bg_main_report.png) center top no-repeat; background-size:20.844rem 17.438rem; height:17.5rem}
+  .event_report li:first-child{height:9.219rem}
+  }
+
+/*icon*/
+.btn a:after, .winner_song li .play:after, .bnrarea .sns li a, .artist_main .total li a:after, .popup-header .layer-close, input.checkbox + label:before, .popup .sns_btn dd a, .popup .chance li, .bx-wrapper .bx-controls-direction a, .tmi_main a.play:after, .tmi_main .thum .rank, .tmi_main .more_view .morebtn:after, .tmi_main .more_view .all_play a:after, .genie_time .ptn dd:after{background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/ico.png) no-repeat;}
+@media screen and (max-width: 1071px) {
+  .btn a:after, .winner_song li .play:after, .bnrarea .sns li a, .artist_main .total li a:after, .vote_list li .rank, .popup-header .layer-close, input.checkbox + label:before, .popup .sns_btn dd a, .popup .chance li, .bx-wrapper .bx-controls-direction a, .tmi_main a.play:after, .tmi_main .thum .rank, .tmi_main .more_view .morebtn:after, .tmi_main .more_view .all_play a:after, .tmi_main .tmi_list li .rank, .genie_time .ptn dd:after{background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/ico.png) no-repeat;background-size:15.625rem}
+}
+
+/*상단공통*/
+.sub_visual{background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/bg_blue_ptn.png);}
+.sub_visual .toparea{background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/bg_subvisual_n.jpg) center top no-repeat; width:100%; height:420px; position:relative}
+.sub_visual .toparea h2 a{position:absolute; width:430px; height:200px; left:50%; top:80px; transform:translateX(-50%); -webkit-transform:translateX(-50%);-moz-transform:translateX(-50%); text-indent:-9999em;}
+
+.menu{background:#3c3c3c}
+.menu.fixed{position:fixed; z-index:10; left:0; top:0; width:100%;}
+.menu ul{text-align:center; font-family: 'GmarketSansM'; width:900px; margin: 0 auto} 
+.menu ul:after{content:""; clear:both; display:block;}
+.menu ul li{display:inline-block; width:26%; float:left; position:relative}
+.menu ul li:nth-child(3){width:22%}
+.menu ul li:after{content:""; position:absolute; left:0; top:26px; border-left:1px solid #9e9e9e; height:15px}
+.menu ul li:first-child:after{border:none}
+.menu ul li a{height:70px; line-height:70px; display:block; color:#636363; font-size:20px; }
+.menu ul li.on a{color:#ffffff}
+
+@media screen and (max-width: 1071px) {
+  .sub_visual{background-size:2.656rem}
+  .sub_visual .toparea{background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/m/bg_subvisual.jpg) center top no-repeat; height:13.125rem; background-size:40.625rem 13.125rem; width:100%}
+  .sub_visual .toparea h2 a{width:15rem; height:5.5rem; top:3.5rem;}
+  .menu ul{width:100%}
+  .menu ul li:after{top:1rem; height:0.7rem;}
+  .menu ul li a{height:2.875rem; line-height:2.875rem; font-size:0.844rem}
+}
+
+/*하단공통*/
+.btm_common{background: #ffffff; padding:60px 0;}
+.caution{background:#464646; padding:35px 0; color:#b0b0b0;}
+.caution dl{margin:0 auto; width:900px}
+.caution dt{font-size:22px; font-family: 'SpoqaHanSansB';}
+.caution dd{font-size:20px; padding-left:10px; position:relative}
+.caution dd:after{content:""; position:absolute; left:2px; top:15px; width:2px; height:2px; background:#b0b0b0; border-radius: 50%;}
+
+.bnrarea{background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/banner.png) left top no-repeat; text-indent:-9999em}
+.bnrarea:after{content:""; clear:both; display:block}
+.bnrarea li{position:relative; float:left;}
+.bnrarea a{display:block;}
+.bnrarea .pay{width:440px; height:145px; }
+.bnrarea .pay a{position:absolute; left:0; top:0; width:100%;height:145px;}
+.bnrarea .sns{position:absolute; right:0; width:440px;height:145px;}
+.bnrarea .sns a{width:50px; height:50px;}
+.bnrarea .sns li{position:absolute; left:229px; top:48px; }
+.bnrarea .sns li a{background-position:-113px 0}
+.bnrarea .sns li a:hover{background-position:-113px -55px}
+.bnrarea .sns li:nth-child(2){left:293px}
+.bnrarea .sns li:nth-child(2) a{background-position:-174px 0}
+.bnrarea .sns li:nth-child(2) a:hover{background-position:-174px -55px}
+.bnrarea .sns li:nth-child(3){left:357px}
+.bnrarea .sns li:nth-child(3) a{background-position:-235px 0}
+.bnrarea .sns li:nth-child(3) a:hover{background-position:-235px -55px}
+
+.m_sns{display:none;}
+.btm_artist .bnrarea{margin-top:0; background-position:0 -313px}
+
+@media screen and (max-width: 1071px) {
+  .btm_common{display:none; padding:0 0.938rem 1.25rem; background:none;}
+  .btm_common.btm_artist{display:block;}
+  .btm_common .content{width:20.625em; margin:0 auto}
+  .caution{padding:1.094rem 0.938rem;}
+  .caution dl{width:100%}
+  .caution dt{font-size:0.781rem; padding-bottom:0.3rem}
+  .caution dd{font-size:0.688rem; padding-left:0.5rem;}
+  .caution dd:after{top:0.469rem;}
+  .bnrarea{background-position:center -4.625rem; background-size:28.125rem; margin:0.938rem auto 0; background-color:#f4df94; border-radius:0.5rem}
+  .bnrarea{background-position:0 -4.625rem; background-size:28.125rem; margin:0.938rem auto 0;}
+  .bnrarea li{width:100%}
+
+  .btm_artist{padding:0 0.938rem 1.625rem;}
+  .btm_artist .content{width:100%; margin:0 auto}
+  .btm_artist .bnrarea{background-color:#7de1c7; border-radius:0.469rem; background-position:center -14.406rem}
+  .bnrarea .sns{display:none}
+  .bnrarea .pay{width:100%; height:5.031rem}
+  .bnrarea .pay a{width:100%; height:5.031rem}
+  .m_sns{display:block; background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/m/ico_sns.gif) center 4.188rem no-repeat #c7cfd7; background-size:15.406rem 2.969rem; height:9.469rem; padding-top:1.875rem}
+  .m_sns ul{text-align:center; padding-top:0.3rem}
+  .m_sns ul li{display:inline-block; margin:0 0.5rem}
+  .m_sns ul li a{text-indent:-9999em; width:2.969rem; height:2.969rem; display:block;}
+}
+
+/*올해의음원*/
+h3{font-family: 'Black Han Sans'; text-align:center; font-size:55px; letter-spacing:6px;}
+.main_txt{font-size:22px;font-family: 'GmarketSansM'; display:block; text-align:center; padding-top:10px}
+.sound_main{background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/bg_sound.jpg) center 78px no-repeat; height:830px;padding-top:115px}
+.sub_tit{font-family: 'Black Han Sans'; text-align:center; font-size:36px; display:block; padding-bottom:25px;}
+.content h3{background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/tit_winner.png) center top no-repeat; height:104px; text-indent:-9999em; margin-bottom:50px}
+.top_artist{padding-bottom:115px;}
+.top_artist ul{padding-bottom:70px;text-align:center;}
+.top_artist ul:after{content:""; clear:both; display:block}
+.top_artist ul li{display:inline-block; margin-right:11px; text-align:Center; width:290px;}
+.top_artist ul li a{display:block;}
+.top_artist ul li:last-child{margin-right:0;}
+.top_artist ul li img{width:290px; border-radius:50%}
+.top_artist ul li strong{display:block; font-family: 'SpoqaHanSansB'; font-size:28px; padding:15px 0 5px}
+.top_artist ul li span{display:block;font-size:25px; height:72px;overflow:hidden;}
+.top_artist .d-day{border:1px solid #a9aeb2; margin:0 auto 48px; width:450px; height:133px; padding-top:55px; text-align:center; font-size:35px; position:relative; }
+.d-day em{vertical-align:baseline; padding-right:15px;font-family:'SpoqaHanSansL'; }
+.top_artist .d-day:after{content:"투표마감"; position:absolute; left:50%; top:23px; font-size:24px; color:#84888b; transform:translateX(-50%); -webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);}
+.btn{text-align:center;}
+.btn a{background:#000; border-radius:50px; width:320px; height:95px; line-height:95px; color:#fff; text-align:center; display:inline-block; font-size:28px; font-family:'GmarketSansM'; padding-right:30px; position:relative}
+.btn a:hover{background:#3c4df0}
+.btn a:after{content:""; position:absolute; left:216px; top:33px; width:18px; height:21px;}
+.btn a.allplay:after{content:""; position:absolute; left:216px; top:33px; width:24px; height:27px; background-position:0 -75px}
+
+.content h3.tit02{background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/tit_winner_end.png) center top no-repeat; margin-bottom:70px}
+.top_song{padding:50px 0}
+.winner_song{text-align:center;}
+.winner_song li{display:inline-block; margin:0 45px; width:350px; height:600px; overflow:hidden;}
+.winner_song img{width:350px; border:1px solid #dce2e7}
+.winner_song li a{display:block; position:relative; color:#000}
+.winner_song li a.play:after{content:""; position:absolute; right:18px; bottom:18px; width:60px; height:60px; background-position:-26px 0}
+.winner_song li strong{display:block; font-family: 'SpoqaHanSansB'; font-size:28px; padding:15px 0 5px; max-height:100px;overflow:hidden}
+.winner_song li span{display:block;font-size:25px; max-height:69px; overflow:hidden}
+
+.content h3.tit03{background-position:center -234px; margin-bottom:70px}
+.top_genre{padding: 113px 0;background:#deeefe; }
+.top_genre .winner_song li{height:650px}
+.top_genre .winner_song em{font-family: 'GmarketSansM'; font-size:22px; width:174px; height:46px; line-height:46px; border-radius:30px; border:2px solid #000; display:inline-block; margin-bottom:28px}
+
+@media screen and (max-width: 1071px) {
+  h3{font-size:1.875rem; letter-spacing:0.188rem;}
+  .main_txt{font-size:0.813rem; padding-top:0.3rem}
+  .sound_main{background-size:28.125rem 46.875rem; background-position:center -23.438rem; height:24rem; padding-top:2.938rem}
+  .sub_tit{font-size:1.438rem;padding-bottom:0.6rem}
+  .content h3{background: url('http://image.genie.co.kr/imageg/web/promo_2020/closing/m/tit_winner.png') center top no-repeat; background-size:10.219rem 25.781rem; height:3.25rem; margin-bottom:1.563rem}
+  .top_artist{padding-bottom:3.594rem;}
+  .top_artist ul{padding-bottom:2.188rem}
+  .top_artist ul li{margin:0 0.15rem;width:9.063rem;}
+  .top_artist ul li:last-child{display:none}
+  .top_artist ul li img{width:9.063rem}
+  .top_artist ul li strong{font-size:0.938rem; padding:0.625rem 0 0.1rem}
+  .top_artist ul li span{font-size:1rem; height:2.9rem;}
+  .top_artist .d-day{width:14.063rem; height:4.156rem; padding-top:1.5rem; font-size:1.25rem; margin-bottom:1.5rem}
+  .d-day em{padding-right:0.4rem; font-family: 'GmarketSansL';}
+  .top_artist .d-day:after{top:0.6rem; font-size:0.75rem}
+  .btn a{border-radius:1.563rem; width:10rem; height:2.969rem; line-height:2.969rem; font-size:0.875rem; padding-right:0.938rem;}
+  .btn a:hover{background:#000}
+  .btn a:after{left:6.813rem; top:1.031rem; width:0.563rem; height:0.656rem;}
+  .btn a.allplay:after{left:6.813rem; top:1.031rem; width:0.65rem; height:0.75rem; background-position:0 -2.344rem}
+
+  .content h3.tit02{background-position:center -4.281rem; background-size:10.219rem; margin-bottom:2.188rem;}
+  .top_song{padding:0rem 0 2rem}
+  .winner_song li{margin:0 0 2.969rem 0; width:100%; height:auto}
+  .winner_song img{width:10.938rem;}
+  .winner_song li a{width:10.938rem; margin:0 auto; letter-spacing: -0.05rem;}
+  .winner_song li a.play:after{right:0.563rem; bottom:0.563rem; width:1.875rem; height:1.875rem; background-position:-0.813rem 0}
+  .winner_song li strong{margin:0 auto; width:10.938rem;font-size:1.125rem; padding:0.625rem 0 0.1rem; max-height:3.8rem; line-height:1.6rem}
+  .winner_song li span{margin:0 auto; width:10.938rem; max-height:2.9rem; font-size:1rem; line-height:1.4rem}
+
+  .content h3.tit03{background-position:center -7.313rem; margin-bottom:1.6rem}
+  .top_genre{padding: 4.063rem 0}
+  .top_genre .winner_song img{width:9.375rem;}
+  .top_genre .winner_song li{margin:0 0.625rem; height:20rem; width:9.375rem;}
+  .top_genre .winner_song li a, .top_genre .winner_song li strong, .top_genre .winner_song li span{width:100%}
+  .top_genre .winner_song em{font-size:1.063rem; width:7.563rem; height:1.844rem; line-height:1.844rem; border-radius:0.938rem;margin-bottom:0.875rem; border:0.063rem solid #000; }
+}
+
+/*올해의가수*/
+.artist_main{padding-top:115px}
+.artist_main .main_txt span{vertical-align:top}
+.artist_main .howto{border: 1px solid #a9aeb2; width:852px; margin:32px auto 74px; padding:31px 20px 31px 58px; font-size:23px; background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/txt_vote.gif) 60px 38px no-repeat;}
+.artist_main .howto dd{display:inline-block; padding-left:150px;font-family: 'GmarketSansM';line-height:47px; width:100% }
+.artist_main .howto dt{text-indent:-9999em; position:absolute;}
+.artist_main .howto dd span{color:#3c4df0; vertical-align: top;}
+
+.artist_main .total{position:relative; height:140px; }
+.artist_main .total:after, .artist_main .total dl:after{content:""; clear:both; display:block;}
+.artist_main .total dl{width:100%; position:relative}
+.artist_main .total dl dt{color:#616466;font-size:20px; left:0; top:-4px;position:absolute;}
+.artist_main .total dl dt:last-of-type{left:262px}
+.artist_main .total dl dd{padding-top:24px; font-size:28px; width:262px; float: left;}
+
+.artist_main .total ul{position:absolute; right:0; top:0;}
+.artist_main .total ul:after{display:block; content:""; clear:both}
+.artist_main .total li{float:left; padding-left:20px}
+.artist_main .total li a{border:1px solid #919599; border-radius:50px; line-height:56px; width:190px; height:60px; color:#414244; font-size:18px; text-align:center; display:block; padding-right:20px;position:relative }
+.artist_main .total li a:after{content:""; width:9px; height:15px; background-position:-327px 0; position:absolute; right:20%; top:21px; transform:translateX(-50%); -webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);}
+.artist_main .total li a:hover{border-color:#3c4df0; color:#3c4df0}
+.artist_main .total li a:hover:after{background-position:-311px 0}
+
+@media screen and (max-width: 1071px) {
+  .artist_main{padding:2.938rem 0.938rem 0}
+  .artist_main .main_txt span{display:block;}
+  .artist_main .howto{width:100%; margin:1rem auto 1.563rem; padding:1.58rem 0.938rem; font-size:0.75rem; background-size:4.031rem 12.344rem; background-position:1rem -8.45em}
+  .artist_main .howto dd{padding-left:3.5rem; width:100%; line-height:1.64rem; letter-spacing:0.005rem}
+  .artist_main .howto dd:nth-of-type(3) span{display:block;height:1.2rem}
+
+  .artist_main .total{margin-top:0; height:auto;}
+  .artist_main .total dl dt{color: #555556; width:50%; text-align:center; font-size:0.813rem;}
+  .artist_main .total dl dt:last-of-type{left:50%;}
+  .artist_main .total dl dd{width:50%; text-align:center; font-size:1.188rem; padding-top:1rem; font-family: 'SpoqaHanSansB';}
+  .artist_main .total dl dd em{font-weight:200; vertical-align:0.04rem}
+  .artist_main .total ul{position:static; float:left; width:100%; padding:1.094rem 0 2.438rem}
+  .artist_main .total ul:after{content:""; clear:both; display:block}
+  .artist_main .total li{width:50%; padding:0 0.469em 0 0;}
+  .artist_main .total li:last-child{padding:0 0 0 0.469em;}
+  .artist_main .total li a{width:100%; font-size:0.875rem; height:2.5rem; line-height:2.3rem; }
+  .artist_main .total li a:hover{border-color:#919599; color:#414244}
+  .artist_main .total li a:after, .artist_main .total li a:hover:after{width:0.406rem; height:0.656rem; background-position:-10.656rem 0;color:#191919; right:25%; top:0.82rem;}
+}
+
+/*올해의가수-투표*/
+.vote_list{width:900px; }
+.vote_list:after{display:block; clear:both; content:""; }
+.vote_list li{width:290px; float:left; margin:0 0 130px 14px;position:relative;}
+.vote_list li:nth-child(3n+1){margin-left:0;}
+.vote_list li .thum{width:100%; height:290px; text-align:center; }
+.vote_list li .mask{width:290px; height:290px; border:0.05em solid #000; opacity:.1; position:absolute; left:0; top:0; border-radius: 50%;}
+.vote_list li .thum a{display:block; }
+.vote_list li .thum img{width:100%; height:100%; border-radius: 50%;}
+.vote_list li .rank{font-size:45px; position:absolute; left:23px; top:0; z-index:2; letter-spacing:-0.22rem;}
+.vote_list li strong{display:block; padding:0 30px 0 80px; font-size:26px; height:37px;line-height:37px;position:relative;font-weight:normal;margin-top:40px }
+.vote_list li strong a{display:block;overflow:hidden; white-space: nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; -moz-text-overflow:ellipsis; }
+.vote_list li dl{display:block;width:238px; margin:0 auto; overflow:hidden; position:relative; font-size:14px; color:#000; }
+.vote_list li dt{font-size:19px; position:absolute; left:0px; bottom:0;}
+.vote_list li .rate{font-size:18px; color:#84888b; text-align: right; font-weight:100;}
+.vote_list li .rate em{font-weight:400; padding-right:3px;vertical-align: baseline;}
+.vote_list li .graph{float:left; width:100%; position:relative; height:3px; background:#ced4d9;overflow:hidden; margin:35px 0 7px}
+.vote_list li .graph span{display:block;position:absolute;top:0;left:0;width:0;height:100%;background:#000;font-size:0;line-height:0;text-indent:-9999px}
+.vote_list li .go_vote{width:252px; height:60px; margin:23px auto 0;line-height:60px; color:#ffffff;font-size:22px; display:block; background:#000; text-align:center; border-radius:50px; font-family: 'GmarketSansM';}
+.vote_list li .go_vote.end, .vote_list li .go_vote.end:hover{background:#cdcaca; color:#e3e1e1; cursor: default;}
+.vote_list li .go_vote:hover{background:#3c4df0}
+.vote_list li .go_vote em{outline: none; vertical-align: baseline;}
+.vote_list li.win .rank{color:#f8415b}
+.vote_list li.win .graph span{background:#f8415b}
+
+@media screen and (max-width: 1071px) {
+  .artist_main{padding-top:2.938rem}
+  .artist_main .main_txt span{display:block; padding-top:0.15rem}
+  .vote_area{width:100%; padding: 0 0.938em;}
+  .vote_list{width:100%; }
+  .vote_list li{width:100%; height:6.094rem; padding:0 6.25rem 0 6.5rem; background:#ffffff; border-radius:0.469rem; margin: 0 0 1.25rem;}
+  .vote_list li .mask{width:4rem; height:4rem}
+  .vote_list li .thum{width:4rem;height:4rem;position:absolute;left:1.875rem;top:1rem;}
+  .vote_list li .rank{font-size:1.094em; text-align:center; width:1.813rem; height:2.531rem; line-height:2.1rem; left:-6rem; top:0rem; z-index:2; color:#ffffff; background-position:0 -3.813rem;letter-spacing:0px}
+  .vote_list li.win .rank{color:#ffffff; background-position:-1.875rem -3.813rem; }
+  .vote_list li strong{width:100%; height:2.813rem; line-height:0.938rem; padding:1.563rem 0 0 0; font-size:0.938rem; margin:0}
+  .vote_list li .song{width:100%; height:1.76em; color:#627079; font-size:0.750em; position:relative; }
+  .vote_list li .song a{color:#627079; }
+  .vote_list li dl{width:100%; margin-top:0.35rem}
+  .vote_list li dt{font-size:0.75rem; position:static;}
+  .vote_list li .rate{position:absolute; right:0; top:0.2em; font-size:0.688rem; padding-top:0;}
+  .vote_list li .graph{float:left; width:100%; margin-top:0.16rem; position:relative; height:0.188rem; overflow:hidden;}
+  .vote_list li .graph span{display:block;position:absolute;top:0;left:0;height:100%; font-size:0; text-indent:-9999px;}
+  .vote_list.hit li .graph span{background:#0eb6e6 }
+  .vote_list li .go_vote{width:4rem; height:2.188rem; font-size:0.938em; line-height:2.3rem; position:absolute; right:1.188rem; top:2rem; margin:0;}
+  .vote_list li .go_vote em{display:none;}
+  .vote_list li .go_vote:hover{background:#000}
+  .vote_list li.singer strong{height:3.35em; line-height: 3.55em;}
+  .vote_list li .aritist{font-size:0.813em; line-height:0.813em; height:2em; padding-left: 1.538em;}
+}
+
+/* reply */
+.reply{font-size:18px; width:100%; border-top:1px solid #e5e5e5; background: #ffffff;}
+.reply .content{padding:50px 0 100px; }
+.note .def-btn { color: #999999; height: 27px; }
+.note .def-btn em { color: #f38175; font-style: normal; position: relative; top: 3px; }
+.reply h4{height:86px; text-align:center;font-size:36px; overflow: hidden; position: relative;font-weight:200;}
+.reply h4 span{vertical-align:top; font-weight:400}
+.reply .profile { overflow: hidden; position: absolute; width: 2.125em; height: 2.125em; margin-right: 1.829268%; border-radius: 50%; }
+.reply .profile:before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0.0625em solid rgba(0, 0, 0, 0.1); border-radius: 50%; }
+.reply .profile img { display: block; width: 100%; border-radius: 50%; }
+.reply .comment { position: relative; text-align: left; }
+.reply .btn-submit { display: block; position: absolute; top: 0; bottom: 0; right: 0; width: 3.1875em; line-height: 0; text-indent: -9999px; z-index:1; }
+.reply .btn-submit:before { content: ''; display: block; position: absolute; top: 50%; left: 1.0416666666em; width: 1.125em; height: 1.125em; margin-top: -0.5625em; background: url("http://image.genie.co.kr/imageg/web/promo_2020/closing/ico_reply.png") no-repeat 0 0; background-size:1.125em; }
+.reply .btn-more { display: block; width: 100%; text-align: center; }
+.reply .btn-more span { display: inline-block; position: relative; height: 3.3055555555em; padding: 0 3.36111111111em 0 2em; font-size: 0.75rem; line-height: 3.30555555555em; }
+.reply .btn-more span:before { content: ''; display: block; position: absolute; top: 50%; right: 1.5em; width: 0.6875em; height: 0.375em; margin-top: -0.2291666666em; font-size: 1rem; background: url("http://image.genie.co.kr/imageg/web/promo_2020/closing/ico_reply.png") no-repeat 0 -3.83333em; background-size: 3.625rem; }
+.reply .input-comment { padding: 1.0625em 1em 1em; background-color: #f7f9fc; border-bottom: 0.0625em solid #eef1f4; }
+.reply .input-comment .user { position: relative; height: 2.125em; margin-bottom: 0.6875em; padding-left: 2.5em; }
+.reply .input-comment .profile { top: 0; left: 0; }
+.reply .user a { display: block; overflow: hidden; float: left; position: relative; width: 48.26%; height: 3.09090909090909em; margin-left: 1.52439%; padding: 0 4.5731707317% 0 10.365853658536%; border-radius: 1.54545454545454em; font-size: 0.6875rem; line-height: 3.181818181818em; text-align: center; }
+.list-comment .range { display: block; text-align: right; border-bottom: 1px solid #e3e3e3; padding: 30px 0 12px; color: #cccccc; font-size: 14px; }
+.list-comment .range a { color: #999999; padding: 0 8px; position: relative; }
+.list-comment .range a.on { font-weight: bold; color: #444444; }
+.list-comment .range a:first-of-type { margin-right: 8px; }
+.list-comment .range a:first-of-type:after { content: ""; position: absolute; right: -5px; top: 4px; width: 1px; height: 13px; background: #999999; }
+.comment-title {margin:0px 0 13px; position:relative}
+.comment-title {margin:0px 0 13px; position:relative}
+.tit-box h3 {display: inline-block; height:auto; margin-bottom:0; background:none; text-indent:0}
+.tit-box .article {display: inline; zoom: 1; margin: 0; padding-left: 5px; vertical-align: baseline; font-size: 11px; line-height: 15px; color: #999;}
+.tit-box .article strong{color: #f68074; vertical-align: baseline;}
+.comment-title .note {font-size: 11px; color: #999; position: absolute; top: 4px; right: 0; text-align: right; letter-spacing: 0;}
+.def-btn {display: inline-block; min-width: 30px; text-align: center; line-height: 21px; vertical-align: middle; font-size: 11px; color: #666; padding: 1px 10px 0; border-radius: 3px; border: 1px solid #ccc; background-color: #fff;}
+.def-btn:hover { border-color: #9f9f9f; background-color: #fafafa;}
+.page-nav a { line-height: 20px; }
+.reply .user .info { display: block; }
+.reply .user a:before { content: ''; display: block; position: absolute; top: 0.6444444444em; left: 7.43405275779%; width: 0.9375em; height: 0.9375em; font-size: 1rem; background: url("http://image.genie.co.kr/imageg/mobile_web/common/blt_reply.png") no-repeat 0 -1.4375em; background-size: 5em auto; }
+.reply .user a.disconnect { opacity: 0.5; }
+.reply .user .btn-fb { background-color: #365097; }
+.reply .user .btn-twitter { background-color: #3999e1; }
+.reply .user .btn-twitter:before { background-position: -1.1875em -1.4375em; }
+.reply .textarea { overflow: hidden; height: 2.857142857142857em; min-height: 2.857142857142857em; padding: 0.6666666666em 3.642857142857em 0.6666666666em 0.8095238095238em; resize: none; display: inline-block; width: 100%; line-height: 1.42857142857em; border: 0.07142857em solid #d7dbde; border-radius: 0.142857142857em; -webkit-appearance: none; font-family: 'Spoqa Han Sans'; }
+.reply .btns { padding-bottom: 0.3958333333em; }
+.reply .btns button { display: inline-block; position: relative; line-height: 2; color:#939aa1}
+.reply .btns button:before { content: ''; display: block; position: absolute; top: 50%; left: 0; width: 1em; height: 1.05em; margin-top: -0.45em; background: url("http://image.genie.co.kr/imageg/mobile_web/common/blt_reply.png") no-repeat 0 -2.6em; background-size: 5em auto; }
+.reply .btns .btn-like { padding: 0 1em 0 1.743589743589em; font-size: 0.8125rem; }
+.reply .btns .btn-like.active:before { background-position: -1.1875em -2.6875em; }
+.reply .btns .btn-reply {padding: 0 1em 0 1.743589743589em; }
+.reply .btns .btn-reply:before { background-position: -2.375em -2.6em; }
+.reply .btns .btn-report{ display: block; position: absolute; top: 0; right: 0; width: 3em; height: 3em; }
+.reply .btns .btn-report:before { left: 0.5em; background-position: -3.625em -2.6875em; }
+.reply .btns .btn-del { display: block; position: absolute; top: 0; right: 0; width: 3em; height: 3em; }
+.reply .btns .btn-del:before { left: 0.5em; width: 1em; height: 1em; margin-top: -0.5em; background-position: -2.625em 0; }
+.reply .list-comment li { display: block; position: relative; padding: 0.875em 1em 0 3.75em; border-bottom: 0.0625em solid #e5e9ec; }
+.reply .list-comment .profile { top: 1em; left: 1em; }
+.reply .list-comment .info { line-height: 1.27; }
+.reply .list-comment .user { display: inline-block; vertical-align: top; }
+.reply .list-comment .icon { display: inline-block; width: 1em; height: 1em; margin: 0.125em 0 0 0.0416666666em; line-height: 0; background: url("http://image.genie.co.kr/imageg/mobile_web/common/blt_reply.png") no-repeat -2.375em -1.4375em; background-size: 5em auto; text-indent: -9999px; vertical-align: top; }
+.reply .list-comment .icon.blt-fb { background-position: -3.625em -1.4375em; }
+.reply .list-comment .date { display: block; padding-top: 0.05555555555em; font-size:0.96rem; color:#939aa1 }
+.reply .list-comment .txt, .popup .reply .list-comment .txt { display: block; padding: 0.6666666666em 0 0.311111111111em;line-height: 1.466666666666em; text-align: left; word-break: break-all; }
+.reply .list-comment .no-data { display: block; padding: 5em 0; font-size: 0.9375rem; line-height: 1.4666666666em; text-align: center; }
+.reply .list-reply { display: none; margin: 0 -1em 0 -3.75em; padding: 0 1em 0 3.5em; border-top: 0.0625em solid #e5e9ec; background-color: #f7f9fc;}
+.reply .list-reply.active { display: block; }
+.reply .list-reply li { padding: 0.6875em 0 0 0.3125em; }
+.reply .list-reply li:before, .reply .input-reply .comment:before { content: ''; display: block; position: absolute; top: 1.22916666666em; left: -1.9166666666em; width: 1em; height: 1.1875em; background: url("http://image.genie.co.kr/imageg/mobile_web/common/blt_reply.png") no-repeat -1.375em 0; background-size: 5em auto; }
+.reply .input-reply .comment:before { top: 0.7291666666em; }
+.reply .list-reply .profile { top: 0.875em; left: 0.125em; width: 1.875em; height: 1.875em; }
+.reply .list-reply .info { padding-left: 2.25em; }
+.reply .list-reply .user { display: inline-block; }
+.reply .list-reply .icon { margin-top: 0.08333333333em; }
+.reply .list-reply .date { padding-top: 0; }
+.reply .list-reply .txt { padding: 0.6923076923em 0 0.4102564102564em; line-height: 1.3846153846em; font-size:90%  }
+.reply .list-reply .btns { padding-bottom: 0.5625em; }
+.reply .list-reply .btn-like { padding-left: 1.743589743589em; font-size: 0.8125rem; line-height: 2.230769230769em; }
+.reply .list-reply .btn-report, .reply .list-reply .btn-del { right: -1em; }
+.reply .input-reply .comment { position: relative; margin-top: 1em; }
+.reply .input-reply .btn-fold { display: block; width: 100%; }
+.reply .input-reply .btn-fold span { display: inline-block; position: relative; height: 3.3055555555em; padding: 0 3.36111111111em 0 2em; font-size: 0.96rem; line-height: 3.30555555555em; }
+.reply .input-reply .btn-fold span:before { content: ''; display: block; position: absolute; top: 50%; right: 1.5em; width: 0.66667em; height: 0.375em; margin-top: -0.2291666666em; font-size: 1rem; background: url("http://image.genie.co.kr/imageg/mobile_web/common/blt_reply.png") no-repeat -1.1875em -3.83333em; background-size: 5em auto; }
+.page-nav { margin-top: 20px; }
+.reply .btn-more { display: none; color: #444; }
+@media screen and (max-width: 1071px) {
+  .reply { width: 100%; margin-bottom: 0px; font-size:100%}
+  .reply .textarea{font-size:0.8rem}
+  .reply .content{padding:0}
+  .reply .btns button:before { top: 45%; }
+  .reply .btns .btn-reply:before { top: 47%; }
+  .reply h4 { line-height: 75px; font-size: 19px; }
+  .reply .list-comment .date{font-size:0.7rem}
+  .list-comment .range a:first-of-type:after { top: 1px; }
+  .list-comment .range { padding: 15px 0; font-size: 12px; }
+  .btn_reply_rule { padding-right: 5px; }
+  .reply .btn-more { display: block; }
+  .comment-title, .page-nav { display: none; }
+  .reply h4 { height: 5rem; background: #f7f9fc; font-size:1.375em;padding-top: 0.9em;}
+  .reply h4:after { width: 11.03125rem; height: 1.25rem; margin: 2.5rem auto 0 auto; background-image: url(http://image.genie.co.kr/imageg/web/promo_2019/0312/m/comment_title.png); background-size: 11.03125rem 1.25rem; }
+}
+
+/* paging */
+.page-nav { margin: 20px 0 10px; min-height: 25px; text-align: center; position: relative; }
+.page-nav a { display: inline-block; vertical-align: middle; text-align: center; width: 23px; height: 23px; font: normal 12px/23px Tahoma, Helvetica, sans-serif; color: #666; border: 1px solid #ccc; background-color: #fff; }
+.page-nav a:hover { border-color: #9f9f9f; background-color: #ededed; }
+.page-nav a.current { border-color: #0096ff; font-weight: bold; color: #0096ff; }
+.page-nav a.current:hover { background-color: #fff; border-color: #0096ff}
+.page-nav a.current { border-color: #0096ff; font-weight: bold;}
+.page-nav a span { font: 0/0 a; }
+.page-nav a.first, .page-nav a.prev, .page-nav a.next, .page-nav a.end { font: 0/0 a; background-image: url("http://image.genie.co.kr/imageg/web/btn/pageing.gif"); background-repeat: no-repeat; }
+.page-nav a.first { background-position: 0 50%; }
+.page-nav a.prev { background-position: -23px 50%; }
+.page-nav a.next { background-position: -46px 50%; }
+.page-nav a.end { background-position: -69px 50%; }
+
+/* popup */
+.popup .popup-content.mtb-scroll{padding-bottom:0}
+.mtb-scroll{overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch; max-height:550px !important;}
+.mtb-scroll::-webkit-scrollbar {width: 13px;height: 13px;border: 3px solid #fff;  }
+.mtb-scroll::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {display: block;height: 1px;background: #efefef}
+.mtb-scroll::-webkit-scrollbar-thumb {height: 50px;width: 50px;background: #c7c7c7;  border-radius:1rem}
+@media (max-width:1071px) {
+  .pop-contents.mtb-scroll{height:350px}
+  .mtb-scroll::-webkit-scrollbar {width: 0.406rem;height:0.406rem;border: 0.094rem solid #fff;  }
+}
+
+.modalLayer{background:url(http://image.genie.co.kr/imageg/web/promo_2018/common/modal_bg.png) repeat 0 0}
+.popup{display:none;position:relative;width:520px; outline:none; border-radius:15px; background:#fff; overflow:hidden}
+.popup .popup-header{position:relative;height:90px;background:#0096ff;padding:0;text-align:left; border-radius:14px 14px 0 0;}
+.popup .popup-header h3{margin:0 0 0 50px;display:inline-block;font-size:28px;color:#fff;line-height:90px; font-family:'SpoqaHanSansB'; letter-spacing:0}
+.popup .popup-header .layer-close{position:absolute;top:27px;right:27px;width:34px;height:34px; text-indent:-9999px; background-position:-383px 0}
+.popup .popup-content {background: #fff; padding:45px 50px; font-size:24px; text-align: center; }
+.popup .popup-content p a{color:#09b6e6}
+.popup .popup-footer{position:relative;height:107px;border-top:2px solid #f5f5f5;}
+.popup .popup-footer button{display:block;color:#0096ff;width:100%;font-size:28px; text-indent:0;box-sizing:border-box;height:104px;border-radius:0 0 0.938rem 0.938rem; }
+.popup .popup-footer button span{position:absolute;top:0;left:0;line-height:108px;width:100%;text-align:center; font-family: 'SpoqaHanSansB';}
+.popup .vote_txt span{vertical-align:top;max-width:250px; overflow:hidden; white-space: nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; -moz-text-overflow:ellipsis; display:inline-block;}
+.popup .stxt{color:#7f848a; padding-top:20px; display:block; line-height:30px; font-size:22px; margin-bottom:-25px}
+
+/*아티스트공유*/
+.popup .blue{color:#0096ff; vertical-align:baseline}
+.popup .gray{color:#7f848a; vertical-align:baseline}
+.popup .sns_share{width:100%; margin:0 auto; padding-top:20px}
+.popup .sns_share li{position:relative; text-align:left; border-bottom:2px solid #f5f5f5}
+.popup .sns_share li:last-child{border-bottom:none}
+.popup .sns_share li label{display:block; width:100%; height:155px; padding:34px 50px 0 72px;font-size:23px; }
+.popup input.checkbox {opacity:0;filter:alpha(opacity=0);position:absolute;left:1px;top:0}
+.popup input.checkbox + label:before {content:''; width:42px; height:42px; position:absolute; right:0; top:53px; background-position:-316px -54px}
+.popup input.checkbox:checked + label:before {background-position:-365px -54px}
+.popup .sns_share li .thum{float:left; position:relative; width:107px}
+.popup .sns_share li .mask{width:90px; height:90px; border:0.05em solid #000; opacity:.1; position:absolute; left:0; top:0; border-radius: 50%;}
+.popup .sns_share li img{width:90px; height:90px; border-radius:50%;}
+.popup .sns_share li i{width:50px; text-align:center; position:absolute; left:-72px; top:12px; color:#000; font-size:40px; }
+.popup .sns_share li strong{font-family: 'SpoqaHanSansB'; display:block; overflow:hidden; white-space: nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; -moz-text-overflow:ellipsis; padding-top:10px; line-height:30px;}
+.popup .sns_share li span{display:block;overflow:hidden; white-space: nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; -moz-text-overflow:ellipsis; }
+.popup .sns_btn{width:412px; margin:0 auto; border-top:2px solid #f5f5f5; position:relative;text-align:right; padding:25px 0;}
+.popup .sns_btn dt{position:absolute; left:0px; top:30px; font-size:24px; color:#7f848a}
+.popup .sns_btn dd{display:inline-block;text-indent:-9999em; font-size:0; margin-left:10px;}
+.popup .sns_btn dd a{width:65px; height:65px; display:block; background-position:-131px -118px; }
+.popup .sns_btn dd:nth-of-type(2) a{background-position:-188px -118px}
+.popup .sns_btn dd:nth-of-type(3){display:none}
+
+.popup .pop_bnr{margin-bottom:-30px; padding-top:23px;}
+.popup .bnr_txt{font-size:22px; display:block; text-align:Center;}
+.popup .bnr_img{width:421px; margin:0 auto 30px; background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/banner.png) left -625px no-repeat #7de2c7; display:block; height:107px; text-indent:-9999em; border-radius:10px; }
+
+.popup .vote_thum{width:150px; height:150px; margin:0 auto 15px; position:relative; }
+.popup .vote_thum .mask{width:150px; height:150px; border:0.05em solid #000; opacity:.1; position:absolute; left:0; top:0; border-radius: 50%;}
+.popup .vote_thum img{width:100%;border-radius:50%}
+.popup .chance{text-align:center; padding: 15px 0 0}
+.popup .chance li{display:inline-block; width:46px; height:46px; background-position:-206px -194px; margin:0 10px; text-indent:-9999em}
+.popup .chance li.on{background-position:-133px -194px;}
+
+.popup .popup-content.vote_info{padding: 50px 35px; text-align:left}
+.popup .info{text-align:left;}
+.popup .info dt{font-family: 'SpoqaHanSansB'; padding:43px 0 5px}
+.popup .info dd{font-size:22px; padding-left:20px; position:relative; line-height:33px;}
+.popup .info dd:after{content:""; position:absolute; left:6px; top:15px; width:2px; height:2px; background:#000; border-radius: 50%;}
+.popup .info dd ul{padding-top:10px; font-size:18px;}
+
+.popup .sns_go{text-align:left;}
+.popup .sns_go dd{padding:0.5625rem 0 1.094rem 0}
+.popup .sns_go dd .sns_txt{font-size:0.688rem; color:#7f848a; display:block; margin:-0.3rem 0 0.5625rem; line-height:0.95rem}
+.popup .sns_go dd input{background:#f5f5f5; height:2.125rem; line-height:2.125rem; width:100%; border:none; outline: none; border-radius:0.4rem; text-indent:0.625rem; font-size: 0.875rem; letter-spacing:-0.05rem}
+.popup .sns_go dd input::placeholder{color:#c1c1c1}
+.popup .btn a{width:4.219rem; height:1.75rem; background:none; border:1px solid #000; color:#000; line-height:1.62rem; padding-right:0; font-family: 'SpoqaHanSansM'; }
+.popup .chk_input{text-align:left; font-size:0.75rem; position:relative; padding-left:1.625rem; line-height:1rem; margin-top:1.875rem}
+.popup .chk_input input.checkbox + label:before{left:0; top:0;}
+
+@media screen and (max-width: 1071px) {
+  .mtb-scroll{max-height:20em !important;}
+  .popup{width:18.75rem;min-width:auto; border-radius:0.469rem }
+  .popup .popup-header{height:2.813rem; border-radius:0.4rem 0.4rem 0 0}
+  .popup .popup-header h3{line-height:2.813rem;font-size:0.875rem; margin: 0 0 0 1.563rem;}
+  .popup .popup-header .layer-close{top:0.844rem; right:0.844rem; width:1.063rem; height:1.063rem; background-position:-11.969rem 0}
+  .popup .popup-content strong{font-size:1.063em}
+  .popup .popup-content{padding:1.406rem 1.563rem;font-size:0.875rem;}
+  .popup .popup-footer button{font-size: 0.875rem;height:3.375rem}
+  .popup .popup-footer{height:3.375rem;border-top:1px solid #f5f5f5;}
+  .popup .popup-footer button span{line-height:3.375rem}
+  .popup .vote_txt span{max-width:7.813rem;}
+  .popup .stxt{padding-top:0.625rem;margin-bottom:-0.781rem;line-height:1rem; font-size:0.688rem}
+ 
+  .popup .sns_share{width:100%; padding-top:0.625rem}
+  .popup .sns_share li{border-bottom:1px solid #f5f5f5}
+  .popup .sns_share li label{height:4.844rem;padding:1.063rem 1.563rem 0 2.250rem;font-size:0.719rem; }
+  .popup input.checkbox + label:before {width:1.313rem; height:1.313rem; top:1.656rem; background-position:-9.875rem -1.688rem}
+  .popup input.checkbox:checked + label:before {background-position:-11.406rem -1.688rem}
+  .popup .sns_share li .thum{width:3.344rem}
+  .popup .sns_share li .mask{width:2.813rem; height:2.813rem; }
+  .popup .sns_share li img{width:2.813rem; height:2.813rem;}
+  .popup .sns_share li i{width:1.563rem; left:-2.25rem; top:0.375rem;font-size:1.25rem; }
+  .popup .sns_share li strong{padding-top:0.313rem; line-height:0.938rem;}
+
+  .popup .sns_btn{width:16rem; border-top:1px solid #f5f5f5;padding:0.781rem 0;}
+  .popup .sns_btn dt{top:1rem; font-size:0.75rem; left:0.1rem}
+  .popup .sns_btn dd{margin-left:0.313rem;}
+  .popup .sns_btn dd a{width:2.063rem; height:2.063rem;background-position:-9.315rem -3.688rem; }
+  .popup .sns_btn dd:nth-of-type(2) a{background-position:-11.469rem -3.688rem;}
+  .popup .sns_btn dd:nth-of-type(3){display:inline-block;}
+  .popup .sns_btn dd:nth-of-type(3) a{background-position:-13.531rem -3.688rem;}
+
+  .popup .pop_bnr{margin-bottom:-0.938rem;}
+  .popup .bnr_txt{font-size:0.688rem;}
+  .popup .bnr_img{width:15.5rem; border-radius:0.4rem; background-position:1.4rem -19.531rem; background-size:28.125rem; height:3.35rem; margin:0 auto 0.938rem;}
+
+  .popup .vote_thum{width:4.688rem; height:4.688rem; margin:0 auto 0.469rem;}
+  .popup .vote_thum .mask{width:4.688rem; height:4.688rem;}
+  .popup .chance{padding: 0.469rem 0 0}
+  .popup .chance li{width:1.438rem; height:1.438rem; background-position:-6.438rem -6.063rem; margin:0 0.313rem;}
+  .popup .chance li.on{background-position:-4.156rem -6.063rem;}
+
+  .popup .popup-content.vote_info{padding: 1.563rem 1.094rem}
+  .popup .info dt{padding:1.344rem 0 0.156rem}
+  .popup .info dd{font-size:0.688rem; padding-left:0.625rem; line-height:1.031rem;}
+  .popup .info dd:after{left:0.188rem; top:0.469rem; width:0.063rem; height:0.063rem;}
+  .popup .info dd ul{padding-top:0.313rem; font-size:0.688rem;}
+}
+
+/* 앱으로 참여하기 */
+.popup.transparent{background:transparent}
+.popup .pop-landing {text-align:center;width:79.642857142857%;padding:1rem 0 0.25rem;margin:0 auto;}
+.popup .pop-landing .btn-app {font-family: 'SpoqaHanSansB'; display:block;overflow:hidden;position:relative;width:100%;height:3rem;border-radius:0.556rem;font-size:1rem;letter-spacing:-0.009rem;line-height:3em;background-color:#0096FF;color:#fff;font-weight:700;}
+.popup .pop-landing .btn-later {display:inline-block;padding:1.650rem 1rem 0.5rem;font-size:0.9rem;line-height:1.5em;text-decoration:underline; color:#fff}
+
+/*지니TMI*/
+.tmi_main{padding-top: 115px; background:#def1ff}
+.content h3.tit04{background-position:center -355px}
+.content h3.tit05{background-position:center -474px}
+.content h3.tit06{background-position:center -595px}
+.content h3.tit07{background-position:center -718px}
+.tmi_main section{padding:120px 0 90px; }
+.tmi_main section.tmi_sound{padding-top:75px;}
+.tmi_main .content:after{content:""; width:100%; height:215px; background: url("http://image.genie.co.kr/imageg/web/promo_2020/closing/bg_tmi.png") 50% 0 no-repeat; position:absolute; left:50%; top:275px;transform:translateX(-50%); -webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);}
+.tmi_main .tmi_artist .content:after{background-position:50% -391px}
+.tmi_main .tmi_issue .content:after{background:none}
+.tmi_main .tmi_service .content:after{background-position:50% -796px}
+
+.tmi_main .tmi_artist{background:#fefce3}
+.tmi_main .tmi_issue{background:#fbeeff}
+.tmi_main .tmi_service{background:#d5fff5}
+.tmi_main h4{font-size:40px; text-align:Center; font-family: 'GmarketSansM'; padding-bottom:42px; line-height:45px}
+.btm_tmi .bnrarea{margin-top:0;background-position:0 -736px;}
+
+.tmi_main .thum{width:320px; margin:0 auto; text-align:center; }
+.tmi_main .thum img{width:100%; height:320px; border:1px solid  rgba(0,0,0,.1 );}
+.tmi_main .thum a{position:relative; display:block; display:block;}
+.tmi_main .thum strong a{overflow:hidden; white-space: nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; -moz-text-overflow:ellipsis;}
+.tmi_main a.play:after {content: ""; position: absolute; right: 18px; bottom: 18px; width: 60px; height: 60px; background-position: -26px 0; }
+.tmi_main .date{min-width:101px; padding:0 20px; text-align:Center; color:#ffffff; font-size:23px; background:#73bdee; border-radius:30px; display:inline-block; line-height:44px; margin-top:25px;}
+.tmi_main .thum strong{display: block; font-weight: 700; font-size: 28px; padding: 10px 0 5px; width:320px; margin:0 auto}
+.tmi_main .thum span{display: block; font-size: 25px; padding-bottom:25px;width:320px; margin:0 auto; letter-spacing:-0.05rem}
+.tmi_main .thum .rank{position:absolute; left:18px; top:-5px; color:#ffffff; width:56px; height:70px; line-height:65px; background-position:0 -250px; text-align:center; font-size:36px; font-family: 'GmarketSansM'; z-index:10}
+
+/*line*/
+.tmi_main .tmi_list{border-top:1px solid #c8d5e1}
+.tmi_list:before{content:""; width:100%; height:0.04rem; background:#c8d5e1; position:absolute; left:0; bottom:0;}
+.tmi_main .tmi_list li{width:50%; float:left; height:185px; border-bottom:1px solid #c8d5e1; padding:24px 10px 24px 215px; position:relative;}
+
+.tmi_artist .tmi_main .tmi_list{border-top:1px solid #dcddce}
+.tmi_artist .tmi_list:before{background-color:#dcddce}
+.tmi_artist .tmi_main .tmi_list li{border-bottom:1px solid #dcddce}
+
+.tmi_service .tmi_main .tmi_list{border-top:1px solid #c8dfda}
+.tmi_service .tmi_list:before{background-color:#c8dfda}
+.tmi_service .tmi_main .tmi_list li{border-bottom:1px solid #c8dfda}
+
+
+.tmi_main .tmi_list:after{content:""; clear:both; display:block;}
+.tmi_main .tmi_list li:last-child{border-bottom:none}
+.tmi_main .tmi_list li .rank{position:absolute; left:-60px; top:40px; font-size:32px; color:#5495fc; width:56px; display:block; text-align:center; font-family: SpoqaHanSansB;}
+.tmi_main .tmi_list li .rank em{display:block; position:absolute; left:10px; top:-25px; color:#000; font-size:20px; font-family: 'GmarketSansM';}
+.tmi_list img{width:130px; height:130px; border: 1px solid  rgba(0,0,0,.1 );}
+.tmi_main .tmi_list li .play{position:absolute; left:60px; top:24px}
+.tmi_main .tmi_list li strong, .tmi_main .tmi_list li span{display:block; overflow:hidden; white-space: nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; -moz-text-overflow:ellipsis;}
+.tmi_main .tmi_list li strong{font-size:24px; font-family: 'SpoqaHanSansB'; font-weight:normal}
+.tmi_main .tmi_list li span{font-size:22px;}
+.tmi_main .tmi_list li .date{line-height:38px;margin-top:10px}
+.tmi_main .more_view .tmi_list{height:186px; overflow:hidden}
+.tmi_main .more_view.on .tmi_list{overflow: visible; height:auto;}
+.tmi_main .more_view .all_play{display:none; padding:50px 0 0; text-align:center}
+.tmi_main .more_view.on .all_play{display:block;}
+.tmi_list{position:relative;}
+
+.tmi_main .more_view .morebtn{display:block; height:60px; border: 1px solid #889199; border-radius: 50px; width:182px; position:absolute; left:50%; bottom:40px;transform:translateX(-50%); -webkit-transform:translateX(-50%);-moz-transform:translateX(-50%); background:url("http://image.genie.co.kr/imageg/web/promo_2020/closing/btn_more.png") 50% 12px no-repeat; text-indent:-9999em}
+.tmi_main .more_view.on .morebtn{background-position:50% -50px;}
+.bxslider li{padding-bottom:150px}
+.tmi_main .more_view .all_play a{display:inline-block; height:60px;border-radius: 50px;position:relative;line-height:55px; background:#000; color:#ffffff; border-radius: 50px; width:182px; text-align:center;padding-right: 20px; }
+.tmi_main .more_view .all_play a:after{content:""; width:15px; height:14px; background-position:-82px -75px; position:absolute; right:21%; top:21px; transform:translateX(-50%); font-size:18px;-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);}
+.tmi_main .tmi_list a.play:after{width:32px; height:32px;background-position: -37px -73px; right:7px; bottom:10px;}
+
+@media screen and (max-width: 1071px) {
+  .tmi_list:before{background:none}
+  .tmi_service .tmi_list:before{background:none}
+  .tmi_artist .tmi_list:before{background:none}
+  .tmi_main{padding-top: 3.594rem ;}
+  .tmi_main .content{padding:0 0.938rem}
+  .content h3.tit04{background-position:center -11.094rem}
+  .content h3.tit05{background-position:center -14.813rem}
+  .content h3.tit06{background-position:center -18.594rem}
+  .content h3.tit07{background-position:center -22.438rem}
+  .tmi_main section{padding:3.75rem 0 2.813rem; }
+  .tmi_main section.tmi_sound{padding-top:2.344rem}
+  .tmi_main h4{font-size:1.25rem;padding-bottom:1.313rem; line-height:1.5rem}
+  .btm_tmi{padding:1.875rem 0.938rem}
+  .btm_tmi .content{width:100%}
+  .btm_tmi .bnrarea{background-color:#fbe091; border-radius:0.469rem; background-position:1.4rem -4.625rem}
+
+  .tmi_main .thum{width:10rem}
+  .tmi_main .thum img{height:10rem}
+  .tmi_main .thum a.play:after{right:0.563rem; bottom:0.563rem; width:1.875rem; height:1.875rem; background-position:-0.813rem 0}
+  .tmi_main .date{min-width:4.688rem; padding:0 0.813rem; font-size:1rem; border-radius:0.938rem; line-height:1.781rem; margin-top:0.813rem;}
+  .tmi_main .thum strong{font-size:1rem; padding:0.313rem 0 0.156rem; width:10rem;}
+  .tmi_main .thum span{width:10rem;font-size:0.875rem; padding-bottom:1.25rem}
+  .tmi_main .thum .rank{left:0.438rem; top:-0.313rem; width:1.781rem; height:2.813rem; line-height:2.6rem; background-position:-6.219rem -7.813rem ;font-size:1.094rem;}
+
+  .tmi_main .tmi_list{border:none}
+  .tmi_main .tmi_list li{border:none;width:100%; background:#ffffff; height:6.094rem;padding: 0 1.188rem 0 7.344rem;border-radius: 0.469rem; margin-bottom:1.25rem;}
+  .tmi_main .tmi_list li .rank{font-size:1.094rem; text-align:center; width:1.813rem; padding-top:0.3rem; height:2.813rem; left:-2rem; top:-1.05rem; z-index:2; color:#ffffff; background-position:-6.219rem -7.813rem;letter-spacing:0px;font-family: SpoqaHanSansM; }
+  .tmi_main .tmi_list li .rank em{position: static; color:#fff; font-size:0.719rem; margin-bottom: -0.5rem;}
+  .tmi_list img{width:4.125rem; height:4.125rem; }
+  .tmi_main .tmi_list li .play{left:2.438rem; top:1rem;}
+  .tmi_main .tmi_list a.play:after{width:1rem; height:1rem;background-position: -1.156rem -2.281rem; right:0.2rem; bottom:0.35rem;}
+  .tmi_main .tmi_list li strong{font-size:1rem;}
+  .tmi_main .tmi_list li span{font-size:0.875rem;}
+  .tmi_main .tmi_list li .date{line-height:1.188rem;margin:-0.03rem 0 -0.1rem;  background:none; color:#73bdee; font-size:0.938rem; padding:1rem 0 0; text-align:left; display:block; font-family: 'SpoqaHanSansB';}
+  .tmi_main .more_view .tmi_list{height:13.8rem;}
+  .bxslider li{padding-bottom:5.625rem}
+  .tmi_main .content:after{display:none}
+
+  .tmi_main .more_view .morebtn{height:2.438rem; 
+    border-radius:1.563rem; width:9.813rem; bottom:1.25rem; background-position:50% -4rem; background-size:6.25rem 9rem}
+  .tmi_main .more_view.on .morebtn{background-position:50% -7.313rem;}
+  .tmi_main .more_view .all_play a{height:2.438rem;line-height:2.2rem;
+    border-radius:1.563rem; width:9.813rem; padding-right:0.688rem; font-size:0.875rem}
+  .tmi_main .more_view .all_play a:after{width:0.656rem; height:0.75rem; background-position:0rem -2.344rem; right:20%; top:0.75rem;}
+  .tmi_main .more_view .all_play{padding-top:1.094rem}
+}
+
+/* tmi-아티스트 */
+.tmi_main .tmi_artist .thum{height:518px}
+.tmi_main .tmi_artist .thum img, .tmi_main .tmi_artist .tmi_list img{border-radius:50%;}
+.tmi_main .tmi_artist a.play:after{background:none}
+.tmi_main .tmi_artist .date{background:#ffb52e;}
+.tmi_main .tmi_artist .tmi_list li .date{margin:25px 0 7px}
+.tmi_main .tmi_artist .tmi_list li .rank{color:#ff7551}
+.tmi_artist .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.tmi_artist .bx-wrapper .bx-pager.bx-default-pager a.active,
+.tmi_artist .bx-wrapper .bx-pager.bx-default-pager a:focus{background:#ff994e}
+.tmi_main .tmi_artist .thum .rank{background-position:-60px -250px; left:41px; top:9px;}
+@media screen and (max-width: 1071px) {
+  .tmi_main .tmi_artist .thum{height:17.188rem}
+  .tmi_main .tmi_artist .thum .rank{background-position:-8.125rem -7.813rem; left:1.313rem; top:0.25rem;}
+  .tmi_main .tmi_artist .tmi_list li .rank{color:#fff;background-position:-8.125rem -7.813rem}
+  .tmi_main .tmi_artist .tmi_list li span{line-height:1.1rem}
+  .tmi_main .tmi_artist .tmi_list li .date{color:#ffb52e;margin:0.7rem 0 -0.4rem}
+  .tmi_main .tmi_artist .tmi_list li strong{padding-top:0.4rem}
+}
+
+/* tmi-이슈 */
+.tmi_main .tmi_issue .date{background:#ae78ff}
+.tmi_issue .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.tmi_issue .bx-wrapper .bx-pager.bx-default-pager a.active,
+.tmi_issue .bx-wrapper .bx-pager.bx-default-pager a:focus
+{background:#bf79fd}
+.tmi_issue .bxslider li{padding-bottom:0;}
+.tmi_main .tmi_issue .thum{width:100%; height:518px}
+.tmi_main .tmi_issue .thum a{width:320px; margin:0 auto}
+.tmi_main .tmi_issue .thum img{width:320px;}
+.tmi_main .genre{position:relative;width:320px; height:320px; background:url("http://image.genie.co.kr/imageg/web/promo_2020/closing/ico_genre.png") no-repeat; margin-bottom:40px; margin:0 auto;}
+.tmi_main .genre a{display:block; text-indent:-9999em; height:320px}
+.tmi_main .tmi_issue .point-up{position:absolute; left:-47px; top:196px; width:154px; height:154px; background:#259af4; text-align:Center;color:#d5ff71; font-family: 'SpoqaHanSansB'; font-size:25px; border-radius:50%; padding:50px 0 0; line-height:1.8rem; }
+.tmi_main .tmi_issue .point-up em{display:block;font-size:22px;font-family: 'GmarketSansM';color:#ffffff; font-weight:normal}
+.tmi_main .genre.ballade{background-position:0 0}
+.tmi_main .genre.dance{background-position:-323px 0}
+.tmi_main .genre.rnb{background-position:-646px 0}
+.tmi_main .genre.rap{background-position:-969px 0}
+.tmi_main .genre.rock{background-position:-1292px 0}
+.tmi_main .genre.elec{background-position:0 -324px}
+.tmi_main .genre.trot{background-position:-323px -324px}
+.tmi_main .genre.blues{background-position:-646px -324px}
+.tmi_main .genre.indie{background-position:-969px -324px}
+.tmi_main .genre.traditional{background-position:-1292px -324px}
+.tmi_main .genre.pop{background-position:0 -648px}
+.tmi_main .genre.ost{background-position:-323px -648px}
+.tmi_main .genre.jpop{background-position:-646px -648px}
+.tmi_main .genre.jazz{background-position:-969px -648px}
+.tmi_main .genre.classic{background-position:-1292px -648px}
+.tmi_main .genre.newage{background-position:0 -973px}
+.tmi_main .genre.ccm{background-position:-323px -973px}
+.tmi_main .genre.kids{background-position:-646px -973px}
+
+.tmi_main .tmi_issue .streaming{width:344px; height:320px; background:url("http://image.genie.co.kr/imageg/web/promo_2020/closing/bg_issue.png") no-repeat; margin:0 auto; position:relative}
+.tmi_main .tmi_issue .streaming .point-up{background:#8857f9; left:-110px; top:140px }
+.tmi_main .tmi_issue .streaming .best{font-size:45px; font-family: 'SpoqaHanSansB';display:inline-block; border-bottom:4px solid #000; padding:100px 5px 0}
+.tmi_main .tmi_issue .streaming.join{background-position:0 -377px}
+.tmi_main .tmi_issue .streaming.join .point-up{background:#db3e80}
+
+@media screen and (max-width: 1071px) {
+  .tmi_main .genre{height:10rem;margin-bottom:1rem; background-size:50.375rem 40.438rem; width:10rem}
+  .tmi_main .genre a{height:10rem}
+  .tmi_main .tmi_issue .point-up{width:5.625rem; height:5.625rem;left:-2rem; top:6rem;font-size:0.875rem; padding-top:1.7rem; line-height:1rem; }
+  .tmi_main .tmi_issue .point-up em{font-size:0.813rem}
+  .tmi_main .tmi_issue .thum{height:15.938rem}
+  .tmi_main .tmi_issue .thum a{width:10rem;}
+  .tmi_main .tmi_issue .thum img{width:10rem;}
+  .tmi_main .genre.ballade{background-position:0 0}
+  .tmi_main .genre.dance{background-position:-10.094rem 0}
+  .tmi_main .genre.rnb{background-position:-20.188rem 0}
+  .tmi_main .genre.rap{background-position:-30.281rem 0}
+  .tmi_main .genre.rock{background-position:-40.375rem 0}
+  .tmi_main .genre.elec{background-position:0 -10.125rem}
+  .tmi_main .genre.trot{background-position:-10.094rem -10.125rem}
+  .tmi_main .genre.blues{background-position:-20.188rem -10.125rem}
+  .tmi_main .genre.indie{background-position:-30.281rem -10.125rem}
+  .tmi_main .genre.traditional{background-position:-40.375rem -10.125rem}
+  .tmi_main .genre.pop{background-position:0 -20.25rem}
+  .tmi_main .genre.ost{background-position:-10.094rem -20.25rem}
+  .tmi_main .genre.jpop{background-position:-20.188rem -20.25rem}
+  .tmi_main .genre.jazz{background-position:-30.281rem -20.25rem}
+  .tmi_main .genre.classic{background-position:-40.375rem -20.25rem}
+  .tmi_main .genre.newage{background-position:0 -30.406rem}
+  .tmi_main .genre.ccm{background-position:-10.094rem -30.406rem}
+  .tmi_main .genre.kids{background-position:-20.188rem -30.406rem}
+
+  .tmi_main .tmi_issue .streaming{width:10.750rem; height:10rem; background-size:10.781rem 20.75rem}
+  .tmi_main .tmi_issue .streaming .point-up{left:-2rem; top:5rem; width:4.688rem; height:4.688rem; padding-top: 1.4rem;}
+  .tmi_main .tmi_issue .streaming .best{font-size:1.406rem; padding:3.4rem 0 0; border:none}
+  .tmi_main .tmi_issue .streaming.join{background-position:0 -11.781rem}
+}
+
+/* tmi-서비스 */
+.tmi_main .tmi_service .thum .rank{background-position: -120px -250px;}
+.tmi_main .tmi_service .tmi_list li .rank{color:#00ba83}
+.tmi_main .tmi_service .tmi_list{border-color:#bfe0d9}
+.tmi_service .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.tmi_service .bx-wrapper .bx-pager.bx-default-pager a.active,
+.tmi_service .bx-wrapper .bx-pager.bx-default-pager a:focus
+{background:#00cc99}
+.tmi_main .tmi_service .thum strong{padding-top:20px;}
+.tmi_main .tmi_service .thum strong a{overflow:hidden; white-space: nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; -moz-text-overflow:ellipsis;}
+.tmi_main .tmi_service .tmi_list li strong{padding-top:20px}
+.tmi_main .tmi_service .thum span{font-size:28px; font-weight: 700;}
+.tmi_main .tmi_service .tmi_list li span{font-size:24px; font-weight: 700;}
+.tmi_main .tmi_service .thum {width:100%; height:482px;}
+.tmi_main .tmi_service .thum a.play{width:320px; margin:0 auto}
+.tmi_main .tmi_service .magazine{position:relative; width:403px; margin:0 auto}
+.tmi_main .tmi_service .magazine span{width:100%; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;  word-wrap:break-word; line-height: 1.4em; height: 2.6em; margin-top:20px; padding:0;}
+.tmi_main .tmi_service .thum img{height:auto;}
+.tmi_main .tmi_service .tmi_list.mag_list li{padding:50px 0px 24px 290px}
+.tmi_main .tmi_service .tmi_list.mag_list .mag_thum{position:absolute; left:65px; top:24px;}
+.tmi_main .tmi_service .tmi_list.mag_list .mag_thum img{width:202px; }
+.tmi_main .tmi_service .tmi_list.mag_list a{font-size: 24px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;  word-wrap:break-word; line-height: 1.4em; max-height: 2.8em; font-family: 'SpoqaHanSansB';}
+
+@media screen and (max-width: 1071px) {
+  .tmi_main .tmi_service .thum .rank{background-position: -9.969rem -7.813rem;}
+  .tmi_main .tmi_service .tmi_list li .rank{background-position: -9.969rem -7.813rem; color:#ffffff; font-weight:400;}
+  .tmi_main .tmi_service .thum{height:15rem}
+  .tmi_main .tmi_service .thum a.play{width:10rem}
+  .tmi_main .tmi_service .thum span{font-size:1rem; }
+  .tmi_main .tmi_service .thum strong{padding-top:0.5rem}
+  .tmi_main .tmi_service .tmi_list li span{font-size:1rem; }
+  .tmi_main .tmi_service .tmi_list li strong{padding-top:1.3rem}
+  .tmi_main .tmi_service .magazine{width:12.594rem}
+  .tmi_main .tmi_service .tmi_list.mag_list li{padding:0 1.188rem 0 9.563rem}
+  .tmi_main .tmi_service .magazine span{margin-top:0.7rem}
+  .tmi_main .tmi_service .tmi_list.mag_list .mag_thum img{width:6.313rem}
+  .tmi_main .tmi_service .tmi_list.mag_list .mag_thum{left: 2.438rem; top: 1.032rem;}
+  .tmi_main .tmi_service .tmi_list.mag_list .mag_thum .rank{line-height:initial}
+  .tmi_main .tmi_service .tmi_list.mag_list li{display: flex; align-items: center; justify-content: center;}
+  .tmi_main .tmi_service .tmi_list.mag_list a{font-size:0.938rem; }
+}
+
+/* bxslider */
+.bxslider{z-index:1}
+.bx-wrapper .bx-pager {text-align: center; font-size: .85em; font-family: Arial; font-weight: bold; color: #666; padding-top: 20px;}
+.bx-wrapper .bx-pager.bx-default-pager a{background: #caced7; text-indent: -9999px; display: block; width: 12px; height: 12px; margin: 0 7px; outline: 0; -moz-border-radius : 50%; -webkit-border-radius: 50%; border-radius: 50%;}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {background: #0096ff;}
+.bx-wrapper .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {display: inline-block; vertical-align: bottom; *zoom: 1; *display: inline;}
+.bx-wrapper .bx-pager-item {font-size: 0; line-height: 0;}
+.bx-wrapper .bx-controls-direction .bx-prev {left:1; background-position:40px -332px}
+.bx-wrapper .bx-controls-direction .bx-next {right:0; background-position:-65px -332px}
+.bx-wrapper .bx-controls-direction a {position: absolute; top:365px; outline: 0; width:100px; height:100px; text-indent: -9999px; z-index:9; border-radius:50%; background-color:#000;}
+.bx-wrapper .bx-controls-direction a.disabled {opacity:.1; cursor:default}
+@media screen and (max-width: 1071px) {
+  .bx-wrapper .bx-pager{padding-top:0.5rem}
+  .bx-wrapper .bx-controls-direction a{width:3.438rem; height:3.438rem; top:11rem}
+  .bx-wrapper .bx-pager.bx-default-pager a{width:0.75rem; height:0.75rem; margin:0 0.438rem}
+  .bx-wrapper .bx-controls-direction .bx-prev {left:0.938rem; background-position:1.2rem -13.2rem}
+  .bx-wrapper .bx-controls-direction .bx-next {right:0.938rem; background-position:-1.9rem -13.2rem}
+}
+
+/* 나만의어워드-내정보 */ 
+.award_main .myinfo{background:#ffffff; height:21.625rem; padding-top: 3.594rem; text-align:center}
+.award_main .myinfo.data{background:#f1f4fb; height:20.1rem}
+.award_main .myinfo .my_txt{font-size:1.125rem; padding:3rem 0 1.406rem}
+.award_main .myinfo .my_txt span{color:#0096ff; font-family: 'SpoqaHanSansB';vertical-align:baseline}
+.award_main .myinfo .my_txt.img{background:url("http://image.genie.co.kr/imageg/web/promo_2020/closing/ico_data.gif") center 1.219rem no-repeat; background-size:9.563rem 8.219rem; padding-top:10.469rem}
+.wrap h5{font-size:1.563rem; font-family: 'Black Han Sans'; padding:3.594rem 0 1.094rem; text-align:center}
+.award_main .myinfo .content{padding: 0 0.938rem; }
+.award_main .myinfo .my_all{border-radius: 0.469rem; background:#5f81ff; color:#ffffff;font-size:1rem; padding:1.25rem}
+.award_main .myinfo .my_all span{vertical-align:baseline;font-family: 'SpoqaHanSansB';}
+
+.caution dd ul{padding-left:0.5rem}
+.caution dd ul li{position:relative; }
+.caution dd ul li:after{content:"-"; position:absolute; left:-0.4rem; top:0; }
+.award_main .btn{font-family: 'GmarketSansM';border-radius: 1.563rem; width:10rem; height:3rem; color:#ffffff; line-height:3rem; display:inline-block; font-size:0.875rem; }
+.award_main .btn.login{background:#0096ff}
+.award_main .btn.check{background:#e5637e}
+.award_main .btn.evtgo{background:#ff9332}
+
+/* 나만의어워드-이벤트 */
+.event{background:#ffe7d1; padding:2.188rem 0.938rem 3.125rem}
+.event .content{width:100%; background:url("http://image.genie.co.kr/imageg/web/promo_2020/closing/ico_gift.png") center 3.031rem no-repeat #ffffff; background-size:18.406rem 64.063rem;border-radius: 0.469rem;text-align:center; height:76.563rem; padding-top:69.5rem}
+
+/* 나만의어워드 */
+.award_main .tmi_main{padding:0 0 2.5rem 0; background:#f1f4fb}
+.award_main .tmi_main .more_view .tmi_list{height:auto; overflow:block;}
+.award_main .tmi_main .tmi_list li .rank{background-position:0 -3.813rem}
+.award_main .tmi_main .tmi_list li .rank.win{background-position:-6.25rem -11.3rem}
+
+.tmi_main.f_artist{background:#f6e5f7}
+.tmi_main.f_artist .thum{height:13.75rem}
+.tmi_main.f_artist .thum img{border-radius:50%; border-color:#dce2e7}
+.tmi_main.f_artist .thum a.play:after{background:none}
+.tmi_main.f_artist .tmi_list li{padding-left:6.25rem}
+.tmi_main.f_artist .thum strong{padding-top:1rem}
+.tmi_main.f_artist .tmi_list li .play{left:1.469rem}
+.tmi_main.f_artist .tmi_list li .date{color:#bc4dd4; padding-top:1.6rem}
+.tmi_main.f_artist .thum .rank{left:1.313rem; top:0.25rem;     background-position: -8.125rem -11.375rem; line-height:2.4rem}
+.f_artist .bxslider li{padding-bottom:0}
+.f_artist .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.f_artist .bx-wrapper .bx-pager.bx-default-pager a.active,
+.f_artist .bx-wrapper .bx-pager.bx-default-pager a:focus{background:#c86bdb}
+
+.tmi_main.f_artist .genre{margin-bottom:0}
+.tmi_main.f_artist .f_genre .thum .rank{background-position: -10rem -11.375rem;}
+.tmi_main.f_artist .f_genre .tmi_list li .date{color:#7e38ff; padding-top:1rem}
+.f_artist .f_genre .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.f_artist .f_genre .bx-wrapper .bx-pager.bx-default-pager a.active,
+.f_artist .f_genre .bx-wrapper .bx-pager.bx-default-pager a:focus{background:#965bfd}
+.f_artist .bx-wrapper .bx-controls-direction a{top:9.2rem}
+
+.genie_time{background:#e3f6ff; padding-bottom:1.25rem;}
+.genie_time .all_time:after{content:""; clear:both; display:block;}
+.genie_time .all_time li{float:left; width:50%; text-align:center; position:relative; padding-top:3rem; font-size:1.406rem}
+.genie_time .all_time li span{position:absolute; left:50%; top:0.82rem; transform:translateX(-50%); -webkit-transform:translateX(-50%);-moz-transform:translateX(-50%); border-bottom:0.094rem solid #000; font-size:1.25rem; line-height: 1.5rem; padding:0 0.2rem; font-family: 'GmarketSansM';}
+.genie_time em{color:#0096ff; vertical-align: baseline; font-family: 'SpoqaHanSansB'}
+.genie_time .ptn{text-align:center; font-size:1.25rem; }
+.genie_time .ptn dt{width:100%; font-family: 'GmarketSansB'; padding:2.5rem 0 0.938rem}
+.genie_time .ptn dd{display:inline-block; width:29%; height:6.25rem; background:#fff; margin:0 0.25rem; border-radius: 0.469rem;font-family: 'SpoqaHanSansB'; padding-top:2.938rem; position:relative;}
+.genie_time .ptn dd:after{content:"";position:absolute; left:50%; top:1.125rem; width:3.625rem; height:1.313rem;transform:translateX(-50%); -webkit-transform:translateX(-50%);-moz-transform:translateX(-50%); }
+.genie_time .ptn dd:nth-of-type(1):after{background-position:-11.969rem -7.688rem}
+.genie_time .ptn dd:nth-of-type(2):after{background-position:-11.969rem -9.875rem}
+.genie_time .ptn dd:nth-of-type(3):after{background-position:-11.969rem -12.156rem}
+
+/* appview 링크 제거 */
+.appview .winner_song li strong a, 
+.appview .winner_song li span a, 
+.appview .vote_list li .thum a,
+.appview .vote_list li strong a,
+.appview .tmi_main .thum strong a,
+.appview .tmi_main .thum span a,
+.appview .tmi_main .tmi_list li strong a,
+.appview .tmi_main .tmi_list li span a,
+.appview .tmi_main .tmi_artist .thum a,
+.appview .tmi_main .genre a,
+.appview .tmi_main .tmi_artist .tmi_list li .play,
+.appview .tmi_main.f_artist .thum a,
+.appview .winner_song.w_artist li a,
+.appview .win_list li .thum a
+{-webkit-tap-highlight-color:transparent; cursor: default;}
+
+.appview .tmi_main .tmi_service a,
+.appview .tmi_main .tmi_service .thum a,
+.appview .tmi_main .tmi_service .tmi_list li a
+{-webkit-tap-highlight-color:inherit; cursor: pointer;}
+
+/* 최종결과 */
+.winner_song.w_artist li a.play:after{display:none}
+.winner_song.w_artist li img{border-radius:50%;}
+
+.final_txt{background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/img_final.png) center 10px no-repeat; height:70px; text-indent:-9999em}
+
+.win_list{width:900px; text-align:center; padding:110px 0}
+.win_list:after{display:block; clear:both; content:""; }
+.win_list li{width:290px; display:inline-block; margin:65px 75px;position:relative;}
+.win_list li:first-child{width:100%; margin:0}
+.win_list li .thum{width:290px; text-align:center; margin:0 auto; position:relative}
+.win_list li .mask{width:290px; height:290px; border:0.05em solid #000; opacity:.1; position:absolute; left:0; top:0; border-radius: 50%;}
+.win_list li .thum a{display:block; }
+.win_list li .thum img{width:100%; height:100%; border-radius: 50%;}
+.win_list li .rank{font-size:36px; color:#ffffff; position:absolute; left:23px; top:0; z-index:2; width:67px; height:91px; line-height:67px;background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/img_final.png) 0 -270px no-repeat; text-indent:-8px}
+.win_list li strong{margin:0 auto; display:block;font-size:26px; padding-top:25px;font-weight:700;}
+
+.index_result .main_contents{background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/bg_main_deco_end.png) center top no-repeat; padding-bottom:165px;}
+.index_result .event_award{background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/bg_main_award_end.jpg) center top no-repeat; height:1210px;}
+.index_result .event_award li:first-child{height:340px}
+
+@media screen and (max-width: 1071px) {
+  .final_txt{background-size:19.438rem 15.625rem; background-position:center -3rem; height:4.655rem}
+  .win_list{width:10.938rem; margin:0 auto; padding:0 0 5rem 0}
+  .win_list li:first-child{margin:2.625rem 0 0 0;}
+  .win_list li{width:100%; margin:2.625rem 0 0 0;}
+  .win_list li .mask{width:10.938rem; height:10.938rem}
+  .win_list li .thum{width:100%;}
+  .win_list li .rank{font-size:1.188rem; width:2.813rem; line-height:2.3rem; height:3.125rem; text-indent:-0.7rem; background-size:19.438rem 15.625rem; background-position:0 -12.281rem; left:1rem; top:0;}
+  .win_list li strong{font-size:1.125rem; padding-top:0.406rem}
+
+  .index_result .main_contents{background:url(http://image.genie.co.kr/imageg/web/promo_2020/closing/m/bg_main_deco_end.png) center top no-repeat; background-size:31.063rem 64.219rem; padding-bottom:4rem}
+  .index_result .event_award{background: url(http://image.genie.co.kr/imageg/web/promo_2020/closing/m/bg_main_award_end.jpg) center top no-repeat;background-size:20.844rem 29.156rem; height:31.5rem}
+  .index_result .event_award li:first-child{height:9.8rem}
+}

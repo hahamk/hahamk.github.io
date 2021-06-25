@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="Referrer" content="origin">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<link rel="shortcut icon" type="image/x-icon" href="//image.genie.co.kr/imageg/web/favicon.ico">
+<title>2019 올해 가장 기대되는 돼지띠 아티스트를 뽑아라!</title>
+<meta name="keywords" content="지니뮤직, 음악, 스마트 다운로드, 알뜰 음악감상, genie shop">
+<meta name="description" content="황금돼지띠를 맞아 돼지띠인 아티스트 중 올해가 가장 기대되는 아티스트는 누구? 후보 추천과 투표를 한 고객 중 추첨을 통해 푸짐한 혜택">
+<meta property="og:description" content="후보 추천과 투표를 한 고객 중 추첨을 통해 푸짐한 혜택">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="지니뮤직">
+<style>
+body {
+  background: #f7e59c;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fcdefc;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  overflow: hidden;
+  border: #383838 solid 10px;
+}
+.container .bear {
+  border: #383838 solid 10px;
+  background: #ffffff;
+  width:200px;
+  height: 300px;
+  z-index: 10;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 110px;
+}
+.container .left-ear {
+  border: #383838 solid 10px;
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  background-color: #C5B697;
+  border-radius: 100%;
+  top: 58px;
+  left: 50px;
+}
+.container .right-ear {
+  border: #383838 solid 10px;
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  background-color: #C5B697;
+  border-radius: 100%;
+  top: 58px;
+  right: 50px;
+  animation: wiggle 2s ease-in-out;
+  animation-iteration-count: infinite;
+}
+.container .left-eye {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: #383838;
+  border-radius: 100%;
+  top: 135px;
+  left: 96px;
+  z-index: 10;
+  animation: blink 2s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+.container .right-eye {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: #383838;
+  border-radius: 100%;
+  top: 135px;
+  right: 96px;
+  z-index: 10;
+  animation: blink 2s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+.container .nose {
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  background-color: #C5B697;
+  border-radius: 100%;
+  top: 150px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  z-index: 10;
+}
+.container .nose::before {
+  content: "";
+  background-color: #383838;
+  width: 36px;
+  height: 30px;
+  display: block;
+  border-radius: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 8px;
+}
+.container .mouth {
+  width: 55px;
+  height: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 10px solid #383838;
+  border-top: 0;
+  position: absolute;
+  top: 192px;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container .mouth::before {
+  content: "";
+  width: 10px;
+  height: 22px;
+  background-color: #383838;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: -10px;
+}
+.container .hand {
+  border: #383838 solid 10px;
+  z-index: 120;
+  background: #ffffff;
+  background-image: radial-gradient(circle at 10px 25px, #C5B697 4px, transparent 4px), radial-gradient(circle at 20px 18px, #C5B697 4px, transparent 4px), radial-gradient(circle at 32px 18px, #C5B697 4px, transparent 4px), radial-gradient(circle at 42px 25px, #C5B697 4px, transparent 4px), radial-gradient(circle at 26px 40px, #C5B697 12px, transparent 12px);
+  width: 51px;
+  height: 150px;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  border-radius: 100px;
+  animation: move 1.5s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+
+.container .right-hand {
+  border: #383838 solid 10px;
+  z-index: 120;
+  background: #ffffff;
+  background-image: radial-gradient(circle at 10px 25px, #C5B697 4px, transparent 4px), radial-gradient(circle at 20px 18px, #C5B697 4px, transparent 4px), radial-gradient(circle at 32px 18px, #C5B697 4px, transparent 4px), radial-gradient(circle at 42px 25px, #C5B697 4px, transparent 4px), radial-gradient(circle at 26px 40px, #C5B697 12px, transparent 12px);
+  width: 51px;
+  height: 150px;
+  position: absolute;
+  top: 150px;
+  right: 0;
+  border-radius: 100px;
+  animation: moveright 2s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move {
+  0% {
+    top: 180px;
+    transform: rotate(50deg);
+  }
+  35% {
+    top: 170px;
+    transform: rotate(-10deg);
+  }
+  100% {
+    top: 180px;
+    transform: rotate(50deg);
+  }
+}
+
+@keyframes moveright {
+  0% {
+    top: 170px;
+    transform: rotate(-50deg);
+  }
+  35% {
+    top: 150px;
+    transform: rotate(-10deg);
+  }
+  100% {
+    top: 170px;
+    transform: rotate(-50deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    height: 22px;
+  }
+  10% {
+    margin-top: 8px;
+    height: 6px;
+  }
+  30% {
+    margin-top: 0px;
+    height: 22px;
+  }
+  100% {
+    height: 22px;
+  }
+}
+@keyframes wiggle {
+  0% {
+    top: 58px;
+    right: 50px;
+  }
+  10% {
+    top: 63px;
+    right: 45px;
+  }
+  20% {
+    top: 58px;
+    right: 50px;
+  }
+  30% {
+    top: 63px;
+    right: 45px;
+  }
+  50% {
+    top: 58px;
+    right: 50px;
+  }
+}
+.txt{font-size:34px; position:absolute; left:44%; top:80%;z-index: 10; color:#000; font-weight:bold}
+</style>
+<body>
+  <div class="container">
+    <div class="bear"></div>
+    <div class="left-ear"></div>
+    <div class="right-ear"></div>
+    <div class="left-eye"></div>
+    <div class="right-eye"></div>
+    <div class="nose"></div>
+    <div class="mouth"></div>
+    <div class="hand"></div>
+    <!-- <div class="txt">YH</div> -->
+    <!-- <div class="right-hand"></div> -->
+  </div>
+</body>
+</html>
