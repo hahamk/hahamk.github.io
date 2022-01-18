@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+*, *:before, *:after{box-sizing: border-box;}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+}
+
+footer, header, nav, section, main{display: block;}
+table{border-collapse: collapse; border-spacing: 0;}
+input{-webkit-appearance: none; border-radius: 0;}
+
+//variables
+//color
+$color-w:#ffffff;
+$color-g:#f4f4f4;
+$color-rg:#ebebeb;
+$color-dg:#4c4c4c;
+$color-blue:#0078d4;
+
+$fs-tit:12px;
+$fs-txt:16px;
+
+//weight
+$fs_w:200;
+$fs_n:400;
+$fs_b:600;
+$fs_bb:900;
+
+//images
+$url-images: "https://hangeul.naver.com/webfont/";
+
+//font
+$font-nanum:'NanumSquare';
+$font-nanumeb:'NanumSquareEB';
+
+//mixin
+@mixin txt-blind{text-indent:-9999em; font-size:0; line-height:0;}
+@mixin clear{content:""; display:block; clear:both;}
+@mixin border{border:1px solid #dddddd; border-radius:10px;}
+
+@font-face {
+    font-family:$font-nanum;
+    src: url($url-images+'NanumSquare/NanumSquareR.eot');
+    src: url($url-images+'NanumSquareRound/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+        url($url-images+'NanumSquare/NanumSquareR.woff2') format('woff2'),
+        url($url-images+'NanumSquare/NanumSquareR.woff') format('woff'),
+        url($url-images+'NanumSquare/NanumSquareR.ttf') format('truetype');
+}
+@font-face {
+    font-family:$font-nanumeb;
+    src: url($url-images+'NanumSquare/NanumSquareEB.eot');
+    src: url($url-images+'NanumSquareRound/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+        url($url-images+'NanumSquare/NanumSquareEB.woff2') format('woff2'),
+        url($url-images+'NanumSquare/NanumSquareEB.woff') format('woff'),
+        url($url-images+'NanumSquare/NanumSquareEB.ttf') format('truetype');
+}
+
+body{line-height: 1; font-family: $font-nanum; background:$color-g}
+a {color:$color-dg; font-size:$fs-txt;text-decoration: none;
+    &:hover{text-decoration: underline;}
+}
+.title {background:$color-blue; border-bottom: 2px solid $color-rg; padding: 20px; font-size:$fs-tit; color: $color-rg;
+    span {color: $color-rg; display: inline-block; padding-left: 10px;}
+    a{font-size:$fs-tit; font-weight:$fs_b; color:$color-rg; border:1px solid $color-w; line-height:24px; padding:0 10px; display:inline-block; margin-left:20px;
+        &:hover{text-decoration: none;}
+    }
+}
+.wrap{padding:30px;
+    .sm-txt{font-size:$fs-tit; color:$color-dg; padding-bottom:10px; }
+}
+h1{font-size: 20px;margin-bottom: 15px;font-family:$font-nanumeb;font-weight: $fs_n; color: #005a9e}
+dl{padding: 10px 0; font-size:$fs-tit;
+    dt{padding: 5px 0 3px}
+    dd{line-height: 18px}
+}
+ul{padding:10px 20px 40px;
+    li{line-height: 30px; font-size: 18px;
+        li{font-size:$fs-txt;}
+    }
+}
