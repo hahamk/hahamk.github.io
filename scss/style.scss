@@ -60,6 +60,7 @@ $font-nanumeb:'NanumSquareEB';
     src: url($url-images+'NanumSquare/NanumSquareEB.eot');
     src: url($url-images+'NanumSquareRound/NanumSquareR.eot?#iefix') format('embedded-opentype'),
         url($url-images+'NanumSquare/NanumSquareEB.woff2') format('woff2'),
+        
         url($url-images+'NanumSquare/NanumSquareEB.woff') format('woff'),
         url($url-images+'NanumSquare/NanumSquareEB.ttf') format('truetype');
 }
