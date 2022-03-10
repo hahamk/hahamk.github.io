@@ -87,8 +87,8 @@ ul{padding:10px 20px 40px;
         li{font-size:$fs-txt;}
     }
 }
-.history{
-    li{font-size:12px; color:$color-dg;
-        span{font-size:11px; padding-left:10px}
+.history{background:$color-w; padding-bottom:10px;
+    li{font-size:12px; color:$color-dg; list-style-type: none; line-height:20px;
+        span{font-size:11px; padding-left:10px; color:rgba(0,0,0,0.5)}
     }
 }
